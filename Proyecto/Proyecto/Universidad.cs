@@ -9,11 +9,11 @@ namespace Proyecto
     class Universidad
     {
         string nombre;
-        public List<Persona> Personas;
+        public List<Carrera> carreras;
         public Universidad(string nombre)
         {
             this.nombre = nombre;
-            Personas = new List<Persona>();
+            carreras = new List<Carrera>();
         }
         public void CrearPersona(int rut, string nombre, string apellido, string clave) => new Persona(rut, nombre, apellido, clave);
     }

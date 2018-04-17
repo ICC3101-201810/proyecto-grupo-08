@@ -8,14 +8,14 @@ namespace Proyecto
 {
     public class Carrera
     {
-      string nombre,facultad;
-      List<Alumno> alumnos;
-      public Carrera(string nombre,string facultad)
-
-      this.nombre = nombre ;
-      this.facultad = facultad ;
-      alumnos = new List<Alumno>();
-
+        string nombre, facultad;
+        List<Alumno> alumnos;
+        public Carrera(string nombre, string facultad)
+        {
+            this.nombre = nombre;
+            this.facultad = facultad;
+            alumnos = new List<Alumno>();
+        }
 
     }
 }

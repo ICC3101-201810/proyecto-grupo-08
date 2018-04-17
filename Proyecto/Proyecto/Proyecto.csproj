@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Carrera.cs" />
     <Compile Include="Curso.cs" />
+    <Compile Include="Horario.cs" />
     <Compile Include="Malla.cs" />
     <Compile Include="NotaAlumno.cs" />
     <Compile Include="Personas\Administrativo.cs" />
