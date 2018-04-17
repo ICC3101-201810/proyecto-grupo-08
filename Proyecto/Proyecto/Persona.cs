@@ -8,9 +8,9 @@ namespace Proyecto
 {
     public class Persona
     {
-        int rut;
+        public int rut;
         public string nombre, apellido, clave;
-        
+
         public Persona(int rut, string nombre, string apellido, string clave)
         {
             this.rut = rut;

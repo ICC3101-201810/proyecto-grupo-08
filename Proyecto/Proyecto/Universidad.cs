@@ -15,6 +15,8 @@ namespace Proyecto
             this.nombre = nombre;
             Personas = new List<Persona>();
         }
-        public void CrearPersona(int rut, string nombre, string apellido,string clave) => new Persona(rut, nombre, apellido,clave);
+        public void CrearPersona(int rut, string nombre, string apellido, string clave) => new Persona(rut, nombre, apellido, clave);
     }
 }
+
+

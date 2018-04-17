@@ -10,13 +10,23 @@ namespace Proyecto
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingrese su rut: ");
-            int rut = Convert.ToInt32(Console.Read());
-            var ruts = Universidad.Personas.Where(per => per.rut == rut);
-            while ( ruts == null )
+            Carrera carrera;
+            Console.WriteLine("Ingrese su carrera: ");
+            string carreraAlumno = (Console.Read());
+            if (carrera.nombre = carreraAlumno)
             {
-                Console.WriteLine("Ingrese un rut valido: ");
-                rut = Convert.ToInt32(Console.Read());
+
+              Console.WriteLine("Ingrese su rut: ");
+              int rut = Convert.ToInt32(Console.Read());
+              var ruts = carrera.alumnos.Where(per => per.rut == rut);
+              while ( ruts == null )
+              {
+                  Console.WriteLine("Ingrese un rut valido: ");
+                  rut = Convert.ToInt32(Console.Read());
+
+              Alumno alumno = carrera.alumnos.Find();
+              }
+
             }
         }
     }
