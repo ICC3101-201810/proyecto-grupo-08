@@ -10,17 +10,19 @@ namespace Proyecto
     {
         public string nombre, facultad;
         public List<Alumno> alumnos;
+        public List<Curso> cursos;
         public Carrera(string nombre, string facultad)
         {
             this.nombre = nombre;
             this.facultad = facultad;
             alumnos = new List<Alumno>();
+            cursos = new List<Curso>();
         }
-        public bool VerificarAlumno(Carrera carrera, int rut)
+        public bool VerificarAlumno(Carrera carrera, int rut, string clave)
         {
             foreach (Alumno a in carrera.alumnos)
             {
-                if (a.rut == rut) { return true; }
+                if (a.rut == rut && a.clave == clave) { return true; }
             }
             Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
             return false;

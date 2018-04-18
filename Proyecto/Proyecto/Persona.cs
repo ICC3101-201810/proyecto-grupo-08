@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
-    public class Persona
+    public abstract class Persona
     {
-        public int rut;
-        public string nombre, apellido, clave;
+        public int rut,creditos;
+        public string nombre, apellido, clave,tipo;
+        public List<Curso> cursos;
 
         public Persona(int rut, string nombre, string apellido, string clave)
         {

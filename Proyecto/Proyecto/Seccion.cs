@@ -9,17 +9,18 @@ namespace Proyecto
     public class Seccion
     {
         public int vacantes, numero;
-        public Horario horario;
+        public List<Horario> horario;
         public Profesor profesor;
-        public List<Alumno> alumnos;
+        public List<Persona> alumnos;
 
-        public Seccion(int vacantes, int numero, Horario horario, Profesor profesor )
+        public Seccion(int vacantes, int numero, Profesor profesor )
         {
             this.vacantes = vacantes;
             this.numero = numero;
-            this.horario = horario;
             this.profesor = profesor;
-            alumnos = new List<Alumno>();
+            alumnos = new List<Persona>();
+            horario = new List<Horario>();
+
         }
 
         public void AgregarAlumno(Alumno alumno)

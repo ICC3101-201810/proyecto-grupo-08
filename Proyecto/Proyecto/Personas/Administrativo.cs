@@ -12,6 +12,8 @@ namespace Proyecto
         public Administrativo(int rut, string nombre, string apellido, string rango, string clave):base(rut,nombre,apellido,clave)
         {
             this.rango = rango;
+            this.tipo = "admin";
+            this.creditos = 0;
         }
     }
 }

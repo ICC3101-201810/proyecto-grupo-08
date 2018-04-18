@@ -14,6 +14,8 @@ namespace Proyecto
         {
             this.titulo = titulo;
             this.anoIngreso = anoIngreso;
+            this.tipo = "profe";
+            this.creditos = 0;
         }
     }
     

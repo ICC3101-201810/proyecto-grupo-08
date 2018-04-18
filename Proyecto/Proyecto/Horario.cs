@@ -8,12 +8,13 @@ namespace Proyecto
 {
     public class Horario
     {
-        public List<Tuple<DateTime,DateTime>> horario;
+        public DateTime inicio, fin;
         string tipo;//Ayudantia, Clase, Laboratorio o Prueba
-        public Horario(string tipo, List<Tuple<DateTime, DateTime>> horario)
+        public Horario(string tipo, DateTime inicio, DateTime fin)
         {
             this.tipo = tipo;
-            this.horario = horario;
+            this.inicio = inicio;
+            this.fin = fin;
         }
     }
 }
