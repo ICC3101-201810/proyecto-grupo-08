@@ -40,6 +40,19 @@ namespace Proyecto
 
             }
         }
+
+        public bool Esta(Alumno alumno)
+        {
+            foreach (Alumno a in alumnos)
+            {
+                if (Equals(alumno, a))
+                {
+                    return true;
+                }
+            }
+            return false;
+            
+        }
  
     }
 }
