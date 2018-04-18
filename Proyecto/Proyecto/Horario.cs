@@ -8,13 +8,14 @@ namespace Proyecto
 {
     public class Horario
     {
-        public DateTime inicio, fin;
+        public DateTime inicio;
+        public int duracion;
         string tipo;//Ayudantia, Clase, Laboratorio o Prueba
-        public Horario(string tipo, DateTime inicio, DateTime fin)
+        public Horario(string tipo, DateTime inicio, int duracion)
         {
             this.tipo = tipo;
             this.inicio = inicio;
-            this.fin = fin;
+            this.duracion = duracion;
         }
     }
 }

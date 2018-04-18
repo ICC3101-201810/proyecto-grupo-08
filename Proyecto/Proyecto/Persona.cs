@@ -10,8 +10,6 @@ namespace Proyecto
     {
         public int rut,creditos;
         public string nombre, apellido, clave,tipo;
-        public List<Curso> cursos;
-
         public Persona(int rut, string nombre, string apellido, string clave)
         {
             this.rut = rut;

@@ -34,6 +34,7 @@ namespace Proyecto
             Persona persona = carrera.alumnos.First(per => per.rut == rut);
             if (persona.tipo == "alumno")
             {
+                Alumno alumno = alumnos.First(al => al.rut == rut);
                 Console.WriteLine("Para volver al menu principal solo ingrese 0");
                 Console.WriteLine("Bienvenido {0},", persona.nombre);
                 Console.WriteLine("Presione Enter para continuar");
@@ -96,11 +97,33 @@ namespace Proyecto
                                         {
                                             foreach (Seccion s in c.secciones)
                                             {
-                                                if (s.numero == seccionTomar)
+                                                foreach (Seccion seccion in alumno.secciones)
                                                 {
-                                                    s.alumnos.Add(persona);
-                                                    persona.c
-                                                    persona.creditos = persona.creditos - c.creditos;
+                                                    foreach (Horario horario in seccion.horario)
+                                                    {
+                                                        foreach (Seccion se in alumno.secciones)
+                                                        {
+                                                            foreach (Horario ho in seccion.horario)
+                                                            {
+                                                                if (horario.inicio == ho.inicio)
+                                                                {
+                                                                    Console.WriteLine("Hay un tope de horario con la seccion {0} en la hora {1}\nVolviendo al menu de secciones", se.numero, ho.inicio); goto SECCIONES;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                if (s.numero == seccionTomar && s.vacantes > 0)
+                                                {
+                                                    s.alumnos.Add(alumno);
+                                                    alumno.secciones.Add(s);
+                                                    alumno.creditos = persona.creditos - c.creditos;
+                                                    s.vacantes--;
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("No hay cupos, volviendo al menu de secciones");
+                                                    goto SECCIONES;
                                                 }
                                             }
                                         }
@@ -110,7 +133,6 @@ namespace Proyecto
                                             goto SECCIONES;
                                         }
                                     }
-                                    
                                 }
                             }
                         }
@@ -122,17 +144,10 @@ namespace Proyecto
                             Console.Beep(); Console.Beep(); Console.ResetColor();
                             goto MENUTOMADERAMOS;
                         }
-
                     }
                 }
             }
-
-
-
-
         }
-
-
     }
 }
 

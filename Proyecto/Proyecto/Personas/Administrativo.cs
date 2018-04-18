@@ -13,7 +13,6 @@ namespace Proyecto
         {
             this.rango = rango;
             this.tipo = "admin";
-            this.creditos = 0;
         }
     }
 }
