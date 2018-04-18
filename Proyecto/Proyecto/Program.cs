@@ -12,12 +12,16 @@ namespace Proyecto
         {
             Universidad Uandes = new Universidad("Universidad de los Andes");
             List<Alumno> alumnos = new List<Alumno>();
+            List<Profesor> profesores = new List<Profesor>();
+            List<Administrativo> admins = new List<Administrativo>();
             string carreraAlumno = "";
             int rut = 0;
             bool menuActivo = true;
             bool elBool = false;
+            INICIOSESION:
             while (elBool == false)
             {
+
                 Console.WriteLine("Ingrese su carrera: ");
                 carreraAlumno = (Console.ReadLine()); elBool = Uandes.VerificarCarrera(Uandes, carreraAlumno);
             }
@@ -37,8 +41,12 @@ namespace Proyecto
                 Alumno alumno = alumnos.First(al => al.rut == rut);
                 Console.WriteLine("Para volver al menu principal solo ingrese 0");
                 Console.WriteLine("Bienvenido {0},", persona.nombre);
-                Console.WriteLine("Presione Enter para continuar");
-                Console.ReadKey();
+                Console.WriteLine("Presione Enter para continuar o 0 para cerrar sesion");
+                string cerrar = Console.ReadLine();
+                if (cerrar == "0")
+                {
+                    goto INICIOSESION;
+                }
                 while (menuActivo == true)
                 {
                     MENU:
@@ -85,10 +93,13 @@ namespace Proyecto
                                         SECCIONES:
                                         foreach (Seccion s in c.secciones)
                                         {
-                                            //List<Horario> horarioSemana = s.horario.Where(x=>x.inicio > DateTime.Today && x.inicio < DateTime.Now.AddDays(7)).ToList();
+                                            List<Horario> horarioSemana = s.horario.Where(x => x.inicio > DateTime.Today && x.inicio < DateTime.Now.AddDays(7)).ToList();
                                             Console.WriteLine("---------------");
                                             Console.WriteLine(s.numero);
-                                            Console.WriteLine(s.horario);
+                                            foreach (Horario horario in horarioSemana)
+                                            {
+                                                Console.WriteLine(horario.inicio);
+                                            }
                                         }
                                         Console.WriteLine("Ingrese la seccion que desea ");
                                         int seccionTomar = int.Parse(Console.ReadLine());
@@ -145,9 +156,163 @@ namespace Proyecto
                             goto MENUTOMADERAMOS;
                         }
                     }
+                    if (opcion == 2)
+                    {
+                        MENUBOTARRAMOS:
+                        foreach (Curso curso in carrera.cursos)
+                        {
+                            foreach (Alumno alumnobotar in curso.secciones)
+                            {
+
+                            }
+                            
+                        }
+                            foreach (Seccion seccion in alumno.secciones) { Console.WriteLine(seccion.numero); }///////////
+                        List<Curso> CursoBotar =
+                        
+                        Console.WriteLine("Escriba el nombre del curso que desea botar");
+                      
+                        if (cursoBotar == "0") { goto MENU; }
+                        try
+                        {
+                            foreach (Curso c in carrera.cursos)
+                            {
+                                if (c.nombre == )
+                                {
+                                    if (persona.creditos < c.creditos)
+                                    {
+                                        Console.WriteLine("No tiene los creditos suficientes. Volviendo al menu principal");
+                                        goto MENU;
+                                    }
+
+                                }
+                            }
+                        }
+                        catch { }
+                    }
+
                 }
             }
+            else if (persona.tipo == "profe")
+            {
+                Profesor profesor = profesores.First(al => al.rut == rut);
+                Console.WriteLine("Para volver al menu principal solo ingrese 0");
+                Console.WriteLine("Bienvenido {0},", persona.nombre);
+                Console.WriteLine("Presione Enter para continuar");
+                Console.ReadKey();
+                while (menuActivo == true)
+                {
+                    MENUPROFE:
+                    Console.Clear();
+                    Console.WriteLine("Que deseas hacer" +
+                    " 1.-Ver Secciones" +
+                    " 2.-Ver Horario" +
+                    " 3.-Cerrar Sesion");
+                    int opcion = Convert.ToInt32(Console.ReadLine());
+                    try
+                    {
+                        if (opcion < -1 || opcion > 3) { throw new DivideByZeroException(); }
+                    }
+                    catch
+                    {
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Elija una opción válida entre 1 y 3");
+                        Console.Beep(); Console.Beep(); Console.ResetColor();
+                        goto MENUPROFE;
+                    }
+                    if (opcion == 0) { goto MENUPROFE; }
+                    if (opcion == 1)
+                    {
+                        foreach (Curso curso in carrera.cursos)
+                        {
+                            foreach (Seccion seccion in curso.secciones)
+                            {
+                                if (seccion.profesor == profesor)
+                                {
+                                    Console.WriteLine("El curso donde hace clases es " + curso.nombre + "\nEn la seccion "); Console.Write(seccion.numero);
+                                    Console.WriteLine("Desea ver los alumnos de esta seccion?");
+                                    string R = Console.ReadLine();
+                                    if (R == "si") { seccion.MostrarAlumnos(); }
+                                }
+                                else { Console.WriteLine("Usted no posee secciones"); }
+
+
+                            }
+                        }
+
+                    }
+                    if (opcion == 2)
+                    {
+                        foreach (Curso curso in carrera.cursos)
+                        {
+                            foreach (Seccion seccion in curso.secciones)
+                            {
+                                if (seccion.profesor == profesor)
+                                {
+                                    foreach (Horario horario in seccion.horario)
+                                    {
+                                        Console.WriteLine(horario.inicio);
+                                    }
+
+                                }
+                                else { Console.WriteLine("Usted no posee horario"); }
+
+
+                            }
+                        }
+
+                    }
+                    if (opcion == 3) { goto INICIOSESION; }
+                }
+            }
+            else if (persona.tipo == "admin")
+            {
+                Administrativo admin = admins.First(al => al.rut == rut);
+                MENUADMIN:
+                Console.WriteLine("Bienvenido {0}" +
+                    " 1.-Agregar alumno" +
+                    " 2.-Agregar carrera" +
+                    " 3.-Eliminar alumno" +
+                    " 4.-Cerrar sesion", admin.nombre);
+                int opcion = Convert.ToInt32(Console.ReadLine());
+                if (opcion == 0) { goto MENUADMIN; }
+
+                else if (opcion == 1)
+                {
+                    Console.WriteLine("Ingrese el rut:");
+                    int rutN = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Ingrese el nombre:");
+                    string nombreN = Console.ReadLine();
+                    Console.WriteLine("Ingrese el apellido:");
+                    string apellidoN = Console.ReadLine();
+                    Console.WriteLine("Ingrese el anio en que ingreso");
+                    DateTime anoN = Convert.ToDateTime(Console.ReadLine());
+                    Console.WriteLine("Ingrese una clave");
+                    string claveN = Console.ReadLine();
+                    Alumno alumnoNuevo = new Alumno(rutN, nombreN, apellidoN, anoN, claveN);
+                }
+                else if (opcion == 2)
+                {
+                    Console.WriteLine("Ingrese el nombre de la carrera:");
+                    string nombreC = Console.ReadLine();
+                    Console.WriteLine("Ingrese el nombre de la facultad a la que pertenece:");
+                    string facultadC = Console.ReadLine();
+                    Carrera carreraNueva = new Carrera(nombreC, facultadC);
+                }
+                else if (opcion == 3)
+                {
+                    Console.WriteLine("Ingrese el rut del alumno que desea eliminar:");
+                    DENUEVO:
+                    int rutAl = Convert.ToInt32(Console.ReadLine());
+                    try { Alumno alumno = alumnos.First(al => al.rut == rutAl); alumnos.Remove(alumno); }
+                    catch { Console.WriteLine("Ingrese un rut valido:"); goto DENUEVO; }
+                }
+                else if (opcion == 4) { goto INICIOSESION; }
+            }
         }
+
     }
 }
+
 

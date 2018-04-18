@@ -33,11 +33,13 @@ namespace Proyecto
         }
         public void MostrarAlumnos()
         {
+            Console.WriteLine("Nombre\n");
             foreach (Alumno alumno in alumnos)
             {
                 Console.WriteLine(alumno.nombre);
 
             }
         }
+ 
     }
 }
