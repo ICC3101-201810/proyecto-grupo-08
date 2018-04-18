@@ -21,21 +21,26 @@ namespace Proyecto
             secciones = new List<Seccion>();
             requisitos = new List<Curso>();//esto
         }
-        public void AgregarRequisito(Curso curso, Curso requisito)
+
+        public void AgregarRequisito(Curso requisito)//
         {
-            curso.requisitos.Add(requisito);
+            requisitos.Add(requisito);
         }
-        public void QuitarRequisito(Curso curso, Curso requisito)
+        public void QuitarRequisito(Curso requisito)//
         {
-            curso.requisitos.Remove(requisito);
+            requisitos.Remove(requisito);
         }
-        public void MostrarRequisito(Curso curso)
+        public void MostrarRequisito() //esto
         {
-            Console.WriteLine(curso.requisitos);
+            foreach (Curso CursRequisito in requisitos)
+            {
+                Console.WriteLine(CursRequisito.nombre);
+            }
         }
-        public void CrearSeccion(Curso curso, Seccion seccion)
+        public void CrearSeccion(Seccion seccion)//esto
         {
-            curso.secciones.Add(seccion);
+            secciones.Add(seccion);
         }
+
     }
 }

@@ -16,6 +16,25 @@ namespace Proyecto
             this.facultad = facultad;
             alumnos = new List<Alumno>();
         }
-
+        public bool VerificarAlumno(Carrera carrera, int rut)
+        {
+            foreach (Alumno a in carrera.alumnos)
+            {
+                if (a.rut == rut) { return true; }
+            }
+            Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
+            return false;
+        }
+        public void AgregarAlumno(Alumno alumno)
+        {
+            alumnos.Add(alumno);
+        }
+        public void MostrarAlumnos()
+        {
+            foreach (Alumno alumno in alumnos)
+            {
+                Console.WriteLine(alumno.nombre);
+            }
+        }
     }
 }
