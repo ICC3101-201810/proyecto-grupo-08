@@ -10,10 +10,10 @@ namespace Proyecto
     {
       string ano;
       List<Curso> cursos;
-      public Malla(ano)
+      public Malla(string ano)
       {
           this.ano =ano;
-          cursos = List<Curso>();
+          cursos = new List<Curso>();
       }
     }
 }

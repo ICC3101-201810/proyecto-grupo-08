@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
-    class Universidad
+    public class Universidad
     {
-        string nombre;
+        public string nombre;
         public List<Carrera> carreras;
         public Universidad(string nombre)
         {

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
-    class Horario
+    public class Horario
     {
-        DateTime horario;
+        public List<Tuple<DateTime,DateTime>> horario;
         string tipo;//Ayudantia, Clase, Laboratorio o Prueba
-        public Horario(string tipo, DateTime horario)
+        public Horario(string tipo, List<Tuple<DateTime, DateTime>> horario)
         {
             this.tipo = tipo;
             this.horario = horario;

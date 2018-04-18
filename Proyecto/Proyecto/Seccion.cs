@@ -17,7 +17,7 @@ namespace Proyecto
             this.numero = numero;
             this.horario = horario;
             this.profesor = profesor;
-            alumnos = List<Alumno>();
+            alumnos = new List<Alumno>();
 
         }
     }
