@@ -22,7 +22,11 @@ namespace Proyecto
         {
             foreach (Alumno a in carrera.alumnos)
             {
-                if (a.rut == rut && a.clave == clave) { return true; }
+                if (a.rut == rut && a.clave == clave)
+                {
+                    return true;
+                    
+                }
             }
             Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
             return false;
@@ -38,5 +42,24 @@ namespace Proyecto
                 Console.WriteLine(alumno.nombre);
             }
         }
+
+        public bool VerificarProfe(Carrera carrera, int rut, string clave)
+        {
+            foreach (Curso curso in carrera.cursos)
+            {
+                foreach (Seccion seccion in curso.secciones)
+                {
+                    if (seccion.profesor.clave == clave && seccion.profesor.rut == rut)
+                    {
+                        return true;
+                    }
+                }
+
+            }
+                    Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
+                    return false;
+        }
+       
     }
 }
+

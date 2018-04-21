@@ -23,11 +23,11 @@ namespace Proyecto
 
         }
 
-        public void AgregarAlumno(Alumno alumno)
+        public void AgregarAlumno(Persona alumno)
         {
             alumnos.Add(alumno);
         }
-        public void QuitarAlumnos(Alumno alumno)//
+        public void QuitarAlumnos(Persona alumno)//
         {
             alumnos.Remove(alumno);
         }
@@ -41,7 +41,7 @@ namespace Proyecto
             }
         }
 
-        public bool Esta(Alumno alumno)
+        public bool Esta(Persona alumno)
         {
             foreach (Alumno a in alumnos)
             {

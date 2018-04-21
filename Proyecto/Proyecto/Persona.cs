@@ -10,12 +10,15 @@ namespace Proyecto
     {
         public int rut,creditos;
         public string nombre, apellido, clave,tipo;
+        public List<Seccion> secciones;
+
         public Persona(int rut, string nombre, string apellido, string clave)
         {
             this.rut = rut;
             this.nombre = nombre;
             this.apellido = apellido;
             this.clave = clave;
+            secciones = new List<Seccion>();
         }
 
         public bool Login(Persona persona)
@@ -26,6 +29,11 @@ namespace Proyecto
             string clave = Console.ReadLine();
             if (persona.rut == rut && persona.clave == clave){return true;}
             else { return false; }
+        }
+
+        public void QuitarSeccion(Seccion seccion)//
+        {
+            secciones.Remove(seccion);
         }
 
     }

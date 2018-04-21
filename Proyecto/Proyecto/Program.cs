@@ -14,6 +14,30 @@ namespace Proyecto
             List<Alumno> alumnos = new List<Alumno>();
             List<Profesor> profesores = new List<Profesor>();
             List<Administrativo> admins = new List<Administrativo>();
+            List<Persona> personas = new List<Persona>();
+
+            Carrera Ingenieria = new Carrera("ingenieria", "Facultad de Ingeniería y Ciencias Aplicadas");
+            Alumno alumnoIng = new Alumno(2, "Juan", "Perez", DateTime.Today.AddYears(-2),"a");
+            Curso calculo = new Curso("2523", "Calculo 2", 6);
+            Profesor tata = new Profesor(1, "tata", "sanchez", "1", DateTime.Today.AddYears(-10), "Ingenieria Civil");
+            Seccion calculoSec1 = new Seccion(60, 1, tata);
+            Horario horarioCal = new Horario("clase", DateTime.Today.AddHours(10), 2);
+
+            calculoSec1.alumnos.Add(alumnoIng);
+            calculoSec1.horario.Add(horarioCal);
+
+            calculo.secciones.Add(calculoSec1);
+            Ingenieria.alumnos.Add(alumnoIng);
+            Ingenieria.cursos.Add(calculo);
+
+            Administrativo admin1 = new Administrativo(0, "admin", "user", "admin", "admin");
+            Uandes.carreras.Add(Ingenieria);
+
+            
+
+
+            
+
             string carreraAlumno = "";
             int rut = 0;
             bool menuActivo = true;
@@ -34,12 +58,31 @@ namespace Proyecto
                 Console.WriteLine("Ingrese su clave: ");
                 string clave = Console.ReadLine();
                 elBool = carrera.VerificarAlumno(carrera, rut, clave);
+                //elBool = carrera.VerificarAdmin(carrera, rut, clave);///
+                if (elBool==false) { elBool = carrera.VerificarProfe(carrera, rut, clave); }
+                /////
+            
+                
             }
-            Persona persona = carrera.alumnos.First(per => per.rut == rut);
+            personas.Clear();
+            foreach (Alumno alumno in carrera.alumnos) {if (alumno.rut == rut) { personas.Add(alumno);  } }
+            foreach (Curso curso in carrera.cursos)
+            {
+                foreach (Seccion seccion in curso.secciones)
+                {
+                    if (seccion.profesor.rut == rut) { personas.Add(seccion.profesor); }
+                }
+            }
+
+
+
+            //persona = carrera.alumnos.First(per => per.rut == rut);
+
+            Persona persona = personas[0];
             if (persona.tipo == "alumno")
             #region ALUMNO
             {
-                Alumno alumno = alumnos.First(al => al.rut == rut);
+                Persona alumno = personas[0];
                 Console.WriteLine("Para cerrar por completo el software, ingrese un cero (0)");
                 Console.WriteLine("Bienvenido {0},", persona.nombre);
                 Console.WriteLine("Presione Enter para continuar o 0 para salir del programa");
@@ -105,6 +148,7 @@ namespace Proyecto
                                             {
                                                 Console.WriteLine(horario.inicio);
                                             }
+                                            Console.ReadKey();
                                         }
                                         Console.WriteLine("Ingrese la seccion que desea ");
                                         int seccionTomar = int.Parse(Console.ReadLine());
@@ -186,6 +230,7 @@ namespace Proyecto
                         {
                             Console.WriteLine("Nombre: {0}    /     NRC: {1}",s.nombre,s.nrc);
                         }
+                        Console.ReadKey();
                         Console.WriteLine("Escribe el NRC del curso que deseas eliminar. ");
                         string nrcBotar = Console.ReadLine();                    
                         if (nrcBotar == "0") { goto FINAL; }
@@ -225,7 +270,7 @@ namespace Proyecto
             else if (persona.tipo == "profe")
             #region PROFESOR
             {
-                Profesor profesor = profesores.First(al => al.rut == rut);
+                Persona profesor = personas[0];
                 Console.WriteLine("Para cerrar por completo el software, ingrese un cero (0)");
                 Console.WriteLine("Bienvenido {0},", persona.nombre);
                 Console.WriteLine("Presione Enter para continuar");
@@ -263,7 +308,7 @@ namespace Proyecto
                                     Console.WriteLine("El curso donde hace clases es " + curso.nombre + "\nEn la seccion "); Console.Write(seccion.numero);
                                     Console.WriteLine("Desea ver los alumnos de esta seccion?");
                                     string R = Console.ReadLine();
-                                    if (R == "si") { seccion.MostrarAlumnos(); }
+                                    if (R == "si") { seccion.MostrarAlumnos();Console.ReadKey(); }
                                 }
                                 else { Console.WriteLine("Usted no posee secciones"); }
 
@@ -284,6 +329,7 @@ namespace Proyecto
                                     {
                                         Console.WriteLine(horario.inicio);
                                     }
+                                    Console.ReadKey();
 
                                 }
                                 else { Console.WriteLine("Usted no posee horario"); }
@@ -300,7 +346,7 @@ namespace Proyecto
             else if (persona.tipo == "admin")
             #region ADMINISTRADOR
             {
-                Administrativo admin = admins.First(al => al.rut == rut);
+                Persona admin = personas[0];
                 MENUADMIN:
                 Console.WriteLine("Para cerrar por completo el software, ingrese un cero (0)");
                 Console.WriteLine("Bienvenido {0}" +
