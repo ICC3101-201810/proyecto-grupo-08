@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Proyecto
 {
@@ -41,6 +42,45 @@ namespace Proyecto
         {
             secciones.Add(seccion);
         }
+        public void MostrarSecciones()
+        {
+            string a="";
+            foreach (Seccion s in secciones)
+            {
+                List<Horario> horarioSemana = s.horario.Where(x => x.inicio > DateTime.Today && x.inicio < DateTime.Now.AddDays(7)).ToList();
+                a = a + "seccion " + s.numero+ "\n----------------\n";
+                foreach (Horario horario in horarioSemana)
+                {
+                    a= a+horario.inicio+"\n";
+                    //Console.WriteLine(horario.inicio);
+                }
+                a += "\n----------------\n";
+                MessageBox.Show(a);
+            }
+        }
+
+              
+
+       /* public void MostrarSiEsta(Persona alumno)
+        {
+            string a = "Tus Cursos son:\n";
+            foreach (Seccion seccion in secciones)
+            {
+                foreach (Persona per in seccion.alumnos)
+                {
+                    if (alumno == per)
+                    {
+                        a = a + nombre + " NRC " + nrc + " seccion " + seccion.numero + "\n";
+                        
+                    }
+                }
+            }
+            MessageBox.Show(a);*/
+                
+            
+        
+
+
 
     }
 }

@@ -17,9 +17,9 @@ namespace Proyecto
             List<Persona> personas = new List<Persona>();
 
             Carrera Ingenieria = new Carrera("ingenieria", "Facultad de Ingeniería y Ciencias Aplicadas");
-            Alumno alumnoIng = new Alumno(2, "Juan", "Perez", DateTime.Today.AddYears(-2),"a");
+            Alumno alumnoIng = new Alumno(2, "Juan", "Perez",2014,"a");
             Curso calculo = new Curso("2523", "Calculo 2", 6);
-            Profesor tata = new Profesor(1, "tata", "sanchez", "1", DateTime.Today.AddYears(-10), "Ingenieria Civil");
+            Profesor tata = new Profesor(1, "tata", "sanchez", "1", 2008, "Ingenieria Civil");
             Seccion calculoSec1 = new Seccion(60, 1, tata);
             Horario horarioCal = new Horario("clase", DateTime.Today.AddHours(10), 2);
 
@@ -53,15 +53,20 @@ namespace Proyecto
             elBool = false;
             while (elBool == false)
             {
-                Console.WriteLine("Ingrese su rut: ");
-                rut = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Ingrese su clave: ");
-                string clave = Console.ReadLine();
-                elBool = carrera.VerificarAlumno(carrera, rut, clave);
-                //elBool = carrera.VerificarAdmin(carrera, rut, clave);///
-                if (elBool==false) { elBool = carrera.VerificarProfe(carrera, rut, clave); }
-                /////
-            
+                Console.WriteLine("si o no");
+                string q = Console.ReadLine();
+                if (q == "si")
+                {
+                    Console.WriteLine("Ingrese su rut: ");
+                    rut = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Ingrese su clave: ");
+                    string clave = Console.ReadLine();
+                    elBool = carrera.VerificarAlumno(carrera, rut, clave);
+                    //elBool = carrera.VerificarAdmin(carrera, rut, clave);///
+                    if (elBool == false) { elBool = carrera.VerificarProfe(carrera, rut, clave); }
+                    /////
+                }
+                else { goto FINAL; }
                 
             }
             personas.Clear();
@@ -127,11 +132,12 @@ namespace Proyecto
                         if (cursoTomar == "0") { goto FINAL; }
                         try
                         {
+                            //string MostrarCursos = "";
                             foreach (Curso c in carrera.cursos)
                             {
                                 if (c.nombre == cursoTomar)
                                 {
-                                    if (persona.creditos < c.creditos)
+                                    if (alumno.creditos < c.creditos)
                                     {
                                         Console.WriteLine("No tiene los creditos suficientes. Volviendo al menu principal");
                                         goto MENU;
@@ -139,7 +145,8 @@ namespace Proyecto
                                     else
                                     {
                                         SECCIONES:
-                                        foreach (Seccion s in c.secciones)
+                                        c.MostrarSecciones();
+                                        /*foreach (Seccion s in c.secciones)
                                         {
                                             List<Horario> horarioSemana = s.horario.Where(x => x.inicio > DateTime.Today && x.inicio < DateTime.Now.AddDays(7)).ToList();
                                             Console.WriteLine("---------------");
@@ -149,42 +156,37 @@ namespace Proyecto
                                                 Console.WriteLine(horario.inicio);
                                             }
                                             Console.ReadKey();
-                                        }
+                                        }*/
                                         Console.WriteLine("Ingrese la seccion que desea ");
                                         int seccionTomar = int.Parse(Console.ReadLine());
                                         if (seccionTomar == 0) { goto FINAL; }
+                                        
                                         try
                                         {
                                             foreach (Seccion s in c.secciones)
-                                            {
-                                                foreach (Seccion seccion in alumno.secciones)
+                                            {   
+                                                if (seccionTomar == s.numero)
                                                 {
-                                                    foreach (Horario horario in seccion.horario)
+                                                    if (s.RevisarSiTopa(alumno))
                                                     {
-                                                        foreach (Seccion se in alumno.secciones)
+                                                        Console.WriteLine("Hay un tope de horario por lo que no es posible agregar su eleccion.\nVolviendo al menu de secciones"); goto SECCIONES;
+                                                    }
+                                                    else
+                                                    {
+                                                        if (s.vacantes > 0)
                                                         {
-                                                            foreach (Horario ho in seccion.horario)
-                                                            {
-                                                                if (horario.inicio == ho.inicio)
-                                                                {
-                                                                    Console.WriteLine("Hay un tope de horario con la seccion {0} en la hora {1}\nVolviendo al menu de secciones", se.numero, ho.inicio); goto SECCIONES;
-                                                                }
-                                                            }
+                                                            s.AgregarAlumno(alumno);
+                                                            alumno.secciones.Add(s);
+                                                            alumno.creditos = alumno.creditos - c.creditos;
+                                                            s.vacantes--;
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.WriteLine("No hay cupos, volviendo al menu de secciones");
+                                                            goto SECCIONES;
                                                         }
                                                     }
-                                                }
-                                                if (s.numero == seccionTomar && s.vacantes > 0)
-                                                {
-                                                    s.alumnos.Add(alumno);
-                                                    alumno.secciones.Add(s);
-                                                    alumno.creditos = persona.creditos - c.creditos;
-                                                    s.vacantes--;
-                                                }
-                                                else
-                                                {
-                                                    Console.WriteLine("No hay cupos, volviendo al menu de secciones");
-                                                    goto SECCIONES;
-                                                }
+                                                }                                                
                                             }
                                         }
                                         catch
@@ -239,9 +241,9 @@ namespace Proyecto
                             int index = cc.FindIndex(curso => curso.nrc == nrcBotar);
                             alumno.QuitarSeccion(ids[index]);
                             ids[index].QuitarAlumnos(alumno);
-                            Console.BackgroundColor = ConsoleColor.Green;
+                            //Console.BackgroundColor = ConsoleColor.Green;
                             Console.WriteLine("Curso eliminado con exito :) ");
-                            Console.BackgroundColor = ConsoleColor.Gray;
+                            //Console.BackgroundColor = ConsoleColor.Gray;
                             Console.WriteLine("Deseas eliminar otro curso?");
                             string q = Console.ReadLine(); 
                             if (q == "si")
@@ -262,6 +264,11 @@ namespace Proyecto
                             Console.Beep(); Console.Beep(); Console.ResetColor();
                             goto MENUBOTARRAMOS;
                         }
+                    }
+                    if (opcion == 3)
+                    {
+                        carrera.MostrarCursosAlumno(alumno);
+                                               
                     }
 
                 }
@@ -299,6 +306,7 @@ namespace Proyecto
                     if (opcion == 0) { goto FINAL; }
                     if (opcion == 1)
                     {
+                        carrera.MostrarCursosProfe(profesor);
                         foreach (Curso curso in carrera.cursos)
                         {
                             foreach (Seccion seccion in curso.secciones)
@@ -366,7 +374,7 @@ namespace Proyecto
                     Console.WriteLine("Ingrese el apellido:");
                     string apellidoN = Console.ReadLine();
                     Console.WriteLine("Ingrese el anio en que ingreso");
-                    DateTime anoN = Convert.ToDateTime(Console.ReadLine());
+                    int anoN = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Ingrese una clave");
                     string claveN = Console.ReadLine();
                     try { Alumno alumnoNuevo = new Alumno(rutN, nombreN, apellidoN, anoN, claveN); Console.WriteLine("Persona creada con exito"); }

@@ -13,7 +13,7 @@ namespace Proyecto
         public Profesor profesor;
         public List<Persona> alumnos;
 
-        public Seccion(int vacantes, int numero, Profesor profesor )
+        public Seccion(int vacantes, int numero, Profesor profesor)
         {
             this.vacantes = vacantes;
             this.numero = numero;
@@ -51,8 +51,29 @@ namespace Proyecto
                 }
             }
             return false;
-            
+
         }
- 
+
+        public bool RevisarSiTopa(Persona alumno)
+        {
+            foreach (Seccion seccion in alumno.secciones)
+            {
+                foreach (Horario horario in seccion.horario)
+                {
+                    foreach (Seccion se in alumno.secciones)
+                    {
+                        foreach (Horario ho in seccion.horario)
+                        {
+                            if (horario.inicio == ho.inicio)
+                            {
+                                return true;
+                            }
+                        }
+
+                    }
+                }
+            }
+            return false;
+        }
     }
 }

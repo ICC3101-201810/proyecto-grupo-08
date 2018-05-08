@@ -31,7 +31,7 @@ namespace Proyecto
             else { return false; }
         }
 
-        public void QuitarSeccion(Seccion seccion)//
+        public void QuitarSeccion(Seccion seccion)
         {
             secciones.Remove(seccion);
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
-    class Administrativo:Persona
+    public class Administrativo:Persona
     {
         string rango;
         public Administrativo(int rut, string nombre, string apellido, string rango, string clave):base(rut,nombre,apellido,clave)

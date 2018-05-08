@@ -15,8 +15,8 @@ namespace Proyecto
             this.nombre = nombre;
             carreras = new List<Carrera>();
         }
-        public void CrearAlumno(int rut, string nombre, string apellido,DateTime ano ,string clave) => new Alumno(rut, nombre, apellido,ano, clave);
-        public void CrearProfesor(int rut, string nombre, string apellido,DateTime ano, string clave, string titulo) => new Profesor(rut, nombre, apellido,clave,ano,titulo);
+        public void CrearAlumno(int rut, string nombre, string apellido,int ano ,string clave) => new Alumno(rut, nombre, apellido,ano, clave);
+        public void CrearProfesor(int rut, string nombre, string apellido,int ano, string clave, string titulo) => new Profesor(rut, nombre, apellido,clave,ano,titulo);
         public void CrearAdmin(int rut, string nombre, string apellido,string rango, string clave) => new Administrativo(rut, nombre, apellido,rango, clave);
 
         public bool VerificarCarrera(Universidad universidad, string nombre)

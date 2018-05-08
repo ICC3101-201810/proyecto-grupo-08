@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Proyecto
 {
@@ -41,6 +42,44 @@ namespace Proyecto
             {
                 Console.WriteLine(alumno.nombre);
             }
+        }
+
+        public void MostrarCursosProfe(Persona profe)
+        {
+            string a = "Tus Cursos son:\n";
+            foreach (Curso curso in cursos)
+            {
+                foreach(Seccion seccion in curso.secciones)
+                {
+                    if (seccion.profesor == profe)
+                    {
+                        a = a + curso.nombre + " NRC " + curso.nrc + " seccion " + seccion.numero + "\n";
+                    }                  
+                }
+            }
+            MessageBox.Show(a);
+        }
+
+        public void MostrarCursosAlumno(Persona alumno)
+        {
+            string a = "Tus Cursos son:\n";
+            foreach (Curso curso in cursos)
+            {
+                foreach (Seccion seccion in curso.secciones)
+                {
+                    foreach (Persona alum in seccion.alumnos)
+                    {
+                        if (alum == alumno)
+                        {
+                            a = a + curso.nombre + " NRC " + curso.nrc + " seccion " + seccion.numero + "\n";
+
+                        }
+                    }
+                    
+                }
+            }
+            MessageBox.Show(a);
+
         }
 
         public bool VerificarProfe(Carrera carrera, int rut, string clave)

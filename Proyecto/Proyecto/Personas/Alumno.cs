@@ -8,10 +8,10 @@ namespace Proyecto
 {
     public class Alumno : Persona
     {
-        public DateTime anoIngreso;
+        public int anoIngreso;
         public List<Seccion> secciones;
 
-        public Alumno(int rut, string nombre, string apellido, DateTime anoIngreso, string clave) : base(rut, nombre, apellido, clave)
+        public Alumno(int rut, string nombre, string apellido, int anoIngreso, string clave) : base(rut, nombre, apellido, clave)
         {
             creditos = 33;
             this.anoIngreso = anoIngreso;
