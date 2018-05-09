@@ -7,42 +7,55 @@ using System.Windows.Forms;
 
 namespace Proyecto
 {
+    [Serializable]
     public class Carrera
     {
         public string nombre, facultad;
-        public List<Alumno> alumnos;
+        //public List<Alumno> alumnos;
+        public List<Administrativo> admins;
         public List<Curso> cursos;
         public Carrera(string nombre, string facultad)
         {
             this.nombre = nombre;
             this.facultad = facultad;
-            alumnos = new List<Alumno>();
+            //alumnos = new List<Alumno>();
             cursos = new List<Curso>();
+            admins = new List<Administrativo>();
         }
-        public bool VerificarAlumno(Carrera carrera, int rut, string clave)
+        public bool VerificarAlumno( int rut, string clave)
         {
-            foreach (Alumno a in carrera.alumnos)
+            foreach ( Curso c in cursos)
             {
-                if (a.rut == rut && a.clave == clave)
+                foreach(Seccion s in c.secciones)
                 {
-                    return true;
-                    
+                    foreach(Alumno a in s.alumnos)
+                    {
+                        if(a.rut == rut && a.clave == clave)
+                        {
+                            return true;
+                        }
+                    }
                 }
+                
             }
             Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
             return false;
         }
-        public void AgregarAlumno(Alumno alumno)
+
+        public bool VerificarAdmin(int rut, string clave)
         {
-            alumnos.Add(alumno);
-        }
-        public void MostrarAlumnos()
-        {
-            foreach (Alumno alumno in alumnos)
+            foreach (Administrativo a  in admins)
             {
-                Console.WriteLine(alumno.nombre);
+                if (a.rut == rut && a.clave == clave)
+                {
+                    return true;
+                }
+
             }
+            Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
+            return false;
         }
+
 
         public void MostrarCursosProfe(Persona profe)
         {
@@ -82,9 +95,9 @@ namespace Proyecto
 
         }
 
-        public bool VerificarProfe(Carrera carrera, int rut, string clave)
+        public bool VerificarProfe(int rut, string clave)
         {
-            foreach (Curso curso in carrera.cursos)
+            foreach (Curso curso in cursos)
             {
                 foreach (Seccion seccion in curso.secciones)
                 {

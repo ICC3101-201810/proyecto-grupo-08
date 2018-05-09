@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
+    [Serializable]
     public class Profesor : Persona
     {
         string titulo;
-        int anoIngreso;
-        public Profesor(int rut, string nombre, string apellido, string clave, int anoIngreso, string titulo) : base(rut, nombre, apellido, clave)
+        DateTime anoIngreso;
+        public Profesor(int rut, string nombre, string apellido, string clave, DateTime anoIngreso, string titulo) : base(rut, nombre, apellido, clave)
         {
             this.titulo = titulo;
             this.anoIngreso = anoIngreso;

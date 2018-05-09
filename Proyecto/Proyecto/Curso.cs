@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace Proyecto
 {
+    [Serializable]
     public class Curso
     {
         public string nrc, nombre;

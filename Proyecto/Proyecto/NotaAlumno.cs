@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
+    [Serializable]
     public class NotaAlumno_Curso
     {
         public double nota;

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Proyecto
 {
+    [Serializable]
     class Program
     {
         static void Main(string[] args)
@@ -27,16 +30,15 @@ namespace Proyecto
             calculoSec1.horario.Add(horarioCal);
 
             calculo.secciones.Add(calculoSec1);
-            Ingenieria.alumnos.Add(alumnoIng);
+            //Ingenieria.alumnos.Add(alumnoIng);
             Ingenieria.cursos.Add(calculo);
+
 
             Administrativo admin1 = new Administrativo(0, "admin", "user", "admin", "admin");
             Uandes.carreras.Add(Ingenieria);
 
-            
+    
 
-
-            
 
             string carreraAlumno = "";
             int rut = 0;
@@ -61,9 +63,10 @@ namespace Proyecto
                     rut = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Ingrese su clave: ");
                     string clave = Console.ReadLine();
-                    elBool = carrera.VerificarAlumno(carrera, rut, clave);
-                    //elBool = carrera.VerificarAdmin(carrera, rut, clave);///
-                    if (elBool == false) { elBool = carrera.VerificarProfe(carrera, rut, clave); }
+                    elBool = carrera.VerificarAlumno(rut, clave);
+
+                    elBool = carrera.VerificarAdmin(rut, clave);///
+                    if (elBool == false) { elBool = carrera.VerificarProfe(rut, clave); }
                     /////
                 }
                 else { goto FINAL; }
@@ -81,7 +84,7 @@ namespace Proyecto
 
 
 
-            //persona = carrera.alumnos.First(per => per.rut == rut);
+            persona = carrera.alumnos.First(per => per.rut == rut);
 
             Persona persona = personas[0];
             if (persona.tipo == "alumno")
