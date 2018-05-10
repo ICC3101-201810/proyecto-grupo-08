@@ -24,8 +24,8 @@ namespace WindowsFormsApp1
         }
         private void botonAgregarRamo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(p.nombre);
-            //carrera.nombre = "Derecho";
+            AgregarRamos ar = new AgregarRamos();
+            ar.Show();
         }
 
         private void BotonBotarRamo_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
             BindingList<Curso> cursos = new BindingList<Curso>();
 
             cursos = (carrera.VerCursos(p));
-       
+        
             string mensaje = "Tus Cursos son \n Nombre\t\tNrc\n";
             foreach (Curso c in cursos)
             {

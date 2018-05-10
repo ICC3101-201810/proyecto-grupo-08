@@ -127,6 +127,7 @@ namespace WindowsFormsApp1
                         {
                             if (lista.Contains(c))
                             {
+                                //Wena los cabres
                             }
                             else
                             {
