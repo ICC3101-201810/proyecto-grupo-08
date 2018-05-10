@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
     {
         public int rut, creditos;
         public string nombre, apellido, clave, tipo;
-        public List<Seccion> secciones;
+        //public List<Seccion> secciones;
 
         public Persona(int rut, string nombre, string apellido, string clave)
         {
@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             this.nombre = nombre;
             this.apellido = apellido;
             this.clave = clave;
-            secciones = new List<Seccion>();
+            //secciones = new List<Seccion>();
         }
 
         public bool Login(Persona persona)
@@ -32,9 +32,9 @@ namespace WindowsFormsApp1
             else { return false; }
         }
 
-        public void QuitarSeccion(Seccion seccion)
-        {
-            secciones.Remove(seccion);
-        }
+        //public void QuitarSeccion(Seccion seccion)
+        //{
+        //    secciones.Remove(seccion);
+        //}
     }
 }

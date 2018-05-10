@@ -57,16 +57,37 @@
     <Compile Include="Clases\Seccion.cs" />
     <Compile Include="Clases\Semestre.cs" />
     <Compile Include="Clases\Universidad.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FInicio.Designer.cs">
+      <DependentUpon>FInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAlumno.Designer.cs">
+      <DependentUpon>FAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProfesor.Designer.cs">
+      <DependentUpon>FProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdmin.Designer.cs">
+      <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FInicio.resx">
+      <DependentUpon>FInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAlumno.resx">
+      <DependentUpon>FAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

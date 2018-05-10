@@ -55,26 +55,40 @@ namespace WindowsFormsApp1
 
         }
 
-        public bool RevisarSiTopa(Persona alumno)
-        {
-            foreach (Seccion seccion in alumno.secciones)
-            {
-                foreach (Horario horario in seccion.horario)
-                {
-                    foreach (Seccion se in alumno.secciones)
-                    {
-                        foreach (Horario ho in seccion.horario)
-                        {
-                            if (horario.inicio == ho.inicio)
-                            {
-                                return true;
-                            }
-                        }
+        //public bool RevisarSiTopa(Persona alumno)
+        //{
+        //    foreach (Seccion seccion in alumno.secciones)
+        //    {
+        //        foreach (Horario horario in seccion.horario)
+        //        {
+        //            foreach (Seccion se in alumno.secciones)
+        //            {
+        //                foreach (Horario ho in seccion.horario)
+        //                {
+        //                    if (horario.inicio == ho.inicio)
+        //                    {
+        //                        return true;
+        //                    }
+        //                }
 
-                    }
-                }
-            }
-            return false;
-        }
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
+        //public Curso VerCurso(Carrera cr)
+        //{
+        //    foreach (Curso c in cr.cursos)
+        //    {
+        //        foreach (Seccion s in c.secciones)
+        //        {
+        //            if (s.numero == this.numero)
+        //            {
+        //                return c;
+        //            }
+        //        }
+        //    }
+        //    return null;
+        //}
     }
 }

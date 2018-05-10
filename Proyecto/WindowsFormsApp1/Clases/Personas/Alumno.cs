@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             secciones = new List<Seccion>();
         }
 
-        public void QuitarSeccion(Seccion seccion)//
+        public void QuitarSeccion(Seccion seccion)
         {
             secciones.Remove(seccion);
         }

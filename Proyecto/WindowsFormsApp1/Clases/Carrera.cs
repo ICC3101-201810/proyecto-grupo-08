@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,29 +23,29 @@ namespace WindowsFormsApp1
             cursos = new List<Curso>();
             admins = new List<Administrativo>();
         }
-        public bool VerificarAlumno( int rut, string clave)
+        public bool VerificarAlumno(int rut, string clave)
         {
-            foreach ( Curso c in cursos)
+            foreach (Curso c in cursos)
             {
-                foreach(Seccion s in c.secciones)
+                foreach (Seccion s in c.secciones)
                 {
-                    foreach(Alumno a in s.alumnos)
+                    foreach (Alumno a in s.alumnos)
                     {
-                        if(a.rut == rut && a.clave == clave)
+                        if (a.rut == rut && a.clave == clave)
                         {
                             return true;
                         }
                     }
                 }
-                
+
             }
-            
+
             return false;
         }
 
         public bool VerificarAdmin(int rut, string clave)
         {
-            foreach (Administrativo a  in admins)
+            foreach (Administrativo a in admins)
             {
                 if (a.rut == rut && a.clave == clave)
                 {
@@ -52,7 +53,7 @@ namespace WindowsFormsApp1
                 }
 
             }
-            
+
             return false;
         }
 
@@ -62,12 +63,12 @@ namespace WindowsFormsApp1
             string a = "Tus Cursos son:\n";
             foreach (Curso curso in cursos)
             {
-                foreach(Seccion seccion in curso.secciones)
+                foreach (Seccion seccion in curso.secciones)
                 {
                     if (seccion.profesor == profe)
                     {
                         a = a + curso.nombre + " NRC " + curso.nrc + " seccion " + seccion.numero + "\n";
-                    }                  
+                    }
                 }
             }
             MessageBox.Show(a);
@@ -84,11 +85,12 @@ namespace WindowsFormsApp1
                     {
                         if (alum == alumno)
                         {
+                            
                             a = a + curso.nombre + " NRC " + curso.nrc + " seccion " + seccion.numero + "\n";
 
                         }
                     }
-                    
+
                 }
             }
             MessageBox.Show(a);
@@ -108,10 +110,36 @@ namespace WindowsFormsApp1
                 }
 
             }
-                    
-                    return false;
+
+            return false;
         }
-       
+
+        public BindingList<Curso> VerCursos(Persona p)
+        {
+            BindingList<Curso> lista = new BindingList<Curso>();
+            foreach (Curso c in cursos)
+            {
+                foreach (Seccion s in c.secciones)
+                {
+                    foreach (Alumno a in s.alumnos)
+                    {
+                        if (a == p)
+                        {
+                            if (lista.Contains(c))
+                            {
+                            }
+                            else
+                            {
+                                lista.Add(c);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
     }
 }
 

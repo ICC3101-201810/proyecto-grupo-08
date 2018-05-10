@@ -10,10 +10,12 @@ namespace WindowsFormsApp1
     [Serializable]
     public class Curso
     {
-        public string nrc, nombre;
+        public string nrc;
+        public string nombre;
         public int creditos;
         public List<Curso> requisitos;//esto
         public List<Seccion> secciones;//esto
+       
 
         public Curso(string nrc, string nombre, int credito)
         {
@@ -23,6 +25,9 @@ namespace WindowsFormsApp1
             secciones = new List<Seccion>();
             requisitos = new List<Curso>();//esto
         }
+
+        
+
 
         public void AgregarRequisito(Curso requisito)//
         {
@@ -62,7 +67,7 @@ namespace WindowsFormsApp1
 
               
 
-       /* public void MostrarSiEsta(Persona alumno)
+        /*public void MostrarSiEsta(Persona alumno)
         {
             string a = "Tus Cursos son:\n";
             foreach (Seccion seccion in secciones)
