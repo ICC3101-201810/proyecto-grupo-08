@@ -13,33 +13,14 @@ namespace Proyecto
     {
         static void Main(string[] args)
         {
-            Universidad Uandes = new Universidad("Universidad de los Andes");
-            List<Alumno> alumnos = new List<Alumno>();
-            List<Profesor> profesores = new List<Profesor>();
-            List<Administrativo> admins = new List<Administrativo>();
-            List<Persona> personas = new List<Persona>();
+            BinaryFormatter formateador = new BinaryFormatter();
+            Stream miStream = new FileStream("Universidades.un", FileMode.Open, FileAccess.Read, FileShare.None);
+            Universidad Uandes = (Universidad)formateador.Deserialize(miStream);
+            miStream.Close();
+            Uandes.MostrarCarreras();
+            Console.WriteLine(Uandes.nombre);
 
-            Carrera Ingenieria = new Carrera("ingenieria", "Facultad de Ingeniería y Ciencias Aplicadas");
-            Alumno alumnoIng = new Alumno(2, "Juan", "Perez",2014,"a");
-            Curso calculo = new Curso("2523", "Calculo 2", 6);
-            Profesor tata = new Profesor(1, "tata", "sanchez", "1", 2008, "Ingenieria Civil");
-            Seccion calculoSec1 = new Seccion(60, 1, tata);
-            Horario horarioCal = new Horario("clase", DateTime.Today.AddHours(10), 2);
-
-            calculoSec1.alumnos.Add(alumnoIng);
-            calculoSec1.horario.Add(horarioCal);
-
-            calculo.secciones.Add(calculoSec1);
-            //Ingenieria.alumnos.Add(alumnoIng);
-            Ingenieria.cursos.Add(calculo);
-
-
-            Administrativo admin1 = new Administrativo(0, "admin", "user", "admin", "admin");
-            Uandes.carreras.Add(Ingenieria);
-
-    
-
-
+            Console.ReadLine();
             string carreraAlumno = "";
             int rut = 0;
             bool menuActivo = true;
@@ -47,7 +28,6 @@ namespace Proyecto
             INICIOSESION:
             while (elBool == false)
             {
-
                 Console.WriteLine("Ingrese su carrera: ");
                 carreraAlumno = (Console.ReadLine()); elBool = Uandes.VerificarCarrera(Uandes, carreraAlumno);
             }
@@ -70,10 +50,10 @@ namespace Proyecto
                     /////
                 }
                 else { goto FINAL; }
-                
+
             }
             personas.Clear();
-            foreach (Alumno alumno in carrera.alumnos) {if (alumno.rut == rut) { personas.Add(alumno);  } }
+            //foreach (Alumno alumno in carrera.alumnos) {if (alumno.rut == rut) { personas.Add(alumno);  } }
             foreach (Curso curso in carrera.cursos)
             {
                 foreach (Seccion seccion in curso.secciones)
@@ -84,7 +64,7 @@ namespace Proyecto
 
 
 
-            persona = carrera.alumnos.First(per => per.rut == rut);
+            //persona = carrera.alumnos.First(per => per.rut == rut);
 
             Persona persona = personas[0];
             if (persona.tipo == "alumno")
@@ -126,7 +106,7 @@ namespace Proyecto
                     {
                         goto INICIOSESION;
                     }
-                        if (opcion == 1)
+                    if (opcion == 1)
                     {
                         MENUTOMADERAMOS:
                         foreach (Curso curso in carrera.cursos) { Console.WriteLine(curso.nombre); }
@@ -163,11 +143,11 @@ namespace Proyecto
                                         Console.WriteLine("Ingrese la seccion que desea ");
                                         int seccionTomar = int.Parse(Console.ReadLine());
                                         if (seccionTomar == 0) { goto FINAL; }
-                                        
+
                                         try
                                         {
                                             foreach (Seccion s in c.secciones)
-                                            {   
+                                            {
                                                 if (seccionTomar == s.numero)
                                                 {
                                                     if (s.RevisarSiTopa(alumno))
@@ -189,7 +169,7 @@ namespace Proyecto
                                                             goto SECCIONES;
                                                         }
                                                     }
-                                                }                                                
+                                                }
                                             }
                                         }
                                         catch
@@ -222,7 +202,7 @@ namespace Proyecto
                             {
                                 foreach (Seccion sexion in alumno.secciones)
                                 {
-                                    if ( seccion == sexion)
+                                    if (seccion == sexion)
                                     {
                                         cc.Add(curso);
                                         ids.Add(seccion);
@@ -233,11 +213,11 @@ namespace Proyecto
                         Console.WriteLine("Los cursos que estas cursando son los siguientes: ");
                         foreach (Curso s in cc)
                         {
-                            Console.WriteLine("Nombre: {0}    /     NRC: {1}",s.nombre,s.nrc);
+                            Console.WriteLine("Nombre: {0}    /     NRC: {1}", s.nombre, s.nrc);
                         }
                         Console.ReadKey();
                         Console.WriteLine("Escribe el NRC del curso que deseas eliminar. ");
-                        string nrcBotar = Console.ReadLine();                    
+                        string nrcBotar = Console.ReadLine();
                         if (nrcBotar == "0") { goto FINAL; }
                         try
                         {
@@ -248,7 +228,7 @@ namespace Proyecto
                             Console.WriteLine("Curso eliminado con exito :) ");
                             //Console.BackgroundColor = ConsoleColor.Gray;
                             Console.WriteLine("Deseas eliminar otro curso?");
-                            string q = Console.ReadLine(); 
+                            string q = Console.ReadLine();
                             if (q == "si")
                             {
                                 goto MENUBOTARRAMOS;
@@ -257,7 +237,7 @@ namespace Proyecto
                             {
                                 goto MENU;
                             }
-                            
+
                         }
                         catch
                         {
@@ -271,7 +251,7 @@ namespace Proyecto
                     if (opcion == 3)
                     {
                         carrera.MostrarCursosAlumno(alumno);
-                                               
+
                     }
 
                 }
@@ -319,7 +299,7 @@ namespace Proyecto
                                     Console.WriteLine("El curso donde hace clases es " + curso.nombre + "\nEn la seccion "); Console.Write(seccion.numero);
                                     Console.WriteLine("Desea ver los alumnos de esta seccion?");
                                     string R = Console.ReadLine();
-                                    if (R == "si") { seccion.MostrarAlumnos();Console.ReadKey(); }
+                                    if (R == "si") { seccion.MostrarAlumnos(); Console.ReadKey(); }
                                 }
                                 else { Console.WriteLine("Usted no posee secciones"); }
 
@@ -377,11 +357,11 @@ namespace Proyecto
                     Console.WriteLine("Ingrese el apellido:");
                     string apellidoN = Console.ReadLine();
                     Console.WriteLine("Ingrese el anio en que ingreso");
-                    int anoN = Convert.ToInt32(Console.ReadLine());
+                    DateTime anoN = Convert.ToDateTime(Console.ReadLine());
                     Console.WriteLine("Ingrese una clave");
                     string claveN = Console.ReadLine();
                     try { Alumno alumnoNuevo = new Alumno(rutN, nombreN, apellidoN, anoN, claveN); Console.WriteLine("Persona creada con exito"); }
-                    catch { Console.ForegroundColor=ConsoleColor.Red; Console.WriteLine("Error al crear el alumno"); Console.ResetColor();goto MENUADMIN; }
+                    catch { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Error al crear el alumno"); Console.ResetColor(); goto MENUADMIN; }
                 }
                 else if (opcion == 2)
                 {

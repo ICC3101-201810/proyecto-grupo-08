@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Carrera.cs" />
+    <Compile Include="Clases\Curso.cs" />
+    <Compile Include="Clases\Horario.cs" />
+    <Compile Include="Clases\Malla.cs" />
+    <Compile Include="Clases\NotaAlumno.cs" />
+    <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\Personas\Administrativo.cs" />
+    <Compile Include="Clases\Personas\Alumno.cs" />
+    <Compile Include="Clases\Personas\Profesor.cs" />
+    <Compile Include="Clases\Seccion.cs" />
+    <Compile Include="Clases\Semestre.cs" />
+    <Compile Include="Clases\Universidad.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +77,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Clases\App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,5 +91,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

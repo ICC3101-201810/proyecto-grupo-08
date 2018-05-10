@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyecto
+namespace WindowsFormsApp1
 {
     [Serializable]
     public class Universidad
     {
-        public event MostrarRamoDelegate
-
+        public event MostrarRamoDelegate MostrarEnInicio;
+        //MostrarEnInicio(cursos);
         public string nombre;
         public List<Carrera> carreras;
         public Universidad(string nombre)
@@ -32,6 +32,8 @@ namespace Proyecto
             return false;
         }
 
+
+
         public List<string> MostrarCarreras()
         {
        
@@ -39,6 +41,7 @@ namespace Proyecto
             foreach (Carrera carrera in carreras)
             {
                 listaCarreras.Add(carrera.nombre);
+                
             }
             return listaCarreras;
         }

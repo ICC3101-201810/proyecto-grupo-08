@@ -32,8 +32,8 @@
             this.botonCarrera = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbRut = new System.Windows.Forms.TextBox();
+            this.tbClave = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -44,6 +44,7 @@
             this.cbCarreras.Name = "cbCarreras";
             this.cbCarreras.Size = new System.Drawing.Size(381, 32);
             this.cbCarreras.TabIndex = 0;
+            this.cbCarreras.SelectedIndexChanged += new System.EventHandler(this.cbCarreras_SelectedIndexChanged);
             // 
             // botonCarrera
             // 
@@ -73,19 +74,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Ingrese su clave";
             // 
-            // textBox1
+            // tbRut
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 205);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(381, 29);
-            this.textBox1.TabIndex = 4;
+            this.tbRut.Location = new System.Drawing.Point(86, 205);
+            this.tbRut.Name = "tbRut";
+            this.tbRut.Size = new System.Drawing.Size(381, 29);
+            this.tbRut.TabIndex = 4;
             // 
-            // textBox2
+            // tbClave
             // 
-            this.textBox2.Location = new System.Drawing.Point(86, 305);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(381, 29);
-            this.textBox2.TabIndex = 5;
+            this.tbClave.Location = new System.Drawing.Point(86, 305);
+            this.tbClave.Name = "tbClave";
+            this.tbClave.Size = new System.Drawing.Size(381, 29);
+            this.tbClave.TabIndex = 5;
             // 
             // label3
             // 
@@ -102,8 +103,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 457);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbClave);
+            this.Controls.Add(this.tbRut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botonCarrera);
@@ -121,8 +122,8 @@
         private System.Windows.Forms.Button botonCarrera;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbRut;
+        private System.Windows.Forms.TextBox tbClave;
         private System.Windows.Forms.Label label3;
     }
 }
