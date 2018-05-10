@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             // cbCarreras  tbRut  tbClave botonCarrera
 
+            
             BinaryFormatter formateador = new BinaryFormatter();
             Stream miStream = new FileStream("Universidades.un", FileMode.Open, FileAccess.Read, FileShare.None);
             Uandes = (Universidad)formateador.Deserialize(miStream);
@@ -53,8 +54,9 @@ namespace WindowsFormsApp1
                 else if (carrera.VerificarProfe(int.Parse(tbRut.Text), tbClave.Text))
                 {
                     FProfesor form3 = new FProfesor();
-                    this.Hide();
-                    //form3.carrera = carrera;
+                    //this.Hide();
+                    form3.p = loggeado;
+                    form3.carrera = carrera;
                     tbClave.Text = "";
                     tbRut.Text = "";
                     form3.Show();

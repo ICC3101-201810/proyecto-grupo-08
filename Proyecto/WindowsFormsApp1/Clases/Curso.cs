@@ -10,16 +10,16 @@ namespace WindowsFormsApp1
     [Serializable]
     public class Curso
     {
-        public string nrc;
+        //public string nrc;
         public string nombre;
         public int creditos;
         public List<Curso> requisitos;//esto
         public List<Seccion> secciones;//esto
        
 
-        public Curso(string nrc, string nombre, int credito)
+        public Curso(string nombre, int credito)
         {
-            this.nrc = nrc;
+            //this.nrc = nrc;
             this.nombre = nombre;
             this.creditos = credito;
             secciones = new List<Seccion>();
@@ -48,24 +48,28 @@ namespace WindowsFormsApp1
         {
             secciones.Add(seccion);
         }
-        public void MostrarSecciones()
-        {
-            string a="";
-            foreach (Seccion s in secciones)
-            {
-                List<Horario> horarioSemana = s.horario.Where(x => x.inicio > DateTime.Today && x.inicio < DateTime.Now.AddDays(7)).ToList();
-                a = a + "seccion " + s.numero+ "\n----------------\n";
-                foreach (Horario horario in horarioSemana)
-                {
-                    a= a+horario.inicio+"\n";
-                    //Console.WriteLine(horario.inicio);
-                }
-                a += "\n----------------\n";
-                MessageBox.Show(a);
-            }
-        }
+        //public bool Pertenece(Persona p)
+        //{
 
-              
+        //}
+        //public void MostrarSecciones()
+        //{
+        //    string a="";
+        //    foreach (Seccion s in secciones)
+        //    {
+        //        List<Horario> horarioSemana = s.horario.Where(x => x.inicio > DateTime.Today && x.inicio < DateTime.Now.AddDays(7)).ToList();
+        //        a = a + "seccion " + s.numero+ "\n----------------\n";
+        //        foreach (Horario horario in horarioSemana)
+        //        {
+        //            a= a+horario.inicio+"\n";
+        //            //Console.WriteLine(horario.inicio);
+        //        }
+        //        a += "\n----------------\n";
+        //        MessageBox.Show(a);
+        //    }
+        //}
+
+
 
         /*public void MostrarSiEsta(Persona alumno)
         {
@@ -82,9 +86,26 @@ namespace WindowsFormsApp1
                 }
             }
             MessageBox.Show(a);*/
+
+        public int mostrarNrc(Persona persona)
+        {
+            foreach (Seccion s in secciones)
+            {
+                if(s.profesor == persona)
+                {
+                    return s.nrc;
+                }
+                foreach(Persona alumno in s.alumnos)
+                {
+                    if (alumno == persona)
+                    {
+                        return s.nrc;
+                    }
+                }
+            }
+            return 0;
+        }
                 
-            
-        
 
 
 

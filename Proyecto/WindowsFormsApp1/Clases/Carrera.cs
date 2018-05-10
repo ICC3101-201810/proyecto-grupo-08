@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
                 {
                     if (seccion.profesor == profe)
                     {
-                        a = a + curso.nombre + " NRC " + curso.nrc + " seccion " + seccion.numero + "\n";
+                        a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
                     }
                 }
             }
@@ -85,8 +85,8 @@ namespace WindowsFormsApp1
                     {
                         if (alum == alumno)
                         {
-                            
-                            a = a + curso.nombre + " NRC " + curso.nrc + " seccion " + seccion.numero + "\n";
+
+                            a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
 
                         }
                     }
@@ -121,6 +121,17 @@ namespace WindowsFormsApp1
             {
                 foreach (Seccion s in c.secciones)
                 {
+                    if (s.profesor == p) //mismo metodo aplica en profes
+                    {
+                        if (lista.Contains(c))
+                        {
+
+                        }
+                        else
+                        {
+                            lista.Add(c);
+                        }
+                    }
                     foreach (Alumno a in s.alumnos)
                     {
                         if (a == p)
@@ -139,6 +150,16 @@ namespace WindowsFormsApp1
             }
 
             return lista;
+        }
+
+        public string devolverStrDelCurso (BindingList<Curso> listaDeCursos, Persona p)
+        {
+            string mensaje = "Tus Cursos son \n Nombre\t\tNrc\n";
+            foreach (Curso c in listaDeCursos)
+            {
+                mensaje = mensaje + "-  " + c.nombre + "\t" + c.mostrarNrc(p).ToString() + "\n";
+            }
+            return mensaje;
         }
 
     }

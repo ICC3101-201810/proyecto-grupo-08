@@ -38,13 +38,18 @@ namespace WindowsFormsApp1
             BindingList<Curso> cursos = new BindingList<Curso>();
 
             cursos = (carrera.VerCursos(p));
-        
-            string mensaje = "Tus Cursos son \n Nombre\t\tNrc\n";
-            foreach (Curso c in cursos)
-            {
-                mensaje = mensaje + "-  " + c.nombre + "\t" + c.nrc.ToString() + "\t";
-            }
-            MessageBox.Show(mensaje);
+            
+            //string mensaje = "Tus Cursos son \n Nombre\t\tNrc\n";
+            //foreach (Curso c in cursos)
+            //{
+            //    foreach (Seccion s in c.secciones)
+            //    {
+
+            //    }
+                
+            //    mensaje = mensaje + "-  " + c.nombre + "\t"   + "\t";
+            //}
+            MessageBox.Show(carrera.devolverStrDelCurso(cursos,p));
             
         }
 
@@ -53,21 +58,12 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void lbNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbApellido_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FAlumno_Load(object sender, EventArgs e)
         {
             this.Text = carrera.nombre;
-            lbNombre.Text = p.nombre;
-            lbApellido.Text = p.apellido;
+            lbBienvenidaAlumno.Text = "Bienvenido " +p.nombre+" "+p.apellido;
+            //lbNombre.Text = p.nombre;
+            //lbApellido.Text = p.apellido;
         }
     }
 }

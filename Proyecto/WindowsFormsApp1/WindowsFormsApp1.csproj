@@ -98,6 +98,9 @@
     <EmbeddedResource Include="FAlumno.resx">
       <DependentUpon>FAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FProfesor.resx">
+      <DependentUpon>FProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
