@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
 
         public void BorrarAlumno( string alumRut)
         {
-            INICIO:
+            //INICIO:
             foreach (Carrera carrera in carreras)
             {
                 foreach (Curso curso in carrera.cursos)
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
                         }
                         catch
                         {
-                            goto INICIO;
+                            //goto INICIO;
                         }
                     }
                 }

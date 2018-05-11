@@ -58,6 +58,8 @@ namespace WindowsFormsApp1
         }
 
 
+
+
         //public void MostrarCursosProfe(Persona profe)
         //{
         //    string a = "Tus Cursos son:\n";
@@ -238,6 +240,28 @@ namespace WindowsFormsApp1
                 }
             }
             return false;
+        }
+
+        public List<Profesor> RetornarProfesoresCarreras() ////
+        {
+            List<Profesor> profes = new List<Profesor>();
+            foreach (Curso curso in cursos)
+            {
+                foreach (Seccion seccion in curso.secciones)
+                {
+
+                    if (profes.Contains(seccion.profesor))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        profes.Add(seccion.profesor);
+                    }
+                }
+
+            }
+            return profes;
         }
         //public List<Seccion> VerSecciones(Persona p)
         //{
