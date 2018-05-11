@@ -239,6 +239,36 @@ namespace WindowsFormsApp1
             }
             return false;
         }
+        //public List<Seccion> VerSecciones(Persona p)
+        //{
+        //    List<Seccion> lista = new List<Seccion>();
+        //    foreach (Curso c in cursos)
+        //    {
+        //        foreach (Seccion s in c.secciones)
+        //        {
+        //            if (s.profesor == p)
+        //            {
+        //                lista.Add(s);
+        //            }
+        //        }
+        //    }
+        //    return lista;
+        //}
+
+        //public Curso VerCurso(Seccion seccion)
+        //{
+        //    foreach (Curso c in cursos)
+        //    {
+        //        foreach (Seccion s in c.secciones)
+        //        {
+        //            if (s == seccion)
+        //            {
+        //                return c;
+        //            }
+        //        }
+        //    }
+        //    return null;
+        //}
     }
 }
 

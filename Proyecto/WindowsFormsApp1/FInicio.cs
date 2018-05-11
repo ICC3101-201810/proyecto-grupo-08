@@ -24,12 +24,12 @@ namespace WindowsFormsApp1
         List<Curso> cursos = new List<Curso>();
         BindingList<string> CursosString = new BindingList<string>();
         BindingList<string> CursosStringProfesor = new BindingList<string>();
+        List<string> todosLosCursos = new List<string>();
         public FInicio()
         {
 
             InitializeComponent();
             // cbCarreras  tbRut  tbClave botonCarrera
-
 
 
 
@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
             Uandes.MostrarCarreras();
             miStream.Close();
             this.cbCarreras.DataSource = Uandes.MostrarCarreras();
+            cbAdministradorAlumnoNuevoCarreras.DataSource = Uandes.MostrarCarreras();
 
         }
 
@@ -79,11 +80,15 @@ namespace WindowsFormsApp1
                 else if (carrera.VerificarAdmin(int.Parse(tbRut.Text), tbClave.Text))
                 {
                     FAdmin form4 = new FAdmin();
-                    this.Hide();
+                    //this.Hide();
                     //form4.carrera = carrera;
+                    lbBienvenidoAdministrador.Text = "Bienvenido \n" + loggeado.nombre + " " + loggeado.apellido;
                     tbClave.Text = "";
                     tbRut.Text = "";
-                    form4.Show();
+                    PanelInicio.Hide();
+                    tbAdministradorCrearAlumnoEstado.Text = "";
+                    panelAdministrador.Show();
+                    //form4.Show();
                 }
                 else
                 {
@@ -177,7 +182,7 @@ namespace WindowsFormsApp1
         {
             panelAlumno.Hide();
             panelTomaRamoAlumno.Show();
-            List<string> todosLosCursos = new List<string>();
+            todosLosCursos.Clear();
             foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
             cbAgregarRamoAlumno.DataSource = todosLosCursos;
 
@@ -232,7 +237,8 @@ namespace WindowsFormsApp1
             CursosString.Clear();
             foreach (Curso curso in cursos)
             {
-               CursosString.Add(curso.nombre);
+                CursosString.Add(curso.nombre);
+
             }
             cbBotarRamo.DataSource = CursosString;
 
@@ -253,7 +259,7 @@ namespace WindowsFormsApp1
             Stream miStream = new FileStream("Universidades.un", FileMode.Create, FileAccess.Write);
             formateador.Serialize(miStream, Uandes);
             miStream.Close();
-            MessageBox.Show("Los datos han sido guardados con exito.\n Gracias por preferirnos");
+            MessageBox.Show("Todos los datos modificados han sido guardados con exito.\n Gracias por preferirnos");
         }
 
         private void btnSalirProfesor_Click(object sender, EventArgs e)
@@ -265,12 +271,15 @@ namespace WindowsFormsApp1
         private void btnCursosProfesor_Click(object sender, EventArgs e)
         {
             cursos = (carrera.VerCursos(loggeado));
+            CursosStringProfesor.Clear();
             foreach (Curso curso in cursos)
-            {
+            {     
                 CursosStringProfesor.Add(curso.nombre);
+                          
             }
-            cbBotarRamo.DataSource = CursosString;
+
             cbCursosProfesor.DataSource = CursosStringProfesor;
+            
             panelProfesor.Hide();
             panelCursosProfesor.Show();
         }
@@ -286,11 +295,63 @@ namespace WindowsFormsApp1
             MessageBox.Show(carrera.RetornarCurso(cbCursosProfesor.Text).MostarALumnosCurso(loggeado));
 
         }
+
+        private void btnAdministradorCerrar_Click(object sender, EventArgs e)
+        {
+            panelAdministrador.Hide();
+            PanelInicio.Show();
+        }
+
+        private void btnAdministradorAgregarAlumno_Click(object sender, EventArgs e)
+        {
+            panelAdministrador.Hide();
+            panelAdministradorCrearAlumno.Show();
+            todosLosCursos.Clear();
+            foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+            cbAdministradorAlumnoNuevoRamo.DataSource = todosLosCursos;
+        }
+
+        private void btnAdministradorAgregarAlumnoNuevo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Alumno alumnoNuevo = new Alumno(int.Parse(tbAdministradoAgregarRut.Text), tbAdministradorAgregarNombre.Text, tbAdministradorAgregarApellido.Text, DateTime.Today, tbAdministradorAgregarClave.Text);
+                tbAdministradorCrearAlumnoEstado.Text = tbAdministradorAgregarNombre.Text + " fue Creado con exito"; tbAdministradorAgregarNombre.Text = ""; tbAdministradoAgregarRut.Text = ""; tbAdministradorAgregarApellido.Text = ""; tbAdministradorAgregarClave.Text = "";
+            }
+            catch { tbAdministradorCrearAlumnoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
+        }
+
+        private void btnAdministradorCrearAlumnoVolver_Click(object sender, EventArgs e)
+        {
+            panelAdministradorCrearAlumno.Hide();
+            panelAdministrador.Show();
+        }
+
+        private void btnHorarioProfesor_Click(object sender, EventArgs e)
+        {
+            
+            cursos = (carrera.VerCursos(loggeado));
+            CursosStringProfesor.Clear();//
+            foreach (Curso curso in cursos)
+            {  
+                CursosStringProfesor.Add(curso.nombre);
+            }
+            cbVerHorarioProfe.DataSource = CursosStringProfesor;
+            panelProfesor.Hide();
+            panelVerHorarioProfe.Show();
+        }
+
+        private void btnVolverVerHorario_Click(object sender, EventArgs e)
+        {
+            panelVerHorarioProfe.Hide();
+            panelProfesor.Show();
+        }
+
+        private void btnVerHorarioProfe_Click(object sender, EventArgs e)
+        {
+            carrera = Uandes.DevolverCarrera(cbCarreras.Text);
+            MessageBox.Show(carrera.RetornarCurso(cbVerHorarioProfe.Text).VerHorarioCurso(loggeado));
+        }  
+        
     }
 }
-
-//
-//cursos = carrera.VerCursos(loggead);
-//cbRamosProfe.DataSource = cursos;
-
-// 

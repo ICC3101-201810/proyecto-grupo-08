@@ -93,6 +93,23 @@ namespace WindowsFormsApp1
             return str;
         }
 
-        
+        public string VerHorarioCurso(Persona profe)
+        {
+            string str = "El horario de " + nombre + " es\n";
+            foreach (Seccion seccion in secciones)
+            {
+                if (seccion.profesor == profe)
+                {
+                    foreach (Horario horario in seccion.horario)
+                    {
+                        str = str + horario.inicio.DayOfWeek.ToString()+"\t "+horario.inicio.TimeOfDay.ToString()+ "\n";
+                    }
+
+                }
+            }
+            return str;
+
+        }
+
     }
 }

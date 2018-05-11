@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
     [Serializable]
     public class Universidad
     {
-       // public event MostrarRamoDelegate MostrarEnInicio;
+        // public event MostrarRamoDelegate MostrarEnInicio;
         //MostrarEnInicio(cursos);
         public string nombre;
         public List<Carrera> carreras;
@@ -25,24 +25,24 @@ namespace WindowsFormsApp1
 
         public List<string> MostrarCarreras()
         {
-       
+
             List<string> listaCarreras = new List<string>();
             foreach (Carrera carrera in carreras)
             {
                 listaCarreras.Add(carrera.nombre);
-                
+
             }
             return listaCarreras;
         }
 
         public Carrera DevolverCarrera(string nomb)
         {
-            foreach(Carrera c in carreras)
+            foreach (Carrera c in carreras)
             {
                 if (c.nombre == nomb)
                 {
                     return c;
-                } 
+                }
             }
             return null;
         }
@@ -79,6 +79,34 @@ namespace WindowsFormsApp1
                 return null;
             }
             catch { return null; }
+        }
+
+        public void BorrarAlumno(Persona alum)
+        {
+            INICIO:
+            foreach (Carrera carrera in carreras)
+            {
+                foreach (Curso curso in carrera.cursos)
+                {
+                    foreach (Seccion seccion in curso.secciones)
+                    {
+                        try
+                        {
+                            foreach (Persona alumno in seccion.alumnos)
+                            {
+                                if (alum == alumno)
+                                {
+                                    seccion.alumnos.Remove(alumno);
+                                }
+                            }
+                        }
+                        catch
+                        {
+                            goto INICIO;
+                        }
+                    }
+                }
+            }
         }
     }
 
