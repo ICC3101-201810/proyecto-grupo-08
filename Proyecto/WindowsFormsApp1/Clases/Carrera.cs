@@ -58,44 +58,44 @@ namespace WindowsFormsApp1
         }
 
 
-        public void MostrarCursosProfe(Persona profe)
-        {
-            string a = "Tus Cursos son:\n";
-            foreach (Curso curso in cursos)
-            {
-                foreach (Seccion seccion in curso.secciones)
-                {
-                    if (seccion.profesor == profe)
-                    {
-                        a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
-                    }
-                }
-            }
-            MessageBox.Show(a);
-        }
+        //public void MostrarCursosProfe(Persona profe)
+        //{
+        //    string a = "Tus Cursos son:\n";
+        //    foreach (Curso curso in cursos)
+        //    {
+        //        foreach (Seccion seccion in curso.secciones)
+        //        {
+        //            if (seccion.profesor == profe)
+        //            {
+        //                a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
+        //            }
+        //        }
+        //    }
+        //    MessageBox.Show(a);
+        //}
 
-        public void MostrarCursosAlumno(Persona alumno)
-        {
-            string a = "Tus Cursos son:\n";
-            foreach (Curso curso in cursos)
-            {
-                foreach (Seccion seccion in curso.secciones)
-                {
-                    foreach (Persona alum in seccion.alumnos)
-                    {
-                        if (alum == alumno)
-                        {
+        //public void MostrarCursosAlumno(Persona alumno)
+        //{
+        //    string a = "Tus Cursos son:\n";
+        //    foreach (Curso curso in cursos)
+        //    {
+        //        foreach (Seccion seccion in curso.secciones)
+        //        {
+        //            foreach (Persona alum in seccion.alumnos)
+        //            {
+        //                if (alum == alumno)
+        //                {
 
-                            a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
+        //                    a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
 
-                        }
-                    }
+        //                }
+        //            }
 
-                }
-            }
-            MessageBox.Show(a);
+        //        }
+        //    }
+        //    MessageBox.Show(a);
 
-        }
+        //}
 
         public bool VerificarProfe(int rut, string clave)
         {

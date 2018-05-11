@@ -24,15 +24,15 @@ namespace WindowsFormsApp1
             aprobados = new List<Curso>();
         }
 
-        public bool Login(Persona persona)
-        {
-            Console.WriteLine("Ingrese su rut: ");
-            int rut = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ingrese su contraseña: ");
-            string clave = Console.ReadLine();
-            if (persona.rut == rut && persona.clave == clave) { return true; }
-            else { return false; }
-        }
+        //public bool Login(Persona persona)
+        //{
+        //    Console.WriteLine("Ingrese su rut: ");
+        //    int rut = Convert.ToInt32(Console.ReadLine());
+        //    Console.WriteLine("Ingrese su contraseña: ");
+        //    string clave = Console.ReadLine();
+        //    if (persona.rut == rut && persona.clave == clave) { return true; }
+        //    else { return false; }
+        //}
 
         public bool TopeHorario(Carrera c, Seccion s)
         {

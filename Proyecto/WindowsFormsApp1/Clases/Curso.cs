@@ -29,18 +29,18 @@ namespace WindowsFormsApp1
 
 
 
-        public void AgregarRequisito(Curso requisito)//
-        {
-            requisitos.Add(requisito);
-        }
-        public void QuitarRequisito(Curso requisito)//
-        {
-            requisitos.Remove(requisito);
-        }
-        public void CrearSeccion(Seccion seccion)//esto
-        {
-            secciones.Add(seccion);
-        }
+        //public void AgregarRequisito(Curso requisito)//
+        //{
+        //    requisitos.Add(requisito);
+        //}
+        //public void QuitarRequisito(Curso requisito)//
+        //{
+        //    requisitos.Remove(requisito);
+        //}
+        //public void CrearSeccion(Seccion seccion)//esto
+        //{
+        //    secciones.Add(seccion);
+        //}
 
         public int mostrarNrc(Persona persona)
         {

@@ -22,17 +22,17 @@ namespace WindowsFormsApp1
         public Universidad Uandes;
         public Carrera carrera;
         List<Curso> cursos = new List<Curso>();
+        List<Persona> alumnosU = new List<Persona>();
+ 
         BindingList<string> CursosString = new BindingList<string>();
         BindingList<string> CursosStringProfesor = new BindingList<string>();
+        BindingList<string> AlumnosString = new BindingList<string>();
         List<string> todosLosCursos = new List<string>();
         public FInicio()
         {
 
             InitializeComponent();
             // cbCarreras  tbRut  tbClave botonCarrera
-
-
-
 
             BinaryFormatter formateador = new BinaryFormatter();
             Stream miStream = new FileStream("Universidades.un", FileMode.Open, FileAccess.Read, FileShare.None);
@@ -351,7 +351,73 @@ namespace WindowsFormsApp1
         {
             carrera = Uandes.DevolverCarrera(cbCarreras.Text);
             MessageBox.Show(carrera.RetornarCurso(cbVerHorarioProfe.Text).VerHorarioCurso(loggeado));
-        }  
+        }
+
+        private void btnBorrarAlumno_Click(object sender, EventArgs e)
+        {
+            alumnosU.Clear();
+            alumnosU = Uandes.DevolverTodosAlumnos();
+            AlumnosString.Clear();
+            foreach (Persona alumno in alumnosU)
+            {
+                AlumnosString.Add(alumno.nombre+"   "+alumno.rut.ToString());
+            }
+            cbBorrarAlumno.DataSource = AlumnosString;
+            panelAdministrador.Hide();
+            panelBorrarAlumno.Show();
+        }
+
+        private void btnVolverBorrarAlumno_Click(object sender, EventArgs e)
+        {
+           
+            panelBorrarAlumno.Hide();
+            panelAdministrador.Show();
+
+        }
+
+        private void btnBorrarAlumnoMetodo_Click(object sender, EventArgs e)//bpanel borrar alumno
+        {
+            alumnosU.Clear();
+            alumnosU = Uandes.DevolverTodosAlumnos();
+            AlumnosString.Clear();
+            foreach (Persona alumno in alumnosU)
+            {
+                AlumnosString.Add(alumno.nombre + '-' + alumno.rut.ToString());
+            }
+            cbBorrarAlumno.DataSource = AlumnosString;
+            string[] asd = cbBorrarAlumno.Text.Split('-');
+            Uandes.BorrarAlumno(asd[1]);
+
+            
+        }
+
         
     }
 }
+
+/*
+
+
+    HACER QUE EL ADMIN PUEDA AGREGAR UN CURSO SOLO CREDITOS Y NOMBRE
+    Y OTRA WEA PARA LA SECCION CON TODAS SUS COSAS
+
+    try{
+    tambien try para la seccion
+            Curso cursoNuevo = new Curso(tbAdministradorAgregarRamoNombre.Text, int.Parse(tbAdministradorAgregarRamoCreditos.Text))
+            tbAdministradorAgregarRamoEstado.Text = tbAdministradorAgregarCursoNombre.Text + " fue Creado con exito"; 
+            tbAdministradorAgregarRamoNrc.Text="";
+            tbAdministradorAgregarRamoNombre.Text="";
+            tbAdministradorAgregarRamoProfesorNombre.Text="";
+            tbAdministradorAgregarRamoProfesorApellido.Text="";
+            tbAdministradorAgregarRamoCreditos.Text="";
+    }
+                catch { tbAdministradorAgregarRamoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
+
+tbAdministradorAgregarRamoNrc
+tbAdministradorAgregarRamoNombre
+tbAdministradorAgregarRamoProfesorNombre
+tbAdministradorAgregarRamoProfesorApellido
+tbAdministradorAgregarRamoCreditos
+
+
+*/

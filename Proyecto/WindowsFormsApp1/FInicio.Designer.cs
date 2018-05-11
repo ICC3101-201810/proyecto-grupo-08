@@ -71,7 +71,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panelAdministrador = new System.Windows.Forms.Panel();
             this.lbBienvenidoAdministrador = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBorrarAlumno = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdministradorAgregarAlumno = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -99,6 +99,10 @@
             this.btnVolverVerHorario = new System.Windows.Forms.Button();
             this.btnVerHorarioProfe = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.panelBorrarAlumno = new System.Windows.Forms.Panel();
+            this.cbBorrarAlumno = new System.Windows.Forms.ComboBox();
+            this.btnVolverBorrarAlumno = new System.Windows.Forms.Button();
+            this.btnBorrarAlumnoMetodo = new System.Windows.Forms.Button();
             this.PanelInicio.SuspendLayout();
             this.panelAlumno.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -110,6 +114,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panelAdministradorCrearAlumno.SuspendLayout();
             this.panelVerHorarioProfe.SuspendLayout();
+            this.panelBorrarAlumno.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbCarreras
@@ -185,9 +190,9 @@
             this.PanelInicio.Controls.Add(this.tbRut);
             this.PanelInicio.Controls.Add(this.label1);
             this.PanelInicio.Controls.Add(this.label2);
-            this.PanelInicio.Location = new System.Drawing.Point(176, 55);
+            this.PanelInicio.Location = new System.Drawing.Point(0, 2);
             this.PanelInicio.Name = "PanelInicio";
-            this.PanelInicio.Size = new System.Drawing.Size(445, 431);
+            this.PanelInicio.Size = new System.Drawing.Size(466, 436);
             this.PanelInicio.TabIndex = 7;
             // 
             // btnSalir
@@ -425,7 +430,7 @@
             this.panelProfesor.Controls.Add(this.lbBienvenidoProfesor);
             this.panelProfesor.Controls.Add(this.btnHorarioProfesor);
             this.panelProfesor.Controls.Add(this.btnSalirProfesor);
-            this.panelProfesor.Location = new System.Drawing.Point(79, 523);
+            this.panelProfesor.Location = new System.Drawing.Point(0, 751);
             this.panelProfesor.Name = "panelProfesor";
             this.panelProfesor.Size = new System.Drawing.Size(709, 517);
             this.panelProfesor.TabIndex = 10;
@@ -538,7 +543,7 @@
             // 
             this.panelAdministrador.Controls.Add(this.tableLayoutPanel2);
             this.panelAdministrador.Controls.Add(this.lbBienvenidoAdministrador);
-            this.panelAdministrador.Location = new System.Drawing.Point(644, 81);
+            this.panelAdministrador.Location = new System.Drawing.Point(472, 18);
             this.panelAdministrador.Name = "panelAdministrador";
             this.panelAdministrador.Size = new System.Drawing.Size(703, 514);
             this.panelAdministrador.TabIndex = 11;
@@ -553,14 +558,15 @@
             this.lbBienvenidoAdministrador.TabIndex = 0;
             this.lbBienvenidoAdministrador.Text = "label8";
             // 
-            // button1
+            // btnBorrarAlumno
             // 
-            this.button1.Location = new System.Drawing.Point(3, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 78);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBorrarAlumno.Location = new System.Drawing.Point(3, 87);
+            this.btnBorrarAlumno.Name = "btnBorrarAlumno";
+            this.btnBorrarAlumno.Size = new System.Drawing.Size(142, 78);
+            this.btnBorrarAlumno.TabIndex = 1;
+            this.btnBorrarAlumno.Text = "Borrar Alumno";
+            this.btnBorrarAlumno.UseVisualStyleBackColor = true;
+            this.btnBorrarAlumno.Click += new System.EventHandler(this.btnBorrarAlumno_Click);
             // 
             // button2
             // 
@@ -618,7 +624,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarAlumno, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorCerrar, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnBorrarAlumno, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.button4, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button5, 1, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(182, 302);
@@ -646,7 +652,7 @@
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradoAgregarRut);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarNombre);
             this.panelAdministradorCrearAlumno.Controls.Add(this.cbAdministradorAlumnoNuevoCarreras);
-            this.panelAdministradorCrearAlumno.Location = new System.Drawing.Point(1646, 861);
+            this.panelAdministradorCrearAlumno.Location = new System.Drawing.Point(1662, 872);
             this.panelAdministradorCrearAlumno.Name = "panelAdministradorCrearAlumno";
             this.panelAdministradorCrearAlumno.Size = new System.Drawing.Size(703, 618);
             this.panelAdministradorCrearAlumno.TabIndex = 8;
@@ -831,11 +837,51 @@
             this.label14.TabIndex = 3;
             this.label14.Text = "Seleccione un Curso";
             // 
+            // panelBorrarAlumno
+            // 
+            this.panelBorrarAlumno.Controls.Add(this.btnBorrarAlumnoMetodo);
+            this.panelBorrarAlumno.Controls.Add(this.btnVolverBorrarAlumno);
+            this.panelBorrarAlumno.Controls.Add(this.cbBorrarAlumno);
+            this.panelBorrarAlumno.Location = new System.Drawing.Point(130, 526);
+            this.panelBorrarAlumno.Name = "panelBorrarAlumno";
+            this.panelBorrarAlumno.Size = new System.Drawing.Size(591, 471);
+            this.panelBorrarAlumno.TabIndex = 13;
+            this.panelBorrarAlumno.Visible = false;
+            // 
+            // cbBorrarAlumno
+            // 
+            this.cbBorrarAlumno.FormattingEnabled = true;
+            this.cbBorrarAlumno.Location = new System.Drawing.Point(109, 77);
+            this.cbBorrarAlumno.Name = "cbBorrarAlumno";
+            this.cbBorrarAlumno.Size = new System.Drawing.Size(359, 32);
+            this.cbBorrarAlumno.TabIndex = 0;
+            // 
+            // btnVolverBorrarAlumno
+            // 
+            this.btnVolverBorrarAlumno.Location = new System.Drawing.Point(326, 290);
+            this.btnVolverBorrarAlumno.Name = "btnVolverBorrarAlumno";
+            this.btnVolverBorrarAlumno.Size = new System.Drawing.Size(183, 88);
+            this.btnVolverBorrarAlumno.TabIndex = 1;
+            this.btnVolverBorrarAlumno.Text = "Volver";
+            this.btnVolverBorrarAlumno.UseVisualStyleBackColor = true;
+            this.btnVolverBorrarAlumno.Click += new System.EventHandler(this.btnVolverBorrarAlumno_Click);
+            // 
+            // btnBorrarAlumnoMetodo
+            // 
+            this.btnBorrarAlumnoMetodo.Location = new System.Drawing.Point(80, 290);
+            this.btnBorrarAlumnoMetodo.Name = "btnBorrarAlumnoMetodo";
+            this.btnBorrarAlumnoMetodo.Size = new System.Drawing.Size(180, 88);
+            this.btnBorrarAlumnoMetodo.TabIndex = 2;
+            this.btnBorrarAlumnoMetodo.Text = "Borrar Alumno";
+            this.btnBorrarAlumnoMetodo.UseVisualStyleBackColor = true;
+            this.btnBorrarAlumnoMetodo.Click += new System.EventHandler(this.btnBorrarAlumnoMetodo_Click);
+            // 
             // FInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2377, 1021);
+            this.Controls.Add(this.panelBorrarAlumno);
             this.Controls.Add(this.panelVerHorarioProfe);
             this.Controls.Add(this.panelBotarRamo);
             this.Controls.Add(this.panelAdministradorCrearAlumno);
@@ -869,6 +915,7 @@
             this.panelAdministradorCrearAlumno.PerformLayout();
             this.panelVerHorarioProfe.ResumeLayout(false);
             this.panelVerHorarioProfe.PerformLayout();
+            this.panelBorrarAlumno.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -922,7 +969,7 @@
         private System.Windows.Forms.Button btnAdministradorAgregarAlumno;
         private System.Windows.Forms.Button btnAdministradorCerrar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBorrarAlumno;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panelAdministradorCrearAlumno;
@@ -946,6 +993,10 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnVerHorarioProfe;
         private System.Windows.Forms.Button btnVolverVerHorario;
+        private System.Windows.Forms.Panel panelBorrarAlumno;
+        private System.Windows.Forms.Button btnBorrarAlumnoMetodo;
+        private System.Windows.Forms.Button btnVolverBorrarAlumno;
+        private System.Windows.Forms.ComboBox cbBorrarAlumno;
     }
 }
 

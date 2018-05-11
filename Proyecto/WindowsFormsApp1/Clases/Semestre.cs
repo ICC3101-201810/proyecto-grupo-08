@@ -17,9 +17,9 @@ namespace WindowsFormsApp1
             cursos = new List<Curso>();
         }
 
-        public void AddCurso(Curso curso)
-        {
-          cursos.Add(curso);
-        }
+        //public void AddCurso(Curso curso)
+        //{
+        //  cursos.Add(curso);
+        //}
     }
 }

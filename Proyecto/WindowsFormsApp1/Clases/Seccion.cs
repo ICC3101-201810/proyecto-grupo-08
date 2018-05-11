@@ -18,7 +18,6 @@ namespace WindowsFormsApp1
         public Seccion(int vacantes, int nrc, Profesor profesor)
         {
             this.vacantes = vacantes;
-            //this.numero = numero;
             this.nrc = nrc;
             this.profesor = profesor;
             alumnos = new List<Persona>();
@@ -26,36 +25,36 @@ namespace WindowsFormsApp1
 
         }
 
-        public void AgregarAlumno(Persona alumno)
-        {
-            alumnos.Add(alumno);
-        }
-        public void QuitarAlumnos(Persona alumno)//
-        {
-            alumnos.Remove(alumno);
-        }
-        public void MostrarAlumnos()
-        {
-            Console.WriteLine("Nombre\n");
-            foreach (Alumno alumno in alumnos)
-            {
-                Console.WriteLine(alumno.nombre);
+        //public void AgregarAlumno(Persona alumno)
+        //{
+        //    alumnos.Add(alumno);
+        //}
+        //public void QuitarAlumnos(Persona alumno)//
+        //{
+        //    alumnos.Remove(alumno);
+        //}
+        //public void MostrarAlumnos()
+        //{
+        //    Console.WriteLine("Nombre\n");
+        //    foreach (Alumno alumno in alumnos)
+        //    {
+        //        Console.WriteLine(alumno.nombre);
 
-            }
-        }
+        //    }
+        //}
 
-        public bool Esta(Persona alumno)
-        {
-            foreach (Alumno a in alumnos)
-            {
-                if (Equals(alumno, a))
-                {
-                    return true;
-                }
-            }
-            return false;
+        //public bool Esta(Persona alumno)
+        //{
+        //    foreach (Alumno a in alumnos)
+        //    {
+        //        if (Equals(alumno, a))
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
 
-        }
+        //}
 
         //public bool RevisarSiTopa(Persona alumno)
         //{
