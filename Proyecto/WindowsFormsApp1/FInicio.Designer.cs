@@ -94,14 +94,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnAdministradorAgregarAlumnoNuevo = new System.Windows.Forms.Button();
             this.cbAdministradorAlumnoNuevoRamo = new System.Windows.Forms.ComboBox();
             this.tbAdministradorAgregarApellido = new System.Windows.Forms.TextBox();
             this.tbAdministradorAgregarClave = new System.Windows.Forms.TextBox();
             this.tbAdministradoAgregarRut = new System.Windows.Forms.TextBox();
             this.tbAdministradorAgregarNombre = new System.Windows.Forms.TextBox();
-            this.cbAdministradorAlumnoNuevoCarreras = new System.Windows.Forms.ComboBox();
             this.panelVerHorarioProfe = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -115,17 +113,26 @@
             this.btnVolverBorrarAlumno = new System.Windows.Forms.Button();
             this.cbBorrarAlumno = new System.Windows.Forms.ComboBox();
             this.panelAdministradorEliminarCurso = new System.Windows.Forms.Panel();
+            this.lbAdministradorEstadoEliminarCurso = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.cbAdministradorEliminarCurso = new System.Windows.Forms.ComboBox();
             this.btnAdministradorEliminarCursoEliminar = new System.Windows.Forms.Button();
             this.btnAdministradorEliminarCursoVolver = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panelAdministradorEliminarSeccion = new System.Windows.Forms.Panel();
+            this.lbAdministradorEstadoEliminarSeccion = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.cbAdministradorEliminarSeccion = new System.Windows.Forms.ComboBox();
             this.btnAdministradorEliminarSeccionEliminar = new System.Windows.Forms.Button();
             this.btnAdministradorEliminarSeccionVolver = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelAdministradorAgregarCurso = new System.Windows.Forms.Panel();
+            this.lbAdministradorEstadoAgregarCurso = new System.Windows.Forms.Label();
+            this.tbAdministradorFacultadCursoNuevo = new System.Windows.Forms.TextBox();
+            this.tbAdministradorNombreCursoNuevo = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.btnAdministradorAgregarCursoAgregar = new System.Windows.Forms.Button();
             this.btnAdministradorAgregarCursoVolver = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
@@ -335,7 +342,7 @@
             // 
             this.lbBienvenidoAlumno.AutoSize = true;
             this.lbBienvenidoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBienvenidoAlumno.Location = new System.Drawing.Point(312, 20);
+            this.lbBienvenidoAlumno.Location = new System.Drawing.Point(302, 64);
             this.lbBienvenidoAlumno.Name = "lbBienvenidoAlumno";
             this.lbBienvenidoAlumno.Size = new System.Drawing.Size(168, 32);
             this.lbBienvenidoAlumno.TabIndex = 4;
@@ -545,7 +552,7 @@
             // 
             this.lbBienvenidoProfesor.AutoSize = true;
             this.lbBienvenidoProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBienvenidoProfesor.Location = new System.Drawing.Point(307, 19);
+            this.lbBienvenidoProfesor.Location = new System.Drawing.Point(294, 64);
             this.lbBienvenidoProfesor.Name = "lbBienvenidoProfesor";
             this.lbBienvenidoProfesor.Size = new System.Drawing.Size(99, 32);
             this.lbBienvenidoProfesor.TabIndex = 2;
@@ -661,7 +668,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorEliminarSeccion, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarAlumno, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarCurso, 1, 0);
@@ -678,7 +685,7 @@
             // 
             // btnAdministradorEliminarSeccion
             // 
-            this.btnAdministradorEliminarSeccion.Location = new System.Drawing.Point(443, 95);
+            this.btnAdministradorEliminarSeccion.Location = new System.Drawing.Point(438, 95);
             this.btnAdministradorEliminarSeccion.Name = "btnAdministradorEliminarSeccion";
             this.btnAdministradorEliminarSeccion.Size = new System.Drawing.Size(173, 86);
             this.btnAdministradorEliminarSeccion.TabIndex = 6;
@@ -698,7 +705,7 @@
             // 
             // btnAdministradorAgregarCurso
             // 
-            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(214, 3);
+            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(212, 3);
             this.btnAdministradorAgregarCurso.Name = "btnAdministradorAgregarCurso";
             this.btnAdministradorAgregarCurso.Size = new System.Drawing.Size(192, 86);
             this.btnAdministradorAgregarCurso.TabIndex = 2;
@@ -718,7 +725,7 @@
             // 
             // btnAdministradorAgregarSeccion
             // 
-            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(443, 3);
+            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(438, 3);
             this.btnAdministradorAgregarSeccion.Name = "btnAdministradorAgregarSeccion";
             this.btnAdministradorAgregarSeccion.Size = new System.Drawing.Size(173, 86);
             this.btnAdministradorAgregarSeccion.TabIndex = 4;
@@ -728,7 +735,7 @@
             // 
             // btnAdministradorEliminarCurso
             // 
-            this.btnAdministradorEliminarCurso.Location = new System.Drawing.Point(214, 95);
+            this.btnAdministradorEliminarCurso.Location = new System.Drawing.Point(212, 95);
             this.btnAdministradorEliminarCurso.Name = "btnAdministradorEliminarCurso";
             this.btnAdministradorEliminarCurso.Size = new System.Drawing.Size(192, 87);
             this.btnAdministradorEliminarCurso.TabIndex = 5;
@@ -740,7 +747,7 @@
             // 
             this.lbBienvenidoAdministrador.AutoSize = true;
             this.lbBienvenidoAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBienvenidoAdministrador.Location = new System.Drawing.Point(286, 20);
+            this.lbBienvenidoAdministrador.Location = new System.Drawing.Point(286, 64);
             this.lbBienvenidoAdministrador.Name = "lbBienvenidoAdministrador";
             this.lbBienvenidoAdministrador.Size = new System.Drawing.Size(99, 32);
             this.lbBienvenidoAdministrador.TabIndex = 0;
@@ -756,14 +763,12 @@
             this.panelAdministradorCrearAlumno.Controls.Add(this.label11);
             this.panelAdministradorCrearAlumno.Controls.Add(this.label10);
             this.panelAdministradorCrearAlumno.Controls.Add(this.label9);
-            this.panelAdministradorCrearAlumno.Controls.Add(this.label8);
             this.panelAdministradorCrearAlumno.Controls.Add(this.btnAdministradorAgregarAlumnoNuevo);
             this.panelAdministradorCrearAlumno.Controls.Add(this.cbAdministradorAlumnoNuevoRamo);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarApellido);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarClave);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradoAgregarRut);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarNombre);
-            this.panelAdministradorCrearAlumno.Controls.Add(this.cbAdministradorAlumnoNuevoCarreras);
             this.panelAdministradorCrearAlumno.Location = new System.Drawing.Point(1926, 526);
             this.panelAdministradorCrearAlumno.Name = "panelAdministradorCrearAlumno";
             this.panelAdministradorCrearAlumno.Size = new System.Drawing.Size(703, 651);
@@ -804,7 +809,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(258, 389);
+            this.label13.Location = new System.Drawing.Point(270, 353);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(190, 25);
             this.label13.TabIndex = 13;
@@ -813,7 +818,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(507, 188);
+            this.label12.Location = new System.Drawing.Point(517, 121);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 25);
             this.label12.TabIndex = 12;
@@ -822,7 +827,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(507, 294);
+            this.label11.Location = new System.Drawing.Point(517, 227);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 25);
             this.label11.TabIndex = 11;
@@ -831,7 +836,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(132, 294);
+            this.label10.Location = new System.Drawing.Point(142, 227);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 25);
             this.label10.TabIndex = 10;
@@ -840,24 +845,15 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(106, 191);
+            this.label9.Location = new System.Drawing.Point(116, 124);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 25);
             this.label9.TabIndex = 9;
             this.label9.Text = "Nombre:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(235, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 25);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Seleccione una carrera";
-            // 
             // btnAdministradorAgregarAlumnoNuevo
             // 
-            this.btnAdministradorAgregarAlumnoNuevo.Location = new System.Drawing.Point(31, 491);
+            this.btnAdministradorAgregarAlumnoNuevo.Location = new System.Drawing.Point(41, 469);
             this.btnAdministradorAgregarAlumnoNuevo.Name = "btnAdministradorAgregarAlumnoNuevo";
             this.btnAdministradorAgregarAlumnoNuevo.Size = new System.Drawing.Size(628, 51);
             this.btnAdministradorAgregarAlumnoNuevo.TabIndex = 7;
@@ -869,47 +865,38 @@
             // 
             this.cbAdministradorAlumnoNuevoRamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorAlumnoNuevoRamo.FormattingEnabled = true;
-            this.cbAdministradorAlumnoNuevoRamo.Location = new System.Drawing.Point(31, 426);
+            this.cbAdministradorAlumnoNuevoRamo.Location = new System.Drawing.Point(43, 390);
             this.cbAdministradorAlumnoNuevoRamo.Name = "cbAdministradorAlumnoNuevoRamo";
             this.cbAdministradorAlumnoNuevoRamo.Size = new System.Drawing.Size(628, 32);
             this.cbAdministradorAlumnoNuevoRamo.TabIndex = 6;
             // 
             // tbAdministradorAgregarApellido
             // 
-            this.tbAdministradorAgregarApellido.Location = new System.Drawing.Point(396, 227);
+            this.tbAdministradorAgregarApellido.Location = new System.Drawing.Point(406, 160);
             this.tbAdministradorAgregarApellido.Name = "tbAdministradorAgregarApellido";
             this.tbAdministradorAgregarApellido.Size = new System.Drawing.Size(263, 29);
             this.tbAdministradorAgregarApellido.TabIndex = 5;
             // 
             // tbAdministradorAgregarClave
             // 
-            this.tbAdministradorAgregarClave.Location = new System.Drawing.Point(396, 331);
+            this.tbAdministradorAgregarClave.Location = new System.Drawing.Point(406, 264);
             this.tbAdministradorAgregarClave.Name = "tbAdministradorAgregarClave";
             this.tbAdministradorAgregarClave.Size = new System.Drawing.Size(263, 29);
             this.tbAdministradorAgregarClave.TabIndex = 4;
             // 
             // tbAdministradoAgregarRut
             // 
-            this.tbAdministradoAgregarRut.Location = new System.Drawing.Point(31, 331);
+            this.tbAdministradoAgregarRut.Location = new System.Drawing.Point(41, 264);
             this.tbAdministradoAgregarRut.Name = "tbAdministradoAgregarRut";
             this.tbAdministradoAgregarRut.Size = new System.Drawing.Size(263, 29);
             this.tbAdministradoAgregarRut.TabIndex = 2;
             // 
             // tbAdministradorAgregarNombre
             // 
-            this.tbAdministradorAgregarNombre.Location = new System.Drawing.Point(31, 227);
+            this.tbAdministradorAgregarNombre.Location = new System.Drawing.Point(41, 160);
             this.tbAdministradorAgregarNombre.Name = "tbAdministradorAgregarNombre";
             this.tbAdministradorAgregarNombre.Size = new System.Drawing.Size(263, 29);
             this.tbAdministradorAgregarNombre.TabIndex = 1;
-            // 
-            // cbAdministradorAlumnoNuevoCarreras
-            // 
-            this.cbAdministradorAlumnoNuevoCarreras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAdministradorAlumnoNuevoCarreras.FormattingEnabled = true;
-            this.cbAdministradorAlumnoNuevoCarreras.Location = new System.Drawing.Point(31, 131);
-            this.cbAdministradorAlumnoNuevoCarreras.Name = "cbAdministradorAlumnoNuevoCarreras";
-            this.cbAdministradorAlumnoNuevoCarreras.Size = new System.Drawing.Size(628, 32);
-            this.cbAdministradorAlumnoNuevoCarreras.TabIndex = 0;
             // 
             // panelVerHorarioProfe
             // 
@@ -1039,6 +1026,8 @@
             // 
             // panelAdministradorEliminarCurso
             // 
+            this.panelAdministradorEliminarCurso.Controls.Add(this.lbAdministradorEstadoEliminarCurso);
+            this.panelAdministradorEliminarCurso.Controls.Add(this.label26);
             this.panelAdministradorEliminarCurso.Controls.Add(this.cbAdministradorEliminarCurso);
             this.panelAdministradorEliminarCurso.Controls.Add(this.btnAdministradorEliminarCursoEliminar);
             this.panelAdministradorEliminarCurso.Controls.Add(this.btnAdministradorEliminarCursoVolver);
@@ -1048,6 +1037,24 @@
             this.panelAdministradorEliminarCurso.Size = new System.Drawing.Size(557, 338);
             this.panelAdministradorEliminarCurso.TabIndex = 15;
             this.panelAdministradorEliminarCurso.Visible = false;
+            // 
+            // lbAdministradorEstadoEliminarCurso
+            // 
+            this.lbAdministradorEstadoEliminarCurso.AutoSize = true;
+            this.lbAdministradorEstadoEliminarCurso.Location = new System.Drawing.Point(174, 255);
+            this.lbAdministradorEstadoEliminarCurso.Name = "lbAdministradorEstadoEliminarCurso";
+            this.lbAdministradorEstadoEliminarCurso.Size = new System.Drawing.Size(93, 25);
+            this.lbAdministradorEstadoEliminarCurso.TabIndex = 29;
+            this.lbAdministradorEstadoEliminarCurso.Text = "Facultad:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(113, 106);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(182, 25);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "Seleccione el curso";
             // 
             // cbAdministradorEliminarCurso
             // 
@@ -1060,16 +1067,17 @@
             // 
             // btnAdministradorEliminarCursoEliminar
             // 
-            this.btnAdministradorEliminarCursoEliminar.Location = new System.Drawing.Point(380, 252);
+            this.btnAdministradorEliminarCursoEliminar.Location = new System.Drawing.Point(48, 252);
             this.btnAdministradorEliminarCursoEliminar.Name = "btnAdministradorEliminarCursoEliminar";
             this.btnAdministradorEliminarCursoEliminar.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorEliminarCursoEliminar.TabIndex = 18;
             this.btnAdministradorEliminarCursoEliminar.Text = "Eliminar";
             this.btnAdministradorEliminarCursoEliminar.UseVisualStyleBackColor = true;
+            this.btnAdministradorEliminarCursoEliminar.Click += new System.EventHandler(this.btnAdministradorEliminarCursoEliminar_Click);
             // 
             // btnAdministradorEliminarCursoVolver
             // 
-            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(48, 252);
+            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(380, 252);
             this.btnAdministradorEliminarCursoVolver.Name = "btnAdministradorEliminarCursoVolver";
             this.btnAdministradorEliminarCursoVolver.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorEliminarCursoVolver.TabIndex = 17;
@@ -1091,6 +1099,8 @@
             // 
             // panelAdministradorEliminarSeccion
             // 
+            this.panelAdministradorEliminarSeccion.Controls.Add(this.lbAdministradorEstadoEliminarSeccion);
+            this.panelAdministradorEliminarSeccion.Controls.Add(this.label8);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.cbAdministradorEliminarSeccion);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.btnAdministradorEliminarSeccionEliminar);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.btnAdministradorEliminarSeccionVolver);
@@ -1101,6 +1111,24 @@
             this.panelAdministradorEliminarSeccion.Size = new System.Drawing.Size(557, 315);
             this.panelAdministradorEliminarSeccion.TabIndex = 16;
             this.panelAdministradorEliminarSeccion.Visible = false;
+            // 
+            // lbAdministradorEstadoEliminarSeccion
+            // 
+            this.lbAdministradorEstadoEliminarSeccion.AutoSize = true;
+            this.lbAdministradorEstadoEliminarSeccion.Location = new System.Drawing.Point(182, 228);
+            this.lbAdministradorEstadoEliminarSeccion.Name = "lbAdministradorEstadoEliminarSeccion";
+            this.lbAdministradorEstadoEliminarSeccion.Size = new System.Drawing.Size(93, 25);
+            this.lbAdministradorEstadoEliminarSeccion.TabIndex = 28;
+            this.lbAdministradorEstadoEliminarSeccion.Text = "Facultad:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(113, 89);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(295, 25);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Seleccione el NRC de la seccion";
             // 
             // cbAdministradorEliminarSeccion
             // 
@@ -1113,16 +1141,17 @@
             // 
             // btnAdministradorEliminarSeccionEliminar
             // 
-            this.btnAdministradorEliminarSeccionEliminar.Location = new System.Drawing.Point(380, 228);
+            this.btnAdministradorEliminarSeccionEliminar.Location = new System.Drawing.Point(48, 228);
             this.btnAdministradorEliminarSeccionEliminar.Name = "btnAdministradorEliminarSeccionEliminar";
             this.btnAdministradorEliminarSeccionEliminar.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorEliminarSeccionEliminar.TabIndex = 20;
             this.btnAdministradorEliminarSeccionEliminar.Text = "Eliminar";
             this.btnAdministradorEliminarSeccionEliminar.UseVisualStyleBackColor = true;
+            this.btnAdministradorEliminarSeccionEliminar.Click += new System.EventHandler(this.btnAdministradorEliminarSeccionEliminar_Click);
             // 
             // btnAdministradorEliminarSeccionVolver
             // 
-            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(48, 228);
+            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(380, 228);
             this.btnAdministradorEliminarSeccionVolver.Name = "btnAdministradorEliminarSeccionVolver";
             this.btnAdministradorEliminarSeccionVolver.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorEliminarSeccionVolver.TabIndex = 19;
@@ -1151,6 +1180,11 @@
             // 
             // panelAdministradorAgregarCurso
             // 
+            this.panelAdministradorAgregarCurso.Controls.Add(this.lbAdministradorEstadoAgregarCurso);
+            this.panelAdministradorAgregarCurso.Controls.Add(this.tbAdministradorFacultadCursoNuevo);
+            this.panelAdministradorAgregarCurso.Controls.Add(this.tbAdministradorNombreCursoNuevo);
+            this.panelAdministradorAgregarCurso.Controls.Add(this.label25);
+            this.panelAdministradorAgregarCurso.Controls.Add(this.label24);
             this.panelAdministradorAgregarCurso.Controls.Add(this.btnAdministradorAgregarCursoAgregar);
             this.panelAdministradorAgregarCurso.Controls.Add(this.btnAdministradorAgregarCursoVolver);
             this.panelAdministradorAgregarCurso.Controls.Add(this.label22);
@@ -1160,18 +1194,60 @@
             this.panelAdministradorAgregarCurso.TabIndex = 18;
             this.panelAdministradorAgregarCurso.Visible = false;
             // 
+            // lbAdministradorEstadoAgregarCurso
+            // 
+            this.lbAdministradorEstadoAgregarCurso.AutoSize = true;
+            this.lbAdministradorEstadoAgregarCurso.Location = new System.Drawing.Point(171, 317);
+            this.lbAdministradorEstadoAgregarCurso.Name = "lbAdministradorEstadoAgregarCurso";
+            this.lbAdministradorEstadoAgregarCurso.Size = new System.Drawing.Size(93, 25);
+            this.lbAdministradorEstadoAgregarCurso.TabIndex = 27;
+            this.lbAdministradorEstadoAgregarCurso.Text = "Facultad:";
+            // 
+            // tbAdministradorFacultadCursoNuevo
+            // 
+            this.tbAdministradorFacultadCursoNuevo.Location = new System.Drawing.Point(176, 220);
+            this.tbAdministradorFacultadCursoNuevo.Name = "tbAdministradorFacultadCursoNuevo";
+            this.tbAdministradorFacultadCursoNuevo.Size = new System.Drawing.Size(312, 29);
+            this.tbAdministradorFacultadCursoNuevo.TabIndex = 26;
+            // 
+            // tbAdministradorNombreCursoNuevo
+            // 
+            this.tbAdministradorNombreCursoNuevo.Location = new System.Drawing.Point(176, 120);
+            this.tbAdministradorNombreCursoNuevo.Name = "tbAdministradorNombreCursoNuevo";
+            this.tbAdministradorNombreCursoNuevo.Size = new System.Drawing.Size(312, 29);
+            this.tbAdministradorNombreCursoNuevo.TabIndex = 25;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(40, 224);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(130, 25);
+            this.label25.TabIndex = 24;
+            this.label25.Text = "Creditos (int):";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(40, 123);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(87, 25);
+            this.label24.TabIndex = 23;
+            this.label24.Text = "Nombre:";
+            // 
             // btnAdministradorAgregarCursoAgregar
             // 
-            this.btnAdministradorAgregarCursoAgregar.Location = new System.Drawing.Point(377, 317);
+            this.btnAdministradorAgregarCursoAgregar.Location = new System.Drawing.Point(18, 317);
             this.btnAdministradorAgregarCursoAgregar.Name = "btnAdministradorAgregarCursoAgregar";
             this.btnAdministradorAgregarCursoAgregar.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorAgregarCursoAgregar.TabIndex = 22;
             this.btnAdministradorAgregarCursoAgregar.Text = "Agregar";
             this.btnAdministradorAgregarCursoAgregar.UseVisualStyleBackColor = true;
+            this.btnAdministradorAgregarCursoAgregar.Click += new System.EventHandler(this.btnAdministradorAgregarCursoAgregar_Click);
             // 
             // btnAdministradorAgregarCursoVolver
             // 
-            this.btnAdministradorAgregarCursoVolver.Location = new System.Drawing.Point(45, 317);
+            this.btnAdministradorAgregarCursoVolver.Location = new System.Drawing.Point(410, 317);
             this.btnAdministradorAgregarCursoVolver.Name = "btnAdministradorAgregarCursoVolver";
             this.btnAdministradorAgregarCursoVolver.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorAgregarCursoVolver.TabIndex = 21;
@@ -1204,16 +1280,17 @@
             // 
             // btnAdministradorAgregarSeccionAgregar
             // 
-            this.btnAdministradorAgregarSeccionAgregar.Location = new System.Drawing.Point(377, 513);
+            this.btnAdministradorAgregarSeccionAgregar.Location = new System.Drawing.Point(45, 513);
             this.btnAdministradorAgregarSeccionAgregar.Name = "btnAdministradorAgregarSeccionAgregar";
             this.btnAdministradorAgregarSeccionAgregar.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorAgregarSeccionAgregar.TabIndex = 24;
             this.btnAdministradorAgregarSeccionAgregar.Text = "Agregar";
             this.btnAdministradorAgregarSeccionAgregar.UseVisualStyleBackColor = true;
+            this.btnAdministradorAgregarSeccionAgregar.Click += new System.EventHandler(this.btnAdministradorAgregarSeccionAgregar_Click);
             // 
             // btnAdministradorAgregarSeccionVolver
             // 
-            this.btnAdministradorAgregarSeccionVolver.Location = new System.Drawing.Point(45, 513);
+            this.btnAdministradorAgregarSeccionVolver.Location = new System.Drawing.Point(377, 513);
             this.btnAdministradorAgregarSeccionVolver.Name = "btnAdministradorAgregarSeccionVolver";
             this.btnAdministradorAgregarSeccionVolver.Size = new System.Drawing.Size(128, 62);
             this.btnAdministradorAgregarSeccionVolver.TabIndex = 23;
@@ -1355,14 +1432,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAdministradorAgregarAlumnoNuevo;
         private System.Windows.Forms.ComboBox cbAdministradorAlumnoNuevoRamo;
         private System.Windows.Forms.TextBox tbAdministradorAgregarApellido;
         private System.Windows.Forms.TextBox tbAdministradorAgregarClave;
         private System.Windows.Forms.TextBox tbAdministradoAgregarRut;
         private System.Windows.Forms.TextBox tbAdministradorAgregarNombre;
-        private System.Windows.Forms.ComboBox cbAdministradorAlumnoNuevoCarreras;
         private System.Windows.Forms.Label tbAdministradorCrearAlumnoEstado;
         private System.Windows.Forms.Button btnAdministradorCrearAlumnoVolver;
         private System.Windows.Forms.Panel panelVerHorarioProfe;
@@ -1404,6 +1479,15 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox cbAdministradorEliminarCurso;
         private System.Windows.Forms.ComboBox cbAdministradorEliminarSeccion;
+        private System.Windows.Forms.TextBox tbAdministradorFacultadCursoNuevo;
+        private System.Windows.Forms.TextBox tbAdministradorNombreCursoNuevo;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lbAdministradorEstadoAgregarCurso;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbAdministradorEstadoEliminarSeccion;
+        private System.Windows.Forms.Label lbAdministradorEstadoEliminarCurso;
     }
 }
 

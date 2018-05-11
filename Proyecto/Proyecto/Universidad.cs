@@ -9,7 +9,6 @@ namespace Proyecto
     [Serializable]
     public class Universidad
     {
-        public event MostrarRamoDelegate
 
         public string nombre;
         public List<Carrera> carreras;

@@ -22,23 +22,23 @@ namespace Proyecto
             cursos = new List<Curso>();
             admins = new List<Administrativo>();
         }
-        public bool VerificarAlumno( int rut, string clave)
+        public bool VerificarAlumno(int rut, string clave)
         {
-            foreach ( Curso c in cursos)
+            foreach (Curso c in cursos)
             {
-                foreach(Seccion s in c.secciones)
+                foreach (Seccion s in c.secciones)
                 {
-                    foreach(Alumno a in s.alumnos)
+                    foreach (Alumno a in s.alumnos)
                     {
-                        if(a.rut == rut && a.clave == clave)
+                        if (a.rut == rut && a.clave == clave)
                         {
                             return true;
                         }
                     }
                 }
-                
+
             }
-            Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
+            // Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
             return false;
         }
 
@@ -52,7 +52,7 @@ namespace Proyecto
                 }
 
             }
-            Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
+           // Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
             return false;
         }
 
@@ -108,7 +108,7 @@ namespace Proyecto
                 }
 
             }
-                    Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
+                    //Console.BackgroundColor = ConsoleColor.Yellow; Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Ingrese datos correctos"); Console.Beep(); Console.Beep(); Console.ResetColor();
                     return false;
         }
        

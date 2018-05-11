@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarRamos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarRamos.Designer.cs">
-      <DependentUpon>AgregarRamos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Carrera.cs" />
     <Compile Include="Clases\Curso.cs" />
     <Compile Include="Clases\Horario.cs" />
@@ -69,37 +63,10 @@
     <Compile Include="FInicio.Designer.cs">
       <DependentUpon>FInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FAlumno.Designer.cs">
-      <DependentUpon>FAlumno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FProfesor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FProfesor.Designer.cs">
-      <DependentUpon>FProfesor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FAdmin.Designer.cs">
-      <DependentUpon>FAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AgregarRamos.resx">
-      <DependentUpon>AgregarRamos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FInicio.resx">
       <DependentUpon>FInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FAlumno.resx">
-      <DependentUpon>FAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FProfesor.resx">
-      <DependentUpon>FProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

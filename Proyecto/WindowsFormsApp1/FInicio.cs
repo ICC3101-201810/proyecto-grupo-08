@@ -26,8 +26,11 @@ namespace WindowsFormsApp1
 
         BindingList<string> CursosString = new BindingList<string>();
         BindingList<string> CursosStringProfesor = new BindingList<string>();
+        BindingList<string> CursosStringAdmin = new BindingList<string>();
+        BindingList<int> nrcCursos = new BindingList<int>();
+
         BindingList<string> AlumnosString = new BindingList<string>();
-        List<string> todosLosCursos = new List<string>();
+        BindingList<string> todosLosCursos = new BindingList<string>();
         public FInicio()
         {
 
@@ -37,7 +40,7 @@ namespace WindowsFormsApp1
             try
             {
                 BinaryFormatter formateador = new BinaryFormatter();
-                Stream miStream = new FileStream("Universidades.un", FileMode.Open, FileAccess.Read, FileShare.None);
+                Stream miStream = new FileStream("Universidades.bin", FileMode.Open, FileAccess.Read, FileShare.None);
                 Uandes = (Universidad)formateador.Deserialize(miStream);
                 Uandes.MostrarCarreras();
                 miStream.Close();
@@ -91,7 +94,11 @@ namespace WindowsFormsApp1
                 Curso minor = new Curso("Minor 1", 2);
                 Curso minor1 = new Curso("Minor 2", 2);
                 Curso minor2 = new Curso("Minor 3", 2);
+                Curso der = new Curso("Civil", 2);
+                Curso com = new Curso("Microeconomia", 2);
 
+                Seccion der1 = new Seccion(60, 2018300, sat);
+                Seccion com1 = new Seccion(60, 2018301, Lorca);
                 Seccion teologia1 = new Seccion(60, 2018101, Lorca);
                 Seccion antropologia1 = new Seccion(60, 2018102, tata);
                 Seccion biologia1 = new Seccion(60, 2018103, sat);
@@ -135,7 +142,8 @@ namespace WindowsFormsApp1
                 Horario k = new Horario("clase", DateTime.Today.AddHours(773), 2);
                 Horario l = new Horario("clase", DateTime.Today.AddHours(163), 2);
 
-
+                der1.horario.Add(a);
+                com1.horario.Add(a);
                 calculo1Sec1.horario.Add(horarioCal);
                 AlgebraSec1.horario.Add(horarioCal);
                 AlgebraSec1.horario.Add(horarioCal1);
@@ -157,7 +165,8 @@ namespace WindowsFormsApp1
                 antropologia1.horario.Add(k);
                 teologia1.horario.Add(l);
 
-
+                der.secciones.Add(der1);
+                com.secciones.Add(com1);
                 minor1.secciones.Add(minora1);
                 minor2.secciones.Add(minor21);
                 minor.secciones.Add(minor11);
@@ -260,16 +269,19 @@ namespace WindowsFormsApp1
                 Ingenieria.cursos.Add(introduccionAlaIng);
                 Ingenieria.cursos.Add(teologia);
                 Ingenieria.cursos.Add(antropologia);
-
-                Administrativo admin1 = new Administrativo(0, "admin", "admin", "admin", "admin");
+                Comercial.cursos.Add(com);
+                Derecho.cursos.Add(der);
+                Administrativo admin1 = new Administrativo(0, "admin", "admin", "admin", "ing");
+                Administrativo admin2 = new Administrativo(0, "admin", "admin", "admin", "der");
+                Administrativo admin3 = new Administrativo(0, "admin", "admin", "admin", "com");
                 Uandes.carreras.Add(Ingenieria);
                 Uandes.carreras.Add(Comercial);
                 Uandes.carreras.Add(Derecho);
                 Ingenieria.admins.Add(admin1);
-                Comercial.admins.Add(admin1);
-                Derecho.admins.Add(admin1);
+                Comercial.admins.Add(admin3);
+                Derecho.admins.Add(admin2);
                 BinaryFormatter formateador = new BinaryFormatter();
-                Stream miStream = new FileStream("Universidades.un", FileMode.Create, FileAccess.Write);
+                Stream miStream = new FileStream("Universidades.bin", FileMode.Create, FileAccess.Write);
                 formateador.Serialize(miStream, Uandes);
                 miStream.Close();
             }
@@ -295,62 +307,8 @@ namespace WindowsFormsApp1
             #endregion
 
             this.cbCarreras.DataSource = Uandes.MostrarCarreras();
-            cbAdministradorAlumnoNuevoCarreras.DataSource = Uandes.MostrarCarreras();
-            carrera = Uandes.DevolverCarrera(cbCarreras.Text);
-            
-
-        }
-
-        private void botonCarrera_Click(object sender, EventArgs e)
-        {
             carrera = Uandes.DevolverCarrera(cbCarreras.Text);
 
-            try
-            {
-                loggeado = Uandes.VerPersona(carrera, tbRut.Text);
-                if (carrera.VerificarAlumno(int.Parse(tbRut.Text), tbClave.Text))
-                {
-                    tbClave.Text = "";
-                    tbRut.Text = "";
-                    lbBienvenidoAlumno.Text = "Bienvenido \n" + loggeado.nombre + " " + loggeado.apellido;
-                    PanelInicio.Hide();
-                    panelAlumno.Show();
-                }
-
-                else if (carrera.VerificarProfe(int.Parse(tbRut.Text), tbClave.Text))
-                {
-                    lbBienvenidoProfesor.Text = "Bienvenido \n" + loggeado.nombre + " " + loggeado.apellido;
-                    tbClave.Text = "";
-                    tbRut.Text = "";
-                    PanelInicio.Hide();
-                    panelProfesor.Show();
-                }
-                else if (carrera.VerificarAdmin(int.Parse(tbRut.Text), tbClave.Text))
-                {
-                    lbBienvenidoAdministrador.Text = "Bienvenido \n" + loggeado.nombre + " " + loggeado.apellido;
-                    tbClave.Text = "";
-                    tbRut.Text = "";
-                    PanelInicio.Hide();
-                    tbAdministradorCrearAlumnoEstado.Text = "";
-                    panelAdministrador.Show();
-                }
-                else
-                {
-                    SystemSounds.Hand.Play();
-                    MessageBox.Show("Rut o contraseña incorrectos.\nPor favor, ingrese los datos correctamente.");
-                    tbClave.Text = "";
-                    tbRut.Text = "";
-                    SendKeys.Send("{TAB}");
-                }
-            }
-            catch
-            {
-                SystemSounds.Hand.Play();
-                MessageBox.Show("Rut o contraseña incorrectos.\nPor favor, ingrese los datos correctamente.");
-                tbClave.Text = "";
-                tbRut.Text = "";
-                SendKeys.Send("{TAB}");
-            }
 
         }
 
@@ -432,13 +390,66 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        private void botonCarrera_Click(object sender, EventArgs e)
+        {
+            carrera = Uandes.DevolverCarrera(cbCarreras.Text);
+            try
+            {
+                loggeado = Uandes.VerPersona(carrera, tbRut.Text);
+                if (carrera.VerificarAlumno(int.Parse(tbRut.Text), tbClave.Text))
+                {
+                    tbClave.Text = "";
+                    tbRut.Text = "";
+                    lbBienvenidoAlumno.Text = "Bienvenido \n" + loggeado.nombre + " " + loggeado.apellido;
+                    PanelInicio.Hide();
+                    panelAlumno.Show();
+                }
+
+                else if (carrera.VerificarProfe(int.Parse(tbRut.Text), tbClave.Text))
+                {
+                    lbBienvenidoProfesor.Text = "Bienvenido \n" + loggeado.nombre + " " + loggeado.apellido;
+                    tbClave.Text = "";
+                    tbRut.Text = "";
+                    PanelInicio.Hide();
+                    panelProfesor.Show();
+                }
+                else if (carrera.VerificarAdmin(int.Parse(tbRut.Text), tbClave.Text))
+                {
+                    lbBienvenidoAdministrador.Text = "Bienvenido \n" + loggeado.nombre + " " + loggeado.apellido;
+                    tbClave.Text = "";
+                    tbRut.Text = "";
+                    PanelInicio.Hide();
+                    tbAdministradorCrearAlumnoEstado.Text = "";
+                    panelAdministrador.Show();
+                }
+                else
+                {
+                    SystemSounds.Hand.Play();
+                    MessageBox.Show("Rut o contraseña incorrectos.\nPor favor, ingrese los datos correctamente.");
+                    tbClave.Text = "";
+                    tbRut.Text = "";
+                    SendKeys.Send("{TAB}");
+                }
+            }
+            catch
+            {
+                SystemSounds.Hand.Play();
+                MessageBox.Show("Rut o contraseña incorrectos.\nPor favor, ingrese los datos correctamente.");
+                tbClave.Text = "";
+                tbRut.Text = "";
+                SendKeys.Send("{TAB}");
+            }
+        }
+
         private void FInicio_Load(object sender, EventArgs e)
         {
             PanelInicio.Show();
             lbAvisoTomaRamo.Text = "";
-        }
+            lbAdministradorEstadoAgregarCurso.Text = "";
+            lbAdministradorEstadoEliminarSeccion.Text = "";
+            lbAdministradorEstadoEliminarCurso.Text = "";
 
-        
+        }
 
         private void botonVerRamosAlumno_Click(object sender, EventArgs e)
         {
@@ -477,10 +488,6 @@ namespace WindowsFormsApp1
 
         }
 
-        
-
-        
-
         private void btnAceptarTomarRamoAlumno_Click(object sender, EventArgs e)
         {
 
@@ -504,8 +511,6 @@ namespace WindowsFormsApp1
         {
             cbSeccionTomarRamoAlumno.DataSource = carrera.DevolverNrc(cbAgregarRamoAlumno.Text);
         }
-
-        
 
         private void botonBotarRamoAlumno_Click(object sender, EventArgs e) //BOTON FORM 4 BOTONES
         {
@@ -534,14 +539,12 @@ namespace WindowsFormsApp1
         private void FInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
             BinaryFormatter formateador = new BinaryFormatter();
-            Stream miStream = new FileStream("Universidades.un", FileMode.Create, FileAccess.Write);
+            Stream miStream = new FileStream("Universidades.bin", FileMode.Create, FileAccess.Write);
             formateador.Serialize(miStream, Uandes);
             miStream.Close();
             MessageBox.Show("Todos los datos modificados han sido guardados con exito.\n Gracias por preferirnos");
 
         }
-
-        
 
         private void btnCursosProfesor_Click(object sender, EventArgs e)
         {
@@ -559,15 +562,11 @@ namespace WindowsFormsApp1
             panelCursosProfesor.Show();
         }
 
-        
-
         private void btnVerAlumnos_Click(object sender, EventArgs e)
         {
             MessageBox.Show(carrera.RetornarCurso(cbCursosProfesor.Text).MostarALumnosCurso(loggeado));
 
         }
-
-        
 
         private void btnAdministradorAgregarAlumno_Click(object sender, EventArgs e)
         {
@@ -576,6 +575,7 @@ namespace WindowsFormsApp1
             todosLosCursos.Clear();
             foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
             cbAdministradorAlumnoNuevoRamo.DataSource = todosLosCursos;
+            cbAdministradorAlumnoNuevoRamo.Refresh();
         }
 
         private void btnAdministradorAgregarAlumnoNuevo_Click(object sender, EventArgs e)
@@ -583,12 +583,11 @@ namespace WindowsFormsApp1
             try
             {
                 Alumno alumnoNuevo = new Alumno(int.Parse(tbAdministradoAgregarRut.Text), tbAdministradorAgregarNombre.Text, tbAdministradorAgregarApellido.Text, DateTime.Today, tbAdministradorAgregarClave.Text);
-                tbAdministradorCrearAlumnoEstado.Text = tbAdministradorAgregarNombre.Text + " fue Creado con exito"; tbAdministradorAgregarNombre.Text = ""; tbAdministradoAgregarRut.Text = ""; tbAdministradorAgregarApellido.Text = ""; tbAdministradorAgregarClave.Text = "";
+                carrera.RetornarCurso(cbAdministradorAlumnoNuevoRamo.Text).secciones[0].alumnos.Add(alumnoNuevo);
+                tbAdministradorCrearAlumnoEstado.ForeColor = Color.Black; tbAdministradorCrearAlumnoEstado.Text = tbAdministradorAgregarNombre.Text + " fue Creado con exito"; tbAdministradorAgregarNombre.Text = ""; tbAdministradoAgregarRut.Text = ""; tbAdministradorAgregarApellido.Text = ""; tbAdministradorAgregarClave.Text = "";
             }
-            catch { tbAdministradorCrearAlumnoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
+            catch { tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red; ; tbAdministradorCrearAlumnoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
         }
-
-        
 
         private void btnHorarioProfesor_Click(object sender, EventArgs e)
         {
@@ -603,8 +602,6 @@ namespace WindowsFormsApp1
             panelProfesor.Hide();
             panelVerHorarioProfe.Show();
         }
-
-        
 
         private void btnVerHorarioProfe_Click(object sender, EventArgs e)
         {
@@ -625,18 +622,13 @@ namespace WindowsFormsApp1
             panelBorrarAlumno.Show();
         }
 
-        
-
         private void btnBorrarAlumnoMetodo_Click(object sender, EventArgs e)
         {
             string[] asd = cbBorrarAlumno.Text.Split('-');
-            MessageBox.Show(asd[1]);
             Uandes.BorrarAlumno(asd[1]);
             AlumnosString.Remove(cbBorrarAlumno.Text);
             cbBotarRamo.Refresh();
         }
-
-       
 
         private void btnAdministradorAgregarCurso_Click(object sender, EventArgs e)
         {
@@ -646,6 +638,9 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorEliminarCurso_Click(object sender, EventArgs e)
         {
+            todosLosCursos.Clear();
+            foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+            cbAdministradorEliminarCurso.DataSource = todosLosCursos;
             panelAdministradorEliminarCurso.Show();
             panelAdministrador.Hide();
         }
@@ -658,35 +653,81 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorEliminarSeccion_Click(object sender, EventArgs e)
         {
+            nrcCursos.Clear();
+            foreach (Curso c in carrera.cursos)
+            {
+                foreach (Seccion s in c.secciones)
+                    nrcCursos.Add(s.nrc);
+            }
+            cbAdministradorEliminarSeccion.DataSource = nrcCursos;
+            cbAdministradorEliminarSeccion.Refresh();
             panelAdministradorEliminarSeccion.Show();
             panelAdministrador.Hide();
+        }
+
+        private void btnAdministradorEliminarCursoEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                carrera.EliminarCurso(carrera.RetornarCurso(cbAdministradorEliminarCurso.Text));
+                todosLosCursos.Clear();
+                foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+                cbAdministradorEliminarCurso.DataSource = todosLosCursos;
+                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Black; lbAdministradorEstadoEliminarCurso.Text = "El Curso " + cbAdministradorEliminarCurso.Text + "\n se elimino con exito."; 
+            }
+            catch
+            {
+                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Red; lbAdministradorEstadoEliminarCurso.Text = "No existen cursos para eliminar.";
+
+            }
+
+
+        }
+
+        private void btnAdministradorEliminarSeccionEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                carrera.devolverCursoDeUnNrc(int.Parse(cbAdministradorEliminarSeccion.Text)).secciones.Remove(carrera.devolverSeccionDeUnNrc(int.Parse(cbAdministradorEliminarSeccion.Text)));
+                lbAdministradorEstadoEliminarSeccion.ForeColor = Color.Black; lbAdministradorEstadoEliminarSeccion.Text = "Fue eliminada con exito";
+                nrcCursos.Clear();
+                foreach (Curso c in carrera.cursos)
+                {
+                    foreach (Seccion s in c.secciones)
+                        nrcCursos.Add(s.nrc);
+                }
+                cbAdministradorEliminarSeccion.DataSource = nrcCursos;
+                cbAdministradorEliminarSeccion.Refresh();
+            }
+            catch
+            {
+                lbAdministradorEstadoEliminarSeccion.ForeColor = Color.Red; ; lbAdministradorEstadoEliminarSeccion.Text = "Hubo un error al intentar\neliminar la seccion."; SystemSounds.Hand.Play();
+            }
+        }
+
+        private void btnAdministradorAgregarCursoAgregar_Click(object sender, EventArgs e)
+        {
+            //ACA AGREGAR
+            try
+            {
+                Curso cur = new Curso(tbAdministradorNombreCursoNuevo.Text, int.Parse(tbAdministradorFacultadCursoNuevo.Text));
+                carrera.cursos.Add(cur);
+                lbAdministradorEstadoAgregarCurso.ForeColor = Color.Black;
+                lbAdministradorEstadoAgregarCurso.Text = tbAdministradorNombreCursoNuevo.Text + "\nse creo exito";
+                tbAdministradorNombreCursoNuevo.Text = "";
+                tbAdministradorFacultadCursoNuevo.Text = "";
+            }
+            catch
+            {
+                lbAdministradorEstadoAgregarCurso.ForeColor = Color.Red; lbAdministradorEstadoAgregarCurso.Text = "Error al crear el curso\nIntente nuevamente"; SystemSounds.Hand.Play();
+            }
+
+        }
+
+        private void btnAdministradorAgregarSeccionAgregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
 
-/*
-
-
-    HACER QUE EL ADMIN PUEDA AGREGAR UN CURSO SOLO CREDITOS Y NOMBRE
-    Y OTRA WEA PARA LA SECCION CON TODAS SUS COSAS
-
-    try{
-    tambien try para la seccion
-            Curso cursoNuevo = new Curso(tbAdministradorAgregarRamoNombre.Text, int.Parse(tbAdministradorAgregarRamoCreditos.Text))
-            tbAdministradorAgregarRamoEstado.Text = tbAdministradorAgregarCursoNombre.Text + " fue Creado con exito"; 
-            tbAdministradorAgregarRamoNrc.Text="";
-            tbAdministradorAgregarRamoNombre.Text="";
-            tbAdministradorAgregarRamoProfesorNombre.Text="";
-            tbAdministradorAgregarRamoProfesorApellido.Text="";
-            tbAdministradorAgregarRamoCreditos.Text="";
-    }
-                catch { tbAdministradorAgregarRamoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
-
-tbAdministradorAgregarRamoNrc
-tbAdministradorAgregarRamoNombre
-tbAdministradorAgregarRamoProfesorNombre
-tbAdministradorAgregarRamoProfesorApellido
-tbAdministradorAgregarRamoCreditos
-
-
-*/

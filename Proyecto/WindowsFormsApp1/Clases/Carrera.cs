@@ -57,48 +57,6 @@ namespace WindowsFormsApp1
             return false;
         }
 
-
-
-
-        //public void MostrarCursosProfe(Persona profe)
-        //{
-        //    string a = "Tus Cursos son:\n";
-        //    foreach (Curso curso in cursos)
-        //    {
-        //        foreach (Seccion seccion in curso.secciones)
-        //        {
-        //            if (seccion.profesor == profe)
-        //            {
-        //                a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
-        //            }
-        //        }
-        //    }
-        //    MessageBox.Show(a);
-        //}
-
-        //public void MostrarCursosAlumno(Persona alumno)
-        //{
-        //    string a = "Tus Cursos son:\n";
-        //    foreach (Curso curso in cursos)
-        //    {
-        //        foreach (Seccion seccion in curso.secciones)
-        //        {
-        //            foreach (Persona alum in seccion.alumnos)
-        //            {
-        //                if (alum == alumno)
-        //                {
-
-        //                    a = a + curso.nombre + " NRC " + seccion.nrc + "\n";
-
-        //                }
-        //            }
-
-        //        }
-        //    }
-        //    MessageBox.Show(a);
-
-        //}
-
         public bool VerificarProfe(int rut, string clave)
         {
             foreach (Curso curso in cursos)
@@ -156,17 +114,17 @@ namespace WindowsFormsApp1
 
         public string devolverStrDelCurso(List<Curso> listaDeCursos, Persona p)
         {
-            string mensaje = "Tus Cursos son \n Nombre\t\tNrc\n";
+            string mensaje = "Tus Cursos son \n Nombre\t\tNrc\tHorario\n";
             foreach (Curso c in listaDeCursos)
             {
-                mensaje = mensaje + "-  " + c.nombre + "\t" + c.mostrarNrc(p).ToString() + "\n";
+                mensaje = mensaje + "-  " + c.nombre + "\t" + c.mostrarNrc(p).ToString() + "\t "+c.secciones[0].horario[0].inicio.DayOfWeek.ToString()+"  "+ c.secciones[0].horario[0].inicio.TimeOfDay.ToString() + "\n";
             }
             return mensaje;
         }
 
-        public List<int> DevolverNrc(string cursoString)
+        public BindingList<int> DevolverNrc(string cursoString)
         {
-            List<int> nrcs = new List<int>();
+            BindingList<int> nrcs = new BindingList<int>();
             foreach (Curso curso in cursos)
             {
                 if (curso.nombre == cursoString)
@@ -263,36 +221,51 @@ namespace WindowsFormsApp1
             }
             return profes;
         }
-        //public List<Seccion> VerSecciones(Persona p)
-        //{
-        //    List<Seccion> lista = new List<Seccion>();
-        //    foreach (Curso c in cursos)
-        //    {
-        //        foreach (Seccion s in c.secciones)
-        //        {
-        //            if (s.profesor == p)
-        //            {
-        //                lista.Add(s);
-        //            }
-        //        }
-        //    }
-        //    return lista;
-        //}
 
-        //public Curso VerCurso(Seccion seccion)
-        //{
-        //    foreach (Curso c in cursos)
-        //    {
-        //        foreach (Seccion s in c.secciones)
-        //        {
-        //            if (s == seccion)
-        //            {
-        //                return c;
-        //            }
-        //        }
-        //    }
-        //    return null;
-        //}
+        public Curso devolverCursoDeUnNrc(int nrc)
+        {
+            foreach (Curso c in cursos)
+            {
+                foreach (Seccion s in c.secciones)
+                {
+                    if (s.nrc == nrc)
+                    {
+                        return c;
+                    }
+                }
+            }
+            return null;
+        }
+        public Seccion devolverSeccionDeUnNrc(int nrc)
+        {
+            foreach (Curso c in cursos)
+            {
+                foreach (Seccion s in c.secciones)
+                {
+                    if (s.nrc == nrc)
+                    {
+                        return s;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public void EliminarCurso(Curso curso)
+        {
+            try
+            {
+                foreach (Curso cur in cursos)
+                {
+                    if (cur == curso)
+                    {
+                        cursos.Remove(cur);
+                    }
+                }
+            }
+            catch { }
+            
+        }
     }
 }
 
