@@ -114,9 +114,9 @@ namespace WindowsFormsApp1
             return false;
         }
 
-        public BindingList<Curso> VerCursos(Persona p)
+        public List<Curso> VerCursos(Persona p)
         {
-            BindingList<Curso> lista = new BindingList<Curso>();
+            List<Curso> lista = new List<Curso>();
             foreach (Curso c in cursos)
             {
                 foreach (Seccion s in c.secciones)
@@ -152,7 +152,7 @@ namespace WindowsFormsApp1
             return lista;
         }
 
-        public string devolverStrDelCurso (BindingList<Curso> listaDeCursos, Persona p)
+        public string devolverStrDelCurso(List<Curso> listaDeCursos, Persona p)
         {
             string mensaje = "Tus Cursos son \n Nombre\t\tNrc\n";
             foreach (Curso c in listaDeCursos)
@@ -162,6 +162,83 @@ namespace WindowsFormsApp1
             return mensaje;
         }
 
+        public List<int> DevolverNrc(string cursoString)
+        {
+            List<int> nrcs = new List<int>();
+            foreach (Curso curso in cursos)
+            {
+                if (curso.nombre == cursoString)
+                {
+                    foreach (Seccion seccion in curso.secciones)
+                    {
+                        nrcs.Add(seccion.nrc);
+                    }
+                }
+            }
+            return nrcs;
+
+        }
+        public void agregarRamo(string nombreCurso, int nrc, Persona personaAgregar)
+        {
+            foreach (Curso c in cursos)
+            {
+                if (c.nombre == nombreCurso)
+                {
+                    foreach (Seccion s in c.secciones)
+                    {
+                        if (s.nrc == nrc)
+                        {
+                            s.alumnos.Add(personaAgregar);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        public Curso RetornarCurso(string s)
+        {
+            foreach (Curso c in cursos)
+            {
+                if (c.nombre == s)
+                {
+                    return c;
+                }
+            }
+            return null;
+        }
+
+        public Seccion RetornarSeccion(string s)
+        {
+            foreach (Curso c in cursos)
+            {
+                foreach (Seccion sec in c.secciones)
+                {
+                    if (sec.nrc == int.Parse(s))
+                    {
+                        return sec;
+                    }
+                }
+
+            }
+            return null;
+        }
+
+        public bool BotarRamo(int rutAlumno, Curso c)
+        {
+            foreach (Seccion se in c.secciones)
+            {
+                foreach (Persona a in se.alumnos)
+                {
+                    if (a.rut == rutAlumno)
+                    {
+                        se.alumnos.Remove(a);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
 }
 

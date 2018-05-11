@@ -11,6 +11,8 @@ namespace WindowsFormsApp1
     {
         public int rut, creditos;
         public string nombre, apellido, clave, tipo;
+        public List<Curso> aprobados;
+
         //public List<Seccion> secciones;
 
         public Persona(int rut, string nombre, string apellido, string clave)
@@ -19,7 +21,7 @@ namespace WindowsFormsApp1
             this.nombre = nombre;
             this.apellido = apellido;
             this.clave = clave;
-            //secciones = new List<Seccion>();
+            aprobados = new List<Curso>();
         }
 
         public bool Login(Persona persona)
@@ -30,6 +32,25 @@ namespace WindowsFormsApp1
             string clave = Console.ReadLine();
             if (persona.rut == rut && persona.clave == clave) { return true; }
             else { return false; }
+        }
+
+        public bool TopeHorario(Carrera c, Seccion s)
+        {
+            foreach (Curso curso in c.VerCursos(this))
+            {
+                foreach (Seccion se in curso.secciones)
+                {
+                    foreach (Horario h in se.horario)
+                    {
+                        if (s.horario.Contains(h))
+                        {
+                            return false;
+                        }
+                        else { continue; }
+                    }
+                }
+            }
+            return true;
         }
 
         //public void QuitarSeccion(Seccion seccion)

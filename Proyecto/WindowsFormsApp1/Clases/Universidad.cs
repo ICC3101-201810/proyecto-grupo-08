@@ -49,32 +49,36 @@ namespace WindowsFormsApp1
 
         public Persona VerPersona(Carrera c, string rut)
         {
-            foreach (Administrativo adm in c.admins)
+            try
             {
-                if (adm.rut == int.Parse(rut))
+                foreach (Administrativo adm in c.admins)
                 {
-                    return adm;
-                }
-            }
-            foreach (Curso cu in c.cursos)
-            {
-                foreach (Seccion s in cu.secciones)
-                {
-                    if (s.profesor.rut == int.Parse(rut))
+                    if (adm.rut == int.Parse(rut))
                     {
-                        return s.profesor;
+                        return adm;
                     }
-                    foreach (Alumno a in s.alumnos)
+                }
+                foreach (Curso cu in c.cursos)
+                {
+                    foreach (Seccion s in cu.secciones)
                     {
-                        if (a.rut == int.Parse(rut))
+                        if (s.profesor.rut == int.Parse(rut))
                         {
-                            return a;
+                            return s.profesor;
+                        }
+                        foreach (Alumno a in s.alumnos)
+                        {
+                            if (a.rut == int.Parse(rut))
+                            {
+                                return a;
+                            }
                         }
                     }
                 }
-            }
 
-            return null;
+                return null;
+            }
+            catch { return null; }
         }
     }
 

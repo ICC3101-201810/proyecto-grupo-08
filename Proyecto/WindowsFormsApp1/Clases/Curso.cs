@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         public int creditos;
         public List<Curso> requisitos;//esto
         public List<Seccion> secciones;//esto
-       
+
 
         public Curso(string nombre, int credito)
         {
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             requisitos = new List<Curso>();//esto
         }
 
-        
+
 
 
         public void AgregarRequisito(Curso requisito)//
@@ -37,65 +37,20 @@ namespace WindowsFormsApp1
         {
             requisitos.Remove(requisito);
         }
-        public void MostrarRequisito() //esto
-        {
-            foreach (Curso CursRequisito in requisitos)
-            {
-                Console.WriteLine(CursRequisito.nombre);
-            }
-        }
         public void CrearSeccion(Seccion seccion)//esto
         {
             secciones.Add(seccion);
         }
-        //public bool Pertenece(Persona p)
-        //{
-
-        //}
-        //public void MostrarSecciones()
-        //{
-        //    string a="";
-        //    foreach (Seccion s in secciones)
-        //    {
-        //        List<Horario> horarioSemana = s.horario.Where(x => x.inicio > DateTime.Today && x.inicio < DateTime.Now.AddDays(7)).ToList();
-        //        a = a + "seccion " + s.numero+ "\n----------------\n";
-        //        foreach (Horario horario in horarioSemana)
-        //        {
-        //            a= a+horario.inicio+"\n";
-        //            //Console.WriteLine(horario.inicio);
-        //        }
-        //        a += "\n----------------\n";
-        //        MessageBox.Show(a);
-        //    }
-        //}
-
-
-
-        /*public void MostrarSiEsta(Persona alumno)
-        {
-            string a = "Tus Cursos son:\n";
-            foreach (Seccion seccion in secciones)
-            {
-                foreach (Persona per in seccion.alumnos)
-                {
-                    if (alumno == per)
-                    {
-                        a = a + nombre + " NRC " + nrc + " seccion " + seccion.numero + "\n";
-                        
-                    }
-                }
-            }
-            MessageBox.Show(a);*/
 
         public int mostrarNrc(Persona persona)
         {
             foreach (Seccion s in secciones)
             {
-                if(s.profesor == persona)
+                if (s.profesor == persona)
                 {
                     return s.nrc;
                 }
-                foreach(Persona alumno in s.alumnos)
+                foreach (Persona alumno in s.alumnos)
                 {
                     if (alumno == persona)
                     {
@@ -105,9 +60,39 @@ namespace WindowsFormsApp1
             }
             return 0;
         }
-                
 
+        public bool RequisitosAprobados(Persona a)
+        {
+            foreach (Curso requisito in requisitos)
+            {
+                if (a.aprobados.Contains(requisito))
+                {
+                    continue;
+                }
+                else { return false; }
+            }
+            return true;
+        }
 
+        public string MostarALumnosCurso(Persona profe)
+        {
+            string str = "Los alumnos de " + nombre + " son:\n";
+            
+            foreach(Seccion seccion in secciones)
+            {
+                if (seccion.profesor == profe)
+                {
+                    foreach(Persona alumno in seccion.alumnos)
+                    {
+                        str = str + alumno.nombre + " " + alumno.apellido + "\n";
 
+                    }
+                    
+                }
+            }
+            return str;
+        }
+
+        
     }
 }

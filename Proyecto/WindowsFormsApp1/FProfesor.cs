@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BindingList<Curso> cursos = new BindingList<Curso>();
+            List<Curso> cursos = new List<Curso>();
 
             cursos = (carrera.VerCursos(p));
 
