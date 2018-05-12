@@ -325,6 +325,7 @@ namespace WindowsFormsApp1
         }
         private void btnTomarRamosAlumnoSalir_Click(object sender, EventArgs e)
         {
+            lbAvisoTomaRamo.Text = "";
             panelTomaRamoAlumno.Hide();
             panelAlumno.Show();
         }
@@ -340,6 +341,7 @@ namespace WindowsFormsApp1
         }
         private void btnSalirBotarRamo_Click(object sender, EventArgs e)
         {
+            lbAvisoBotarRamo.Text = "";
             panelBotarRamo.Hide();
             panelAlumno.Show();
         }
@@ -355,29 +357,42 @@ namespace WindowsFormsApp1
         }
         private void btnAdministradorEliminarCursoVolver_Click(object sender, EventArgs e)
         {
+            lbAdministradorEstadoEliminarCurso.Text = "";
             panelAdministradorEliminarCurso.Hide();
             panelAdministrador.Show();
         }
 
         private void btnAdministradorEliminarSeccionVolver_Click(object sender, EventArgs e)
         {
+            lbAdministradorEstadoEliminarSeccion.Text = "";
             panelAdministradorEliminarSeccion.Hide();
             panelAdministrador.Show();
         }
 
         private void btnAdministradorAgregarCursoVolver_Click(object sender, EventArgs e)
         {
+            tbAdministradorNombreCursoNuevo.Text = "";
+            tbAdministradorFacultadCursoNuevo.Text = "";
+            lbAdministradorEstadoAgregarCurso.Text = "";
             panelAdministradorAgregarCurso.Hide();
             panelAdministrador.Show();
         }
 
         private void btnAdministradorAgregarSeccionVolver_Click(object sender, EventArgs e)
         {
+            tbAdministradorAgregarSeccionVacantes.Text = "";
+            tbAdministradorAgregarSeccionNrc.Text = "";
+            lbAdministradorEstadoAgregarSeccion.Text = "";
             panelAdministradorAgregarSeccion.Hide();
             panelAdministrador.Show();
         }
         private void btnAdministradorCrearAlumnoVolver_Click(object sender, EventArgs e)
         {
+            tbAdministradoAgregarRut.Text = "";
+            tbAdministradorAgregarNombre.Text = "";
+            tbAdministradorAgregarApellido.Text = "";
+            tbAdministradorAgregarClave.Text = "";
+            tbAdministradorCrearAlumnoEstado.Text = "";
             panelAdministradorCrearAlumno.Hide();
             panelAdministrador.Show();
         }
@@ -688,11 +703,12 @@ namespace WindowsFormsApp1
         {
             try
             {
+                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Black; lbAdministradorEstadoEliminarCurso.Text = "El Curso " + cbAdministradorEliminarCurso.Text + "\n se elimino con exito.";
                 carrera.EliminarCurso(carrera.RetornarCurso(cbAdministradorEliminarCurso.Text));
                 todosLosCursos.Clear();
                 foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+
                 cbAdministradorEliminarCurso.DataSource = todosLosCursos;
-                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Black; lbAdministradorEstadoEliminarCurso.Text = "El Curso " + cbAdministradorEliminarCurso.Text + "\n se elimino con exito.";
             }
             catch
             {

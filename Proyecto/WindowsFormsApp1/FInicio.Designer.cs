@@ -70,6 +70,7 @@
             this.btnHorarioProfesor = new System.Windows.Forms.Button();
             this.btnSalirProfesor = new System.Windows.Forms.Button();
             this.panelCursosProfesor = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnVerAlumnos = new System.Windows.Forms.Button();
             this.btnVolverCursosProfesor = new System.Windows.Forms.Button();
@@ -151,7 +152,6 @@
             this.btnAdministradorAgregarSeccionAgregar = new System.Windows.Forms.Button();
             this.btnAdministradorAgregarSeccionVolver = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.PanelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelAlumno.SuspendLayout();
@@ -178,16 +178,18 @@
             // 
             this.cbCarreras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCarreras.FormattingEnabled = true;
-            this.cbCarreras.Location = new System.Drawing.Point(48, 252);
+            this.cbCarreras.Location = new System.Drawing.Point(26, 137);
+            this.cbCarreras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCarreras.Name = "cbCarreras";
-            this.cbCarreras.Size = new System.Drawing.Size(381, 32);
+            this.cbCarreras.Size = new System.Drawing.Size(210, 21);
             this.cbCarreras.TabIndex = 0;
             // 
             // botonCarrera
             // 
-            this.botonCarrera.Location = new System.Drawing.Point(254, 516);
+            this.botonCarrera.Location = new System.Drawing.Point(139, 280);
+            this.botonCarrera.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonCarrera.Name = "botonCarrera";
-            this.botonCarrera.Size = new System.Drawing.Size(175, 65);
+            this.botonCarrera.Size = new System.Drawing.Size(95, 35);
             this.botonCarrera.TabIndex = 1;
             this.botonCarrera.Text = "Ingresar";
             this.botonCarrera.UseVisualStyleBackColor = true;
@@ -196,43 +198,48 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 313);
+            this.label1.Location = new System.Drawing.Point(23, 170);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 25);
+            this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ingrese su rut";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 414);
+            this.label2.Location = new System.Drawing.Point(23, 224);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 25);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ingrese su clave";
             // 
             // tbRut
             // 
-            this.tbRut.Location = new System.Drawing.Point(48, 361);
+            this.tbRut.Location = new System.Drawing.Point(26, 196);
+            this.tbRut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbRut.Name = "tbRut";
-            this.tbRut.Size = new System.Drawing.Size(381, 29);
+            this.tbRut.Size = new System.Drawing.Size(210, 20);
             this.tbRut.TabIndex = 4;
             this.tbRut.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbRut_KeyDown);
             // 
             // tbClave
             // 
-            this.tbClave.Location = new System.Drawing.Point(48, 461);
+            this.tbClave.Location = new System.Drawing.Point(26, 250);
+            this.tbClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbClave.Name = "tbClave";
-            this.tbClave.Size = new System.Drawing.Size(381, 29);
+            this.tbClave.Size = new System.Drawing.Size(210, 20);
             this.tbClave.TabIndex = 5;
             this.tbClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbClave_KeyDown);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 197);
+            this.label3.Location = new System.Drawing.Point(23, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 25);
+            this.label3.Size = new System.Drawing.Size(111, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Seleccione su Carrera";
             // 
@@ -247,26 +254,29 @@
             this.PanelInicio.Controls.Add(this.tbRut);
             this.PanelInicio.Controls.Add(this.label1);
             this.PanelInicio.Controls.Add(this.label2);
-            this.PanelInicio.Location = new System.Drawing.Point(0, 2);
+            this.PanelInicio.Location = new System.Drawing.Point(0, 1);
+            this.PanelInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelInicio.Name = "PanelInicio";
-            this.PanelInicio.Size = new System.Drawing.Size(466, 601);
+            this.PanelInicio.Size = new System.Drawing.Size(254, 326);
             this.PanelInicio.TabIndex = 7;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox4.Location = new System.Drawing.Point(57, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(31, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(355, 191);
+            this.pictureBox4.Size = new System.Drawing.Size(194, 103);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(48, 516);
+            this.btnSalir.Location = new System.Drawing.Point(26, 280);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(175, 65);
+            this.btnSalir.Size = new System.Drawing.Size(95, 35);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -277,18 +287,20 @@
             this.panelAlumno.Controls.Add(this.pictureBox1);
             this.panelAlumno.Controls.Add(this.tableLayoutPanel1);
             this.panelAlumno.Controls.Add(this.lbBienvenidoAlumno);
-            this.panelAlumno.Location = new System.Drawing.Point(472, 2);
+            this.panelAlumno.Location = new System.Drawing.Point(257, 1);
+            this.panelAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAlumno.Name = "panelAlumno";
-            this.panelAlumno.Size = new System.Drawing.Size(715, 467);
+            this.panelAlumno.Size = new System.Drawing.Size(390, 253);
             this.panelAlumno.TabIndex = 8;
             this.panelAlumno.Visible = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 147);
+            this.pictureBox1.Size = new System.Drawing.Size(142, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -302,19 +314,21 @@
             this.tableLayoutPanel1.Controls.Add(this.botonVerRamosAlumno, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.botonAgeregarRamoAlumno, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.botonCerrarSeccionAlumno, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(71, 279);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(39, 151);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(635, 145);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(346, 79);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // botonBotarRamoAlumno
             // 
-            this.botonBotarRamoAlumno.Location = new System.Drawing.Point(320, 3);
+            this.botonBotarRamoAlumno.Location = new System.Drawing.Point(175, 2);
+            this.botonBotarRamoAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonBotarRamoAlumno.Name = "botonBotarRamoAlumno";
-            this.botonBotarRamoAlumno.Size = new System.Drawing.Size(234, 66);
+            this.botonBotarRamoAlumno.Size = new System.Drawing.Size(128, 35);
             this.botonBotarRamoAlumno.TabIndex = 1;
             this.botonBotarRamoAlumno.Text = "Botar Ramo";
             this.botonBotarRamoAlumno.UseVisualStyleBackColor = true;
@@ -322,9 +336,10 @@
             // 
             // botonVerRamosAlumno
             // 
-            this.botonVerRamosAlumno.Location = new System.Drawing.Point(3, 75);
+            this.botonVerRamosAlumno.Location = new System.Drawing.Point(2, 41);
+            this.botonVerRamosAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonVerRamosAlumno.Name = "botonVerRamosAlumno";
-            this.botonVerRamosAlumno.Size = new System.Drawing.Size(233, 67);
+            this.botonVerRamosAlumno.Size = new System.Drawing.Size(127, 36);
             this.botonVerRamosAlumno.TabIndex = 2;
             this.botonVerRamosAlumno.Text = "Ver Ramos";
             this.botonVerRamosAlumno.UseVisualStyleBackColor = true;
@@ -332,9 +347,10 @@
             // 
             // botonAgeregarRamoAlumno
             // 
-            this.botonAgeregarRamoAlumno.Location = new System.Drawing.Point(3, 3);
+            this.botonAgeregarRamoAlumno.Location = new System.Drawing.Point(2, 2);
+            this.botonAgeregarRamoAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonAgeregarRamoAlumno.Name = "botonAgeregarRamoAlumno";
-            this.botonAgeregarRamoAlumno.Size = new System.Drawing.Size(233, 66);
+            this.botonAgeregarRamoAlumno.Size = new System.Drawing.Size(127, 35);
             this.botonAgeregarRamoAlumno.TabIndex = 0;
             this.botonAgeregarRamoAlumno.Text = "Agregar Ramo";
             this.botonAgeregarRamoAlumno.UseVisualStyleBackColor = true;
@@ -342,9 +358,10 @@
             // 
             // botonCerrarSeccionAlumno
             // 
-            this.botonCerrarSeccionAlumno.Location = new System.Drawing.Point(320, 75);
+            this.botonCerrarSeccionAlumno.Location = new System.Drawing.Point(175, 41);
+            this.botonCerrarSeccionAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonCerrarSeccionAlumno.Name = "botonCerrarSeccionAlumno";
-            this.botonCerrarSeccionAlumno.Size = new System.Drawing.Size(234, 67);
+            this.botonCerrarSeccionAlumno.Size = new System.Drawing.Size(128, 36);
             this.botonCerrarSeccionAlumno.TabIndex = 3;
             this.botonCerrarSeccionAlumno.Text = "Cerrar Sesión";
             this.botonCerrarSeccionAlumno.UseVisualStyleBackColor = true;
@@ -354,9 +371,10 @@
             // 
             this.lbBienvenidoAlumno.AutoSize = true;
             this.lbBienvenidoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBienvenidoAlumno.Location = new System.Drawing.Point(302, 64);
+            this.lbBienvenidoAlumno.Location = new System.Drawing.Point(165, 35);
+            this.lbBienvenidoAlumno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbBienvenidoAlumno.Name = "lbBienvenidoAlumno";
-            this.lbBienvenidoAlumno.Size = new System.Drawing.Size(168, 32);
+            this.lbBienvenidoAlumno.Size = new System.Drawing.Size(97, 20);
             this.lbBienvenidoAlumno.TabIndex = 4;
             this.lbBienvenidoAlumno.Text = "Bienvenido";
             // 
@@ -370,9 +388,10 @@
             this.panelTomaRamoAlumno.Controls.Add(this.btnTomarRamosAlumnoSalir);
             this.panelTomaRamoAlumno.Controls.Add(this.label4);
             this.panelTomaRamoAlumno.Controls.Add(this.cbAgregarRamoAlumno);
-            this.panelTomaRamoAlumno.Location = new System.Drawing.Point(546, 475);
+            this.panelTomaRamoAlumno.Location = new System.Drawing.Point(298, 257);
+            this.panelTomaRamoAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTomaRamoAlumno.Name = "panelTomaRamoAlumno";
-            this.panelTomaRamoAlumno.Size = new System.Drawing.Size(508, 520);
+            this.panelTomaRamoAlumno.Size = new System.Drawing.Size(277, 282);
             this.panelTomaRamoAlumno.TabIndex = 9;
             this.panelTomaRamoAlumno.Visible = false;
             // 
@@ -381,9 +400,10 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(121, 43);
+            this.label20.Location = new System.Drawing.Point(66, 23);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(217, 38);
+            this.label20.Size = new System.Drawing.Size(130, 24);
             this.label20.TabIndex = 17;
             this.label20.Text = "Tomar Ramo";
             this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -391,18 +411,20 @@
             // lbAvisoTomaRamo
             // 
             this.lbAvisoTomaRamo.AutoSize = true;
-            this.lbAvisoTomaRamo.Location = new System.Drawing.Point(49, 333);
+            this.lbAvisoTomaRamo.Location = new System.Drawing.Point(27, 180);
+            this.lbAvisoTomaRamo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAvisoTomaRamo.Name = "lbAvisoTomaRamo";
-            this.lbAvisoTomaRamo.Size = new System.Drawing.Size(64, 25);
+            this.lbAvisoTomaRamo.Size = new System.Drawing.Size(35, 13);
             this.lbAvisoTomaRamo.TabIndex = 6;
             this.lbAvisoTomaRamo.Text = "label5";
             // 
             // lbSeccionTomaRamos
             // 
             this.lbSeccionTomaRamos.AutoSize = true;
-            this.lbSeccionTomaRamos.Location = new System.Drawing.Point(49, 233);
+            this.lbSeccionTomaRamos.Location = new System.Drawing.Point(27, 126);
+            this.lbSeccionTomaRamos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSeccionTomaRamos.Name = "lbSeccionTomaRamos";
-            this.lbSeccionTomaRamos.Size = new System.Drawing.Size(270, 25);
+            this.lbSeccionTomaRamos.Size = new System.Drawing.Size(148, 13);
             this.lbSeccionTomaRamos.TabIndex = 5;
             this.lbSeccionTomaRamos.Text = "Seleccione una seccion (nrc).";
             // 
@@ -410,16 +432,18 @@
             // 
             this.cbSeccionTomarRamoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSeccionTomarRamoAlumno.FormattingEnabled = true;
-            this.cbSeccionTomarRamoAlumno.Location = new System.Drawing.Point(54, 277);
+            this.cbSeccionTomarRamoAlumno.Location = new System.Drawing.Point(29, 150);
+            this.cbSeccionTomarRamoAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbSeccionTomarRamoAlumno.Name = "cbSeccionTomarRamoAlumno";
-            this.cbSeccionTomarRamoAlumno.Size = new System.Drawing.Size(385, 32);
+            this.cbSeccionTomarRamoAlumno.Size = new System.Drawing.Size(212, 21);
             this.cbSeccionTomarRamoAlumno.TabIndex = 4;
             // 
             // btnAceptarTomarRamoAlumno
             // 
-            this.btnAceptarTomarRamoAlumno.Location = new System.Drawing.Point(54, 431);
+            this.btnAceptarTomarRamoAlumno.Location = new System.Drawing.Point(29, 233);
+            this.btnAceptarTomarRamoAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptarTomarRamoAlumno.Name = "btnAceptarTomarRamoAlumno";
-            this.btnAceptarTomarRamoAlumno.Size = new System.Drawing.Size(177, 65);
+            this.btnAceptarTomarRamoAlumno.Size = new System.Drawing.Size(97, 35);
             this.btnAceptarTomarRamoAlumno.TabIndex = 3;
             this.btnAceptarTomarRamoAlumno.Text = "Tomar Ramo";
             this.btnAceptarTomarRamoAlumno.UseVisualStyleBackColor = true;
@@ -427,9 +451,10 @@
             // 
             // btnTomarRamosAlumnoSalir
             // 
-            this.btnTomarRamosAlumnoSalir.Location = new System.Drawing.Point(262, 431);
+            this.btnTomarRamosAlumnoSalir.Location = new System.Drawing.Point(143, 233);
+            this.btnTomarRamosAlumnoSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTomarRamosAlumnoSalir.Name = "btnTomarRamosAlumnoSalir";
-            this.btnTomarRamosAlumnoSalir.Size = new System.Drawing.Size(177, 65);
+            this.btnTomarRamosAlumnoSalir.Size = new System.Drawing.Size(97, 35);
             this.btnTomarRamosAlumnoSalir.TabIndex = 2;
             this.btnTomarRamosAlumnoSalir.Text = "Salir";
             this.btnTomarRamosAlumnoSalir.UseVisualStyleBackColor = true;
@@ -438,9 +463,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 120);
+            this.label4.Location = new System.Drawing.Point(21, 65);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(438, 25);
+            this.label4.Size = new System.Drawing.Size(240, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "A  continuación, escoja el ramo que desea tomar.";
             // 
@@ -448,9 +474,10 @@
             // 
             this.cbAgregarRamoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAgregarRamoAlumno.FormattingEnabled = true;
-            this.cbAgregarRamoAlumno.Location = new System.Drawing.Point(54, 166);
+            this.cbAgregarRamoAlumno.Location = new System.Drawing.Point(29, 90);
+            this.cbAgregarRamoAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAgregarRamoAlumno.Name = "cbAgregarRamoAlumno";
-            this.cbAgregarRamoAlumno.Size = new System.Drawing.Size(385, 32);
+            this.cbAgregarRamoAlumno.Size = new System.Drawing.Size(212, 21);
             this.cbAgregarRamoAlumno.TabIndex = 0;
             this.cbAgregarRamoAlumno.SelectedIndexChanged += new System.EventHandler(this.cbAgregarRamoAlumno_SelectedIndexChanged);
             // 
@@ -462,9 +489,10 @@
             this.panelBotarRamo.Controls.Add(this.btnSalirBotarRamo);
             this.panelBotarRamo.Controls.Add(this.btnBotarRamo);
             this.panelBotarRamo.Controls.Add(this.label5);
-            this.panelBotarRamo.Location = new System.Drawing.Point(534, 1001);
+            this.panelBotarRamo.Location = new System.Drawing.Point(291, 542);
+            this.panelBotarRamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBotarRamo.Name = "panelBotarRamo";
-            this.panelBotarRamo.Size = new System.Drawing.Size(544, 520);
+            this.panelBotarRamo.Size = new System.Drawing.Size(297, 282);
             this.panelBotarRamo.TabIndex = 7;
             this.panelBotarRamo.Visible = false;
             // 
@@ -473,9 +501,10 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(148, 45);
+            this.label16.Location = new System.Drawing.Point(81, 24);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(219, 38);
+            this.label16.Size = new System.Drawing.Size(128, 24);
             this.label16.TabIndex = 4;
             this.label16.Text = "Botar Ramos";
             this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -484,25 +513,28 @@
             // 
             this.cbBotarRamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBotarRamo.FormattingEnabled = true;
-            this.cbBotarRamo.Location = new System.Drawing.Point(18, 202);
+            this.cbBotarRamo.Location = new System.Drawing.Point(10, 109);
+            this.cbBotarRamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBotarRamo.Name = "cbBotarRamo";
-            this.cbBotarRamo.Size = new System.Drawing.Size(501, 32);
+            this.cbBotarRamo.Size = new System.Drawing.Size(275, 21);
             this.cbBotarRamo.TabIndex = 4;
             // 
             // lbAvisoBotarRamo
             // 
             this.lbAvisoBotarRamo.AutoSize = true;
-            this.lbAvisoBotarRamo.Location = new System.Drawing.Point(22, 301);
+            this.lbAvisoBotarRamo.Location = new System.Drawing.Point(12, 163);
+            this.lbAvisoBotarRamo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAvisoBotarRamo.Name = "lbAvisoBotarRamo";
-            this.lbAvisoBotarRamo.Size = new System.Drawing.Size(64, 25);
+            this.lbAvisoBotarRamo.Size = new System.Drawing.Size(35, 13);
             this.lbAvisoBotarRamo.TabIndex = 3;
             this.lbAvisoBotarRamo.Text = "label6";
             // 
             // btnSalirBotarRamo
             // 
-            this.btnSalirBotarRamo.Location = new System.Drawing.Point(342, 412);
+            this.btnSalirBotarRamo.Location = new System.Drawing.Point(187, 223);
+            this.btnSalirBotarRamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalirBotarRamo.Name = "btnSalirBotarRamo";
-            this.btnSalirBotarRamo.Size = new System.Drawing.Size(177, 64);
+            this.btnSalirBotarRamo.Size = new System.Drawing.Size(97, 35);
             this.btnSalirBotarRamo.TabIndex = 2;
             this.btnSalirBotarRamo.Text = "Salir";
             this.btnSalirBotarRamo.UseVisualStyleBackColor = true;
@@ -510,9 +542,10 @@
             // 
             // btnBotarRamo
             // 
-            this.btnBotarRamo.Location = new System.Drawing.Point(18, 412);
+            this.btnBotarRamo.Location = new System.Drawing.Point(10, 223);
+            this.btnBotarRamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBotarRamo.Name = "btnBotarRamo";
-            this.btnBotarRamo.Size = new System.Drawing.Size(177, 66);
+            this.btnBotarRamo.Size = new System.Drawing.Size(97, 36);
             this.btnBotarRamo.TabIndex = 1;
             this.btnBotarRamo.Text = "Botar Ramo";
             this.btnBotarRamo.UseVisualStyleBackColor = true;
@@ -521,9 +554,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 140);
+            this.label5.Location = new System.Drawing.Point(36, 76);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(428, 25);
+            this.label5.Size = new System.Drawing.Size(235, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "A continuación, escoja el ramo que desea botar.";
             // 
@@ -534,27 +568,30 @@
             this.panelProfesor.Controls.Add(this.lbBienvenidoProfesor);
             this.panelProfesor.Controls.Add(this.btnHorarioProfesor);
             this.panelProfesor.Controls.Add(this.btnSalirProfesor);
-            this.panelProfesor.Location = new System.Drawing.Point(1193, 2);
+            this.panelProfesor.Location = new System.Drawing.Point(651, 1);
+            this.panelProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelProfesor.Name = "panelProfesor";
-            this.panelProfesor.Size = new System.Drawing.Size(709, 370);
+            this.panelProfesor.Size = new System.Drawing.Size(387, 200);
             this.panelProfesor.TabIndex = 10;
             this.panelProfesor.Visible = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(261, 147);
+            this.pictureBox2.Size = new System.Drawing.Size(142, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // btnCursosProfesor
             // 
-            this.btnCursosProfesor.Location = new System.Drawing.Point(47, 241);
+            this.btnCursosProfesor.Location = new System.Drawing.Point(26, 131);
+            this.btnCursosProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCursosProfesor.Name = "btnCursosProfesor";
-            this.btnCursosProfesor.Size = new System.Drawing.Size(190, 95);
+            this.btnCursosProfesor.Size = new System.Drawing.Size(104, 51);
             this.btnCursosProfesor.TabIndex = 4;
             this.btnCursosProfesor.Text = "Ver Cursos";
             this.btnCursosProfesor.UseVisualStyleBackColor = true;
@@ -564,17 +601,19 @@
             // 
             this.lbBienvenidoProfesor.AutoSize = true;
             this.lbBienvenidoProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBienvenidoProfesor.Location = new System.Drawing.Point(294, 64);
+            this.lbBienvenidoProfesor.Location = new System.Drawing.Point(160, 35);
+            this.lbBienvenidoProfesor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbBienvenidoProfesor.Name = "lbBienvenidoProfesor";
-            this.lbBienvenidoProfesor.Size = new System.Drawing.Size(99, 32);
+            this.lbBienvenidoProfesor.Size = new System.Drawing.Size(57, 20);
             this.lbBienvenidoProfesor.TabIndex = 2;
             this.lbBienvenidoProfesor.Text = "label6";
             // 
             // btnHorarioProfesor
             // 
-            this.btnHorarioProfesor.Location = new System.Drawing.Point(264, 239);
+            this.btnHorarioProfesor.Location = new System.Drawing.Point(144, 129);
+            this.btnHorarioProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHorarioProfesor.Name = "btnHorarioProfesor";
-            this.btnHorarioProfesor.Size = new System.Drawing.Size(190, 95);
+            this.btnHorarioProfesor.Size = new System.Drawing.Size(104, 51);
             this.btnHorarioProfesor.TabIndex = 1;
             this.btnHorarioProfesor.Text = "Ver Horario";
             this.btnHorarioProfesor.UseVisualStyleBackColor = true;
@@ -582,9 +621,10 @@
             // 
             // btnSalirProfesor
             // 
-            this.btnSalirProfesor.Location = new System.Drawing.Point(486, 239);
+            this.btnSalirProfesor.Location = new System.Drawing.Point(265, 129);
+            this.btnSalirProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalirProfesor.Name = "btnSalirProfesor";
-            this.btnSalirProfesor.Size = new System.Drawing.Size(190, 99);
+            this.btnSalirProfesor.Size = new System.Drawing.Size(104, 54);
             this.btnSalirProfesor.TabIndex = 0;
             this.btnSalirProfesor.Text = "Cerrar Sesión";
             this.btnSalirProfesor.UseVisualStyleBackColor = true;
@@ -597,29 +637,42 @@
             this.panelCursosProfesor.Controls.Add(this.btnVerAlumnos);
             this.panelCursosProfesor.Controls.Add(this.btnVolverCursosProfesor);
             this.panelCursosProfesor.Controls.Add(this.cbCursosProfesor);
-            this.panelCursosProfesor.Location = new System.Drawing.Point(1193, 675);
+            this.panelCursosProfesor.Location = new System.Drawing.Point(651, 366);
+            this.panelCursosProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCursosProfesor.Name = "panelCursosProfesor";
-            this.panelCursosProfesor.Size = new System.Drawing.Size(581, 377);
+            this.panelCursosProfesor.Size = new System.Drawing.Size(317, 204);
             this.panelCursosProfesor.TabIndex = 5;
             this.panelCursosProfesor.Visible = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(97, 53);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(106, 13);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "Seleccione un Ramo";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(217, 41);
+            this.label6.Location = new System.Drawing.Point(118, 22);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 38);
+            this.label6.Size = new System.Drawing.Size(74, 24);
             this.label6.TabIndex = 3;
             this.label6.Text = "Ramos";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnVerAlumnos
             // 
-            this.btnVerAlumnos.Location = new System.Drawing.Point(37, 226);
+            this.btnVerAlumnos.Location = new System.Drawing.Point(20, 122);
+            this.btnVerAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerAlumnos.Name = "btnVerAlumnos";
-            this.btnVerAlumnos.Size = new System.Drawing.Size(210, 96);
+            this.btnVerAlumnos.Size = new System.Drawing.Size(115, 52);
             this.btnVerAlumnos.TabIndex = 2;
             this.btnVerAlumnos.Text = "Ver Alumnos Inscritos";
             this.btnVerAlumnos.UseVisualStyleBackColor = true;
@@ -627,9 +680,10 @@
             // 
             // btnVolverCursosProfesor
             // 
-            this.btnVolverCursosProfesor.Location = new System.Drawing.Point(327, 226);
+            this.btnVolverCursosProfesor.Location = new System.Drawing.Point(178, 122);
+            this.btnVolverCursosProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolverCursosProfesor.Name = "btnVolverCursosProfesor";
-            this.btnVolverCursosProfesor.Size = new System.Drawing.Size(225, 96);
+            this.btnVolverCursosProfesor.Size = new System.Drawing.Size(123, 52);
             this.btnVolverCursosProfesor.TabIndex = 1;
             this.btnVolverCursosProfesor.Text = "Volver";
             this.btnVolverCursosProfesor.UseVisualStyleBackColor = true;
@@ -639,9 +693,10 @@
             // 
             this.cbCursosProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCursosProfesor.FormattingEnabled = true;
-            this.cbCursosProfesor.Location = new System.Drawing.Point(37, 126);
+            this.cbCursosProfesor.Location = new System.Drawing.Point(20, 68);
+            this.cbCursosProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCursosProfesor.Name = "cbCursosProfesor";
-            this.cbCursosProfesor.Size = new System.Drawing.Size(515, 32);
+            this.cbCursosProfesor.Size = new System.Drawing.Size(283, 21);
             this.cbCursosProfesor.TabIndex = 0;
             // 
             // panelAdministrador
@@ -650,27 +705,30 @@
             this.panelAdministrador.Controls.Add(this.btnAdministradorCerrar);
             this.panelAdministrador.Controls.Add(this.tableLayoutPanel2);
             this.panelAdministrador.Controls.Add(this.lbBienvenidoAdministrador);
-            this.panelAdministrador.Location = new System.Drawing.Point(1926, 2);
+            this.panelAdministrador.Location = new System.Drawing.Point(1051, 1);
+            this.panelAdministrador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAdministrador.Name = "panelAdministrador";
-            this.panelAdministrador.Size = new System.Drawing.Size(703, 514);
+            this.panelAdministrador.Size = new System.Drawing.Size(383, 278);
             this.panelAdministrador.TabIndex = 11;
             this.panelAdministrador.Visible = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(19, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(10, 11);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(261, 147);
+            this.pictureBox3.Size = new System.Drawing.Size(142, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
             // btnAdministradorCerrar
             // 
-            this.btnAdministradorCerrar.Location = new System.Drawing.Point(201, 403);
+            this.btnAdministradorCerrar.Location = new System.Drawing.Point(110, 218);
+            this.btnAdministradorCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorCerrar.Name = "btnAdministradorCerrar";
-            this.btnAdministradorCerrar.Size = new System.Drawing.Size(308, 87);
+            this.btnAdministradorCerrar.Size = new System.Drawing.Size(168, 47);
             this.btnAdministradorCerrar.TabIndex = 6;
             this.btnAdministradorCerrar.Text = "Cerrar Sesión";
             this.btnAdministradorCerrar.UseVisualStyleBackColor = true;
@@ -681,26 +739,28 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorEliminarSeccion, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarAlumno, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarCurso, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnBorrarAlumno, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarSeccion, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorEliminarCurso, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(41, 205);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(22, 111);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(638, 185);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(348, 100);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // btnAdministradorEliminarSeccion
             // 
-            this.btnAdministradorEliminarSeccion.Location = new System.Drawing.Point(436, 95);
+            this.btnAdministradorEliminarSeccion.Location = new System.Drawing.Point(237, 52);
+            this.btnAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorEliminarSeccion.Name = "btnAdministradorEliminarSeccion";
-            this.btnAdministradorEliminarSeccion.Size = new System.Drawing.Size(173, 86);
+            this.btnAdministradorEliminarSeccion.Size = new System.Drawing.Size(94, 46);
             this.btnAdministradorEliminarSeccion.TabIndex = 6;
             this.btnAdministradorEliminarSeccion.Text = "Eliminar Sección";
             this.btnAdministradorEliminarSeccion.UseVisualStyleBackColor = true;
@@ -708,9 +768,10 @@
             // 
             // btnAdministradorAgregarAlumno
             // 
-            this.btnAdministradorAgregarAlumno.Location = new System.Drawing.Point(3, 3);
+            this.btnAdministradorAgregarAlumno.Location = new System.Drawing.Point(2, 2);
+            this.btnAdministradorAgregarAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarAlumno.Name = "btnAdministradorAgregarAlumno";
-            this.btnAdministradorAgregarAlumno.Size = new System.Drawing.Size(177, 86);
+            this.btnAdministradorAgregarAlumno.Size = new System.Drawing.Size(97, 46);
             this.btnAdministradorAgregarAlumno.TabIndex = 3;
             this.btnAdministradorAgregarAlumno.Text = "Agregar Alumno";
             this.btnAdministradorAgregarAlumno.UseVisualStyleBackColor = true;
@@ -718,9 +779,10 @@
             // 
             // btnAdministradorAgregarCurso
             // 
-            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(211, 3);
+            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(115, 2);
+            this.btnAdministradorAgregarCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarCurso.Name = "btnAdministradorAgregarCurso";
-            this.btnAdministradorAgregarCurso.Size = new System.Drawing.Size(192, 86);
+            this.btnAdministradorAgregarCurso.Size = new System.Drawing.Size(105, 46);
             this.btnAdministradorAgregarCurso.TabIndex = 2;
             this.btnAdministradorAgregarCurso.Text = "Agregar Curso";
             this.btnAdministradorAgregarCurso.UseVisualStyleBackColor = true;
@@ -728,9 +790,10 @@
             // 
             // btnBorrarAlumno
             // 
-            this.btnBorrarAlumno.Location = new System.Drawing.Point(3, 95);
+            this.btnBorrarAlumno.Location = new System.Drawing.Point(2, 52);
+            this.btnBorrarAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBorrarAlumno.Name = "btnBorrarAlumno";
-            this.btnBorrarAlumno.Size = new System.Drawing.Size(177, 87);
+            this.btnBorrarAlumno.Size = new System.Drawing.Size(97, 46);
             this.btnBorrarAlumno.TabIndex = 1;
             this.btnBorrarAlumno.Text = "Borrar Alumno";
             this.btnBorrarAlumno.UseVisualStyleBackColor = true;
@@ -738,9 +801,10 @@
             // 
             // btnAdministradorAgregarSeccion
             // 
-            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(436, 3);
+            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(237, 2);
+            this.btnAdministradorAgregarSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarSeccion.Name = "btnAdministradorAgregarSeccion";
-            this.btnAdministradorAgregarSeccion.Size = new System.Drawing.Size(173, 86);
+            this.btnAdministradorAgregarSeccion.Size = new System.Drawing.Size(94, 46);
             this.btnAdministradorAgregarSeccion.TabIndex = 4;
             this.btnAdministradorAgregarSeccion.Text = "Agregar Sección";
             this.btnAdministradorAgregarSeccion.UseVisualStyleBackColor = true;
@@ -748,9 +812,10 @@
             // 
             // btnAdministradorEliminarCurso
             // 
-            this.btnAdministradorEliminarCurso.Location = new System.Drawing.Point(211, 95);
+            this.btnAdministradorEliminarCurso.Location = new System.Drawing.Point(115, 52);
+            this.btnAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorEliminarCurso.Name = "btnAdministradorEliminarCurso";
-            this.btnAdministradorEliminarCurso.Size = new System.Drawing.Size(192, 87);
+            this.btnAdministradorEliminarCurso.Size = new System.Drawing.Size(105, 46);
             this.btnAdministradorEliminarCurso.TabIndex = 5;
             this.btnAdministradorEliminarCurso.Text = "Eliminar Curso";
             this.btnAdministradorEliminarCurso.UseVisualStyleBackColor = true;
@@ -760,9 +825,10 @@
             // 
             this.lbBienvenidoAdministrador.AutoSize = true;
             this.lbBienvenidoAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBienvenidoAdministrador.Location = new System.Drawing.Point(286, 64);
+            this.lbBienvenidoAdministrador.Location = new System.Drawing.Point(156, 35);
+            this.lbBienvenidoAdministrador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbBienvenidoAdministrador.Name = "lbBienvenidoAdministrador";
-            this.lbBienvenidoAdministrador.Size = new System.Drawing.Size(99, 32);
+            this.lbBienvenidoAdministrador.Size = new System.Drawing.Size(57, 20);
             this.lbBienvenidoAdministrador.TabIndex = 0;
             this.lbBienvenidoAdministrador.Text = "label8";
             // 
@@ -782,9 +848,10 @@
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarClave);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradoAgregarRut);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarNombre);
-            this.panelAdministradorCrearAlumno.Location = new System.Drawing.Point(1926, 526);
+            this.panelAdministradorCrearAlumno.Location = new System.Drawing.Point(1051, 285);
+            this.panelAdministradorCrearAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAdministradorCrearAlumno.Name = "panelAdministradorCrearAlumno";
-            this.panelAdministradorCrearAlumno.Size = new System.Drawing.Size(703, 651);
+            this.panelAdministradorCrearAlumno.Size = new System.Drawing.Size(383, 353);
             this.panelAdministradorCrearAlumno.TabIndex = 8;
             this.panelAdministradorCrearAlumno.Visible = false;
             // 
@@ -793,18 +860,20 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(194, 39);
+            this.label18.Location = new System.Drawing.Point(106, 21);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(266, 38);
+            this.label18.Size = new System.Drawing.Size(163, 24);
             this.label18.TabIndex = 6;
             this.label18.Text = "Agregar Alumno";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnAdministradorCrearAlumnoVolver
             // 
-            this.btnAdministradorCrearAlumnoVolver.Location = new System.Drawing.Point(545, 561);
+            this.btnAdministradorCrearAlumnoVolver.Location = new System.Drawing.Point(297, 304);
+            this.btnAdministradorCrearAlumnoVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorCrearAlumnoVolver.Name = "btnAdministradorCrearAlumnoVolver";
-            this.btnAdministradorCrearAlumnoVolver.Size = new System.Drawing.Size(114, 48);
+            this.btnAdministradorCrearAlumnoVolver.Size = new System.Drawing.Size(62, 26);
             this.btnAdministradorCrearAlumnoVolver.TabIndex = 15;
             this.btnAdministradorCrearAlumnoVolver.Text = "Volver";
             this.btnAdministradorCrearAlumnoVolver.UseVisualStyleBackColor = true;
@@ -813,62 +882,69 @@
             // tbAdministradorCrearAlumnoEstado
             // 
             this.tbAdministradorCrearAlumnoEstado.AutoSize = true;
-            this.tbAdministradorCrearAlumnoEstado.Location = new System.Drawing.Point(36, 573);
+            this.tbAdministradorCrearAlumnoEstado.Location = new System.Drawing.Point(20, 310);
+            this.tbAdministradorCrearAlumnoEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tbAdministradorCrearAlumnoEstado.Name = "tbAdministradorCrearAlumnoEstado";
-            this.tbAdministradorCrearAlumnoEstado.Size = new System.Drawing.Size(75, 25);
+            this.tbAdministradorCrearAlumnoEstado.Size = new System.Drawing.Size(41, 13);
             this.tbAdministradorCrearAlumnoEstado.TabIndex = 14;
             this.tbAdministradorCrearAlumnoEstado.Text = "label14";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(270, 353);
+            this.label13.Location = new System.Drawing.Point(147, 191);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(190, 25);
+            this.label13.Size = new System.Drawing.Size(104, 13);
             this.label13.TabIndex = 13;
             this.label13.Text = "Ramo al que ingresa";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(517, 121);
+            this.label12.Location = new System.Drawing.Point(282, 66);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 25);
+            this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 12;
             this.label12.Text = "Apellido:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(517, 227);
+            this.label11.Location = new System.Drawing.Point(282, 123);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 25);
+            this.label11.Size = new System.Drawing.Size(37, 13);
             this.label11.TabIndex = 11;
             this.label11.Text = "Clave:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(142, 227);
+            this.label10.Location = new System.Drawing.Point(77, 123);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 25);
+            this.label10.Size = new System.Drawing.Size(27, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "Rut:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(116, 124);
+            this.label9.Location = new System.Drawing.Point(63, 67);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 25);
+            this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 9;
             this.label9.Text = "Nombre:";
             // 
             // btnAdministradorAgregarAlumnoNuevo
             // 
-            this.btnAdministradorAgregarAlumnoNuevo.Location = new System.Drawing.Point(41, 469);
+            this.btnAdministradorAgregarAlumnoNuevo.Location = new System.Drawing.Point(22, 254);
+            this.btnAdministradorAgregarAlumnoNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarAlumnoNuevo.Name = "btnAdministradorAgregarAlumnoNuevo";
-            this.btnAdministradorAgregarAlumnoNuevo.Size = new System.Drawing.Size(628, 51);
+            this.btnAdministradorAgregarAlumnoNuevo.Size = new System.Drawing.Size(343, 28);
             this.btnAdministradorAgregarAlumnoNuevo.TabIndex = 7;
             this.btnAdministradorAgregarAlumnoNuevo.Text = "Agregar Alumno";
             this.btnAdministradorAgregarAlumnoNuevo.UseVisualStyleBackColor = true;
@@ -878,37 +954,42 @@
             // 
             this.cbAdministradorAlumnoNuevoRamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorAlumnoNuevoRamo.FormattingEnabled = true;
-            this.cbAdministradorAlumnoNuevoRamo.Location = new System.Drawing.Point(43, 390);
+            this.cbAdministradorAlumnoNuevoRamo.Location = new System.Drawing.Point(23, 211);
+            this.cbAdministradorAlumnoNuevoRamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAdministradorAlumnoNuevoRamo.Name = "cbAdministradorAlumnoNuevoRamo";
-            this.cbAdministradorAlumnoNuevoRamo.Size = new System.Drawing.Size(628, 32);
+            this.cbAdministradorAlumnoNuevoRamo.Size = new System.Drawing.Size(344, 21);
             this.cbAdministradorAlumnoNuevoRamo.TabIndex = 6;
             // 
             // tbAdministradorAgregarApellido
             // 
-            this.tbAdministradorAgregarApellido.Location = new System.Drawing.Point(406, 160);
+            this.tbAdministradorAgregarApellido.Location = new System.Drawing.Point(221, 87);
+            this.tbAdministradorAgregarApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradorAgregarApellido.Name = "tbAdministradorAgregarApellido";
-            this.tbAdministradorAgregarApellido.Size = new System.Drawing.Size(263, 29);
+            this.tbAdministradorAgregarApellido.Size = new System.Drawing.Size(145, 20);
             this.tbAdministradorAgregarApellido.TabIndex = 5;
             // 
             // tbAdministradorAgregarClave
             // 
-            this.tbAdministradorAgregarClave.Location = new System.Drawing.Point(406, 264);
+            this.tbAdministradorAgregarClave.Location = new System.Drawing.Point(221, 143);
+            this.tbAdministradorAgregarClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradorAgregarClave.Name = "tbAdministradorAgregarClave";
-            this.tbAdministradorAgregarClave.Size = new System.Drawing.Size(263, 29);
+            this.tbAdministradorAgregarClave.Size = new System.Drawing.Size(145, 20);
             this.tbAdministradorAgregarClave.TabIndex = 4;
             // 
             // tbAdministradoAgregarRut
             // 
-            this.tbAdministradoAgregarRut.Location = new System.Drawing.Point(41, 264);
+            this.tbAdministradoAgregarRut.Location = new System.Drawing.Point(22, 143);
+            this.tbAdministradoAgregarRut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradoAgregarRut.Name = "tbAdministradoAgregarRut";
-            this.tbAdministradoAgregarRut.Size = new System.Drawing.Size(263, 29);
+            this.tbAdministradoAgregarRut.Size = new System.Drawing.Size(145, 20);
             this.tbAdministradoAgregarRut.TabIndex = 2;
             // 
             // tbAdministradorAgregarNombre
             // 
-            this.tbAdministradorAgregarNombre.Location = new System.Drawing.Point(41, 160);
+            this.tbAdministradorAgregarNombre.Location = new System.Drawing.Point(22, 87);
+            this.tbAdministradorAgregarNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradorAgregarNombre.Name = "tbAdministradorAgregarNombre";
-            this.tbAdministradorAgregarNombre.Size = new System.Drawing.Size(263, 29);
+            this.tbAdministradorAgregarNombre.Size = new System.Drawing.Size(145, 20);
             this.tbAdministradorAgregarNombre.TabIndex = 1;
             // 
             // panelVerHorarioProfe
@@ -918,9 +999,10 @@
             this.panelVerHorarioProfe.Controls.Add(this.btnVerHorarioProfe);
             this.panelVerHorarioProfe.Controls.Add(this.btnVolverVerHorario);
             this.panelVerHorarioProfe.Controls.Add(this.cbVerHorarioProfe);
-            this.panelVerHorarioProfe.Location = new System.Drawing.Point(1193, 375);
+            this.panelVerHorarioProfe.Location = new System.Drawing.Point(651, 203);
+            this.panelVerHorarioProfe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelVerHorarioProfe.Name = "panelVerHorarioProfe";
-            this.panelVerHorarioProfe.Size = new System.Drawing.Size(534, 294);
+            this.panelVerHorarioProfe.Size = new System.Drawing.Size(291, 159);
             this.panelVerHorarioProfe.TabIndex = 12;
             this.panelVerHorarioProfe.Visible = false;
             // 
@@ -929,9 +1011,10 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(175, 26);
+            this.label19.Location = new System.Drawing.Point(95, 14);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(195, 38);
+            this.label19.Size = new System.Drawing.Size(118, 24);
             this.label19.TabIndex = 16;
             this.label19.Text = "Ver Horario";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -939,17 +1022,19 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(175, 97);
+            this.label14.Location = new System.Drawing.Point(95, 53);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(194, 25);
+            this.label14.Size = new System.Drawing.Size(105, 13);
             this.label14.TabIndex = 3;
             this.label14.Text = "Seleccione un Curso";
             // 
             // btnVerHorarioProfe
             // 
-            this.btnVerHorarioProfe.Location = new System.Drawing.Point(27, 194);
+            this.btnVerHorarioProfe.Location = new System.Drawing.Point(15, 105);
+            this.btnVerHorarioProfe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerHorarioProfe.Name = "btnVerHorarioProfe";
-            this.btnVerHorarioProfe.Size = new System.Drawing.Size(165, 75);
+            this.btnVerHorarioProfe.Size = new System.Drawing.Size(90, 41);
             this.btnVerHorarioProfe.TabIndex = 2;
             this.btnVerHorarioProfe.Text = "Ver Horario";
             this.btnVerHorarioProfe.UseVisualStyleBackColor = true;
@@ -957,9 +1042,10 @@
             // 
             // btnVolverVerHorario
             // 
-            this.btnVolverVerHorario.Location = new System.Drawing.Point(337, 194);
+            this.btnVolverVerHorario.Location = new System.Drawing.Point(184, 105);
+            this.btnVolverVerHorario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolverVerHorario.Name = "btnVolverVerHorario";
-            this.btnVolverVerHorario.Size = new System.Drawing.Size(165, 75);
+            this.btnVolverVerHorario.Size = new System.Drawing.Size(90, 41);
             this.btnVolverVerHorario.TabIndex = 1;
             this.btnVolverVerHorario.Text = "Volver";
             this.btnVolverVerHorario.UseVisualStyleBackColor = true;
@@ -969,9 +1055,10 @@
             // 
             this.cbVerHorarioProfe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVerHorarioProfe.FormattingEnabled = true;
-            this.cbVerHorarioProfe.Location = new System.Drawing.Point(27, 125);
+            this.cbVerHorarioProfe.Location = new System.Drawing.Point(15, 68);
+            this.cbVerHorarioProfe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbVerHorarioProfe.Name = "cbVerHorarioProfe";
-            this.cbVerHorarioProfe.Size = new System.Drawing.Size(475, 32);
+            this.cbVerHorarioProfe.Size = new System.Drawing.Size(261, 21);
             this.cbVerHorarioProfe.TabIndex = 0;
             // 
             // panelBorrarAlumno
@@ -981,9 +1068,10 @@
             this.panelBorrarAlumno.Controls.Add(this.btnBorrarAlumnoMetodo);
             this.panelBorrarAlumno.Controls.Add(this.btnVolverBorrarAlumno);
             this.panelBorrarAlumno.Controls.Add(this.cbBorrarAlumno);
-            this.panelBorrarAlumno.Location = new System.Drawing.Point(1926, 1183);
+            this.panelBorrarAlumno.Location = new System.Drawing.Point(1051, 641);
+            this.panelBorrarAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBorrarAlumno.Name = "panelBorrarAlumno";
-            this.panelBorrarAlumno.Size = new System.Drawing.Size(523, 402);
+            this.panelBorrarAlumno.Size = new System.Drawing.Size(285, 218);
             this.panelBorrarAlumno.TabIndex = 13;
             this.panelBorrarAlumno.Visible = false;
             // 
@@ -992,9 +1080,10 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(116, 37);
+            this.label17.Location = new System.Drawing.Point(63, 20);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(286, 38);
+            this.label17.Size = new System.Drawing.Size(174, 24);
             this.label17.TabIndex = 5;
             this.label17.Text = "Eliminar Alumnos";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1002,17 +1091,19 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(22, 110);
+            this.label15.Location = new System.Drawing.Point(12, 60);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(475, 25);
+            this.label15.Size = new System.Drawing.Size(259, 13);
             this.label15.TabIndex = 5;
             this.label15.Text = "A continuación, escoja el al alumno que dese eliminar";
             // 
             // btnBorrarAlumnoMetodo
             // 
-            this.btnBorrarAlumnoMetodo.Location = new System.Drawing.Point(46, 280);
+            this.btnBorrarAlumnoMetodo.Location = new System.Drawing.Point(25, 152);
+            this.btnBorrarAlumnoMetodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBorrarAlumnoMetodo.Name = "btnBorrarAlumnoMetodo";
-            this.btnBorrarAlumnoMetodo.Size = new System.Drawing.Size(180, 88);
+            this.btnBorrarAlumnoMetodo.Size = new System.Drawing.Size(98, 48);
             this.btnBorrarAlumnoMetodo.TabIndex = 2;
             this.btnBorrarAlumnoMetodo.Text = "Borrar Alumno";
             this.btnBorrarAlumnoMetodo.UseVisualStyleBackColor = true;
@@ -1020,9 +1111,10 @@
             // 
             // btnVolverBorrarAlumno
             // 
-            this.btnVolverBorrarAlumno.Location = new System.Drawing.Point(292, 280);
+            this.btnVolverBorrarAlumno.Location = new System.Drawing.Point(159, 152);
+            this.btnVolverBorrarAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolverBorrarAlumno.Name = "btnVolverBorrarAlumno";
-            this.btnVolverBorrarAlumno.Size = new System.Drawing.Size(183, 88);
+            this.btnVolverBorrarAlumno.Size = new System.Drawing.Size(100, 48);
             this.btnVolverBorrarAlumno.TabIndex = 1;
             this.btnVolverBorrarAlumno.Text = "Volver";
             this.btnVolverBorrarAlumno.UseVisualStyleBackColor = true;
@@ -1032,9 +1124,10 @@
             // 
             this.cbBorrarAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBorrarAlumno.FormattingEnabled = true;
-            this.cbBorrarAlumno.Location = new System.Drawing.Point(46, 171);
+            this.cbBorrarAlumno.Location = new System.Drawing.Point(25, 93);
+            this.cbBorrarAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBorrarAlumno.Name = "cbBorrarAlumno";
-            this.cbBorrarAlumno.Size = new System.Drawing.Size(429, 32);
+            this.cbBorrarAlumno.Size = new System.Drawing.Size(236, 21);
             this.cbBorrarAlumno.TabIndex = 0;
             // 
             // panelAdministradorEliminarCurso
@@ -1045,27 +1138,30 @@
             this.panelAdministradorEliminarCurso.Controls.Add(this.btnAdministradorEliminarCursoEliminar);
             this.panelAdministradorEliminarCurso.Controls.Add(this.btnAdministradorEliminarCursoVolver);
             this.panelAdministradorEliminarCurso.Controls.Add(this.label7);
-            this.panelAdministradorEliminarCurso.Location = new System.Drawing.Point(2635, 2);
+            this.panelAdministradorEliminarCurso.Location = new System.Drawing.Point(1437, 1);
+            this.panelAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAdministradorEliminarCurso.Name = "panelAdministradorEliminarCurso";
-            this.panelAdministradorEliminarCurso.Size = new System.Drawing.Size(557, 338);
+            this.panelAdministradorEliminarCurso.Size = new System.Drawing.Size(304, 183);
             this.panelAdministradorEliminarCurso.TabIndex = 15;
             this.panelAdministradorEliminarCurso.Visible = false;
             // 
             // lbAdministradorEstadoEliminarCurso
             // 
             this.lbAdministradorEstadoEliminarCurso.AutoSize = true;
-            this.lbAdministradorEstadoEliminarCurso.Location = new System.Drawing.Point(21, 180);
+            this.lbAdministradorEstadoEliminarCurso.Location = new System.Drawing.Point(11, 98);
+            this.lbAdministradorEstadoEliminarCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAdministradorEstadoEliminarCurso.Name = "lbAdministradorEstadoEliminarCurso";
-            this.lbAdministradorEstadoEliminarCurso.Size = new System.Drawing.Size(93, 25);
+            this.lbAdministradorEstadoEliminarCurso.Size = new System.Drawing.Size(51, 13);
             this.lbAdministradorEstadoEliminarCurso.TabIndex = 29;
             this.lbAdministradorEstadoEliminarCurso.Text = "Facultad:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(113, 106);
+            this.label26.Location = new System.Drawing.Point(62, 57);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(182, 25);
+            this.label26.Size = new System.Drawing.Size(100, 13);
             this.label26.TabIndex = 21;
             this.label26.Text = "Seleccione el curso";
             // 
@@ -1073,16 +1169,18 @@
             // 
             this.cbAdministradorEliminarCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorEliminarCurso.FormattingEnabled = true;
-            this.cbAdministradorEliminarCurso.Location = new System.Drawing.Point(118, 134);
+            this.cbAdministradorEliminarCurso.Location = new System.Drawing.Point(64, 73);
+            this.cbAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAdministradorEliminarCurso.Name = "cbAdministradorEliminarCurso";
-            this.cbAdministradorEliminarCurso.Size = new System.Drawing.Size(318, 32);
+            this.cbAdministradorEliminarCurso.Size = new System.Drawing.Size(175, 21);
             this.cbAdministradorEliminarCurso.TabIndex = 21;
             // 
             // btnAdministradorEliminarCursoEliminar
             // 
-            this.btnAdministradorEliminarCursoEliminar.Location = new System.Drawing.Point(21, 273);
+            this.btnAdministradorEliminarCursoEliminar.Location = new System.Drawing.Point(11, 148);
+            this.btnAdministradorEliminarCursoEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorEliminarCursoEliminar.Name = "btnAdministradorEliminarCursoEliminar";
-            this.btnAdministradorEliminarCursoEliminar.Size = new System.Drawing.Size(370, 41);
+            this.btnAdministradorEliminarCursoEliminar.Size = new System.Drawing.Size(202, 22);
             this.btnAdministradorEliminarCursoEliminar.TabIndex = 18;
             this.btnAdministradorEliminarCursoEliminar.Text = "Eliminar";
             this.btnAdministradorEliminarCursoEliminar.UseVisualStyleBackColor = true;
@@ -1090,9 +1188,10 @@
             // 
             // btnAdministradorEliminarCursoVolver
             // 
-            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(413, 273);
+            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(225, 148);
+            this.btnAdministradorEliminarCursoVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorEliminarCursoVolver.Name = "btnAdministradorEliminarCursoVolver";
-            this.btnAdministradorEliminarCursoVolver.Size = new System.Drawing.Size(128, 41);
+            this.btnAdministradorEliminarCursoVolver.Size = new System.Drawing.Size(70, 22);
             this.btnAdministradorEliminarCursoVolver.TabIndex = 17;
             this.btnAdministradorEliminarCursoVolver.Text = "Volver";
             this.btnAdministradorEliminarCursoVolver.UseVisualStyleBackColor = true;
@@ -1103,9 +1202,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(160, 20);
+            this.label7.Location = new System.Drawing.Point(87, 11);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(245, 38);
+            this.label7.Size = new System.Drawing.Size(147, 24);
             this.label7.TabIndex = 16;
             this.label7.Text = "Eliminar Curso";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1119,27 +1219,30 @@
             this.panelAdministradorEliminarSeccion.Controls.Add(this.btnAdministradorEliminarSeccionVolver);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.label21);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.panel2);
-            this.panelAdministradorEliminarSeccion.Location = new System.Drawing.Point(2635, 346);
+            this.panelAdministradorEliminarSeccion.Location = new System.Drawing.Point(1437, 187);
+            this.panelAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAdministradorEliminarSeccion.Name = "panelAdministradorEliminarSeccion";
-            this.panelAdministradorEliminarSeccion.Size = new System.Drawing.Size(557, 315);
+            this.panelAdministradorEliminarSeccion.Size = new System.Drawing.Size(304, 171);
             this.panelAdministradorEliminarSeccion.TabIndex = 16;
             this.panelAdministradorEliminarSeccion.Visible = false;
             // 
             // lbAdministradorEstadoEliminarSeccion
             // 
             this.lbAdministradorEstadoEliminarSeccion.AutoSize = true;
-            this.lbAdministradorEstadoEliminarSeccion.Location = new System.Drawing.Point(21, 161);
+            this.lbAdministradorEstadoEliminarSeccion.Location = new System.Drawing.Point(11, 87);
+            this.lbAdministradorEstadoEliminarSeccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAdministradorEstadoEliminarSeccion.Name = "lbAdministradorEstadoEliminarSeccion";
-            this.lbAdministradorEstadoEliminarSeccion.Size = new System.Drawing.Size(93, 25);
+            this.lbAdministradorEstadoEliminarSeccion.Size = new System.Drawing.Size(51, 13);
             this.lbAdministradorEstadoEliminarSeccion.TabIndex = 28;
             this.lbAdministradorEstadoEliminarSeccion.Text = "Facultad:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(113, 89);
+            this.label8.Location = new System.Drawing.Point(62, 48);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(295, 25);
+            this.label8.Size = new System.Drawing.Size(163, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Seleccione el NRC de la seccion";
             // 
@@ -1147,16 +1250,18 @@
             // 
             this.cbAdministradorEliminarSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorEliminarSeccion.FormattingEnabled = true;
-            this.cbAdministradorEliminarSeccion.Location = new System.Drawing.Point(118, 117);
+            this.cbAdministradorEliminarSeccion.Location = new System.Drawing.Point(64, 63);
+            this.cbAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAdministradorEliminarSeccion.Name = "cbAdministradorEliminarSeccion";
-            this.cbAdministradorEliminarSeccion.Size = new System.Drawing.Size(318, 32);
+            this.cbAdministradorEliminarSeccion.Size = new System.Drawing.Size(175, 21);
             this.cbAdministradorEliminarSeccion.TabIndex = 20;
             // 
             // btnAdministradorEliminarSeccionEliminar
             // 
-            this.btnAdministradorEliminarSeccionEliminar.Location = new System.Drawing.Point(21, 249);
+            this.btnAdministradorEliminarSeccionEliminar.Location = new System.Drawing.Point(11, 135);
+            this.btnAdministradorEliminarSeccionEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorEliminarSeccionEliminar.Name = "btnAdministradorEliminarSeccionEliminar";
-            this.btnAdministradorEliminarSeccionEliminar.Size = new System.Drawing.Size(370, 41);
+            this.btnAdministradorEliminarSeccionEliminar.Size = new System.Drawing.Size(202, 22);
             this.btnAdministradorEliminarSeccionEliminar.TabIndex = 20;
             this.btnAdministradorEliminarSeccionEliminar.Text = "Eliminar";
             this.btnAdministradorEliminarSeccionEliminar.UseVisualStyleBackColor = true;
@@ -1164,9 +1269,10 @@
             // 
             // btnAdministradorEliminarSeccionVolver
             // 
-            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(413, 249);
+            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(225, 135);
+            this.btnAdministradorEliminarSeccionVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorEliminarSeccionVolver.Name = "btnAdministradorEliminarSeccionVolver";
-            this.btnAdministradorEliminarSeccionVolver.Size = new System.Drawing.Size(128, 41);
+            this.btnAdministradorEliminarSeccionVolver.Size = new System.Drawing.Size(70, 22);
             this.btnAdministradorEliminarSeccionVolver.TabIndex = 19;
             this.btnAdministradorEliminarSeccionVolver.Text = "Volver";
             this.btnAdministradorEliminarSeccionVolver.UseVisualStyleBackColor = true;
@@ -1177,18 +1283,20 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(160, 20);
+            this.label21.Location = new System.Drawing.Point(87, 11);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(276, 38);
+            this.label21.Size = new System.Drawing.Size(168, 24);
             this.label21.TabIndex = 17;
             this.label21.Text = "Eliminar Seccion";
             this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 382);
+            this.panel2.Location = new System.Drawing.Point(0, 207);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(557, 483);
+            this.panel2.Size = new System.Drawing.Size(304, 262);
             this.panel2.TabIndex = 17;
             // 
             // panelAdministradorAgregarCurso
@@ -1201,58 +1309,65 @@
             this.panelAdministradorAgregarCurso.Controls.Add(this.btnAdministradorAgregarCursoAgregar);
             this.panelAdministradorAgregarCurso.Controls.Add(this.btnAdministradorAgregarCursoVolver);
             this.panelAdministradorAgregarCurso.Controls.Add(this.label22);
-            this.panelAdministradorAgregarCurso.Location = new System.Drawing.Point(2638, 667);
+            this.panelAdministradorAgregarCurso.Location = new System.Drawing.Point(1439, 361);
+            this.panelAdministradorAgregarCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAdministradorAgregarCurso.Name = "panelAdministradorAgregarCurso";
-            this.panelAdministradorAgregarCurso.Size = new System.Drawing.Size(557, 397);
+            this.panelAdministradorAgregarCurso.Size = new System.Drawing.Size(304, 215);
             this.panelAdministradorAgregarCurso.TabIndex = 18;
             this.panelAdministradorAgregarCurso.Visible = false;
             // 
             // lbAdministradorEstadoAgregarCurso
             // 
             this.lbAdministradorEstadoAgregarCurso.AutoSize = true;
-            this.lbAdministradorEstadoAgregarCurso.Location = new System.Drawing.Point(18, 270);
+            this.lbAdministradorEstadoAgregarCurso.Location = new System.Drawing.Point(10, 146);
+            this.lbAdministradorEstadoAgregarCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAdministradorEstadoAgregarCurso.Name = "lbAdministradorEstadoAgregarCurso";
-            this.lbAdministradorEstadoAgregarCurso.Size = new System.Drawing.Size(93, 25);
+            this.lbAdministradorEstadoAgregarCurso.Size = new System.Drawing.Size(51, 13);
             this.lbAdministradorEstadoAgregarCurso.TabIndex = 27;
             this.lbAdministradorEstadoAgregarCurso.Text = "Facultad:";
             // 
             // tbAdministradorFacultadCursoNuevo
             // 
-            this.tbAdministradorFacultadCursoNuevo.Location = new System.Drawing.Point(176, 220);
+            this.tbAdministradorFacultadCursoNuevo.Location = new System.Drawing.Point(96, 119);
+            this.tbAdministradorFacultadCursoNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradorFacultadCursoNuevo.Name = "tbAdministradorFacultadCursoNuevo";
-            this.tbAdministradorFacultadCursoNuevo.Size = new System.Drawing.Size(312, 29);
+            this.tbAdministradorFacultadCursoNuevo.Size = new System.Drawing.Size(172, 20);
             this.tbAdministradorFacultadCursoNuevo.TabIndex = 26;
             // 
             // tbAdministradorNombreCursoNuevo
             // 
-            this.tbAdministradorNombreCursoNuevo.Location = new System.Drawing.Point(176, 120);
+            this.tbAdministradorNombreCursoNuevo.Location = new System.Drawing.Point(96, 65);
+            this.tbAdministradorNombreCursoNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradorNombreCursoNuevo.Name = "tbAdministradorNombreCursoNuevo";
-            this.tbAdministradorNombreCursoNuevo.Size = new System.Drawing.Size(312, 29);
+            this.tbAdministradorNombreCursoNuevo.Size = new System.Drawing.Size(172, 20);
             this.tbAdministradorNombreCursoNuevo.TabIndex = 25;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(40, 224);
+            this.label25.Location = new System.Drawing.Point(22, 121);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(130, 25);
+            this.label25.Size = new System.Drawing.Size(68, 13);
             this.label25.TabIndex = 24;
             this.label25.Text = "Creditos (int):";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(40, 123);
+            this.label24.Location = new System.Drawing.Point(22, 67);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(87, 25);
+            this.label24.Size = new System.Drawing.Size(47, 13);
             this.label24.TabIndex = 23;
             this.label24.Text = "Nombre:";
             // 
             // btnAdministradorAgregarCursoAgregar
             // 
-            this.btnAdministradorAgregarCursoAgregar.Location = new System.Drawing.Point(18, 338);
+            this.btnAdministradorAgregarCursoAgregar.Location = new System.Drawing.Point(10, 183);
+            this.btnAdministradorAgregarCursoAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarCursoAgregar.Name = "btnAdministradorAgregarCursoAgregar";
-            this.btnAdministradorAgregarCursoAgregar.Size = new System.Drawing.Size(370, 41);
+            this.btnAdministradorAgregarCursoAgregar.Size = new System.Drawing.Size(202, 22);
             this.btnAdministradorAgregarCursoAgregar.TabIndex = 22;
             this.btnAdministradorAgregarCursoAgregar.Text = "Agregar";
             this.btnAdministradorAgregarCursoAgregar.UseVisualStyleBackColor = true;
@@ -1260,9 +1375,10 @@
             // 
             // btnAdministradorAgregarCursoVolver
             // 
-            this.btnAdministradorAgregarCursoVolver.Location = new System.Drawing.Point(410, 338);
+            this.btnAdministradorAgregarCursoVolver.Location = new System.Drawing.Point(224, 183);
+            this.btnAdministradorAgregarCursoVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarCursoVolver.Name = "btnAdministradorAgregarCursoVolver";
-            this.btnAdministradorAgregarCursoVolver.Size = new System.Drawing.Size(128, 41);
+            this.btnAdministradorAgregarCursoVolver.Size = new System.Drawing.Size(70, 22);
             this.btnAdministradorAgregarCursoVolver.TabIndex = 21;
             this.btnAdministradorAgregarCursoVolver.Text = "Volver";
             this.btnAdministradorAgregarCursoVolver.UseVisualStyleBackColor = true;
@@ -1273,9 +1389,10 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(157, 20);
+            this.label22.Location = new System.Drawing.Point(86, 11);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(243, 38);
+            this.label22.Size = new System.Drawing.Size(146, 24);
             this.label22.TabIndex = 18;
             this.label22.Text = "Agregar Curso";
             this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1296,52 +1413,58 @@
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionAgregar);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionVolver);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.label23);
-            this.panelAdministradorAgregarSeccion.Location = new System.Drawing.Point(2638, 1073);
+            this.panelAdministradorAgregarSeccion.Location = new System.Drawing.Point(1439, 581);
+            this.panelAdministradorAgregarSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAdministradorAgregarSeccion.Name = "panelAdministradorAgregarSeccion";
-            this.panelAdministradorAgregarSeccion.Size = new System.Drawing.Size(557, 596);
+            this.panelAdministradorAgregarSeccion.Size = new System.Drawing.Size(304, 323);
             this.panelAdministradorAgregarSeccion.TabIndex = 19;
             this.panelAdministradorAgregarSeccion.Visible = false;
             // 
             // lbAdministradorEstadoAgregarSeccion
             // 
             this.lbAdministradorEstadoAgregarSeccion.AutoSize = true;
-            this.lbAdministradorEstadoAgregarSeccion.Location = new System.Drawing.Point(30, 453);
+            this.lbAdministradorEstadoAgregarSeccion.Location = new System.Drawing.Point(16, 245);
+            this.lbAdministradorEstadoAgregarSeccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAdministradorEstadoAgregarSeccion.Name = "lbAdministradorEstadoAgregarSeccion";
-            this.lbAdministradorEstadoAgregarSeccion.Size = new System.Drawing.Size(81, 25);
+            this.lbAdministradorEstadoAgregarSeccion.Size = new System.Drawing.Size(44, 13);
             this.lbAdministradorEstadoAgregarSeccion.TabIndex = 37;
             this.lbAdministradorEstadoAgregarSeccion.Text = "Horario:";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(240, 376);
+            this.label29.Location = new System.Drawing.Point(131, 204);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(81, 25);
+            this.label29.Size = new System.Drawing.Size(44, 13);
             this.label29.TabIndex = 36;
             this.label29.Text = "Horario:";
             // 
             // dtpAdministradorAgregarSeccionHorario
             // 
-            this.dtpAdministradorAgregarSeccionHorario.Location = new System.Drawing.Point(85, 404);
+            this.dtpAdministradorAgregarSeccionHorario.Location = new System.Drawing.Point(46, 219);
+            this.dtpAdministradorAgregarSeccionHorario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpAdministradorAgregarSeccionHorario.Name = "dtpAdministradorAgregarSeccionHorario";
-            this.dtpAdministradorAgregarSeccionHorario.Size = new System.Drawing.Size(371, 29);
+            this.dtpAdministradorAgregarSeccionHorario.Size = new System.Drawing.Size(204, 20);
             this.dtpAdministradorAgregarSeccionHorario.TabIndex = 35;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(40, 164);
+            this.label28.Location = new System.Drawing.Point(22, 89);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(71, 25);
+            this.label28.Size = new System.Drawing.Size(37, 13);
             this.label28.TabIndex = 34;
             this.label28.Text = "Curso:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(307, 167);
+            this.label27.Location = new System.Drawing.Point(167, 90);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(91, 25);
+            this.label27.Size = new System.Drawing.Size(49, 13);
             this.label27.TabIndex = 33;
             this.label27.Text = "Profesor:";
             // 
@@ -1349,57 +1472,64 @@
             // 
             this.cbAdministradorAgregarSeccionProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorAgregarSeccionProfesor.FormattingEnabled = true;
-            this.cbAdministradorAgregarSeccionProfesor.Location = new System.Drawing.Point(312, 195);
+            this.cbAdministradorAgregarSeccionProfesor.Location = new System.Drawing.Point(170, 106);
+            this.cbAdministradorAgregarSeccionProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAdministradorAgregarSeccionProfesor.Name = "cbAdministradorAgregarSeccionProfesor";
-            this.cbAdministradorAgregarSeccionProfesor.Size = new System.Drawing.Size(193, 32);
+            this.cbAdministradorAgregarSeccionProfesor.Size = new System.Drawing.Size(107, 21);
             this.cbAdministradorAgregarSeccionProfesor.TabIndex = 32;
             // 
             // cbAdministradorAgregarSeccionCurso
             // 
             this.cbAdministradorAgregarSeccionCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorAgregarSeccionCurso.FormattingEnabled = true;
-            this.cbAdministradorAgregarSeccionCurso.Location = new System.Drawing.Point(45, 195);
+            this.cbAdministradorAgregarSeccionCurso.Location = new System.Drawing.Point(25, 106);
+            this.cbAdministradorAgregarSeccionCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAdministradorAgregarSeccionCurso.Name = "cbAdministradorAgregarSeccionCurso";
-            this.cbAdministradorAgregarSeccionCurso.Size = new System.Drawing.Size(193, 32);
+            this.cbAdministradorAgregarSeccionCurso.Size = new System.Drawing.Size(107, 21);
             this.cbAdministradorAgregarSeccionCurso.TabIndex = 31;
             // 
             // sad
             // 
             this.sad.AutoSize = true;
-            this.sad.Location = new System.Drawing.Point(307, 280);
+            this.sad.Location = new System.Drawing.Point(167, 152);
+            this.sad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sad.Name = "sad";
-            this.sad.Size = new System.Drawing.Size(48, 25);
+            this.sad.Size = new System.Drawing.Size(27, 13);
             this.sad.TabIndex = 29;
             this.sad.Text = "Nrc:";
             // 
             // dsa
             // 
             this.dsa.AutoSize = true;
-            this.dsa.Location = new System.Drawing.Point(40, 280);
+            this.dsa.Location = new System.Drawing.Point(22, 152);
+            this.dsa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dsa.Name = "dsa";
-            this.dsa.Size = new System.Drawing.Size(101, 25);
+            this.dsa.Size = new System.Drawing.Size(55, 13);
             this.dsa.TabIndex = 28;
             this.dsa.Text = "Vacantes:";
             // 
             // tbAdministradorAgregarSeccionVacantes
             // 
-            this.tbAdministradorAgregarSeccionVacantes.Location = new System.Drawing.Point(45, 308);
+            this.tbAdministradorAgregarSeccionVacantes.Location = new System.Drawing.Point(25, 167);
+            this.tbAdministradorAgregarSeccionVacantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradorAgregarSeccionVacantes.Name = "tbAdministradorAgregarSeccionVacantes";
-            this.tbAdministradorAgregarSeccionVacantes.Size = new System.Drawing.Size(193, 29);
+            this.tbAdministradorAgregarSeccionVacantes.Size = new System.Drawing.Size(107, 20);
             this.tbAdministradorAgregarSeccionVacantes.TabIndex = 26;
             // 
             // tbAdministradorAgregarSeccionNrc
             // 
-            this.tbAdministradorAgregarSeccionNrc.Location = new System.Drawing.Point(312, 308);
+            this.tbAdministradorAgregarSeccionNrc.Location = new System.Drawing.Point(170, 167);
+            this.tbAdministradorAgregarSeccionNrc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAdministradorAgregarSeccionNrc.Name = "tbAdministradorAgregarSeccionNrc";
-            this.tbAdministradorAgregarSeccionNrc.Size = new System.Drawing.Size(193, 29);
+            this.tbAdministradorAgregarSeccionNrc.Size = new System.Drawing.Size(107, 20);
             this.tbAdministradorAgregarSeccionNrc.TabIndex = 26;
             // 
             // btnAdministradorAgregarSeccionAgregar
             // 
-            this.btnAdministradorAgregarSeccionAgregar.Location = new System.Drawing.Point(18, 534);
+            this.btnAdministradorAgregarSeccionAgregar.Location = new System.Drawing.Point(10, 289);
+            this.btnAdministradorAgregarSeccionAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarSeccionAgregar.Name = "btnAdministradorAgregarSeccionAgregar";
-            this.btnAdministradorAgregarSeccionAgregar.Size = new System.Drawing.Size(370, 41);
+            this.btnAdministradorAgregarSeccionAgregar.Size = new System.Drawing.Size(202, 22);
             this.btnAdministradorAgregarSeccionAgregar.TabIndex = 24;
             this.btnAdministradorAgregarSeccionAgregar.Text = "Agregar";
             this.btnAdministradorAgregarSeccionAgregar.UseVisualStyleBackColor = true;
@@ -1407,9 +1537,10 @@
             // 
             // btnAdministradorAgregarSeccionVolver
             // 
-            this.btnAdministradorAgregarSeccionVolver.Location = new System.Drawing.Point(410, 534);
+            this.btnAdministradorAgregarSeccionVolver.Location = new System.Drawing.Point(224, 289);
+            this.btnAdministradorAgregarSeccionVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministradorAgregarSeccionVolver.Name = "btnAdministradorAgregarSeccionVolver";
-            this.btnAdministradorAgregarSeccionVolver.Size = new System.Drawing.Size(128, 41);
+            this.btnAdministradorAgregarSeccionVolver.Size = new System.Drawing.Size(70, 22);
             this.btnAdministradorAgregarSeccionVolver.TabIndex = 23;
             this.btnAdministradorAgregarSeccionVolver.Text = "Volver";
             this.btnAdministradorAgregarSeccionVolver.UseVisualStyleBackColor = true;
@@ -1420,29 +1551,21 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(151, 24);
+            this.label23.Location = new System.Drawing.Point(82, 13);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(274, 38);
+            this.label23.Size = new System.Drawing.Size(167, 24);
             this.label23.TabIndex = 19;
             this.label23.Text = "Agregar Seccion";
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(177, 98);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(192, 25);
-            this.label30.TabIndex = 17;
-            this.label30.Text = "Seleccione un Ramo";
-            // 
             // FInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(3204, 1764);
+            this.ClientSize = new System.Drawing.Size(1765, 913);
             this.Controls.Add(this.panelAdministradorAgregarSeccion);
             this.Controls.Add(this.panelAdministradorAgregarCurso);
             this.Controls.Add(this.panelAdministradorEliminarSeccion);
@@ -1458,6 +1581,7 @@
             this.Controls.Add(this.PanelInicio);
             this.Controls.Add(this.panelBotarRamo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
