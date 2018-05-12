@@ -10,7 +10,6 @@ namespace WindowsFormsApp1
     [Serializable]
     public class Curso
     {
-        //public string nrc;
         public string nombre;
         public int creditos;
         public List<Curso> requisitos;//esto
@@ -19,7 +18,6 @@ namespace WindowsFormsApp1
 
         public Curso(string nombre, int credito)
         {
-            //this.nrc = nrc;
             this.nombre = nombre;
             this.creditos = credito;
             secciones = new List<Seccion>();
@@ -93,6 +91,14 @@ namespace WindowsFormsApp1
             }
             return str;
 
+        }
+
+        public void CrearSeccion(DateTime dateTi,int nrcc,int vacan,Profesor profe)
+        {
+            Seccion secc = new Seccion(vacan, nrcc, profe);
+            Horario horario = new Horario("clase", dateTi, 2);
+            secc.horario.Add(horario);
+            secciones.Add(secc);
         }
 
     }

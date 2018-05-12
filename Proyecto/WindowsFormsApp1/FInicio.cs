@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         public Carrera carrera;
         List<Curso> cursos = new List<Curso>();
         List<Persona> alumnosU = new List<Persona>();
+        List<Persona> ProfesoresCarrera = new List<Persona>();
 
         BindingList<string> CursosString = new BindingList<string>();
         BindingList<string> CursosStringProfesor = new BindingList<string>();
@@ -31,12 +32,13 @@ namespace WindowsFormsApp1
 
         BindingList<string> AlumnosString = new BindingList<string>();
         BindingList<string> todosLosCursos = new BindingList<string>();
+        BindingList<string> ProfesoresString = new BindingList<string>();
         public FInicio()
         {
 
             InitializeComponent();
 
-            #region Agregar Datos
+            #region Datos
             try
             {
                 BinaryFormatter formateador = new BinaryFormatter();
@@ -47,6 +49,8 @@ namespace WindowsFormsApp1
             }
             catch
             {
+                //ESTO SOLO CORRERIA EN EL CASO DE QUE EL ARCHIVO BIN SEA ELIMINADO, PERO AHORA LO ESTA LEYENDO DE LA CARPETA
+                //RESULTADOS QUE HEMOS CREADO Y HECHO DIRECTORIO DE LAS COMPILACIONES
                 Uandes = new Universidad("Universidad de los Andes");
                 List<Alumno> alumnos = new List<Alumno>();
                 List<Profesor> profesores = new List<Profesor>();
@@ -244,8 +248,6 @@ namespace WindowsFormsApp1
                 introduccionAlaIng1.alumnos.Add(a6);
                 biologia1.alumnos.Add(a7);
 
-
-
                 a4.aprobados.Add(algebra);
                 a4.aprobados.Add(lineal);
                 a4.aprobados.Add(calculo1);
@@ -308,8 +310,6 @@ namespace WindowsFormsApp1
 
             this.cbCarreras.DataSource = Uandes.MostrarCarreras();
             carrera = Uandes.DevolverCarrera(cbCarreras.Text);
-
-
         }
 
         #region Botones Volver, Salir, Cerrar Sesion
@@ -448,6 +448,7 @@ namespace WindowsFormsApp1
             lbAdministradorEstadoAgregarCurso.Text = "";
             lbAdministradorEstadoEliminarSeccion.Text = "";
             lbAdministradorEstadoEliminarCurso.Text = "";
+            lbAdministradorEstadoEliminarCurso.Text = "";
 
         }
 
@@ -485,31 +486,42 @@ namespace WindowsFormsApp1
             todosLosCursos.Clear();
             foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
             cbAgregarRamoAlumno.DataSource = todosLosCursos;
+            cbSeccionTomarRamoAlumno.DataSource = carrera.DevolverNrc(cbAgregarRamoAlumno.Text);
+            cbSeccionTomarRamoAlumno.Refresh();
 
         }
 
         private void btnAceptarTomarRamoAlumno_Click(object sender, EventArgs e)
         {
-
-            if (carrera.RetornarCurso(cbAgregarRamoAlumno.Text).RequisitosAprobados(loggeado) && loggeado.TopeHorario(carrera, carrera.RetornarSeccion(cbSeccionTomarRamoAlumno.Text)))
-
+            try
             {
-                carrera.agregarRamo(cbAgregarRamoAlumno.Text, int.Parse(cbSeccionTomarRamoAlumno.Text), loggeado);
-                lbAvisoTomaRamo.ForeColor = Color.Black;
-                lbAvisoTomaRamo.Text = cbAgregarRamoAlumno.Text + " fue agregado con exito";
+                if (carrera.RetornarCurso(cbAgregarRamoAlumno.Text).RequisitosAprobados(loggeado) && loggeado.TopeHorario(carrera, carrera.RetornarSeccion(cbSeccionTomarRamoAlumno.Text)))
+
+                {
+                    carrera.agregarRamo(cbAgregarRamoAlumno.Text, int.Parse(cbSeccionTomarRamoAlumno.Text), loggeado);
+                    lbAvisoTomaRamo.ForeColor = Color.Black;
+                    lbAvisoTomaRamo.Text = cbAgregarRamoAlumno.Text + " fue agregado con exito";
+                }
+                else
+                {
+                    SystemSounds.Hand.Play();
+                    lbAvisoTomaRamo.ForeColor = Color.Red;
+                    lbAvisoTomaRamo.Text = "No puedes tomar " + cbAgregarRamoAlumno.Text;
+
+                }
             }
-            else
+            catch
             {
                 SystemSounds.Hand.Play();
                 lbAvisoTomaRamo.ForeColor = Color.Red;
                 lbAvisoTomaRamo.Text = "No puedes tomar " + cbAgregarRamoAlumno.Text;
-
             }
         }
 
         private void cbAgregarRamoAlumno_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbSeccionTomarRamoAlumno.DataSource = carrera.DevolverNrc(cbAgregarRamoAlumno.Text);
+            cbSeccionTomarRamoAlumno.Refresh();
         }
 
         private void botonBotarRamoAlumno_Click(object sender, EventArgs e) //BOTON FORM 4 BOTONES
@@ -647,6 +659,13 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarSeccion_Click(object sender, EventArgs e)
         {
+            todosLosCursos.Clear();
+            ProfesoresString.Clear();
+            foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+            foreach (Profesor p in carrera.RetornarProfesoresCarreras()) { ProfesoresString.Add(p.nombre); }
+            cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
+            cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
+
             panelAdministradorAgregarSeccion.Show();
             panelAdministrador.Hide();
         }
@@ -673,12 +692,12 @@ namespace WindowsFormsApp1
                 todosLosCursos.Clear();
                 foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
                 cbAdministradorEliminarCurso.DataSource = todosLosCursos;
-                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Black; lbAdministradorEstadoEliminarCurso.Text = "El Curso " + cbAdministradorEliminarCurso.Text + "\n se elimino con exito."; 
+                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Black; lbAdministradorEstadoEliminarCurso.Text = "El Curso " + cbAdministradorEliminarCurso.Text + "\n se elimino con exito.";
             }
             catch
             {
                 lbAdministradorEstadoEliminarCurso.ForeColor = Color.Red; lbAdministradorEstadoEliminarCurso.Text = "No existen cursos para eliminar.";
-
+                SystemSounds.Hand.Play();
             }
 
 
@@ -707,7 +726,6 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarCursoAgregar_Click(object sender, EventArgs e)
         {
-            //ACA AGREGAR
             try
             {
                 Curso cur = new Curso(tbAdministradorNombreCursoNuevo.Text, int.Parse(tbAdministradorFacultadCursoNuevo.Text));
@@ -726,8 +744,30 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarSeccionAgregar_Click(object sender, EventArgs e)
         {
+            todosLosCursos.Clear();
+            ProfesoresString.Clear();
+            foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+            foreach (Profesor p in carrera.RetornarProfesoresCarreras()) { ProfesoresString.Add(p.nombre); }
+            cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
+            cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
+
+            try
+            {
+                DateTime dt = this.dtpAdministradorAgregarSeccionHorario.Value.Date;
+                carrera.RetornarCurso(cbAdministradorAgregarSeccionCurso.Text).CrearSeccion(dt, int.Parse(tbAdministradorAgregarSeccionNrc.Text), int.Parse(tbAdministradorAgregarSeccionVacantes.Text), carrera.RetornarProfesor(cbAdministradorAgregarSeccionProfesor.Text));
+                lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Black;
+                lbAdministradorEstadoAgregarSeccion.Text = "Se agrego correctamente la seccion " + tbAdministradorAgregarSeccionNrc.Text + " \nen el curso " + cbAdministradorAgregarSeccionCurso.Text;
+            }
+
+            catch
+            {
+                lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Red;
+                lbAdministradorEstadoAgregarSeccion.Text = "No se ha podido ingresar la seccion \nverifique datos";
+                SystemSounds.Hand.Play();
+            }
 
         }
+
     }
 }
 

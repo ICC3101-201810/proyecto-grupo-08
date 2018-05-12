@@ -137,9 +137,21 @@
             this.btnAdministradorAgregarCursoVolver = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.panelAdministradorAgregarSeccion = new System.Windows.Forms.Panel();
+            this.lbAdministradorEstadoAgregarSeccion = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.dtpAdministradorAgregarSeccionHorario = new System.Windows.Forms.DateTimePicker();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cbAdministradorAgregarSeccionProfesor = new System.Windows.Forms.ComboBox();
+            this.cbAdministradorAgregarSeccionCurso = new System.Windows.Forms.ComboBox();
+            this.sad = new System.Windows.Forms.Label();
+            this.dsa = new System.Windows.Forms.Label();
+            this.tbAdministradorAgregarSeccionVacantes = new System.Windows.Forms.TextBox();
+            this.tbAdministradorAgregarSeccionNrc = new System.Windows.Forms.TextBox();
             this.btnAdministradorAgregarSeccionAgregar = new System.Windows.Forms.Button();
             this.btnAdministradorAgregarSeccionVolver = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.PanelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelAlumno.SuspendLayout();
@@ -358,9 +370,9 @@
             this.panelTomaRamoAlumno.Controls.Add(this.btnTomarRamosAlumnoSalir);
             this.panelTomaRamoAlumno.Controls.Add(this.label4);
             this.panelTomaRamoAlumno.Controls.Add(this.cbAgregarRamoAlumno);
-            this.panelTomaRamoAlumno.Location = new System.Drawing.Point(472, 485);
+            this.panelTomaRamoAlumno.Location = new System.Drawing.Point(546, 475);
             this.panelTomaRamoAlumno.Name = "panelTomaRamoAlumno";
-            this.panelTomaRamoAlumno.Size = new System.Drawing.Size(712, 520);
+            this.panelTomaRamoAlumno.Size = new System.Drawing.Size(508, 520);
             this.panelTomaRamoAlumno.TabIndex = 9;
             this.panelTomaRamoAlumno.Visible = false;
             // 
@@ -369,7 +381,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(212, 41);
+            this.label20.Location = new System.Drawing.Point(121, 43);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(217, 38);
             this.label20.TabIndex = 17;
@@ -379,7 +391,7 @@
             // lbAvisoTomaRamo
             // 
             this.lbAvisoTomaRamo.AutoSize = true;
-            this.lbAvisoTomaRamo.Location = new System.Drawing.Point(129, 447);
+            this.lbAvisoTomaRamo.Location = new System.Drawing.Point(49, 333);
             this.lbAvisoTomaRamo.Name = "lbAvisoTomaRamo";
             this.lbAvisoTomaRamo.Size = new System.Drawing.Size(64, 25);
             this.lbAvisoTomaRamo.TabIndex = 6;
@@ -388,7 +400,7 @@
             // lbSeccionTomaRamos
             // 
             this.lbSeccionTomaRamos.AutoSize = true;
-            this.lbSeccionTomaRamos.Location = new System.Drawing.Point(140, 231);
+            this.lbSeccionTomaRamos.Location = new System.Drawing.Point(49, 233);
             this.lbSeccionTomaRamos.Name = "lbSeccionTomaRamos";
             this.lbSeccionTomaRamos.Size = new System.Drawing.Size(270, 25);
             this.lbSeccionTomaRamos.TabIndex = 5;
@@ -398,14 +410,14 @@
             // 
             this.cbSeccionTomarRamoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSeccionTomarRamoAlumno.FormattingEnabled = true;
-            this.cbSeccionTomarRamoAlumno.Location = new System.Drawing.Point(145, 275);
+            this.cbSeccionTomarRamoAlumno.Location = new System.Drawing.Point(54, 277);
             this.cbSeccionTomarRamoAlumno.Name = "cbSeccionTomarRamoAlumno";
             this.cbSeccionTomarRamoAlumno.Size = new System.Drawing.Size(385, 32);
             this.cbSeccionTomarRamoAlumno.TabIndex = 4;
             // 
             // btnAceptarTomarRamoAlumno
             // 
-            this.btnAceptarTomarRamoAlumno.Location = new System.Drawing.Point(134, 354);
+            this.btnAceptarTomarRamoAlumno.Location = new System.Drawing.Point(54, 431);
             this.btnAceptarTomarRamoAlumno.Name = "btnAceptarTomarRamoAlumno";
             this.btnAceptarTomarRamoAlumno.Size = new System.Drawing.Size(177, 65);
             this.btnAceptarTomarRamoAlumno.TabIndex = 3;
@@ -415,7 +427,7 @@
             // 
             // btnTomarRamosAlumnoSalir
             // 
-            this.btnTomarRamosAlumnoSalir.Location = new System.Drawing.Point(390, 353);
+            this.btnTomarRamosAlumnoSalir.Location = new System.Drawing.Point(262, 431);
             this.btnTomarRamosAlumnoSalir.Name = "btnTomarRamosAlumnoSalir";
             this.btnTomarRamosAlumnoSalir.Size = new System.Drawing.Size(177, 65);
             this.btnTomarRamosAlumnoSalir.TabIndex = 2;
@@ -426,7 +438,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 118);
+            this.label4.Location = new System.Drawing.Point(38, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(438, 25);
             this.label4.TabIndex = 1;
@@ -436,7 +448,7 @@
             // 
             this.cbAgregarRamoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAgregarRamoAlumno.FormattingEnabled = true;
-            this.cbAgregarRamoAlumno.Location = new System.Drawing.Point(145, 164);
+            this.cbAgregarRamoAlumno.Location = new System.Drawing.Point(54, 166);
             this.cbAgregarRamoAlumno.Name = "cbAgregarRamoAlumno";
             this.cbAgregarRamoAlumno.Size = new System.Drawing.Size(385, 32);
             this.cbAgregarRamoAlumno.TabIndex = 0;
@@ -450,9 +462,9 @@
             this.panelBotarRamo.Controls.Add(this.btnSalirBotarRamo);
             this.panelBotarRamo.Controls.Add(this.btnBotarRamo);
             this.panelBotarRamo.Controls.Add(this.label5);
-            this.panelBotarRamo.Location = new System.Drawing.Point(478, 1017);
+            this.panelBotarRamo.Location = new System.Drawing.Point(534, 1001);
             this.panelBotarRamo.Name = "panelBotarRamo";
-            this.panelBotarRamo.Size = new System.Drawing.Size(706, 520);
+            this.panelBotarRamo.Size = new System.Drawing.Size(544, 520);
             this.panelBotarRamo.TabIndex = 7;
             this.panelBotarRamo.Visible = false;
             // 
@@ -461,7 +473,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(240, 56);
+            this.label16.Location = new System.Drawing.Point(148, 45);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(219, 38);
             this.label16.TabIndex = 4;
@@ -472,7 +484,7 @@
             // 
             this.cbBotarRamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBotarRamo.FormattingEnabled = true;
-            this.cbBotarRamo.Location = new System.Drawing.Point(110, 213);
+            this.cbBotarRamo.Location = new System.Drawing.Point(18, 202);
             this.cbBotarRamo.Name = "cbBotarRamo";
             this.cbBotarRamo.Size = new System.Drawing.Size(501, 32);
             this.cbBotarRamo.TabIndex = 4;
@@ -480,7 +492,7 @@
             // lbAvisoBotarRamo
             // 
             this.lbAvisoBotarRamo.AutoSize = true;
-            this.lbAvisoBotarRamo.Location = new System.Drawing.Point(171, 445);
+            this.lbAvisoBotarRamo.Location = new System.Drawing.Point(22, 301);
             this.lbAvisoBotarRamo.Name = "lbAvisoBotarRamo";
             this.lbAvisoBotarRamo.Size = new System.Drawing.Size(64, 25);
             this.lbAvisoBotarRamo.TabIndex = 3;
@@ -488,7 +500,7 @@
             // 
             // btnSalirBotarRamo
             // 
-            this.btnSalirBotarRamo.Location = new System.Drawing.Point(434, 323);
+            this.btnSalirBotarRamo.Location = new System.Drawing.Point(342, 412);
             this.btnSalirBotarRamo.Name = "btnSalirBotarRamo";
             this.btnSalirBotarRamo.Size = new System.Drawing.Size(177, 64);
             this.btnSalirBotarRamo.TabIndex = 2;
@@ -498,7 +510,7 @@
             // 
             // btnBotarRamo
             // 
-            this.btnBotarRamo.Location = new System.Drawing.Point(110, 323);
+            this.btnBotarRamo.Location = new System.Drawing.Point(18, 412);
             this.btnBotarRamo.Name = "btnBotarRamo";
             this.btnBotarRamo.Size = new System.Drawing.Size(177, 66);
             this.btnBotarRamo.TabIndex = 1;
@@ -509,7 +521,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(158, 151);
+            this.label5.Location = new System.Drawing.Point(66, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(428, 25);
             this.label5.TabIndex = 0;
@@ -524,7 +536,7 @@
             this.panelProfesor.Controls.Add(this.btnSalirProfesor);
             this.panelProfesor.Location = new System.Drawing.Point(1193, 2);
             this.panelProfesor.Name = "panelProfesor";
-            this.panelProfesor.Size = new System.Drawing.Size(709, 517);
+            this.panelProfesor.Size = new System.Drawing.Size(709, 370);
             this.panelProfesor.TabIndex = 10;
             this.panelProfesor.Visible = false;
             // 
@@ -540,7 +552,7 @@
             // 
             // btnCursosProfesor
             // 
-            this.btnCursosProfesor.Location = new System.Drawing.Point(50, 373);
+            this.btnCursosProfesor.Location = new System.Drawing.Point(47, 241);
             this.btnCursosProfesor.Name = "btnCursosProfesor";
             this.btnCursosProfesor.Size = new System.Drawing.Size(190, 95);
             this.btnCursosProfesor.TabIndex = 4;
@@ -560,7 +572,7 @@
             // 
             // btnHorarioProfesor
             // 
-            this.btnHorarioProfesor.Location = new System.Drawing.Point(267, 371);
+            this.btnHorarioProfesor.Location = new System.Drawing.Point(264, 239);
             this.btnHorarioProfesor.Name = "btnHorarioProfesor";
             this.btnHorarioProfesor.Size = new System.Drawing.Size(190, 95);
             this.btnHorarioProfesor.TabIndex = 1;
@@ -570,7 +582,7 @@
             // 
             // btnSalirProfesor
             // 
-            this.btnSalirProfesor.Location = new System.Drawing.Point(489, 371);
+            this.btnSalirProfesor.Location = new System.Drawing.Point(486, 239);
             this.btnSalirProfesor.Name = "btnSalirProfesor";
             this.btnSalirProfesor.Size = new System.Drawing.Size(190, 99);
             this.btnSalirProfesor.TabIndex = 0;
@@ -580,13 +592,14 @@
             // 
             // panelCursosProfesor
             // 
+            this.panelCursosProfesor.Controls.Add(this.label30);
             this.panelCursosProfesor.Controls.Add(this.label6);
             this.panelCursosProfesor.Controls.Add(this.btnVerAlumnos);
             this.panelCursosProfesor.Controls.Add(this.btnVolverCursosProfesor);
             this.panelCursosProfesor.Controls.Add(this.cbCursosProfesor);
-            this.panelCursosProfesor.Location = new System.Drawing.Point(1193, 816);
+            this.panelCursosProfesor.Location = new System.Drawing.Point(1193, 675);
             this.panelCursosProfesor.Name = "panelCursosProfesor";
-            this.panelCursosProfesor.Size = new System.Drawing.Size(706, 517);
+            this.panelCursosProfesor.Size = new System.Drawing.Size(581, 377);
             this.panelCursosProfesor.TabIndex = 5;
             this.panelCursosProfesor.Visible = false;
             // 
@@ -595,7 +608,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(280, 38);
+            this.label6.Location = new System.Drawing.Point(217, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 38);
             this.label6.TabIndex = 3;
@@ -604,9 +617,9 @@
             // 
             // btnVerAlumnos
             // 
-            this.btnVerAlumnos.Location = new System.Drawing.Point(100, 223);
+            this.btnVerAlumnos.Location = new System.Drawing.Point(37, 226);
             this.btnVerAlumnos.Name = "btnVerAlumnos";
-            this.btnVerAlumnos.Size = new System.Drawing.Size(240, 223);
+            this.btnVerAlumnos.Size = new System.Drawing.Size(210, 96);
             this.btnVerAlumnos.TabIndex = 2;
             this.btnVerAlumnos.Text = "Ver Alumnos Inscritos";
             this.btnVerAlumnos.UseVisualStyleBackColor = true;
@@ -614,9 +627,9 @@
             // 
             // btnVolverCursosProfesor
             // 
-            this.btnVolverCursosProfesor.Location = new System.Drawing.Point(375, 223);
+            this.btnVolverCursosProfesor.Location = new System.Drawing.Point(327, 226);
             this.btnVolverCursosProfesor.Name = "btnVolverCursosProfesor";
-            this.btnVolverCursosProfesor.Size = new System.Drawing.Size(240, 223);
+            this.btnVolverCursosProfesor.Size = new System.Drawing.Size(225, 96);
             this.btnVolverCursosProfesor.TabIndex = 1;
             this.btnVolverCursosProfesor.Text = "Volver";
             this.btnVolverCursosProfesor.UseVisualStyleBackColor = true;
@@ -626,7 +639,7 @@
             // 
             this.cbCursosProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCursosProfesor.FormattingEnabled = true;
-            this.cbCursosProfesor.Location = new System.Drawing.Point(99, 115);
+            this.cbCursosProfesor.Location = new System.Drawing.Point(37, 126);
             this.cbCursosProfesor.Name = "cbCursosProfesor";
             this.cbCursosProfesor.Size = new System.Drawing.Size(515, 32);
             this.cbCursosProfesor.TabIndex = 0;
@@ -668,7 +681,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorEliminarSeccion, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarAlumno, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdministradorAgregarCurso, 1, 0);
@@ -685,7 +698,7 @@
             // 
             // btnAdministradorEliminarSeccion
             // 
-            this.btnAdministradorEliminarSeccion.Location = new System.Drawing.Point(438, 95);
+            this.btnAdministradorEliminarSeccion.Location = new System.Drawing.Point(436, 95);
             this.btnAdministradorEliminarSeccion.Name = "btnAdministradorEliminarSeccion";
             this.btnAdministradorEliminarSeccion.Size = new System.Drawing.Size(173, 86);
             this.btnAdministradorEliminarSeccion.TabIndex = 6;
@@ -705,7 +718,7 @@
             // 
             // btnAdministradorAgregarCurso
             // 
-            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(212, 3);
+            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(211, 3);
             this.btnAdministradorAgregarCurso.Name = "btnAdministradorAgregarCurso";
             this.btnAdministradorAgregarCurso.Size = new System.Drawing.Size(192, 86);
             this.btnAdministradorAgregarCurso.TabIndex = 2;
@@ -725,7 +738,7 @@
             // 
             // btnAdministradorAgregarSeccion
             // 
-            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(438, 3);
+            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(436, 3);
             this.btnAdministradorAgregarSeccion.Name = "btnAdministradorAgregarSeccion";
             this.btnAdministradorAgregarSeccion.Size = new System.Drawing.Size(173, 86);
             this.btnAdministradorAgregarSeccion.TabIndex = 4;
@@ -735,7 +748,7 @@
             // 
             // btnAdministradorEliminarCurso
             // 
-            this.btnAdministradorEliminarCurso.Location = new System.Drawing.Point(212, 95);
+            this.btnAdministradorEliminarCurso.Location = new System.Drawing.Point(211, 95);
             this.btnAdministradorEliminarCurso.Name = "btnAdministradorEliminarCurso";
             this.btnAdministradorEliminarCurso.Size = new System.Drawing.Size(192, 87);
             this.btnAdministradorEliminarCurso.TabIndex = 5;
@@ -905,9 +918,9 @@
             this.panelVerHorarioProfe.Controls.Add(this.btnVerHorarioProfe);
             this.panelVerHorarioProfe.Controls.Add(this.btnVolverVerHorario);
             this.panelVerHorarioProfe.Controls.Add(this.cbVerHorarioProfe);
-            this.panelVerHorarioProfe.Location = new System.Drawing.Point(1193, 525);
+            this.panelVerHorarioProfe.Location = new System.Drawing.Point(1193, 375);
             this.panelVerHorarioProfe.Name = "panelVerHorarioProfe";
-            this.panelVerHorarioProfe.Size = new System.Drawing.Size(695, 276);
+            this.panelVerHorarioProfe.Size = new System.Drawing.Size(534, 294);
             this.panelVerHorarioProfe.TabIndex = 12;
             this.panelVerHorarioProfe.Visible = false;
             // 
@@ -916,7 +929,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(248, 26);
+            this.label19.Location = new System.Drawing.Point(175, 26);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(195, 38);
             this.label19.TabIndex = 16;
@@ -926,7 +939,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(250, 86);
+            this.label14.Location = new System.Drawing.Point(175, 97);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(194, 25);
             this.label14.TabIndex = 3;
@@ -934,7 +947,7 @@
             // 
             // btnVerHorarioProfe
             // 
-            this.btnVerHorarioProfe.Location = new System.Drawing.Point(107, 179);
+            this.btnVerHorarioProfe.Location = new System.Drawing.Point(27, 194);
             this.btnVerHorarioProfe.Name = "btnVerHorarioProfe";
             this.btnVerHorarioProfe.Size = new System.Drawing.Size(165, 75);
             this.btnVerHorarioProfe.TabIndex = 2;
@@ -944,7 +957,7 @@
             // 
             // btnVolverVerHorario
             // 
-            this.btnVolverVerHorario.Location = new System.Drawing.Point(408, 179);
+            this.btnVolverVerHorario.Location = new System.Drawing.Point(337, 194);
             this.btnVolverVerHorario.Name = "btnVolverVerHorario";
             this.btnVolverVerHorario.Size = new System.Drawing.Size(165, 75);
             this.btnVolverVerHorario.TabIndex = 1;
@@ -956,9 +969,9 @@
             // 
             this.cbVerHorarioProfe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVerHorarioProfe.FormattingEnabled = true;
-            this.cbVerHorarioProfe.Location = new System.Drawing.Point(177, 123);
+            this.cbVerHorarioProfe.Location = new System.Drawing.Point(27, 125);
             this.cbVerHorarioProfe.Name = "cbVerHorarioProfe";
-            this.cbVerHorarioProfe.Size = new System.Drawing.Size(332, 32);
+            this.cbVerHorarioProfe.Size = new System.Drawing.Size(475, 32);
             this.cbVerHorarioProfe.TabIndex = 0;
             // 
             // panelBorrarAlumno
@@ -968,9 +981,9 @@
             this.panelBorrarAlumno.Controls.Add(this.btnBorrarAlumnoMetodo);
             this.panelBorrarAlumno.Controls.Add(this.btnVolverBorrarAlumno);
             this.panelBorrarAlumno.Controls.Add(this.cbBorrarAlumno);
-            this.panelBorrarAlumno.Location = new System.Drawing.Point(1926, 1197);
+            this.panelBorrarAlumno.Location = new System.Drawing.Point(1926, 1183);
             this.panelBorrarAlumno.Name = "panelBorrarAlumno";
-            this.panelBorrarAlumno.Size = new System.Drawing.Size(591, 471);
+            this.panelBorrarAlumno.Size = new System.Drawing.Size(523, 402);
             this.panelBorrarAlumno.TabIndex = 13;
             this.panelBorrarAlumno.Visible = false;
             // 
@@ -979,7 +992,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(150, 47);
+            this.label17.Location = new System.Drawing.Point(116, 37);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(286, 38);
             this.label17.TabIndex = 5;
@@ -989,7 +1002,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(56, 120);
+            this.label15.Location = new System.Drawing.Point(22, 110);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(475, 25);
             this.label15.TabIndex = 5;
@@ -997,7 +1010,7 @@
             // 
             // btnBorrarAlumnoMetodo
             // 
-            this.btnBorrarAlumnoMetodo.Location = new System.Drawing.Point(80, 290);
+            this.btnBorrarAlumnoMetodo.Location = new System.Drawing.Point(46, 280);
             this.btnBorrarAlumnoMetodo.Name = "btnBorrarAlumnoMetodo";
             this.btnBorrarAlumnoMetodo.Size = new System.Drawing.Size(180, 88);
             this.btnBorrarAlumnoMetodo.TabIndex = 2;
@@ -1007,7 +1020,7 @@
             // 
             // btnVolverBorrarAlumno
             // 
-            this.btnVolverBorrarAlumno.Location = new System.Drawing.Point(326, 290);
+            this.btnVolverBorrarAlumno.Location = new System.Drawing.Point(292, 280);
             this.btnVolverBorrarAlumno.Name = "btnVolverBorrarAlumno";
             this.btnVolverBorrarAlumno.Size = new System.Drawing.Size(183, 88);
             this.btnVolverBorrarAlumno.TabIndex = 1;
@@ -1019,7 +1032,7 @@
             // 
             this.cbBorrarAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBorrarAlumno.FormattingEnabled = true;
-            this.cbBorrarAlumno.Location = new System.Drawing.Point(80, 181);
+            this.cbBorrarAlumno.Location = new System.Drawing.Point(46, 171);
             this.cbBorrarAlumno.Name = "cbBorrarAlumno";
             this.cbBorrarAlumno.Size = new System.Drawing.Size(429, 32);
             this.cbBorrarAlumno.TabIndex = 0;
@@ -1041,7 +1054,7 @@
             // lbAdministradorEstadoEliminarCurso
             // 
             this.lbAdministradorEstadoEliminarCurso.AutoSize = true;
-            this.lbAdministradorEstadoEliminarCurso.Location = new System.Drawing.Point(174, 255);
+            this.lbAdministradorEstadoEliminarCurso.Location = new System.Drawing.Point(21, 180);
             this.lbAdministradorEstadoEliminarCurso.Name = "lbAdministradorEstadoEliminarCurso";
             this.lbAdministradorEstadoEliminarCurso.Size = new System.Drawing.Size(93, 25);
             this.lbAdministradorEstadoEliminarCurso.TabIndex = 29;
@@ -1067,9 +1080,9 @@
             // 
             // btnAdministradorEliminarCursoEliminar
             // 
-            this.btnAdministradorEliminarCursoEliminar.Location = new System.Drawing.Point(48, 252);
+            this.btnAdministradorEliminarCursoEliminar.Location = new System.Drawing.Point(21, 273);
             this.btnAdministradorEliminarCursoEliminar.Name = "btnAdministradorEliminarCursoEliminar";
-            this.btnAdministradorEliminarCursoEliminar.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorEliminarCursoEliminar.Size = new System.Drawing.Size(370, 41);
             this.btnAdministradorEliminarCursoEliminar.TabIndex = 18;
             this.btnAdministradorEliminarCursoEliminar.Text = "Eliminar";
             this.btnAdministradorEliminarCursoEliminar.UseVisualStyleBackColor = true;
@@ -1077,9 +1090,9 @@
             // 
             // btnAdministradorEliminarCursoVolver
             // 
-            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(380, 252);
+            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(413, 273);
             this.btnAdministradorEliminarCursoVolver.Name = "btnAdministradorEliminarCursoVolver";
-            this.btnAdministradorEliminarCursoVolver.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorEliminarCursoVolver.Size = new System.Drawing.Size(128, 41);
             this.btnAdministradorEliminarCursoVolver.TabIndex = 17;
             this.btnAdministradorEliminarCursoVolver.Text = "Volver";
             this.btnAdministradorEliminarCursoVolver.UseVisualStyleBackColor = true;
@@ -1115,7 +1128,7 @@
             // lbAdministradorEstadoEliminarSeccion
             // 
             this.lbAdministradorEstadoEliminarSeccion.AutoSize = true;
-            this.lbAdministradorEstadoEliminarSeccion.Location = new System.Drawing.Point(182, 228);
+            this.lbAdministradorEstadoEliminarSeccion.Location = new System.Drawing.Point(21, 161);
             this.lbAdministradorEstadoEliminarSeccion.Name = "lbAdministradorEstadoEliminarSeccion";
             this.lbAdministradorEstadoEliminarSeccion.Size = new System.Drawing.Size(93, 25);
             this.lbAdministradorEstadoEliminarSeccion.TabIndex = 28;
@@ -1141,9 +1154,9 @@
             // 
             // btnAdministradorEliminarSeccionEliminar
             // 
-            this.btnAdministradorEliminarSeccionEliminar.Location = new System.Drawing.Point(48, 228);
+            this.btnAdministradorEliminarSeccionEliminar.Location = new System.Drawing.Point(21, 249);
             this.btnAdministradorEliminarSeccionEliminar.Name = "btnAdministradorEliminarSeccionEliminar";
-            this.btnAdministradorEliminarSeccionEliminar.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorEliminarSeccionEliminar.Size = new System.Drawing.Size(370, 41);
             this.btnAdministradorEliminarSeccionEliminar.TabIndex = 20;
             this.btnAdministradorEliminarSeccionEliminar.Text = "Eliminar";
             this.btnAdministradorEliminarSeccionEliminar.UseVisualStyleBackColor = true;
@@ -1151,9 +1164,9 @@
             // 
             // btnAdministradorEliminarSeccionVolver
             // 
-            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(380, 228);
+            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(413, 249);
             this.btnAdministradorEliminarSeccionVolver.Name = "btnAdministradorEliminarSeccionVolver";
-            this.btnAdministradorEliminarSeccionVolver.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorEliminarSeccionVolver.Size = new System.Drawing.Size(128, 41);
             this.btnAdministradorEliminarSeccionVolver.TabIndex = 19;
             this.btnAdministradorEliminarSeccionVolver.Text = "Volver";
             this.btnAdministradorEliminarSeccionVolver.UseVisualStyleBackColor = true;
@@ -1197,7 +1210,7 @@
             // lbAdministradorEstadoAgregarCurso
             // 
             this.lbAdministradorEstadoAgregarCurso.AutoSize = true;
-            this.lbAdministradorEstadoAgregarCurso.Location = new System.Drawing.Point(171, 317);
+            this.lbAdministradorEstadoAgregarCurso.Location = new System.Drawing.Point(18, 270);
             this.lbAdministradorEstadoAgregarCurso.Name = "lbAdministradorEstadoAgregarCurso";
             this.lbAdministradorEstadoAgregarCurso.Size = new System.Drawing.Size(93, 25);
             this.lbAdministradorEstadoAgregarCurso.TabIndex = 27;
@@ -1237,9 +1250,9 @@
             // 
             // btnAdministradorAgregarCursoAgregar
             // 
-            this.btnAdministradorAgregarCursoAgregar.Location = new System.Drawing.Point(18, 317);
+            this.btnAdministradorAgregarCursoAgregar.Location = new System.Drawing.Point(18, 338);
             this.btnAdministradorAgregarCursoAgregar.Name = "btnAdministradorAgregarCursoAgregar";
-            this.btnAdministradorAgregarCursoAgregar.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorAgregarCursoAgregar.Size = new System.Drawing.Size(370, 41);
             this.btnAdministradorAgregarCursoAgregar.TabIndex = 22;
             this.btnAdministradorAgregarCursoAgregar.Text = "Agregar";
             this.btnAdministradorAgregarCursoAgregar.UseVisualStyleBackColor = true;
@@ -1247,9 +1260,9 @@
             // 
             // btnAdministradorAgregarCursoVolver
             // 
-            this.btnAdministradorAgregarCursoVolver.Location = new System.Drawing.Point(410, 317);
+            this.btnAdministradorAgregarCursoVolver.Location = new System.Drawing.Point(410, 338);
             this.btnAdministradorAgregarCursoVolver.Name = "btnAdministradorAgregarCursoVolver";
-            this.btnAdministradorAgregarCursoVolver.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorAgregarCursoVolver.Size = new System.Drawing.Size(128, 41);
             this.btnAdministradorAgregarCursoVolver.TabIndex = 21;
             this.btnAdministradorAgregarCursoVolver.Text = "Volver";
             this.btnAdministradorAgregarCursoVolver.UseVisualStyleBackColor = true;
@@ -1269,6 +1282,17 @@
             // 
             // panelAdministradorAgregarSeccion
             // 
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.lbAdministradorEstadoAgregarSeccion);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.label29);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.dtpAdministradorAgregarSeccionHorario);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.label28);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.label27);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.cbAdministradorAgregarSeccionProfesor);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.cbAdministradorAgregarSeccionCurso);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.sad);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.dsa);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.tbAdministradorAgregarSeccionVacantes);
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.tbAdministradorAgregarSeccionNrc);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionAgregar);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionVolver);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.label23);
@@ -1278,11 +1302,104 @@
             this.panelAdministradorAgregarSeccion.TabIndex = 19;
             this.panelAdministradorAgregarSeccion.Visible = false;
             // 
+            // lbAdministradorEstadoAgregarSeccion
+            // 
+            this.lbAdministradorEstadoAgregarSeccion.AutoSize = true;
+            this.lbAdministradorEstadoAgregarSeccion.Location = new System.Drawing.Point(30, 453);
+            this.lbAdministradorEstadoAgregarSeccion.Name = "lbAdministradorEstadoAgregarSeccion";
+            this.lbAdministradorEstadoAgregarSeccion.Size = new System.Drawing.Size(81, 25);
+            this.lbAdministradorEstadoAgregarSeccion.TabIndex = 37;
+            this.lbAdministradorEstadoAgregarSeccion.Text = "Horario:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(240, 376);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(81, 25);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "Horario:";
+            // 
+            // dtpAdministradorAgregarSeccionHorario
+            // 
+            this.dtpAdministradorAgregarSeccionHorario.Location = new System.Drawing.Point(85, 404);
+            this.dtpAdministradorAgregarSeccionHorario.Name = "dtpAdministradorAgregarSeccionHorario";
+            this.dtpAdministradorAgregarSeccionHorario.Size = new System.Drawing.Size(371, 29);
+            this.dtpAdministradorAgregarSeccionHorario.TabIndex = 35;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(40, 164);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(71, 25);
+            this.label28.TabIndex = 34;
+            this.label28.Text = "Curso:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(307, 167);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(91, 25);
+            this.label27.TabIndex = 33;
+            this.label27.Text = "Profesor:";
+            // 
+            // cbAdministradorAgregarSeccionProfesor
+            // 
+            this.cbAdministradorAgregarSeccionProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAdministradorAgregarSeccionProfesor.FormattingEnabled = true;
+            this.cbAdministradorAgregarSeccionProfesor.Location = new System.Drawing.Point(312, 195);
+            this.cbAdministradorAgregarSeccionProfesor.Name = "cbAdministradorAgregarSeccionProfesor";
+            this.cbAdministradorAgregarSeccionProfesor.Size = new System.Drawing.Size(193, 32);
+            this.cbAdministradorAgregarSeccionProfesor.TabIndex = 32;
+            // 
+            // cbAdministradorAgregarSeccionCurso
+            // 
+            this.cbAdministradorAgregarSeccionCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAdministradorAgregarSeccionCurso.FormattingEnabled = true;
+            this.cbAdministradorAgregarSeccionCurso.Location = new System.Drawing.Point(45, 195);
+            this.cbAdministradorAgregarSeccionCurso.Name = "cbAdministradorAgregarSeccionCurso";
+            this.cbAdministradorAgregarSeccionCurso.Size = new System.Drawing.Size(193, 32);
+            this.cbAdministradorAgregarSeccionCurso.TabIndex = 31;
+            // 
+            // sad
+            // 
+            this.sad.AutoSize = true;
+            this.sad.Location = new System.Drawing.Point(307, 280);
+            this.sad.Name = "sad";
+            this.sad.Size = new System.Drawing.Size(48, 25);
+            this.sad.TabIndex = 29;
+            this.sad.Text = "Nrc:";
+            // 
+            // dsa
+            // 
+            this.dsa.AutoSize = true;
+            this.dsa.Location = new System.Drawing.Point(40, 280);
+            this.dsa.Name = "dsa";
+            this.dsa.Size = new System.Drawing.Size(101, 25);
+            this.dsa.TabIndex = 28;
+            this.dsa.Text = "Vacantes:";
+            // 
+            // tbAdministradorAgregarSeccionVacantes
+            // 
+            this.tbAdministradorAgregarSeccionVacantes.Location = new System.Drawing.Point(45, 308);
+            this.tbAdministradorAgregarSeccionVacantes.Name = "tbAdministradorAgregarSeccionVacantes";
+            this.tbAdministradorAgregarSeccionVacantes.Size = new System.Drawing.Size(193, 29);
+            this.tbAdministradorAgregarSeccionVacantes.TabIndex = 26;
+            // 
+            // tbAdministradorAgregarSeccionNrc
+            // 
+            this.tbAdministradorAgregarSeccionNrc.Location = new System.Drawing.Point(312, 308);
+            this.tbAdministradorAgregarSeccionNrc.Name = "tbAdministradorAgregarSeccionNrc";
+            this.tbAdministradorAgregarSeccionNrc.Size = new System.Drawing.Size(193, 29);
+            this.tbAdministradorAgregarSeccionNrc.TabIndex = 26;
+            // 
             // btnAdministradorAgregarSeccionAgregar
             // 
-            this.btnAdministradorAgregarSeccionAgregar.Location = new System.Drawing.Point(45, 513);
+            this.btnAdministradorAgregarSeccionAgregar.Location = new System.Drawing.Point(18, 534);
             this.btnAdministradorAgregarSeccionAgregar.Name = "btnAdministradorAgregarSeccionAgregar";
-            this.btnAdministradorAgregarSeccionAgregar.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorAgregarSeccionAgregar.Size = new System.Drawing.Size(370, 41);
             this.btnAdministradorAgregarSeccionAgregar.TabIndex = 24;
             this.btnAdministradorAgregarSeccionAgregar.Text = "Agregar";
             this.btnAdministradorAgregarSeccionAgregar.UseVisualStyleBackColor = true;
@@ -1290,9 +1407,9 @@
             // 
             // btnAdministradorAgregarSeccionVolver
             // 
-            this.btnAdministradorAgregarSeccionVolver.Location = new System.Drawing.Point(377, 513);
+            this.btnAdministradorAgregarSeccionVolver.Location = new System.Drawing.Point(410, 534);
             this.btnAdministradorAgregarSeccionVolver.Name = "btnAdministradorAgregarSeccionVolver";
-            this.btnAdministradorAgregarSeccionVolver.Size = new System.Drawing.Size(128, 62);
+            this.btnAdministradorAgregarSeccionVolver.Size = new System.Drawing.Size(128, 41);
             this.btnAdministradorAgregarSeccionVolver.TabIndex = 23;
             this.btnAdministradorAgregarSeccionVolver.Text = "Volver";
             this.btnAdministradorAgregarSeccionVolver.UseVisualStyleBackColor = true;
@@ -1309,6 +1426,15 @@
             this.label23.TabIndex = 19;
             this.label23.Text = "Agregar Seccion";
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(177, 98);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 25);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "Seleccione un Ramo";
             // 
             // FInicio
             // 
@@ -1488,6 +1614,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbAdministradorEstadoEliminarSeccion;
         private System.Windows.Forms.Label lbAdministradorEstadoEliminarCurso;
+        private System.Windows.Forms.Label sad;
+        private System.Windows.Forms.Label dsa;
+        private System.Windows.Forms.TextBox tbAdministradorAgregarSeccionVacantes;
+        private System.Windows.Forms.TextBox tbAdministradorAgregarSeccionNrc;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox cbAdministradorAgregarSeccionProfesor;
+        private System.Windows.Forms.ComboBox cbAdministradorAgregarSeccionCurso;
+        private System.Windows.Forms.DateTimePicker dtpAdministradorAgregarSeccionHorario;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lbAdministradorEstadoAgregarSeccion;
+        private System.Windows.Forms.Label label30;
     }
 }
 

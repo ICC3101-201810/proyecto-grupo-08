@@ -174,12 +174,29 @@ namespace WindowsFormsApp1
             {
                 foreach (Seccion sec in c.secciones)
                 {
+
                     if (sec.nrc == int.Parse(s))
                     {
                         return sec;
                     }
                 }
 
+            }
+            return null;
+        }
+
+        public Profesor RetornarProfesor(string pro)
+        {
+            foreach(Curso c in cursos)
+            {
+                foreach(Seccion s in c.secciones)
+                {
+                    if (s.profesor.nombre == pro)
+                    {
+                        return s.profesor;
+                        
+                    }
+                }
             }
             return null;
         }

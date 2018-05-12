@@ -16,10 +16,6 @@ namespace WindowsFormsApp1
             this.tag = tag;
             cursos = new List<Curso>();
         }
-
-        //public void AddCurso(Curso curso)
-        //{
-        //  cursos.Add(curso);
-        //}
+        
     }
 }

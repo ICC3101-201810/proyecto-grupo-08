@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Resultados\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,8 +48,6 @@
     <Compile Include="Clases\Carrera.cs" />
     <Compile Include="Clases\Curso.cs" />
     <Compile Include="Clases\Horario.cs" />
-    <Compile Include="Clases\Malla.cs" />
-    <Compile Include="Clases\NotaAlumno.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Personas\Administrativo.cs" />
     <Compile Include="Clases\Personas\Alumno.cs" />
