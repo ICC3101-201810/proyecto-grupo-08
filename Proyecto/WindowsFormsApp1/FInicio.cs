@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
         List<Curso> cursos = new List<Curso>();
         List<Persona> alumnosU = new List<Persona>();
         List<Persona> ProfesoresCarrera = new List<Persona>();
-
+        Persona Alumno;
         BindingList<string> CursosString = new BindingList<string>();
         BindingList<string> CursosStringProfesor = new BindingList<string>();
         BindingList<string> CursosStringAdmin = new BindingList<string>();
@@ -305,6 +305,7 @@ namespace WindowsFormsApp1
             panelAdministradorAgregarSeccion.Location = new Point(0, 0);
             panelAdministradorEliminarCurso.Location = new Point(0, 0);
             panelAdministradorEliminarSeccion.Location = new Point(0, 0);
+            panelAdministradorEditarAlumno.Location = new Point(0, 0);
             this.Text = Uandes.nombre;
             #endregion
 
@@ -393,8 +394,16 @@ namespace WindowsFormsApp1
             tbAdministradorAgregarApellido.Text = "";
             tbAdministradorAgregarClave.Text = "";
             tbAdministradorCrearAlumnoEstado.Text = "";
+            alumnosU = Uandes.DevolverTodosAlumnos();
+            AlumnosString.Clear();
+            foreach (Persona alumno in alumnosU)
+            {
+                AlumnosString.Add(alumno.nombre + '-' + alumno.rut.ToString());
+            }
+            lbEliminarAlumnos.DataSource = AlumnosString;
+            lbEliminarAlumnos.Refresh();
             panelAdministradorCrearAlumno.Hide();
-            panelAdministrador.Show();
+            panelBorrarAlumno.Show();
         }
         private void btnVolverBorrarAlumno_Click(object sender, EventArgs e)
         {
@@ -597,7 +606,7 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarAlumno_Click(object sender, EventArgs e)
         {
-            panelAdministrador.Hide();
+            panelBorrarAlumno.Hide();
             panelAdministradorCrearAlumno.Show();
             todosLosCursos.Clear();
             foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
@@ -644,16 +653,16 @@ namespace WindowsFormsApp1
             {
                 AlumnosString.Add(alumno.nombre + '-' + alumno.rut.ToString());
             }
-            cbBorrarAlumno.DataSource = AlumnosString;
+            lbEliminarAlumnos.DataSource = AlumnosString;
             panelAdministrador.Hide();
             panelBorrarAlumno.Show();
         }
 
         private void btnBorrarAlumnoMetodo_Click(object sender, EventArgs e)
         {
-            string[] asd = cbBorrarAlumno.Text.Split('-');
+            string[] asd = lbEliminarAlumnos.Text.Split('-');
             Uandes.BorrarAlumno(asd[1]);
-            AlumnosString.Remove(cbBorrarAlumno.Text);
+            AlumnosString.Remove(lbEliminarAlumnos.Text);
             cbBotarRamo.Refresh();
         }
 
@@ -784,6 +793,74 @@ namespace WindowsFormsApp1
 
         }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            string[] asd = lbEliminarAlumnos.Text.Split('-');
+            Uandes.BorrarAlumno(asd[1]);
+            AlumnosString.Remove(lbEliminarAlumnos.Text);
+            cbBotarRamo.Refresh();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            lbAdminEditarAlumnoEstado.Text = "";
+            panelBorrarAlumno.Hide();
+            panelAdministradorEditarAlumno.Show();
+            string[] asd = lbEliminarAlumnos.Text.Split('-');
+            Alumno = Uandes.VerPersona(carrera, asd[1]);
+            tbAdminEditarNombre.Text = Alumno.nombre;
+            tbAdminEditarRut.Text = Alumno.rut.ToString();
+            tbAdminEditarClave.Text = Alumno.clave;
+            tbAdminEditarApellido.Text = Alumno.apellido;
+        }
+
+        private void btnAdministradorAlumnoEditarAlumnoEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Alumno.nombre = tbAdminEditarNombre.Text;
+                Alumno.apellido = tbAdminEditarApellido.Text;
+                Alumno.clave = tbAdminEditarClave.Text;
+                Alumno.rut = Convert.ToInt32(tbAdminEditarRut.Text);
+                lbAdminEditarAlumnoEstado.ForeColor = Color.Black;
+                lbAdminEditarAlumnoEstado.Text = "Se edito correctamente a " + tbAdminEditarNombre.Text;
+
+            }
+            catch {
+
+                lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
+                lbAdminEditarAlumnoEstado.Text = "No se ha podido agregar el alumno";
+                SystemSounds.Hand.Play();
+            }
+        }
+
+        private void btnAdministradorAlumnoEditarAlumnoVolver_Click(object sender, EventArgs e)
+        {
+            alumnosU = Uandes.DevolverTodosAlumnos();
+            AlumnosString.Clear();
+            foreach (Persona alumno in alumnosU)
+            {
+                AlumnosString.Add(alumno.nombre + '-' + alumno.rut.ToString());
+            }
+            lbEliminarAlumnos.DataSource = AlumnosString;
+            lbEliminarAlumnos.Refresh();
+            panelBorrarAlumno.Show();
+            panelAdministradorEditarAlumno.Hide();
+            
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            alumnosU = Uandes.DevolverTodosAlumnos();
+            AlumnosString.Clear();
+            foreach (Persona alumno in alumnosU)
+            {
+                AlumnosString.Add(alumno.nombre + '-' + alumno.rut.ToString());
+            }
+            lbEliminarAlumnos.DataSource = AlumnosString;
+            panelAdministrador.Hide();
+            panelBorrarAlumno.Show();
+        }
     }
 }
 

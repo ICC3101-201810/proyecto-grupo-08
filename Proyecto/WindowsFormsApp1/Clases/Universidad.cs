@@ -75,6 +75,8 @@ namespace WindowsFormsApp1
             catch { return null; }
         }
 
+
+
         public List<Persona> DevolverTodosAlumnos()
         {
             List<Persona> listAlum = new List<Persona>();

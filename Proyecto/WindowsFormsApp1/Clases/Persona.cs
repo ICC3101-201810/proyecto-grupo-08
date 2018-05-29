@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
             this.nombre = nombre;
             this.apellido = apellido;
             this.clave = clave;
-            aprobados = new List<Curso>();
         }
 
         public bool TopeHorario(Carrera c, Seccion s)

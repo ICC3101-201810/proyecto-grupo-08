@@ -93,5 +93,23 @@
   <ItemGroup>
     <None Include="Resources\uandes-logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basurero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basurero1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alumno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profesor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
