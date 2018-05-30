@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
         BindingList<string> ProfesoresString = new BindingList<string>();
         public FInicio()
         {
-
+            
             InitializeComponent();
 
             #region Datos
@@ -312,10 +312,11 @@ namespace WindowsFormsApp1
 
             this.cbCarreras.DataSource = Uandes.MostrarCarreras();
             carrera = Uandes.DevolverCarrera(cbCarreras.Text);
+            tbClave.UseSystemPasswordChar = true;
         }
 
         #region Botones Volver, Salir, Cerrar Sesion
-
+        
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
