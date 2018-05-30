@@ -132,6 +132,23 @@ namespace WindowsFormsApp1
             }
         }
 
+        public Curso retornarCurso (string nombre)
+        {
+            foreach (Carrera carrera in carreras)
+            {
+                
+                foreach (Curso curso in carrera.cursos)
+                {
+
+                    if (nombre == curso.nombre)
+                    {
+                        return curso;
+                    }
+                }
+            }
+            return null;
+        }
+
         
     }
 

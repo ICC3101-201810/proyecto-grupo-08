@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         BindingList<string> CursosString = new BindingList<string>();
         BindingList<string> CursosStringProfesor = new BindingList<string>();
         BindingList<string> CursosStringAdmin = new BindingList<string>();
-        BindingList<int> nrcCursos = new BindingList<int>();
+        BindingList<string> nrcCursos = new BindingList<string>();
 
         BindingList<string> AlumnosString = new BindingList<string>();
         BindingList<string> todosLosCursos = new BindingList<string>();
@@ -306,6 +306,7 @@ namespace WindowsFormsApp1
             panelAdministradorEliminarCurso.Location = new Point(0, 0);
             panelAdministradorEliminarSeccion.Location = new Point(0, 0);
             panelAdministradorEditarAlumno.Location = new Point(0, 0);
+            panelAdminEditarCurso.Location = new Point(0, 0);
             this.Text = Uandes.nombre;
             #endregion
 
@@ -358,14 +359,12 @@ namespace WindowsFormsApp1
         }
         private void btnAdministradorEliminarCursoVolver_Click(object sender, EventArgs e)
         {
-            lbAdministradorEstadoEliminarCurso.Text = "";
             panelAdministradorEliminarCurso.Hide();
             panelAdministrador.Show();
         }
 
         private void btnAdministradorEliminarSeccionVolver_Click(object sender, EventArgs e)
         {
-            lbAdministradorEstadoEliminarSeccion.Text = "";
             panelAdministradorEliminarSeccion.Hide();
             panelAdministrador.Show();
         }
@@ -470,10 +469,6 @@ namespace WindowsFormsApp1
             PanelInicio.Show();
             lbAvisoTomaRamo.Text = "";
             lbAdministradorEstadoAgregarCurso.Text = "";
-            lbAdministradorEstadoEliminarSeccion.Text = "";
-            lbAdministradorEstadoEliminarCurso.Text = "";
-            lbAdministradorEstadoEliminarCurso.Text = "";
-
         }
 
         private void botonVerRamosAlumno_Click(object sender, EventArgs e)
@@ -668,8 +663,8 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarCurso_Click(object sender, EventArgs e)
         {
+            panelAdministradorEliminarCurso.Hide();
             panelAdministradorAgregarCurso.Show();
-            panelAdministrador.Hide();
         }
 
         private void btnAdministradorEliminarCurso_Click(object sender, EventArgs e)
@@ -689,9 +684,8 @@ namespace WindowsFormsApp1
             foreach (Profesor p in carrera.RetornarProfesoresCarreras()) { ProfesoresString.Add(p.nombre); }
             cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
             cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
-
+            panelAdministradorEliminarSeccion.Hide();
             panelAdministradorAgregarSeccion.Show();
-            panelAdministrador.Hide();
         }
 
         private void btnAdministradorEliminarSeccion_Click(object sender, EventArgs e)
@@ -700,53 +694,23 @@ namespace WindowsFormsApp1
             foreach (Curso c in carrera.cursos)
             {
                 foreach (Seccion s in c.secciones)
-                    nrcCursos.Add(s.nrc);
+                    nrcCursos.Add(s.nrc.ToString() + "-" + c.nombre);
             }
             cbAdministradorEliminarSeccion.DataSource = nrcCursos;
             cbAdministradorEliminarSeccion.Refresh();
+
             panelAdministradorEliminarSeccion.Show();
             panelAdministrador.Hide();
         }
 
         private void btnAdministradorEliminarCursoEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Black; lbAdministradorEstadoEliminarCurso.Text = "El Curso " + cbAdministradorEliminarCurso.Text + "\n se elimino con exito.";
-                carrera.EliminarCurso(carrera.RetornarCurso(cbAdministradorEliminarCurso.Text));
-                todosLosCursos.Clear();
-                foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
-
-                cbAdministradorEliminarCurso.DataSource = todosLosCursos;
-            }
-            catch
-            {
-                lbAdministradorEstadoEliminarCurso.ForeColor = Color.Red; lbAdministradorEstadoEliminarCurso.Text = "No existen cursos para eliminar.";
-                SystemSounds.Hand.Play();
-            }
-
 
         }
 
         private void btnAdministradorEliminarSeccionEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                carrera.devolverCursoDeUnNrc(int.Parse(cbAdministradorEliminarSeccion.Text)).secciones.Remove(carrera.devolverSeccionDeUnNrc(int.Parse(cbAdministradorEliminarSeccion.Text)));
-                lbAdministradorEstadoEliminarSeccion.ForeColor = Color.Black; lbAdministradorEstadoEliminarSeccion.Text = "Fue eliminada con exito";
-                nrcCursos.Clear();
-                foreach (Curso c in carrera.cursos)
-                {
-                    foreach (Seccion s in c.secciones)
-                        nrcCursos.Add(s.nrc);
-                }
-                cbAdministradorEliminarSeccion.DataSource = nrcCursos;
-                cbAdministradorEliminarSeccion.Refresh();
-            }
-            catch
-            {
-                lbAdministradorEstadoEliminarSeccion.ForeColor = Color.Red; ; lbAdministradorEstadoEliminarSeccion.Text = "Hubo un error al intentar\neliminar la seccion."; SystemSounds.Hand.Play();
-            }
+
         }
 
         private void btnAdministradorAgregarCursoAgregar_Click(object sender, EventArgs e)
@@ -826,10 +790,11 @@ namespace WindowsFormsApp1
                 lbAdminEditarAlumnoEstado.Text = "Se edito correctamente a " + tbAdminEditarNombre.Text;
 
             }
-            catch {
+            catch
+            {
 
                 lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
-                lbAdminEditarAlumnoEstado.Text = "No se ha podido agregar el alumno";
+                lbAdminEditarAlumnoEstado.Text = "No se ha podido editar el alumno";
                 SystemSounds.Hand.Play();
             }
         }
@@ -846,7 +811,7 @@ namespace WindowsFormsApp1
             lbEliminarAlumnos.Refresh();
             panelBorrarAlumno.Show();
             panelAdministradorEditarAlumno.Hide();
-            
+
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -860,6 +825,85 @@ namespace WindowsFormsApp1
             lbEliminarAlumnos.DataSource = AlumnosString;
             panelAdministrador.Hide();
             panelBorrarAlumno.Show();
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                carrera.EliminarCurso(carrera.RetornarCurso(cbAdministradorEliminarCurso.Text));
+                todosLosCursos.Clear();
+                foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+
+                cbAdministradorEliminarCurso.DataSource = todosLosCursos;
+            }
+            catch
+            {
+                SystemSounds.Hand.Play();
+            }
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] asd = cbAdministradorEliminarSeccion.Text.Split('-');
+                int nrc = int.Parse(asd[0]);
+                carrera.devolverCursoDeUnNrc(int.Parse(asd[0])).secciones.Remove(carrera.devolverSeccionDeUnNrc(int.Parse(asd[0])));
+                nrcCursos.Clear();
+                foreach (Curso c in carrera.cursos)
+                {
+                    foreach (Seccion s in c.secciones)
+                        nrcCursos.Add(s.nrc.ToString() + "-" + c.nombre);
+                }
+                cbAdministradorEliminarSeccion.DataSource = nrcCursos;
+                cbAdministradorEliminarSeccion.Refresh();
+            }
+            catch
+            {
+                SystemSounds.Hand.Play();
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            lbAdminEditarCursoEstado.Text = "";
+            Curso tempCurso = Uandes.retornarCurso(cbAdministradorEliminarCurso.Text);
+            tbAdminEditarCursoCreditos.Text = tempCurso.creditos.ToString();
+            tbAdminEditarCursoNombre.Text = tempCurso.nombre;
+            panelAdministradorEliminarCurso.Hide();
+            panelAdminEditarCurso.Show();
+        }
+
+        private void btnAdminEditarCursoEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Curso tempCurso = Uandes.retornarCurso(cbAdministradorEliminarCurso.Text);
+                tempCurso.creditos = int.Parse(tbAdminEditarCursoCreditos.Text);
+                tempCurso.nombre = tbAdminEditarCursoNombre.Text;
+                lbAdminEditarCursoEstado.ForeColor = Color.Black;
+                lbAdminEditarCursoEstado.Text = tbAdminEditarCursoNombre.Text + " se edito correctamente ";
+
+            }
+            catch
+            {
+
+                lbAdminEditarCursoEstado.ForeColor = Color.Red;
+                lbAdminEditarCursoEstado.Text = "No se ha podido editar el curso";
+                SystemSounds.Hand.Play();
+            }
+
+        }
+
+
+        private void btnAdminEditarCursoVolver_Click(object sender, EventArgs e)
+        {
+            todosLosCursos.Clear();
+            foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+            cbAdministradorEliminarCurso.DataSource = todosLosCursos;
+            panelAdminEditarCurso.Hide();
+            panelAdministradorEliminarCurso.Show();
         }
     }
 }
