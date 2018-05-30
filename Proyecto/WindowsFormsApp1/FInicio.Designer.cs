@@ -173,6 +173,10 @@
             this.btnAdminEditarCursoEditar = new System.Windows.Forms.Button();
             this.btnAdminEditarCursoVolver = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
+            this.panelAlumnoVerRamos = new System.Windows.Forms.Panel();
+            this.btnAlumnoVerRamosVolver = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.dgvAlumnoVerRamos = new System.Windows.Forms.DataGridView();
             this.PanelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelAlumno.SuspendLayout();
@@ -202,6 +206,8 @@
             this.panelAdministradorAgregarSeccion.SuspendLayout();
             this.panelAdministradorEditarAlumno.SuspendLayout();
             this.panelAdminEditarCurso.SuspendLayout();
+            this.panelAlumnoVerRamos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoVerRamos)).BeginInit();
             this.SuspendLayout();
             // 
             // cbCarreras
@@ -1696,6 +1702,50 @@
             this.label36.Text = "Editar Curso";
             this.label36.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panelAlumnoVerRamos
+            // 
+            this.panelAlumnoVerRamos.Controls.Add(this.dgvAlumnoVerRamos);
+            this.panelAlumnoVerRamos.Controls.Add(this.btnAlumnoVerRamosVolver);
+            this.panelAlumnoVerRamos.Controls.Add(this.label39);
+            this.panelAlumnoVerRamos.Location = new System.Drawing.Point(923, 1160);
+            this.panelAlumnoVerRamos.Name = "panelAlumnoVerRamos";
+            this.panelAlumnoVerRamos.Size = new System.Drawing.Size(514, 243);
+            this.panelAlumnoVerRamos.TabIndex = 29;
+            this.panelAlumnoVerRamos.Visible = false;
+            // 
+            // btnAlumnoVerRamosVolver
+            // 
+            this.btnAlumnoVerRamosVolver.Location = new System.Drawing.Point(19, 209);
+            this.btnAlumnoVerRamosVolver.Name = "btnAlumnoVerRamosVolver";
+            this.btnAlumnoVerRamosVolver.Size = new System.Drawing.Size(477, 28);
+            this.btnAlumnoVerRamosVolver.TabIndex = 21;
+            this.btnAlumnoVerRamosVolver.Text = "Volver";
+            this.btnAlumnoVerRamosVolver.UseVisualStyleBackColor = true;
+            this.btnAlumnoVerRamosVolver.Click += new System.EventHandler(this.btnAlumnoVerRamosVolver_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label39.Location = new System.Drawing.Point(159, 4);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(94, 29);
+            this.label39.TabIndex = 18;
+            this.label39.Text = "Ramos";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dgvAlumnoVerRamos
+            // 
+            this.dgvAlumnoVerRamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAlumnoVerRamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnoVerRamos.Location = new System.Drawing.Point(19, 36);
+            this.dgvAlumnoVerRamos.Name = "dgvAlumnoVerRamos";
+            this.dgvAlumnoVerRamos.ReadOnly = true;
+            this.dgvAlumnoVerRamos.RowTemplate.Height = 24;
+            this.dgvAlumnoVerRamos.Size = new System.Drawing.Size(477, 150);
+            this.dgvAlumnoVerRamos.TabIndex = 22;
+            // 
             // FInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1703,6 +1753,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(2317, 1255);
+            this.Controls.Add(this.panelAlumnoVerRamos);
             this.Controls.Add(this.panelAdminEditarCurso);
             this.Controls.Add(this.panelAdministradorEditarAlumno);
             this.Controls.Add(this.panelAdministradorAgregarSeccion);
@@ -1770,6 +1821,9 @@
             this.panelAdministradorEditarAlumno.PerformLayout();
             this.panelAdminEditarCurso.ResumeLayout(false);
             this.panelAdminEditarCurso.PerformLayout();
+            this.panelAlumnoVerRamos.ResumeLayout(false);
+            this.panelAlumnoVerRamos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoVerRamos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1920,6 +1974,10 @@
         private System.Windows.Forms.Button btnAdminEditarCursoEditar;
         private System.Windows.Forms.Button btnAdminEditarCursoVolver;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Panel panelAlumnoVerRamos;
+        private System.Windows.Forms.DataGridView dgvAlumnoVerRamos;
+        private System.Windows.Forms.Button btnAlumnoVerRamosVolver;
+        private System.Windows.Forms.Label label39;
     }
 }
 

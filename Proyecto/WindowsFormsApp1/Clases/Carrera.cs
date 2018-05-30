@@ -112,14 +112,19 @@ namespace WindowsFormsApp1
             return lista;
         }
 
-        public string devolverStrDelCurso(List<Curso> listaDeCursos, Persona p)
+        public BindingList<Tabla> devolverStrDelCurso(List<Curso> listaDeCursos, Persona p)
         {
-            string mensaje = "Tus Cursos son \n Nombre\t\tNrc\tHorario\n";
+            BindingList<Tabla> lista = new BindingList<Tabla>();
             foreach (Curso c in listaDeCursos)
             {
-                mensaje = mensaje + "-  " + c.nombre + "\t" + c.mostrarNrc(p).ToString() + "\t "+c.secciones[0].horario[0].inicio.DayOfWeek.ToString()+"  "+ c.secciones[0].horario[0].inicio.TimeOfDay.ToString() + "\n";
+                foreach (Horario horario in c.secciones[0].horario)
+                {
+                    Tabla elementoTabla = new Tabla(c.nombre, horario.tipo ,horario.inicio.DayOfWeek.ToString() + "  " + horario.inicio.TimeOfDay.ToString(), c.mostrarNrc(p).ToString());
+                    lista.Add(elementoTabla);
+                }
+                
             }
-            return mensaje;
+            return lista;
         }
 
         public BindingList<int> DevolverNrc(string cursoString)

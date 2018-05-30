@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
     {
         public DateTime inicio;
         public int duracion;
-        string tipo;//Ayudantia, Clase, Laboratorio o Prueba
+        public string tipo;//Ayudantia, Clase, Laboratorio o Prueba
         public Horario(string tipo, DateTime inicio, int duracion)
         {
             this.tipo = tipo;

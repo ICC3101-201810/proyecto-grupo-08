@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             this.clave = clave;
         }
 
-        public bool TopeHorario(Carrera c, Seccion s)
+        public Curso TopeHorario(Carrera c, Seccion s)
         {
             foreach (Curso curso in c.VerCursos(this))
             {
@@ -33,13 +33,13 @@ namespace WindowsFormsApp1
                     {
                         if (s.horario.Contains(h))
                         {
-                            return false;
+                            return curso;
                         }
                         else { continue; }
                     }
                 }
             }
-            return true;
+            return null;
         }
 
     }
