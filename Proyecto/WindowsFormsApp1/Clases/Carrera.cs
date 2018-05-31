@@ -119,8 +119,12 @@ namespace WindowsFormsApp1
             {
                 foreach (Horario horario in c.secciones[0].horario)
                 {
-                    Tabla elementoTabla = new Tabla(c.nombre, horario.tipo ,horario.inicio.DayOfWeek.ToString() + "  " + horario.inicio.TimeOfDay.ToString(), c.mostrarNrc(p).ToString(),horario.duracion);
-                    lista.Add(elementoTabla);
+                    if (c.nombre == "") { continue; }
+                    else
+                    {
+                        Tabla elementoTabla = new Tabla(c.nombre, horario.tipo, horario.inicio.DayOfWeek.ToString() + "  " + horario.inicio.TimeOfDay.ToString(), c.mostrarNrc(p).ToString(), horario.duracion);
+                        lista.Add(elementoTabla);
+                    }
                 }
                 
             }

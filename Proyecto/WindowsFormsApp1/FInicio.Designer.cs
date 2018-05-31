@@ -37,11 +37,8 @@
             this.tbClave = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PanelInicio = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelAlumno = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.botonBotarRamoAlumno = new System.Windows.Forms.Button();
             this.botonVerRamosAlumno = new System.Windows.Forms.Button();
             this.botonAgeregarRamoAlumno = new System.Windows.Forms.Button();
@@ -64,7 +61,6 @@
             this.btnBotarRamo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panelProfesor = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCursosProfesor = new System.Windows.Forms.Button();
             this.lbBienvenidoProfesor = new System.Windows.Forms.Label();
             this.btnHorarioProfesor = new System.Windows.Forms.Button();
@@ -78,10 +74,6 @@
             this.panelAdministrador = new System.Windows.Forms.Panel();
             this.btnAdministradorEliminarSeccion = new System.Windows.Forms.Button();
             this.btnAdministradorEliminarCurso = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAdministradorCerrar = new System.Windows.Forms.Button();
             this.btnBorrarAlumno = new System.Windows.Forms.Button();
             this.lbBienvenidoAdministrador = new System.Windows.Forms.Label();
@@ -90,13 +82,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnAdministradorCrearAlumnoVolver = new System.Windows.Forms.Button();
             this.tbAdministradorCrearAlumnoEstado = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAdministradorAgregarAlumnoNuevo = new System.Windows.Forms.Button();
-            this.cbAdministradorAlumnoNuevoRamo = new System.Windows.Forms.ComboBox();
             this.tbAdministradorAgregarApellido = new System.Windows.Forms.TextBox();
             this.tbAdministradorAgregarClave = new System.Windows.Forms.TextBox();
             this.tbAdministradoAgregarRut = new System.Windows.Forms.TextBox();
@@ -108,20 +98,15 @@
             this.btnVolverVerHorario = new System.Windows.Forms.Button();
             this.cbVerHorarioProfe = new System.Windows.Forms.ComboBox();
             this.panelBorrarAlumno = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lbEliminarAlumnos = new System.Windows.Forms.ListBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btnVolverBorrarAlumno = new System.Windows.Forms.Button();
             this.panelAdministradorEliminarCurso = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.btnAdministradorAgregarCurso = new System.Windows.Forms.Button();
             this.cbAdministradorEliminarCurso = new System.Windows.Forms.ListBox();
             this.btnAdministradorEliminarCursoVolver = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panelAdministradorEliminarSeccion = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.btnAdministradorEliminarSeccionVolver = new System.Windows.Forms.Button();
             this.cbAdministradorEliminarSeccion = new System.Windows.Forms.ListBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -137,9 +122,8 @@
             this.btnAdministradorAgregarCursoVolver = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.panelAdministradorAgregarSeccion = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.lbAdministradorEstadoAgregarSeccion = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.dtpAgregarHorario = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.cbAdministradorAgregarSeccionProfesor = new System.Windows.Forms.ComboBox();
@@ -151,6 +135,8 @@
             this.btnAdministradorAgregarSeccionAgregar = new System.Windows.Forms.Button();
             this.btnAdministradorAgregarSeccionVolver = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.dtpAgregarHorario = new System.Windows.Forms.DateTimePicker();
             this.panelAdministradorEditarAlumno = new System.Windows.Forms.Panel();
             this.lbAdminEditarAlumnoEstado = new System.Windows.Forms.Label();
             this.btnAdministradorAlumnoEditarAlumnoVolver = new System.Windows.Forms.Button();
@@ -178,6 +164,12 @@
             this.btnAlumnoVerRamosVolver = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
             this.panelAgregarHorario = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.tbAgregarHorarioDuracion = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbAgregarHorarioTipos = new System.Windows.Forms.ComboBox();
+            this.tbAgregarHorarioMin = new System.Windows.Forms.TextBox();
             this.lbAgregarHorarioEstado = new System.Windows.Forms.Label();
             this.tbAgregarHorarioHoras = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
@@ -185,37 +177,33 @@
             this.btnAgregarHorarioAgregar = new System.Windows.Forms.Button();
             this.btnAgregarHorarioVolver = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
-            this.tbAgregarHorarioMin = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.cbAgregarHorarioTipos = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbAgregarHorarioDuracion = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
+            this.lbAgregarHorarioHorario = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.PanelInicio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelAlumno.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panelTomaRamoAlumno.SuspendLayout();
             this.panelBotarRamo.SuspendLayout();
             this.panelProfesor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelCursosProfesor.SuspendLayout();
             this.panelAdministrador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelAdministradorCrearAlumno.SuspendLayout();
             this.panelVerHorarioProfe.SuspendLayout();
             this.panelBorrarAlumno.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelAdministradorEliminarCurso.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelAdministradorEliminarSeccion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panelAdministradorAgregarCurso.SuspendLayout();
             this.panelAdministradorAgregarSeccion.SuspendLayout();
             this.panelAdministradorEditarAlumno.SuspendLayout();
@@ -223,6 +211,19 @@
             this.panelAlumnoVerRamos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoVerRamos)).BeginInit();
             this.panelAgregarHorario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // cbCarreras
@@ -303,16 +304,6 @@
             this.PanelInicio.Size = new System.Drawing.Size(339, 401);
             this.PanelInicio.TabIndex = 7;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox4.Location = new System.Drawing.Point(41, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(259, 127);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(35, 345);
@@ -325,8 +316,12 @@
             // 
             // panelAlumno
             // 
+            this.panelAlumno.Controls.Add(this.button1);
+            this.panelAlumno.Controls.Add(this.botonCerrarSeccionAlumno);
+            this.panelAlumno.Controls.Add(this.botonBotarRamoAlumno);
             this.panelAlumno.Controls.Add(this.pictureBox1);
-            this.panelAlumno.Controls.Add(this.tableLayoutPanel1);
+            this.panelAlumno.Controls.Add(this.botonVerRamosAlumno);
+            this.panelAlumno.Controls.Add(this.botonAgeregarRamoAlumno);
             this.panelAlumno.Controls.Add(this.lbBienvenidoAlumno);
             this.panelAlumno.Location = new System.Drawing.Point(343, 1);
             this.panelAlumno.Name = "panelAlumno";
@@ -334,38 +329,11 @@
             this.panelAlumno.TabIndex = 8;
             this.panelAlumno.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.botonBotarRamoAlumno, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.botonVerRamosAlumno, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.botonAgeregarRamoAlumno, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.botonCerrarSeccionAlumno, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(52, 186);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 97);
-            this.tableLayoutPanel1.TabIndex = 5;
-            // 
             // botonBotarRamoAlumno
             // 
-            this.botonBotarRamoAlumno.Location = new System.Drawing.Point(233, 3);
+            this.botonBotarRamoAlumno.Location = new System.Drawing.Point(174, 219);
             this.botonBotarRamoAlumno.Name = "botonBotarRamoAlumno";
-            this.botonBotarRamoAlumno.Size = new System.Drawing.Size(171, 42);
+            this.botonBotarRamoAlumno.Size = new System.Drawing.Size(144, 76);
             this.botonBotarRamoAlumno.TabIndex = 1;
             this.botonBotarRamoAlumno.Text = "Botar Ramo";
             this.botonBotarRamoAlumno.UseVisualStyleBackColor = true;
@@ -373,19 +341,19 @@
             // 
             // botonVerRamosAlumno
             // 
-            this.botonVerRamosAlumno.Location = new System.Drawing.Point(3, 51);
+            this.botonVerRamosAlumno.Location = new System.Drawing.Point(17, 136);
             this.botonVerRamosAlumno.Name = "botonVerRamosAlumno";
-            this.botonVerRamosAlumno.Size = new System.Drawing.Size(169, 43);
+            this.botonVerRamosAlumno.Size = new System.Drawing.Size(142, 77);
             this.botonVerRamosAlumno.TabIndex = 2;
-            this.botonVerRamosAlumno.Text = "Ver Ramos";
+            this.botonVerRamosAlumno.Text = "Ver Ramos Actuales";
             this.botonVerRamosAlumno.UseVisualStyleBackColor = true;
             this.botonVerRamosAlumno.Click += new System.EventHandler(this.botonVerRamosAlumno_Click);
             // 
             // botonAgeregarRamoAlumno
             // 
-            this.botonAgeregarRamoAlumno.Location = new System.Drawing.Point(3, 3);
+            this.botonAgeregarRamoAlumno.Location = new System.Drawing.Point(17, 219);
             this.botonAgeregarRamoAlumno.Name = "botonAgeregarRamoAlumno";
-            this.botonAgeregarRamoAlumno.Size = new System.Drawing.Size(169, 42);
+            this.botonAgeregarRamoAlumno.Size = new System.Drawing.Size(142, 76);
             this.botonAgeregarRamoAlumno.TabIndex = 0;
             this.botonAgeregarRamoAlumno.Text = "Agregar Ramo";
             this.botonAgeregarRamoAlumno.UseVisualStyleBackColor = true;
@@ -393,7 +361,7 @@
             // 
             // botonCerrarSeccionAlumno
             // 
-            this.botonCerrarSeccionAlumno.Location = new System.Drawing.Point(233, 51);
+            this.botonCerrarSeccionAlumno.Location = new System.Drawing.Point(339, 257);
             this.botonCerrarSeccionAlumno.Name = "botonCerrarSeccionAlumno";
             this.botonCerrarSeccionAlumno.Size = new System.Drawing.Size(171, 43);
             this.botonCerrarSeccionAlumno.TabIndex = 3;
@@ -591,16 +559,6 @@
             this.panelProfesor.TabIndex = 10;
             this.panelProfesor.Visible = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(189, 99);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnCursosProfesor
             // 
             this.btnCursosProfesor.Location = new System.Drawing.Point(35, 161);
@@ -741,50 +699,6 @@
             this.btnAdministradorEliminarCurso.UseVisualStyleBackColor = true;
             this.btnAdministradorEliminarCurso.Click += new System.EventHandler(this.btnAdministradorEliminarCurso_Click);
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.cursos1;
-            this.pictureBox8.Location = new System.Drawing.Point(200, 125);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(121, 93);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 26;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.seccion;
-            this.pictureBox7.Location = new System.Drawing.Point(358, 125);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(121, 93);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 25;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::WindowsFormsApp1.Properties.Resources.aluno;
-            this.pictureBox9.Location = new System.Drawing.Point(39, 125);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(121, 93);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 21;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(189, 99);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
             // btnAdministradorCerrar
             // 
             this.btnAdministradorCerrar.Location = new System.Drawing.Point(147, 268);
@@ -830,20 +744,18 @@
             this.panelAdministradorCrearAlumno.Controls.Add(this.label18);
             this.panelAdministradorCrearAlumno.Controls.Add(this.btnAdministradorCrearAlumnoVolver);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorCrearAlumnoEstado);
-            this.panelAdministradorCrearAlumno.Controls.Add(this.label13);
             this.panelAdministradorCrearAlumno.Controls.Add(this.label12);
             this.panelAdministradorCrearAlumno.Controls.Add(this.label11);
             this.panelAdministradorCrearAlumno.Controls.Add(this.label10);
             this.panelAdministradorCrearAlumno.Controls.Add(this.label9);
             this.panelAdministradorCrearAlumno.Controls.Add(this.btnAdministradorAgregarAlumnoNuevo);
-            this.panelAdministradorCrearAlumno.Controls.Add(this.cbAdministradorAlumnoNuevoRamo);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarApellido);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarClave);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradoAgregarRut);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarNombre);
             this.panelAdministradorCrearAlumno.Location = new System.Drawing.Point(1401, 351);
             this.panelAdministradorCrearAlumno.Name = "panelAdministradorCrearAlumno";
-            this.panelAdministradorCrearAlumno.Size = new System.Drawing.Size(511, 435);
+            this.panelAdministradorCrearAlumno.Size = new System.Drawing.Size(511, 351);
             this.panelAdministradorCrearAlumno.TabIndex = 8;
             this.panelAdministradorCrearAlumno.Visible = false;
             // 
@@ -861,7 +773,7 @@
             // 
             // btnAdministradorCrearAlumnoVolver
             // 
-            this.btnAdministradorCrearAlumnoVolver.Location = new System.Drawing.Point(396, 374);
+            this.btnAdministradorCrearAlumnoVolver.Location = new System.Drawing.Point(396, 283);
             this.btnAdministradorCrearAlumnoVolver.Name = "btnAdministradorCrearAlumnoVolver";
             this.btnAdministradorCrearAlumnoVolver.Size = new System.Drawing.Size(83, 32);
             this.btnAdministradorCrearAlumnoVolver.TabIndex = 15;
@@ -872,20 +784,11 @@
             // tbAdministradorCrearAlumnoEstado
             // 
             this.tbAdministradorCrearAlumnoEstado.AutoSize = true;
-            this.tbAdministradorCrearAlumnoEstado.Location = new System.Drawing.Point(27, 381);
+            this.tbAdministradorCrearAlumnoEstado.Location = new System.Drawing.Point(27, 290);
             this.tbAdministradorCrearAlumnoEstado.Name = "tbAdministradorCrearAlumnoEstado";
             this.tbAdministradorCrearAlumnoEstado.Size = new System.Drawing.Size(54, 17);
             this.tbAdministradorCrearAlumnoEstado.TabIndex = 14;
             this.tbAdministradorCrearAlumnoEstado.Text = "label14";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(196, 235);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 17);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Ramo al que ingresa";
             // 
             // label12
             // 
@@ -925,22 +828,13 @@
             // 
             // btnAdministradorAgregarAlumnoNuevo
             // 
-            this.btnAdministradorAgregarAlumnoNuevo.Location = new System.Drawing.Point(29, 313);
+            this.btnAdministradorAgregarAlumnoNuevo.Location = new System.Drawing.Point(29, 227);
             this.btnAdministradorAgregarAlumnoNuevo.Name = "btnAdministradorAgregarAlumnoNuevo";
             this.btnAdministradorAgregarAlumnoNuevo.Size = new System.Drawing.Size(457, 35);
             this.btnAdministradorAgregarAlumnoNuevo.TabIndex = 7;
             this.btnAdministradorAgregarAlumnoNuevo.Text = "Agregar Alumno";
             this.btnAdministradorAgregarAlumnoNuevo.UseVisualStyleBackColor = true;
             this.btnAdministradorAgregarAlumnoNuevo.Click += new System.EventHandler(this.btnAdministradorAgregarAlumnoNuevo_Click);
-            // 
-            // cbAdministradorAlumnoNuevoRamo
-            // 
-            this.cbAdministradorAlumnoNuevoRamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAdministradorAlumnoNuevoRamo.FormattingEnabled = true;
-            this.cbAdministradorAlumnoNuevoRamo.Location = new System.Drawing.Point(31, 260);
-            this.cbAdministradorAlumnoNuevoRamo.Name = "cbAdministradorAlumnoNuevoRamo";
-            this.cbAdministradorAlumnoNuevoRamo.Size = new System.Drawing.Size(457, 24);
-            this.cbAdministradorAlumnoNuevoRamo.TabIndex = 6;
             // 
             // tbAdministradorAgregarApellido
             // 
@@ -1041,37 +935,11 @@
             this.panelBorrarAlumno.Controls.Add(this.btnAdministradorAgregarAlumno);
             this.panelBorrarAlumno.Controls.Add(this.label17);
             this.panelBorrarAlumno.Controls.Add(this.btnVolverBorrarAlumno);
-            this.panelBorrarAlumno.Location = new System.Drawing.Point(1401, 789);
+            this.panelBorrarAlumno.Location = new System.Drawing.Point(1401, 714);
             this.panelBorrarAlumno.Name = "panelBorrarAlumno";
             this.panelBorrarAlumno.Size = new System.Drawing.Size(509, 324);
             this.panelBorrarAlumno.TabIndex = 13;
             this.panelBorrarAlumno.Visible = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.editar;
-            this.pictureBox6.Location = new System.Drawing.Point(423, 79);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(56, 51);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 16;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.basurero;
-            this.pictureBox5.Location = new System.Drawing.Point(422, 167);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(57, 59);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 21;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // lbEliminarAlumnos
             // 
@@ -1115,39 +983,13 @@
             this.panelAdministradorEliminarCurso.Controls.Add(this.label7);
             this.panelAdministradorEliminarCurso.Location = new System.Drawing.Point(1916, 1);
             this.panelAdministradorEliminarCurso.Name = "panelAdministradorEliminarCurso";
-            this.panelAdministradorEliminarCurso.Size = new System.Drawing.Size(405, 225);
+            this.panelAdministradorEliminarCurso.Size = new System.Drawing.Size(405, 295);
             this.panelAdministradorEliminarCurso.TabIndex = 15;
             this.panelAdministradorEliminarCurso.Visible = false;
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Image = global::WindowsFormsApp1.Properties.Resources.editar;
-            this.pictureBox10.Location = new System.Drawing.Point(337, 70);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 41);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 22;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox11.Image = global::WindowsFormsApp1.Properties.Resources.basurero;
-            this.pictureBox11.Location = new System.Drawing.Point(336, 125);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(54, 49);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 23;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
-            // 
             // btnAdministradorAgregarCurso
             // 
-            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(15, 181);
+            this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(15, 256);
             this.btnAdministradorAgregarCurso.Name = "btnAdministradorAgregarCurso";
             this.btnAdministradorAgregarCurso.Size = new System.Drawing.Size(275, 27);
             this.btnAdministradorAgregarCurso.TabIndex = 2;
@@ -1162,12 +1004,12 @@
             this.cbAdministradorEliminarCurso.Location = new System.Drawing.Point(16, 60);
             this.cbAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(2);
             this.cbAdministradorEliminarCurso.Name = "cbAdministradorEliminarCurso";
-            this.cbAdministradorEliminarCurso.Size = new System.Drawing.Size(311, 116);
+            this.cbAdministradorEliminarCurso.Size = new System.Drawing.Size(311, 180);
             this.cbAdministradorEliminarCurso.TabIndex = 22;
             // 
             // btnAdministradorEliminarCursoVolver
             // 
-            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(300, 182);
+            this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(300, 256);
             this.btnAdministradorEliminarCursoVolver.Name = "btnAdministradorEliminarCursoVolver";
             this.btnAdministradorEliminarCursoVolver.Size = new System.Drawing.Size(93, 27);
             this.btnAdministradorEliminarCursoVolver.TabIndex = 17;
@@ -1195,28 +1037,15 @@
             this.panelAdministradorEliminarSeccion.Controls.Add(this.label21);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.btnAdministradorAgregarSeccion);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.panel2);
-            this.panelAdministradorEliminarSeccion.Location = new System.Drawing.Point(1916, 230);
+            this.panelAdministradorEliminarSeccion.Location = new System.Drawing.Point(1918, 302);
             this.panelAdministradorEliminarSeccion.Name = "panelAdministradorEliminarSeccion";
-            this.panelAdministradorEliminarSeccion.Size = new System.Drawing.Size(405, 211);
+            this.panelAdministradorEliminarSeccion.Size = new System.Drawing.Size(405, 260);
             this.panelAdministradorEliminarSeccion.TabIndex = 16;
             this.panelAdministradorEliminarSeccion.Visible = false;
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::WindowsFormsApp1.Properties.Resources.basurero;
-            this.pictureBox13.Location = new System.Drawing.Point(336, 108);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(54, 49);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 29;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
-            // 
             // btnAdministradorEliminarSeccionVolver
             // 
-            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(300, 166);
+            this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(300, 220);
             this.btnAdministradorEliminarSeccionVolver.Name = "btnAdministradorEliminarSeccionVolver";
             this.btnAdministradorEliminarSeccionVolver.Size = new System.Drawing.Size(93, 27);
             this.btnAdministradorEliminarSeccionVolver.TabIndex = 19;
@@ -1231,7 +1060,7 @@
             this.cbAdministradorEliminarSeccion.Location = new System.Drawing.Point(16, 43);
             this.cbAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(2);
             this.cbAdministradorEliminarSeccion.Name = "cbAdministradorEliminarSeccion";
-            this.cbAdministradorEliminarSeccion.Size = new System.Drawing.Size(311, 116);
+            this.cbAdministradorEliminarSeccion.Size = new System.Drawing.Size(311, 164);
             this.cbAdministradorEliminarSeccion.TabIndex = 28;
             // 
             // label21
@@ -1248,7 +1077,7 @@
             // 
             // btnAdministradorAgregarSeccion
             // 
-            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(15, 166);
+            this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(15, 220);
             this.btnAdministradorAgregarSeccion.Name = "btnAdministradorAgregarSeccion";
             this.btnAdministradorAgregarSeccion.Size = new System.Drawing.Size(271, 27);
             this.btnAdministradorAgregarSeccion.TabIndex = 4;
@@ -1273,7 +1102,7 @@
             this.panelAdministradorAgregarCurso.Controls.Add(this.btnAdministradorAgregarCursoAgregar);
             this.panelAdministradorAgregarCurso.Controls.Add(this.btnAdministradorAgregarCursoVolver);
             this.panelAdministradorAgregarCurso.Controls.Add(this.label22);
-            this.panelAdministradorAgregarCurso.Location = new System.Drawing.Point(1919, 444);
+            this.panelAdministradorAgregarCurso.Location = new System.Drawing.Point(1916, 578);
             this.panelAdministradorAgregarCurso.Name = "panelAdministradorAgregarCurso";
             this.panelAdministradorAgregarCurso.Size = new System.Drawing.Size(405, 265);
             this.panelAdministradorAgregarCurso.TabIndex = 18;
@@ -1354,6 +1183,7 @@
             // 
             // panelAdministradorAgregarSeccion
             // 
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.pictureBox12);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.button3);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.lbAdministradorEstadoAgregarSeccion);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.label28);
@@ -1367,11 +1197,21 @@
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionAgregar);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionVolver);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.label23);
-            this.panelAdministradorAgregarSeccion.Location = new System.Drawing.Point(1919, 715);
+            this.panelAdministradorAgregarSeccion.Location = new System.Drawing.Point(1916, 850);
             this.panelAdministradorAgregarSeccion.Name = "panelAdministradorAgregarSeccion";
             this.panelAdministradorAgregarSeccion.Size = new System.Drawing.Size(405, 397);
             this.panelAdministradorAgregarSeccion.TabIndex = 19;
             this.panelAdministradorAgregarSeccion.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(155, 247);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(146, 45);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Agregar Horarios";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lbAdministradorEstadoAgregarSeccion
             // 
@@ -1381,23 +1221,6 @@
             this.lbAdministradorEstadoAgregarSeccion.Size = new System.Drawing.Size(59, 17);
             this.lbAdministradorEstadoAgregarSeccion.TabIndex = 37;
             this.lbAdministradorEstadoAgregarSeccion.Text = "Horario:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(32, 109);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(51, 17);
-            this.label29.TabIndex = 36;
-            this.label29.Text = "Fecha:";
-            // 
-            // dtpAgregarHorario
-            // 
-            this.dtpAgregarHorario.Location = new System.Drawing.Point(103, 109);
-            this.dtpAgregarHorario.Name = "dtpAgregarHorario";
-            this.dtpAgregarHorario.Size = new System.Drawing.Size(228, 22);
-            this.dtpAgregarHorario.TabIndex = 35;
-            this.dtpAgregarHorario.Value = new System.DateTime(2018, 5, 30, 0, 0, 0, 0);
             // 
             // label28
             // 
@@ -1499,6 +1322,23 @@
             this.label23.Text = "Agregar Seccion";
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(32, 109);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(51, 17);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "Fecha:";
+            // 
+            // dtpAgregarHorario
+            // 
+            this.dtpAgregarHorario.Location = new System.Drawing.Point(103, 109);
+            this.dtpAgregarHorario.Name = "dtpAgregarHorario";
+            this.dtpAgregarHorario.Size = new System.Drawing.Size(228, 22);
+            this.dtpAgregarHorario.TabIndex = 35;
+            this.dtpAgregarHorario.Value = new System.DateTime(2018, 5, 30, 0, 0, 0, 0);
+            // 
             // panelAdministradorEditarAlumno
             // 
             this.panelAdministradorEditarAlumno.Controls.Add(this.lbAdminEditarAlumnoEstado);
@@ -1513,7 +1353,7 @@
             this.panelAdministradorEditarAlumno.Controls.Add(this.tbAdminEditarRut);
             this.panelAdministradorEditarAlumno.Controls.Add(this.tbAdminEditarClave);
             this.panelAdministradorEditarAlumno.Controls.Add(this.tbAdminEditarApellido);
-            this.panelAdministradorEditarAlumno.Location = new System.Drawing.Point(988, 789);
+            this.panelAdministradorEditarAlumno.Location = new System.Drawing.Point(988, 714);
             this.panelAdministradorEditarAlumno.Margin = new System.Windows.Forms.Padding(2);
             this.panelAdministradorEditarAlumno.Name = "panelAdministradorEditarAlumno";
             this.panelAdministradorEditarAlumno.Size = new System.Drawing.Size(409, 324);
@@ -1722,9 +1562,9 @@
             this.panelAlumnoVerRamos.Controls.Add(this.dgvAlumnoVerRamos);
             this.panelAlumnoVerRamos.Controls.Add(this.btnAlumnoVerRamosVolver);
             this.panelAlumnoVerRamos.Controls.Add(this.label39);
-            this.panelAlumnoVerRamos.Location = new System.Drawing.Point(1401, 1119);
+            this.panelAlumnoVerRamos.Location = new System.Drawing.Point(1211, 1044);
             this.panelAlumnoVerRamos.Name = "panelAlumnoVerRamos";
-            this.panelAlumnoVerRamos.Size = new System.Drawing.Size(514, 243);
+            this.panelAlumnoVerRamos.Size = new System.Drawing.Size(701, 614);
             this.panelAlumnoVerRamos.TabIndex = 29;
             this.panelAlumnoVerRamos.Visible = false;
             // 
@@ -1732,18 +1572,18 @@
             // 
             this.dgvAlumnoVerRamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAlumnoVerRamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlumnoVerRamos.Location = new System.Drawing.Point(19, 36);
+            this.dgvAlumnoVerRamos.Location = new System.Drawing.Point(22, 36);
             this.dgvAlumnoVerRamos.Name = "dgvAlumnoVerRamos";
             this.dgvAlumnoVerRamos.ReadOnly = true;
             this.dgvAlumnoVerRamos.RowTemplate.Height = 24;
-            this.dgvAlumnoVerRamos.Size = new System.Drawing.Size(477, 150);
+            this.dgvAlumnoVerRamos.Size = new System.Drawing.Size(658, 530);
             this.dgvAlumnoVerRamos.TabIndex = 22;
             // 
             // btnAlumnoVerRamosVolver
             // 
-            this.btnAlumnoVerRamosVolver.Location = new System.Drawing.Point(19, 209);
+            this.btnAlumnoVerRamosVolver.Location = new System.Drawing.Point(19, 572);
             this.btnAlumnoVerRamosVolver.Name = "btnAlumnoVerRamosVolver";
-            this.btnAlumnoVerRamosVolver.Size = new System.Drawing.Size(477, 28);
+            this.btnAlumnoVerRamosVolver.Size = new System.Drawing.Size(661, 28);
             this.btnAlumnoVerRamosVolver.TabIndex = 21;
             this.btnAlumnoVerRamosVolver.Text = "Volver";
             this.btnAlumnoVerRamosVolver.UseVisualStyleBackColor = true;
@@ -1754,7 +1594,7 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label39.Location = new System.Drawing.Point(159, 4);
+            this.label39.Location = new System.Drawing.Point(318, 4);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(100, 29);
             this.label39.TabIndex = 18;
@@ -1763,6 +1603,8 @@
             // 
             // panelAgregarHorario
             // 
+            this.panelAgregarHorario.Controls.Add(this.lbAgregarHorarioHorario);
+            this.panelAgregarHorario.Controls.Add(this.label42);
             this.panelAgregarHorario.Controls.Add(this.tbAgregarHorarioDuracion);
             this.panelAgregarHorario.Controls.Add(this.label41);
             this.panelAgregarHorario.Controls.Add(this.label8);
@@ -1783,10 +1625,60 @@
             this.panelAgregarHorario.TabIndex = 29;
             this.panelAgregarHorario.Visible = false;
             // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(25, 161);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(42, 17);
+            this.label42.TabIndex = 40;
+            this.label42.Text = "(24h)";
+            // 
+            // tbAgregarHorarioDuracion
+            // 
+            this.tbAgregarHorarioDuracion.Location = new System.Drawing.Point(309, 151);
+            this.tbAgregarHorarioDuracion.Name = "tbAgregarHorarioDuracion";
+            this.tbAgregarHorarioDuracion.Size = new System.Drawing.Size(39, 22);
+            this.tbAgregarHorarioDuracion.TabIndex = 39;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(237, 154);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(69, 17);
+            this.label41.TabIndex = 38;
+            this.label41.Text = "Duracion:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(32, 68);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 17);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Tipo:";
+            // 
+            // cbAgregarHorarioTipos
+            // 
+            this.cbAgregarHorarioTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAgregarHorarioTipos.FormattingEnabled = true;
+            this.cbAgregarHorarioTipos.Location = new System.Drawing.Point(103, 63);
+            this.cbAgregarHorarioTipos.Name = "cbAgregarHorarioTipos";
+            this.cbAgregarHorarioTipos.Size = new System.Drawing.Size(228, 24);
+            this.cbAgregarHorarioTipos.TabIndex = 5;
+            // 
+            // tbAgregarHorarioMin
+            // 
+            this.tbAgregarHorarioMin.Location = new System.Drawing.Point(182, 152);
+            this.tbAgregarHorarioMin.Name = "tbAgregarHorarioMin";
+            this.tbAgregarHorarioMin.Size = new System.Drawing.Size(39, 22);
+            this.tbAgregarHorarioMin.TabIndex = 28;
+            // 
             // lbAgregarHorarioEstado
             // 
             this.lbAgregarHorarioEstado.AutoSize = true;
-            this.lbAgregarHorarioEstado.Location = new System.Drawing.Point(14, 181);
+            this.lbAgregarHorarioEstado.Location = new System.Drawing.Point(14, 186);
             this.lbAgregarHorarioEstado.Name = "lbAgregarHorarioEstado";
             this.lbAgregarHorarioEstado.Size = new System.Drawing.Size(66, 17);
             this.lbAgregarHorarioEstado.TabIndex = 27;
@@ -1802,7 +1694,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(20, 154);
+            this.label37.Location = new System.Drawing.Point(22, 147);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(50, 17);
             this.label37.TabIndex = 24;
@@ -1819,7 +1711,7 @@
             // 
             // btnAgregarHorarioAgregar
             // 
-            this.btnAgregarHorarioAgregar.Location = new System.Drawing.Point(17, 225);
+            this.btnAgregarHorarioAgregar.Location = new System.Drawing.Point(20, 241);
             this.btnAgregarHorarioAgregar.Name = "btnAgregarHorarioAgregar";
             this.btnAgregarHorarioAgregar.Size = new System.Drawing.Size(171, 28);
             this.btnAgregarHorarioAgregar.TabIndex = 22;
@@ -1829,7 +1721,7 @@
             // 
             // btnAgregarHorarioVolver
             // 
-            this.btnAgregarHorarioVolver.Location = new System.Drawing.Point(263, 225);
+            this.btnAgregarHorarioVolver.Location = new System.Drawing.Point(266, 241);
             this.btnAgregarHorarioVolver.Name = "btnAgregarHorarioVolver";
             this.btnAgregarHorarioVolver.Size = new System.Drawing.Size(95, 28);
             this.btnAgregarHorarioVolver.TabIndex = 21;
@@ -1849,56 +1741,174 @@
             this.label40.Text = "Agregar Horario";
             this.label40.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tbAgregarHorarioMin
+            // lbAgregarHorarioHorario
             // 
-            this.tbAgregarHorarioMin.Location = new System.Drawing.Point(182, 152);
-            this.tbAgregarHorarioMin.Name = "tbAgregarHorarioMin";
-            this.tbAgregarHorarioMin.Size = new System.Drawing.Size(39, 22);
-            this.tbAgregarHorarioMin.TabIndex = 28;
+            this.lbAgregarHorarioHorario.AutoSize = true;
+            this.lbAgregarHorarioHorario.Location = new System.Drawing.Point(14, 207);
+            this.lbAgregarHorarioHorario.Name = "lbAgregarHorarioHorario";
+            this.lbAgregarHorarioHorario.Size = new System.Drawing.Size(66, 17);
+            this.lbAgregarHorarioHorario.TabIndex = 41;
+            this.lbAgregarHorarioHorario.Text = "Facultad:";
             // 
-            // button3
+            // pictureBox12
             // 
-            this.button3.Location = new System.Drawing.Point(95, 241);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 45);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Agregar Horarios";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.pictureBox12.Image = global::WindowsFormsApp1.Properties.Resources.horario;
+            this.pictureBox12.Location = new System.Drawing.Point(84, 241);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(56, 54);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 27;
+            this.pictureBox12.TabStop = false;
             // 
-            // cbAgregarHorarioTipos
+            // pictureBox13
             // 
-            this.cbAgregarHorarioTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAgregarHorarioTipos.FormattingEnabled = true;
-            this.cbAgregarHorarioTipos.Location = new System.Drawing.Point(103, 63);
-            this.cbAgregarHorarioTipos.Name = "cbAgregarHorarioTipos";
-            this.cbAgregarHorarioTipos.Size = new System.Drawing.Size(228, 24);
-            this.cbAgregarHorarioTipos.TabIndex = 5;
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::WindowsFormsApp1.Properties.Resources.basurero;
+            this.pictureBox13.Location = new System.Drawing.Point(331, 149);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(54, 49);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 29;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
-            // label8
+            // pictureBox10
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 17);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Tipo:";
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox10.Image = global::WindowsFormsApp1.Properties.Resources.editar;
+            this.pictureBox10.Location = new System.Drawing.Point(337, 136);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(53, 41);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 22;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
-            // tbAgregarHorarioDuracion
+            // pictureBox11
             // 
-            this.tbAgregarHorarioDuracion.Location = new System.Drawing.Point(309, 151);
-            this.tbAgregarHorarioDuracion.Name = "tbAgregarHorarioDuracion";
-            this.tbAgregarHorarioDuracion.Size = new System.Drawing.Size(39, 22);
-            this.tbAgregarHorarioDuracion.TabIndex = 39;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = global::WindowsFormsApp1.Properties.Resources.basurero;
+            this.pictureBox11.Location = new System.Drawing.Point(336, 191);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(54, 49);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 23;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
-            // label41
+            // pictureBox6
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(237, 154);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(69, 17);
-            this.label41.TabIndex = 38;
-            this.label41.Text = "Duracion:";
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.editar;
+            this.pictureBox6.Location = new System.Drawing.Point(423, 79);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(56, 51);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 16;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.basurero;
+            this.pictureBox5.Location = new System.Drawing.Point(422, 167);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(57, 59);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 21;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.cursos1;
+            this.pictureBox8.Location = new System.Drawing.Point(200, 125);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(121, 93);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 26;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.seccion;
+            this.pictureBox7.Location = new System.Drawing.Point(358, 125);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(121, 93);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 25;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::WindowsFormsApp1.Properties.Resources.aluno;
+            this.pictureBox9.Location = new System.Drawing.Point(39, 125);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(121, 93);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 21;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(189, 99);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(189, 99);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
+            this.pictureBox4.Location = new System.Drawing.Point(41, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(259, 127);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(174, 136);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 77);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Ver Aprobado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FInicio
             // 
@@ -1933,41 +1943,28 @@
             this.Load += new System.EventHandler(this.FInicio_Load);
             this.PanelInicio.ResumeLayout(false);
             this.PanelInicio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelAlumno.ResumeLayout(false);
             this.panelAlumno.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.panelTomaRamoAlumno.ResumeLayout(false);
             this.panelTomaRamoAlumno.PerformLayout();
             this.panelBotarRamo.ResumeLayout(false);
             this.panelBotarRamo.PerformLayout();
             this.panelProfesor.ResumeLayout(false);
             this.panelProfesor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelCursosProfesor.ResumeLayout(false);
             this.panelCursosProfesor.PerformLayout();
             this.panelAdministrador.ResumeLayout(false);
             this.panelAdministrador.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelAdministradorCrearAlumno.ResumeLayout(false);
             this.panelAdministradorCrearAlumno.PerformLayout();
             this.panelVerHorarioProfe.ResumeLayout(false);
             this.panelVerHorarioProfe.PerformLayout();
             this.panelBorrarAlumno.ResumeLayout(false);
             this.panelBorrarAlumno.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelAdministradorEliminarCurso.ResumeLayout(false);
             this.panelAdministradorEliminarCurso.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panelAdministradorEliminarSeccion.ResumeLayout(false);
             this.panelAdministradorEliminarSeccion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panelAdministradorAgregarCurso.ResumeLayout(false);
             this.panelAdministradorAgregarCurso.PerformLayout();
             this.panelAdministradorAgregarSeccion.ResumeLayout(false);
@@ -1981,6 +1978,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoVerRamos)).EndInit();
             this.panelAgregarHorario.ResumeLayout(false);
             this.panelAgregarHorario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1996,7 +2006,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel PanelInicio;
         private System.Windows.Forms.Panel panelAlumno;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button botonAgeregarRamoAlumno;
         private System.Windows.Forms.Button botonBotarRamoAlumno;
         private System.Windows.Forms.Button botonVerRamosAlumno;
@@ -2032,13 +2041,11 @@
         private System.Windows.Forms.Button btnAdministradorAgregarAlumno;
         private System.Windows.Forms.Button btnAdministradorCerrar;
         private System.Windows.Forms.Panel panelAdministradorCrearAlumno;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAdministradorAgregarAlumnoNuevo;
-        private System.Windows.Forms.ComboBox cbAdministradorAlumnoNuevoRamo;
         private System.Windows.Forms.TextBox tbAdministradorAgregarApellido;
         private System.Windows.Forms.TextBox tbAdministradorAgregarClave;
         private System.Windows.Forms.TextBox tbAdministradoAgregarRut;
@@ -2149,6 +2156,10 @@
         private System.Windows.Forms.ComboBox cbAgregarHorarioTipos;
         private System.Windows.Forms.TextBox tbAgregarHorarioDuracion;
         private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label lbAgregarHorarioHorario;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button button1;
     }
 }
 

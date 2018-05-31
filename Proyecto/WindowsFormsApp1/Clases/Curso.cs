@@ -99,11 +99,10 @@ namespace WindowsFormsApp1
 
         }
 
-        public void CrearSeccion(DateTime dateTi,int nrcc,int vacan,Profesor profe)
+        public void CrearSeccion(List<Horario> dateTi,int nrcc,int vacan,Profesor profe)
         {
             Seccion secc = new Seccion(vacan, nrcc, profe);
-            Horario horario = new Horario("clase", dateTi, 2);
-            secc.horario.Add(horario);
+            secc.horario = dateTi;
             secciones.Add(secc);
         }
 

@@ -139,11 +139,11 @@ namespace WindowsFormsApp1
             }
         }
 
-        public Curso retornarCurso (string nombre)
+        public Curso retornarCurso(string nombre)
         {
             foreach (Carrera carrera in carreras)
             {
-                
+
                 foreach (Curso curso in carrera.cursos)
                 {
 
@@ -156,7 +156,29 @@ namespace WindowsFormsApp1
             return null;
         }
 
-        
+        public bool noRepetirRamo(Persona persona,string nombreCurso)
+        {
+            foreach (Carrera carrera in carreras)
+            {
+
+                foreach (Curso curso in carrera.cursos)
+                {
+                    if (curso.nombre == nombreCurso)
+                    {
+                        foreach (Seccion seccion in curso.secciones)
+                        {
+                            if (seccion.alumnos.Contains(persona))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+
     }
 
 }
