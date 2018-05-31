@@ -53,277 +53,277 @@ namespace WindowsFormsApp1
                 //ESTO SOLO CORRERIA EN EL CASO DE QUE EL ARCHIVO BIN SEA ELIMINADO, PERO AHORA LO ESTA LEYENDO DE LA CARPETA
                 //RESULTADOS QUE HEMOS CREADO Y HECHO DIRECTORIO DE LAS COMPILACIONES
                 Uandes = new Universidad("Universidad de los Andes");
-            List<Alumno> alumnos = new List<Alumno>();
-            List<Profesor> profesores = new List<Profesor>();
-            List<Administrativo> admins = new List<Administrativo>();
-            List<Persona> personas = new List<Persona>();
+                List<Alumno> alumnos = new List<Alumno>();
+                List<Profesor> profesores = new List<Profesor>();
+                List<Administrativo> admins = new List<Administrativo>();
+                List<Persona> personas = new List<Persona>();
 
-            Carrera Ingenieria = new Carrera("Ingenieria", "Facultad de Ingeniería y Ciencias Aplicadas");
-            Carrera Comercial = new Carrera("Comercial", "Facultad de Negocios");
-            Carrera Derecho = new Carrera("Derecho", "Facultad de Derecho");
-            Alumno alumnoIng = new Alumno(2, "Juan", "Perez", DateTime.Today.AddYears(-7), "a");
-            Alumno a1 = new Alumno(1, "Pedro", "Perez", DateTime.Today.AddYears(-2), "a");
-            Alumno a2 = new Alumno(3, "Juan", "Soto", DateTime.Today.AddYears(-5), "a");
-            Alumno a5 = new Alumno(5, "Federico", "Sanchez", DateTime.Today.AddYears(-3), "a");
-            Alumno a4 = new Alumno(6, "Pepe", "Soto", DateTime.Today.AddYears(-8), "a");
-            Alumno a3 = new Alumno(7, "Maicl", "Yacson", DateTime.Today.AddYears(-2), "a");
-            Alumno a6 = new Alumno(8, "Jorge", "Piasu", DateTime.Today.AddYears(-2), "a");
-            Alumno a7 = new Alumno(9, "Jose", "Hernandez", DateTime.Today.AddYears(-2), "a");
-            Alumno a8 = new Alumno(10, "Fernando", "Brito", DateTime.Today.AddYears(-2), "a");
-            Alumno a9 = new Alumno(11, "Felipe", "Brayatan", DateTime.Today.AddYears(-2), "a");
-            Alumno a10 = new Alumno(12, "Gonzalo", "Cabezas", DateTime.Today.AddYears(-2), "a");
-            Alumno a11 = new Alumno(13, "Rosario", "Cortes", DateTime.Today.AddYears(-2), "a");
-            Alumno a12 = new Alumno(14, "Marcela", "Cortez", DateTime.Today.AddYears(-2), "a");
-            Alumno a13 = new Alumno(15, "Ximena", "Lorca", DateTime.Today.AddYears(-2), "a");
-            Alumno a14 = new Alumno(4, "Yahayra", "La Bellakeu", DateTime.Today.AddYears(-2), "a");
-
-
-            Profesor tata = new Profesor(100, "Leonardo", "Sanchez", "a", DateTime.Today.AddYears(-10), "Ingenieria Civil");
-            Profesor sat = new Profesor(101, "Ricardo", "Sat", "a", DateTime.Today.AddYears(-10), "Ingenieria Civil");
-            Profesor Lorca = new Profesor(102, "Felipe", "Lorca", "a", DateTime.Today.AddYears(-10), "Ingenieria Civil");
-
-            Profesor aa = new Profesor(1111111, "", "", "", DateTime.Today.AddYears(-10), "");
+                Carrera Ingenieria = new Carrera("Ingenieria", "Facultad de Ingeniería y Ciencias Aplicadas");
+                Carrera Comercial = new Carrera("Comercial", "Facultad de Negocios");
+                Carrera Derecho = new Carrera("Derecho", "Facultad de Derecho");
+                Alumno alumnoIng = new Alumno(2, "Juan", "Perez", DateTime.Today.AddYears(-7), "a");
+                Alumno a1 = new Alumno(1, "Pedro", "Perez", DateTime.Today.AddYears(-2), "a");
+                Alumno a2 = new Alumno(3, "Juan", "Soto", DateTime.Today.AddYears(-5), "a");
+                Alumno a5 = new Alumno(5, "Federico", "Sanchez", DateTime.Today.AddYears(-3), "a");
+                Alumno a4 = new Alumno(6, "Pepe", "Soto", DateTime.Today.AddYears(-8), "a");
+                Alumno a3 = new Alumno(7, "Maicl", "Yacson", DateTime.Today.AddYears(-2), "a");
+                Alumno a6 = new Alumno(8, "Jorge", "Piasu", DateTime.Today.AddYears(-2), "a");
+                Alumno a7 = new Alumno(9, "Jose", "Hernandez", DateTime.Today.AddYears(-2), "a");
+                Alumno a8 = new Alumno(10, "Fernando", "Brito", DateTime.Today.AddYears(-2), "a");
+                Alumno a9 = new Alumno(11, "Felipe", "Brayatan", DateTime.Today.AddYears(-2), "a");
+                Alumno a10 = new Alumno(12, "Gonzalo", "Cabezas", DateTime.Today.AddYears(-2), "a");
+                Alumno a11 = new Alumno(13, "Rosario", "Cortes", DateTime.Today.AddYears(-2), "a");
+                Alumno a12 = new Alumno(14, "Marcela", "Cortez", DateTime.Today.AddYears(-2), "a");
+                Alumno a13 = new Alumno(15, "Ximena", "Lorca", DateTime.Today.AddYears(-2), "a");
+                Alumno a14 = new Alumno(4, "Yahayra", "La Bellakeu", DateTime.Today.AddYears(-2), "a");
 
 
-            Curso generico = new Curso("", 0);
+                Profesor tata = new Profesor(100, "Leonardo", "Sanchez", "a", DateTime.Today.AddYears(-10), "Ingenieria Civil");
+                Profesor sat = new Profesor(101, "Ricardo", "Sat", "a", DateTime.Today.AddYears(-10), "Ingenieria Civil");
+                Profesor Lorca = new Profesor(102, "Felipe", "Lorca", "a", DateTime.Today.AddYears(-10), "Ingenieria Civil");
 
-            Curso calculo2 = new Curso("Calculo 2", 6);
-            Curso calculo1 = new Curso("Calculo 1", 6);
-            Curso edo = new Curso("Edo", 6);
-            Curso lineal = new Curso("Algebra lineal", 6);
-            Curso algebra = new Curso("Algebra", 6);
-            Curso teologia = new Curso("Teologia", 2);
-            Curso antropologia = new Curso("Antropologia", 2);
-            Curso biologia = new Curso("Biologia", 2);
-            Curso quimica = new Curso("Quimica", 2);
-            Curso programacion = new Curso("Programacion", 2);
-            Curso introduccionAlaIng = new Curso("Intro a la Ing", 2);
-            Curso peg = new Curso("PEG Ciencias", 2);
-            Curso peg1 = new Curso("PEG Historia", 2);
-            Curso peg2 = new Curso("PEG Arte", 2);
-            Curso minor = new Curso("Minor 1", 2);
-            Curso minor1 = new Curso("Minor 2", 2);
-            Curso minor2 = new Curso("Minor 3", 2);
-            Curso der = new Curso("Civil", 2);
-            Curso com = new Curso("Microeconomia", 2);
+                Profesor aa = new Profesor(1111111, "", "", "", DateTime.Today.AddYears(-10), "");
 
 
-            Seccion gen = new Seccion(0, 0, aa);
+                Curso generico = new Curso("", 0);
 
-            Seccion der1 = new Seccion(60, 2018300, sat);
-            Seccion com1 = new Seccion(60, 2018301, Lorca);
-            Seccion teologia1 = new Seccion(60, 2018101, Lorca);
-            Seccion antropologia1 = new Seccion(60, 2018102, tata);
-            Seccion biologia1 = new Seccion(60, 2018103, sat);
-            Seccion quimica1 = new Seccion(60, 2018104, tata);
-            Seccion programacion1 = new Seccion(60, 2018105, sat);
-            Seccion introduccionAlaIng1 = new Seccion(60, 2018106, tata);
-            Seccion pega1 = new Seccion(70, 2018107, sat);
-            Seccion peg11 = new Seccion(60, 2018108, Lorca);
-            Seccion peg21 = new Seccion(60, 2018109, Lorca);
-            Seccion minora1 = new Seccion(60, 2018110, tata);
-            Seccion minor11 = new Seccion(60, 2018111, Lorca);
-            Seccion minor21 = new Seccion(60, 2018112, Lorca);
-            Seccion calculo1Sec1 = new Seccion(60, 2018113, tata);
-            Seccion AlgebraSec1 = new Seccion(42, 2018114, sat);
-            Seccion AlgebraSec2 = new Seccion(20, 2018118, Lorca);
-            Seccion LinealSec1 = new Seccion(50, 2018115, Lorca);
-            Seccion edoSec1 = new Seccion(50, 2018116, Lorca);
-            Seccion calculo2Sec1 = new Seccion(50, 2018117, Lorca);
-
-
-            calculo2.requisitos.Add(calculo1);
-            calculo2.requisitos.Add(algebra);
-            edo.requisitos.Add(lineal);
-            edo.requisitos.Add(calculo1);
-            lineal.requisitos.Add(algebra);
-
-            Horario horarioCal = new Horario("clase", DateTime.Today.AddHours(102), 2);
-            Horario horarioCal1 = new Horario("clase", DateTime.Today.AddHours(1), 2);
-            Horario horarioAlg = new Horario("clase", DateTime.Today.AddHours(32), 2);
-            Horario horarioLin = new Horario("clase", DateTime.Today.AddHours(5), 2);
-            Horario horarioLin2 = new Horario("clase", DateTime.Today.AddHours(65), 2);
-            Horario horarioLin3 = new Horario("clase", DateTime.Today.AddHours(13), 2);
-            Horario i = new Horario("clase", DateTime.Today.AddHours(113), 2);
-            Horario j = new Horario("clase", DateTime.Today.AddHours(132), 2);
-            Horario h = new Horario("ayudantia", DateTime.Today.AddHours(4324), 2);
-            Horario g = new Horario("clase", DateTime.Today.AddHours(53), 2);
-            Horario f = new Horario("prueba", DateTime.Today.AddHours(1423), 2);
-            Horario e = new Horario("clase", DateTime.Today.AddHours(113), 2);
-            Horario d = new Horario("clase", DateTime.Today.AddHours(3212113), 2);
-            Horario c = new Horario("ayudantia", DateTime.Today.AddHours(233), 2);
-            Horario b = new Horario("clase", DateTime.Today.AddHours(131), 2);
-            Horario a = new Horario("clase", DateTime.Today.AddHours(173), 2);
-            Horario k = new Horario("clase", DateTime.Today.AddHours(773), 2);
-            Horario l = new Horario("clase", DateTime.Today.AddHours(163), 2);
-            Horario m = new Horario("clase", DateTime.Today.AddHours(126), 2);
-            Horario n = new Horario("prueba", DateTime.Today.AddHours(13), 2);
+                Curso calculo2 = new Curso("Calculo 2", 6);
+                Curso calculo1 = new Curso("Calculo 1", 6);
+                Curso edo = new Curso("Edo", 6);
+                Curso lineal = new Curso("Algebra lineal", 6);
+                Curso algebra = new Curso("Algebra", 6);
+                Curso teologia = new Curso("Teologia", 2);
+                Curso antropologia = new Curso("Antropologia", 2);
+                Curso biologia = new Curso("Biologia", 2);
+                Curso quimica = new Curso("Quimica", 2);
+                Curso programacion = new Curso("Programacion", 2);
+                Curso introduccionAlaIng = new Curso("Intro a la Ing", 2);
+                Curso peg = new Curso("PEG Ciencias", 2);
+                Curso peg1 = new Curso("PEG Historia", 2);
+                Curso peg2 = new Curso("PEG Arte", 2);
+                Curso minor = new Curso("Minor 1", 2);
+                Curso minor1 = new Curso("Minor 2", 2);
+                Curso minor2 = new Curso("Minor 3", 2);
+                Curso der = new Curso("Civil", 2);
+                Curso com = new Curso("Microeconomia", 2);
 
 
-            Horario gene = new Horario("prueba", DateTime.Today.AddHours(156563), 2);
+                Seccion gen = new Seccion(0, 0, aa);
 
-            gen.horario.Add(gene);
-
-            AlgebraSec2.horario.Add(g);
-            der1.horario.Add(a);
-            com1.horario.Add(a);
-            calculo1Sec1.horario.Add(horarioCal);
-            calculo1Sec1.horario.Add(m);
-            calculo1Sec1.horario.Add(n);
-            AlgebraSec1.horario.Add(e);
-            AlgebraSec1.horario.Add(horarioCal1);
-            LinealSec1.horario.Add(horarioLin);
-            LinealSec1.horario.Add(horarioLin2);
-            LinealSec1.horario.Add(horarioLin3);
-            edoSec1.horario.Add(horarioLin2);
-            calculo2Sec1.horario.Add(d);
-            minor11.horario.Add(horarioCal);
-            minora1.horario.Add(horarioCal);
-            minor21.horario.Add(horarioCal);
-            pega1.horario.Add(d);
-            peg11.horario.Add(e);
-            peg21.horario.Add(f);
-            introduccionAlaIng1.horario.Add(g);
-            programacion1.horario.Add(h);
-            quimica1.horario.Add(i);
-            biologia1.horario.Add(j);
-            antropologia1.horario.Add(k);
-            teologia1.horario.Add(l);
-
-            generico.secciones.Add(gen);
-
-            der.secciones.Add(der1);
-            com.secciones.Add(com1);
-            minor1.secciones.Add(minora1);
-            minor2.secciones.Add(minor21);
-            minor.secciones.Add(minor11);
-            peg2.secciones.Add(pega1);
-            peg1.secciones.Add(peg11);
-            peg.secciones.Add(peg21);
-            introduccionAlaIng.secciones.Add(introduccionAlaIng1);
-            programacion.secciones.Add(programacion1);
-            quimica.secciones.Add(quimica1);
-            biologia.secciones.Add(biologia1);
-            calculo1.secciones.Add(calculo1Sec1);
-            algebra.secciones.Add(AlgebraSec1);
-            algebra.secciones.Add(AlgebraSec2);
-            lineal.secciones.Add(LinealSec1);
-            edo.secciones.Add(edoSec1);
-            calculo2.secciones.Add(calculo2Sec1);
-            teologia.secciones.Add(teologia1);
-            antropologia.secciones.Add(antropologia1);
-
-            a1.aprobados.Add(algebra);
-            a1.aprobados.Add(teologia);
-            a1.aprobados.Add(calculo1);
-            a1.aprobados.Add(lineal);
-            a2.aprobados.Add(algebra);
-            a2.aprobados.Add(teologia);
-            a2.aprobados.Add(peg);
-
-            gen.alumnos.Add(a1);
-            gen.alumnos.Add(a2);
-            gen.alumnos.Add(a3);
-            gen.alumnos.Add(a4);
-            gen.alumnos.Add(a5);
-            gen.alumnos.Add(a6);
-            gen.alumnos.Add(a7);
-            gen.alumnos.Add(a8);
-            gen.alumnos.Add(a9);
-            gen.alumnos.Add(a10);
-            gen.alumnos.Add(a11);
-            gen.alumnos.Add(a12);
-            gen.alumnos.Add(a13);
-            gen.alumnos.Add(a14);
-            gen.alumnos.Add(alumnoIng);
-            //calculo1Sec1.alumnos.Add(alumnoIng);
-            //AlgebraSec1.alumnos.Add(a2);
-            //LinealSec1.alumnos.Add(a3);
-            //edoSec1.alumnos.Add(a4);
-            //programacion1.alumnos.Add(a5);
-            //programacion1.alumnos.Add(alumnoIng);
-            //programacion1.alumnos.Add(a1);
-            //programacion1.alumnos.Add(a2);
-            //programacion1.alumnos.Add(a3);
-            //programacion1.alumnos.Add(a4);
-            //quimica1.alumnos.Add(a5);
-            //quimica1.alumnos.Add(alumnoIng);
-            //quimica1.alumnos.Add(a2);
-            //quimica1.alumnos.Add(a3);
-            //quimica1.alumnos.Add(a4);
-            //calculo2Sec1.alumnos.Add(a5);
-            //calculo1Sec1.alumnos.Add(a6);
-            //calculo1Sec1.alumnos.Add(a7);
-            //AlgebraSec1.alumnos.Add(a8);
-            //LinealSec1.alumnos.Add(a9);
-            //edoSec1.alumnos.Add(a10);
-            //programacion1.alumnos.Add(a11);
-            //programacion1.alumnos.Add(a12);
-            //programacion1.alumnos.Add(a13);
-            //programacion1.alumnos.Add(a14);
-            //programacion1.alumnos.Add(a6);
-            //programacion1.alumnos.Add(a7);
-            //quimica1.alumnos.Add(a8);
-            //quimica1.alumnos.Add(a9);
-            //quimica1.alumnos.Add(a10);
-            //quimica1.alumnos.Add(a11);
-            //quimica1.alumnos.Add(a12);
-            //quimica1.alumnos.Add(a14);
-            //calculo2Sec1.alumnos.Add(a2);
-            //teologia1.alumnos.Add(a4);
-            //antropologia1.alumnos.Add(a11);
-            //peg21.alumnos.Add(a14);
-            //peg11.alumnos.Add(a12);
-            //pega1.alumnos.Add(a10);
-            //minor21.alumnos.Add(a2);
-            //minor11.alumnos.Add(a4);
-            //introduccionAlaIng1.alumnos.Add(a3);
-            //biologia1.alumnos.Add(a5);
-            //calculo2Sec1.alumnos.Add(a6);
-            //teologia1.alumnos.Add(a8);
-            //antropologia1.alumnos.Add(a7);
-            //peg21.alumnos.Add(a9);
-            //peg11.alumnos.Add(a10);
-            //minora1.alumnos.Add(a2);
-            //minor21.alumnos.Add(a3);
-            //minor11.alumnos.Add(a5);
-            //introduccionAlaIng1.alumnos.Add(a6);
-            //biologia1.alumnos.Add(a7);
-            Ingenieria.cursos.Add(generico);
+                Seccion der1 = new Seccion(60, 2018300, sat);
+                Seccion com1 = new Seccion(60, 2018301, Lorca);
+                Seccion teologia1 = new Seccion(60, 2018101, Lorca);
+                Seccion antropologia1 = new Seccion(60, 2018102, tata);
+                Seccion biologia1 = new Seccion(60, 2018103, sat);
+                Seccion quimica1 = new Seccion(60, 2018104, tata);
+                Seccion programacion1 = new Seccion(60, 2018105, sat);
+                Seccion introduccionAlaIng1 = new Seccion(60, 2018106, tata);
+                Seccion pega1 = new Seccion(70, 2018107, sat);
+                Seccion peg11 = new Seccion(60, 2018108, Lorca);
+                Seccion peg21 = new Seccion(60, 2018109, Lorca);
+                Seccion minora1 = new Seccion(60, 2018110, tata);
+                Seccion minor11 = new Seccion(60, 2018111, Lorca);
+                Seccion minor21 = new Seccion(60, 2018112, Lorca);
+                Seccion calculo1Sec1 = new Seccion(60, 2018113, tata);
+                Seccion AlgebraSec1 = new Seccion(42, 2018114, sat);
+                Seccion AlgebraSec2 = new Seccion(20, 2018118, Lorca);
+                Seccion LinealSec1 = new Seccion(50, 2018115, Lorca);
+                Seccion edoSec1 = new Seccion(50, 2018116, Lorca);
+                Seccion calculo2Sec1 = new Seccion(50, 2018117, Lorca);
 
 
-            Ingenieria.cursos.Add(calculo2);
-            Ingenieria.cursos.Add(calculo1);
-            Ingenieria.cursos.Add(edo);
-            Ingenieria.cursos.Add(lineal);
-            Ingenieria.cursos.Add(algebra);
-            Ingenieria.cursos.Add(programacion);
-            Ingenieria.cursos.Add(quimica);
-            Ingenieria.cursos.Add(biologia);
-            Ingenieria.cursos.Add(peg);
-            Ingenieria.cursos.Add(peg1);
-            Ingenieria.cursos.Add(peg2);
-            Ingenieria.cursos.Add(minor);
-            Ingenieria.cursos.Add(minor1);
-            Ingenieria.cursos.Add(minor2);
-            Ingenieria.cursos.Add(introduccionAlaIng);
-            Ingenieria.cursos.Add(teologia);
-            Ingenieria.cursos.Add(antropologia);
-            Comercial.cursos.Add(com);
-            Derecho.cursos.Add(der);
-            Administrativo admin1 = new Administrativo(0, "admin", "admin", "admin", "ing");
-            Administrativo admin2 = new Administrativo(0, "admin", "admin", "admin", "der");
-            Administrativo admin3 = new Administrativo(0, "admin", "admin", "admin", "com");
-            Uandes.carreras.Add(Ingenieria);
-            Uandes.carreras.Add(Comercial);
-            Uandes.carreras.Add(Derecho);
-            Ingenieria.admins.Add(admin1);
-            Comercial.admins.Add(admin3);
-            Derecho.admins.Add(admin2);
-            BinaryFormatter formateador = new BinaryFormatter();
-            Stream miStream = new FileStream("Universidades.bin", FileMode.Create, FileAccess.Write);
-            formateador.Serialize(miStream, Uandes);
-            miStream.Close();
+                calculo2.requisitos.Add(calculo1);
+                calculo2.requisitos.Add(algebra);
+                edo.requisitos.Add(lineal);
+                edo.requisitos.Add(calculo1);
+                lineal.requisitos.Add(algebra);
+
+                Horario horarioCal = new Horario("clase", DateTime.Today.AddHours(102), 2);
+                Horario horarioCal1 = new Horario("clase", DateTime.Today.AddHours(1), 2);
+                Horario horarioAlg = new Horario("clase", DateTime.Today.AddHours(32), 2);
+                Horario horarioLin = new Horario("clase", DateTime.Today.AddHours(5), 2);
+                Horario horarioLin2 = new Horario("clase", DateTime.Today.AddHours(65), 2);
+                Horario horarioLin3 = new Horario("clase", DateTime.Today.AddHours(13), 2);
+                Horario i = new Horario("clase", DateTime.Today.AddHours(113), 2);
+                Horario j = new Horario("clase", DateTime.Today.AddHours(132), 2);
+                Horario h = new Horario("ayudantia", DateTime.Today.AddHours(4324), 2);
+                Horario g = new Horario("clase", DateTime.Today.AddHours(53), 2);
+                Horario f = new Horario("prueba", DateTime.Today.AddHours(1423), 2);
+                Horario e = new Horario("clase", DateTime.Today.AddHours(113), 2);
+                Horario d = new Horario("clase", DateTime.Today.AddHours(3212113), 2);
+                Horario c = new Horario("ayudantia", DateTime.Today.AddHours(233), 2);
+                Horario b = new Horario("clase", DateTime.Today.AddHours(131), 2);
+                Horario a = new Horario("clase", DateTime.Today.AddHours(173), 2);
+                Horario k = new Horario("clase", DateTime.Today.AddHours(773), 2);
+                Horario l = new Horario("clase", DateTime.Today.AddHours(163), 2);
+                Horario m = new Horario("clase", DateTime.Today.AddHours(126), 2);
+                Horario n = new Horario("prueba", DateTime.Today.AddHours(13), 2);
+
+
+                Horario gene = new Horario("prueba", DateTime.Today.AddHours(156563), 2);
+
+                gen.horario.Add(gene);
+
+                AlgebraSec2.horario.Add(g);
+                der1.horario.Add(a);
+                com1.horario.Add(a);
+                calculo1Sec1.horario.Add(horarioCal);
+                calculo1Sec1.horario.Add(m);
+                calculo1Sec1.horario.Add(n);
+                AlgebraSec1.horario.Add(e);
+                AlgebraSec1.horario.Add(horarioCal1);
+                LinealSec1.horario.Add(horarioLin);
+                LinealSec1.horario.Add(horarioLin2);
+                LinealSec1.horario.Add(horarioLin3);
+                edoSec1.horario.Add(horarioLin2);
+                calculo2Sec1.horario.Add(d);
+                minor11.horario.Add(horarioCal);
+                minora1.horario.Add(horarioCal);
+                minor21.horario.Add(horarioCal);
+                pega1.horario.Add(d);
+                peg11.horario.Add(e);
+                peg21.horario.Add(f);
+                introduccionAlaIng1.horario.Add(g);
+                programacion1.horario.Add(h);
+                quimica1.horario.Add(i);
+                biologia1.horario.Add(j);
+                antropologia1.horario.Add(k);
+                teologia1.horario.Add(l);
+
+                generico.secciones.Add(gen);
+
+                der.secciones.Add(der1);
+                com.secciones.Add(com1);
+                minor1.secciones.Add(minora1);
+                minor2.secciones.Add(minor21);
+                minor.secciones.Add(minor11);
+                peg2.secciones.Add(pega1);
+                peg1.secciones.Add(peg11);
+                peg.secciones.Add(peg21);
+                introduccionAlaIng.secciones.Add(introduccionAlaIng1);
+                programacion.secciones.Add(programacion1);
+                quimica.secciones.Add(quimica1);
+                biologia.secciones.Add(biologia1);
+                calculo1.secciones.Add(calculo1Sec1);
+                algebra.secciones.Add(AlgebraSec1);
+                algebra.secciones.Add(AlgebraSec2);
+                lineal.secciones.Add(LinealSec1);
+                edo.secciones.Add(edoSec1);
+                calculo2.secciones.Add(calculo2Sec1);
+                teologia.secciones.Add(teologia1);
+                antropologia.secciones.Add(antropologia1);
+
+                a1.aprobados.Add(algebra);
+                a1.aprobados.Add(teologia);
+                a1.aprobados.Add(calculo1);
+                a1.aprobados.Add(lineal);
+                a2.aprobados.Add(algebra);
+                a2.aprobados.Add(teologia);
+                a2.aprobados.Add(peg);
+
+                gen.alumnos.Add(a1);
+                gen.alumnos.Add(a2);
+                gen.alumnos.Add(a3);
+                gen.alumnos.Add(a4);
+                gen.alumnos.Add(a5);
+                gen.alumnos.Add(a6);
+                gen.alumnos.Add(a7);
+                gen.alumnos.Add(a8);
+                gen.alumnos.Add(a9);
+                gen.alumnos.Add(a10);
+                gen.alumnos.Add(a11);
+                gen.alumnos.Add(a12);
+                gen.alumnos.Add(a13);
+                gen.alumnos.Add(a14);
+                gen.alumnos.Add(alumnoIng);
+                //calculo1Sec1.alumnos.Add(alumnoIng);
+                //AlgebraSec1.alumnos.Add(a2);
+                //LinealSec1.alumnos.Add(a3);
+                //edoSec1.alumnos.Add(a4);
+                //programacion1.alumnos.Add(a5);
+                //programacion1.alumnos.Add(alumnoIng);
+                //programacion1.alumnos.Add(a1);
+                //programacion1.alumnos.Add(a2);
+                //programacion1.alumnos.Add(a3);
+                //programacion1.alumnos.Add(a4);
+                //quimica1.alumnos.Add(a5);
+                //quimica1.alumnos.Add(alumnoIng);
+                //quimica1.alumnos.Add(a2);
+                //quimica1.alumnos.Add(a3);
+                //quimica1.alumnos.Add(a4);
+                //calculo2Sec1.alumnos.Add(a5);
+                //calculo1Sec1.alumnos.Add(a6);
+                //calculo1Sec1.alumnos.Add(a7);
+                //AlgebraSec1.alumnos.Add(a8);
+                //LinealSec1.alumnos.Add(a9);
+                //edoSec1.alumnos.Add(a10);
+                //programacion1.alumnos.Add(a11);
+                //programacion1.alumnos.Add(a12);
+                //programacion1.alumnos.Add(a13);
+                //programacion1.alumnos.Add(a14);
+                //programacion1.alumnos.Add(a6);
+                //programacion1.alumnos.Add(a7);
+                //quimica1.alumnos.Add(a8);
+                //quimica1.alumnos.Add(a9);
+                //quimica1.alumnos.Add(a10);
+                //quimica1.alumnos.Add(a11);
+                //quimica1.alumnos.Add(a12);
+                //quimica1.alumnos.Add(a14);
+                //calculo2Sec1.alumnos.Add(a2);
+                //teologia1.alumnos.Add(a4);
+                //antropologia1.alumnos.Add(a11);
+                //peg21.alumnos.Add(a14);
+                //peg11.alumnos.Add(a12);
+                //pega1.alumnos.Add(a10);
+                //minor21.alumnos.Add(a2);
+                //minor11.alumnos.Add(a4);
+                //introduccionAlaIng1.alumnos.Add(a3);
+                //biologia1.alumnos.Add(a5);
+                //calculo2Sec1.alumnos.Add(a6);
+                //teologia1.alumnos.Add(a8);
+                //antropologia1.alumnos.Add(a7);
+                //peg21.alumnos.Add(a9);
+                //peg11.alumnos.Add(a10);
+                //minora1.alumnos.Add(a2);
+                //minor21.alumnos.Add(a3);
+                //minor11.alumnos.Add(a5);
+                //introduccionAlaIng1.alumnos.Add(a6);
+                //biologia1.alumnos.Add(a7);
+                Ingenieria.cursos.Add(generico);
+
+
+                Ingenieria.cursos.Add(calculo2);
+                Ingenieria.cursos.Add(calculo1);
+                Ingenieria.cursos.Add(edo);
+                Ingenieria.cursos.Add(lineal);
+                Ingenieria.cursos.Add(algebra);
+                Ingenieria.cursos.Add(programacion);
+                Ingenieria.cursos.Add(quimica);
+                Ingenieria.cursos.Add(biologia);
+                Ingenieria.cursos.Add(peg);
+                Ingenieria.cursos.Add(peg1);
+                Ingenieria.cursos.Add(peg2);
+                Ingenieria.cursos.Add(minor);
+                Ingenieria.cursos.Add(minor1);
+                Ingenieria.cursos.Add(minor2);
+                Ingenieria.cursos.Add(introduccionAlaIng);
+                Ingenieria.cursos.Add(teologia);
+                Ingenieria.cursos.Add(antropologia);
+                Comercial.cursos.Add(com);
+                Derecho.cursos.Add(der);
+                Administrativo admin1 = new Administrativo(0, "admin", "admin", "admin", "ing");
+                Administrativo admin2 = new Administrativo(0, "admin", "admin", "admin", "der");
+                Administrativo admin3 = new Administrativo(0, "admin", "admin", "admin", "com");
+                Uandes.carreras.Add(Ingenieria);
+                Uandes.carreras.Add(Comercial);
+                Uandes.carreras.Add(Derecho);
+                Ingenieria.admins.Add(admin1);
+                Comercial.admins.Add(admin3);
+                Derecho.admins.Add(admin2);
+                BinaryFormatter formateador = new BinaryFormatter();
+                Stream miStream = new FileStream("Universidades.bin", FileMode.Create, FileAccess.Write);
+                formateador.Serialize(miStream, Uandes);
+                miStream.Close();
             }
             #endregion
 
@@ -764,7 +764,7 @@ namespace WindowsFormsApp1
                 tbAdministradorCrearAlumnoEstado.Text = "El nombre está vacio";
                 SystemSounds.Hand.Play();
             }
-            
+
             else if (tbAdministradorAgregarApellido.Text.Length == 0 || isZeroA)
             {
                 tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red;
@@ -947,38 +947,39 @@ namespace WindowsFormsApp1
             }
             else
             {
-                todosLosCursos.Clear();
-                ProfesoresString.Clear();
-                foreach (Curso c in carrera.cursos)
-                {
-                    if (c.nombre == "")
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        todosLosCursos.Add(c.nombre);
-                    }
-                }
-                foreach (Profesor p in carrera.RetornarProfesoresCarreras())
-                {
-                    if (p.nombre == "")
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        ProfesoresString.Add(p.nombre);
-                    }
-                }
-                cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
-                cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
+
 
                 try
                 {
 
                     carrera.RetornarCurso(cbAdministradorAgregarSeccionCurso.Text).CrearSeccion(horariosSeccion, int.Parse(tbAdministradorAgregarSeccionNrc.Text), int.Parse(tbAdministradorAgregarSeccionVacantes.Text), carrera.RetornarProfesor(cbAdministradorAgregarSeccionProfesor.Text));
                     lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Black;
+                    todosLosCursos.Clear();
+                    ProfesoresString.Clear();
+                    foreach (Curso c in carrera.cursos)
+                    {
+                        if (c.nombre == "")
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            todosLosCursos.Add(c.nombre);
+                        }
+                    }
+                    foreach (Profesor p in carrera.RetornarProfesoresCarreras())
+                    {
+                        if (p.nombre == "")
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            ProfesoresString.Add(p.nombre);
+                        }
+                    }
+                    cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
+                    cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
                     lbAdministradorEstadoAgregarSeccion.Text = "Se agrego correctamente la seccion " + tbAdministradorAgregarSeccionNrc.Text + " \nen el curso " + cbAdministradorAgregarSeccionCurso.Text;
                 }
 
@@ -1046,7 +1047,7 @@ namespace WindowsFormsApp1
                 lbAdminEditarAlumnoEstado.Text = "El nombre está vacio";
                 SystemSounds.Hand.Play();
             }
-            
+
             else if (tbAdminEditarApellido.Text.Length == 0 || isZeroA)
             {
                 lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
@@ -1211,7 +1212,8 @@ namespace WindowsFormsApp1
         private void btnAdminEditarCursoVolver_Click(object sender, EventArgs e)
         {
             todosLosCursos.Clear();
-            foreach (Curso c in carrera.cursos) {
+            foreach (Curso c in carrera.cursos)
+            {
                 if (c.nombre == "")
                 {
                     continue;
@@ -1270,6 +1272,9 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            tbAgregarHorarioHoras.Text = "";
+            tbAgregarHorarioMin.Text = "";
+            tbAgregarHorarioDuracion.Text = "";
             lbAgregarHorarioEstado.Text = "";
             lbAgregarHorarioHorario.Text = "";
             panelAdministradorAgregarSeccion.Hide();
