@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
                         lista.Add(elementoTabla);
                     }
                 }
-                
+
             }
             return lista;
         }
@@ -196,14 +196,14 @@ namespace WindowsFormsApp1
 
         public Profesor RetornarProfesor(string pro)
         {
-            foreach(Curso c in cursos)
+            foreach (Curso c in cursos)
             {
-                foreach(Seccion s in c.secciones)
+                foreach (Seccion s in c.secciones)
                 {
                     if (s.profesor.nombre == pro)
                     {
                         return s.profesor;
-                        
+
                     }
                 }
             }
@@ -290,8 +290,34 @@ namespace WindowsFormsApp1
                 }
             }
             catch { }
-            
+
         }
+
+        public List<Persona> DevolverTodosAlumnos()
+        {
+            List<Persona> listAlum = new List<Persona>();
+            foreach (Curso curso in cursos)
+            {
+                foreach (Seccion seccion in curso.secciones)
+                {
+                    foreach (Persona alumno in seccion.alumnos)
+                    {
+                        if (listAlum.Contains(alumno))
+                        {
+
+                        }
+                        else
+                        {
+                            listAlum.Add(alumno);
+                        }
+
+                    }
+                }
+            }
+
+            return listAlum;
+        }
+
     }
 }
 

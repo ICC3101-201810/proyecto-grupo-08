@@ -84,33 +84,7 @@ namespace WindowsFormsApp1
 
 
 
-        public List<Persona> DevolverTodosAlumnos()
-        {
-            List<Persona> listAlum = new List<Persona>();
-            foreach(Carrera carrera in carreras)
-            {
-                foreach(Curso curso in carrera.cursos)
-                {
-                    foreach(Seccion seccion in curso.secciones)
-                    {
-                        foreach(Persona alumno in seccion.alumnos)
-                        {
-                            if (listAlum.Contains(alumno))
-                            {
-
-                            }
-                            else
-                            {
-                                listAlum.Add(alumno);
-                            }
-
-                        }
-                    }
-                }
-            }
-            return listAlum;
-        }
-
+        
         public void BorrarAlumno( string alumRut)
         {
             //INICIO:

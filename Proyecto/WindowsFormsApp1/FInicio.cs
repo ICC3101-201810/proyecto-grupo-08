@@ -86,6 +86,8 @@ namespace WindowsFormsApp1
 
 
                 Curso generico = new Curso("", 0);
+                Curso genericocom = new Curso("", 0);
+                Curso genericoder = new Curso("", 0);
 
                 Curso calculo2 = new Curso("Calculo 2", 6);
                 Curso calculo1 = new Curso("Calculo 1", 6);
@@ -109,6 +111,8 @@ namespace WindowsFormsApp1
 
 
                 Seccion gen = new Seccion(0, 0, aa);
+                Seccion genO = new Seccion(0, 0, aa);
+                Seccion genOO = new Seccion(0, 0, aa);
 
                 Seccion der1 = new Seccion(60, 2018300, sat);
                 Seccion com1 = new Seccion(60, 2018301, Lorca);
@@ -163,6 +167,8 @@ namespace WindowsFormsApp1
                 Horario gene = new Horario("prueba", DateTime.Today.AddHours(156563), 2);
 
                 gen.horario.Add(gene);
+                genO.horario.Add(gene);
+                genOO.horario.Add(gene);
 
                 AlgebraSec2.horario.Add(g);
                 der1.horario.Add(a);
@@ -191,6 +197,8 @@ namespace WindowsFormsApp1
                 teologia1.horario.Add(l);
 
                 generico.secciones.Add(gen);
+                genericocom.secciones.Add(genO);
+                genericoder.secciones.Add(genOO);
 
                 der.secciones.Add(der1);
                 com.secciones.Add(com1);
@@ -311,6 +319,8 @@ namespace WindowsFormsApp1
                 Ingenieria.cursos.Add(antropologia);
                 Comercial.cursos.Add(com);
                 Derecho.cursos.Add(der);
+                Comercial.cursos.Add(genericocom);
+                Derecho.cursos.Add(genericoder);
                 Administrativo admin1 = new Administrativo(0, "admin", "admin", "admin", "ing");
                 Administrativo admin2 = new Administrativo(0, "admin", "admin", "admin", "der");
                 Administrativo admin3 = new Administrativo(0, "admin", "admin", "admin", "com");
@@ -466,7 +476,7 @@ namespace WindowsFormsApp1
             tbAdministradorAgregarApellido.Text = "";
             tbAdministradorAgregarClave.Text = "";
             tbAdministradorCrearAlumnoEstado.Text = "";
-            alumnosU = Uandes.DevolverTodosAlumnos();
+            alumnosU = carrera.DevolverTodosAlumnos();
             AlumnosString.Clear();
             foreach (Persona alumno in alumnosU)
             {
@@ -779,7 +789,7 @@ namespace WindowsFormsApp1
                     carrera.RetornarCurso("").secciones[0].alumnos.Add(alumnoNuevo);
                     tbAdministradorCrearAlumnoEstado.ForeColor = Color.Black; tbAdministradorCrearAlumnoEstado.Text = tbAdministradorAgregarNombre.Text + " fue Creado con exito"; tbAdministradorAgregarNombre.Text = ""; tbAdministradoAgregarRut.Text = ""; tbAdministradorAgregarApellido.Text = ""; tbAdministradorAgregarClave.Text = "";
                 }
-                catch { tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red; ; tbAdministradorCrearAlumnoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
+                catch (Exception c) { MessageBox.Show(c.ToString()); tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red; ; tbAdministradorCrearAlumnoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
             }
         }
 
@@ -809,13 +819,14 @@ namespace WindowsFormsApp1
 
         private void btnBorrarAlumno_Click(object sender, EventArgs e)
         {
-            alumnosU = Uandes.DevolverTodosAlumnos();
+            alumnosU = carrera.DevolverTodosAlumnos();
             AlumnosString.Clear();
             foreach (Persona alumno in alumnosU)
             {
                 AlumnosString.Add(alumno.nombre + '-' + alumno.rut.ToString());
             }
             lbEliminarAlumnos.DataSource = AlumnosString;
+
             panelAdministrador.Hide();
             panelBorrarAlumno.Show();
         }
@@ -1010,15 +1021,24 @@ namespace WindowsFormsApp1
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            lbAdminEditarAlumnoEstado.Text = "";
-            panelBorrarAlumno.Hide();
-            panelAdministradorEditarAlumno.Show();
-            string[] asd = lbEliminarAlumnos.Text.Split('-');
-            Alumno = Uandes.VerPersona(carrera, asd[1]);
-            tbAdminEditarNombre.Text = Alumno.nombre;
-            tbAdminEditarRut.Text = Alumno.rut.ToString();
-            tbAdminEditarClave.Text = Alumno.clave;
-            tbAdminEditarApellido.Text = Alumno.apellido;
+            try
+            {
+                lbAdminEditarAlumnoEstado.Text = "";
+                panelBorrarAlumno.Hide();
+                panelAdministradorEditarAlumno.Show();
+                string[] asd = lbEliminarAlumnos.Text.Split('-');
+                Alumno = Uandes.VerPersona(carrera, asd[1]);
+                tbAdminEditarNombre.Text = Alumno.nombre;
+                tbAdminEditarRut.Text = Alumno.rut.ToString();
+                tbAdminEditarClave.Text = Alumno.clave;
+                tbAdminEditarApellido.Text = Alumno.apellido;
+            }
+
+            catch
+            {
+                SystemSounds.Hand.Play();
+                MessageBox.Show("No existen alumnos para editar");
+            }
         }
 
         private void btnAdministradorAlumnoEditarAlumnoEditar_Click(object sender, EventArgs e)
@@ -1078,7 +1098,7 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAlumnoEditarAlumnoVolver_Click(object sender, EventArgs e)
         {
-            alumnosU = Uandes.DevolverTodosAlumnos();
+            alumnosU = carrera.DevolverTodosAlumnos();
             AlumnosString.Clear();
             foreach (Persona alumno in alumnosU)
             {
@@ -1093,7 +1113,7 @@ namespace WindowsFormsApp1
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            alumnosU = Uandes.DevolverTodosAlumnos();
+            alumnosU = carrera.DevolverTodosAlumnos();
             AlumnosString.Clear();
             foreach (Persona alumno in alumnosU)
             {
@@ -1164,12 +1184,21 @@ namespace WindowsFormsApp1
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            lbAdminEditarCursoEstado.Text = "";
-            tempCurso = Uandes.retornarCurso(cbAdministradorEliminarCurso.Text);
-            tbAdminEditarCursoCreditos.Text = tempCurso.creditos.ToString();
-            tbAdminEditarCursoNombre.Text = tempCurso.nombre;
-            panelAdministradorEliminarCurso.Hide();
-            panelAdminEditarCurso.Show();
+            try
+            {
+                lbAdminEditarCursoEstado.Text = "";
+                tempCurso = Uandes.retornarCurso(cbAdministradorEliminarCurso.Text);
+                tbAdminEditarCursoCreditos.Text = tempCurso.creditos.ToString();
+                tbAdminEditarCursoNombre.Text = tempCurso.nombre;
+                panelAdministradorEliminarCurso.Hide();
+                panelAdminEditarCurso.Show();
+            }
+
+            catch
+            {
+                SystemSounds.Hand.Play();
+                MessageBox.Show("No existen alumnos para editar");
+            }
         }
 
         private void btnAdminEditarCursoEditar_Click(object sender, EventArgs e)
@@ -1243,15 +1272,16 @@ namespace WindowsFormsApp1
 
         private void btnAgregarHorarioAgregar_Click(object sender, EventArgs e)
         {
-            if (int.Parse(tbAgregarHorarioHoras.Text) > 24 || int.Parse(tbAgregarHorarioMin.Text) > 60)
+
+            try
             {
-                lbAgregarHorarioEstado.ForeColor = Color.Red;
-                lbAgregarHorarioEstado.Text = "Porfavor ingrese una hora valida";
-                SystemSounds.Hand.Play();
-            }
-            else
-            {
-                try
+                if (int.Parse(tbAgregarHorarioHoras.Text) > 24 || int.Parse(tbAgregarHorarioMin.Text) > 60)
+                {
+                    lbAgregarHorarioEstado.ForeColor = Color.Red;
+                    lbAgregarHorarioEstado.Text = "Porfavor ingrese una hora valida";
+                    SystemSounds.Hand.Play();
+                }
+                else
                 {
                     DateTime dt = this.dtpAgregarHorario.Value.Date;
                     dt.AddHours(int.Parse(tbAgregarHorarioHoras.Text));
@@ -1261,12 +1291,13 @@ namespace WindowsFormsApp1
                     lbAgregarHorarioEstado.Text = "El horario se agrego correctamente el dia";
                     lbAgregarHorarioHorario.Text = dtpAgregarHorario.Value.DayOfWeek + "a las" + tbAgregarHorarioHoras.Text + ":" + tbAgregarHorarioMin.Text;
                 }
-                catch
-                {
-                    lbAgregarHorarioEstado.ForeColor = Color.Red;
-                    lbAgregarHorarioEstado.Text = "No se ha podido editar el curso";
-                    SystemSounds.Hand.Play();
-                }
+            }
+            catch
+            {
+                lbAgregarHorarioEstado.ForeColor = Color.Red;
+                lbAgregarHorarioEstado.Text = "No se ha podido editar el curso";
+                SystemSounds.Hand.Play();
+
             }
         }
 
