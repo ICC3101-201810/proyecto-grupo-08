@@ -361,9 +361,9 @@
             // 
             // botonCerrarSeccionAlumno
             // 
-            this.botonCerrarSeccionAlumno.Location = new System.Drawing.Point(339, 257);
+            this.botonCerrarSeccionAlumno.Location = new System.Drawing.Point(335, 136);
             this.botonCerrarSeccionAlumno.Name = "botonCerrarSeccionAlumno";
-            this.botonCerrarSeccionAlumno.Size = new System.Drawing.Size(171, 43);
+            this.botonCerrarSeccionAlumno.Size = new System.Drawing.Size(171, 159);
             this.botonCerrarSeccionAlumno.TabIndex = 3;
             this.botonCerrarSeccionAlumno.Text = "Cerrar Sesión";
             this.botonCerrarSeccionAlumno.UseVisualStyleBackColor = true;
@@ -1904,7 +1904,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(174, 136);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 77);
+            this.button1.Size = new System.Drawing.Size(144, 77);
             this.button1.TabIndex = 7;
             this.button1.Text = "Ver Aprobado";
             this.button1.UseVisualStyleBackColor = true;

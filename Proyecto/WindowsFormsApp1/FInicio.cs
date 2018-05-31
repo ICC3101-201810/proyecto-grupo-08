@@ -420,7 +420,7 @@ namespace WindowsFormsApp1
             tbAdministradorFacultadCursoNuevo.Text = "";
             lbAdministradorEstadoAgregarCurso.Text = "";
             panelAdministradorAgregarCurso.Hide();
-            panelAdministrador.Show();
+            panelAdministradorEliminarCurso.Show();
         }
 
         private void btnAdministradorAgregarSeccionVolver_Click(object sender, EventArgs e)
@@ -887,8 +887,28 @@ namespace WindowsFormsApp1
             {
                 todosLosCursos.Clear();
                 ProfesoresString.Clear();
-                foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
-                foreach (Profesor p in carrera.RetornarProfesoresCarreras()) { ProfesoresString.Add(p.nombre); }
+                foreach (Curso c in carrera.cursos)
+                {
+                    if (c.nombre == "")
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        todosLosCursos.Add(c.nombre);
+                    }
+                }
+                foreach (Profesor p in carrera.RetornarProfesoresCarreras())
+                {
+                    if (p.nombre == "")
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        ProfesoresString.Add(p.nombre);
+                    }
+                }
                 cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
                 cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
 
