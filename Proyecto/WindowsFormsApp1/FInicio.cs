@@ -419,6 +419,19 @@ namespace WindowsFormsApp1
             tbAdministradorNombreCursoNuevo.Text = "";
             tbAdministradorFacultadCursoNuevo.Text = "";
             lbAdministradorEstadoAgregarCurso.Text = "";
+            todosLosCursos.Clear();
+            foreach (Curso c in carrera.cursos)
+            {
+                if (c.nombre == "")
+                {
+                    continue;
+                }
+                else
+                {
+                    todosLosCursos.Add(c.nombre);
+                }
+            }
+            cbAdministradorEliminarCurso.DataSource = todosLosCursos;
             panelAdministradorAgregarCurso.Hide();
             panelAdministradorEliminarCurso.Show();
         }
@@ -428,8 +441,23 @@ namespace WindowsFormsApp1
             tbAdministradorAgregarSeccionVacantes.Text = "";
             tbAdministradorAgregarSeccionNrc.Text = "";
             lbAdministradorEstadoAgregarSeccion.Text = "";
+            nrcCursos.Clear();
+            foreach (Curso c in carrera.cursos)
+            {
+                foreach (Seccion s in c.secciones)
+                    if (s.nrc == 0)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        nrcCursos.Add(s.nrc.ToString() + "-" + c.nombre);
+                    }
+            }
+            cbAdministradorEliminarSeccion.DataSource = nrcCursos;
+            cbAdministradorEliminarSeccion.Refresh();
             panelAdministradorAgregarSeccion.Hide();
-            panelAdministrador.Show();
+            panelAdministradorEliminarSeccion.Show();
         }
         private void btnAdministradorCrearAlumnoVolver_Click(object sender, EventArgs e)
         {
@@ -712,13 +740,47 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarAlumnoNuevo_Click(object sender, EventArgs e)
         {
-            try
+            bool isZeroN = true;
+            bool isZeroA = true;
+            foreach (char letra in tbAdministradorAgregarNombre.Text)
             {
-                Alumno alumnoNuevo = new Alumno(int.Parse(tbAdministradoAgregarRut.Text), tbAdministradorAgregarNombre.Text, tbAdministradorAgregarApellido.Text, DateTime.Today, tbAdministradorAgregarClave.Text);
-                carrera.RetornarCurso("").secciones[0].alumnos.Add(alumnoNuevo);
-                tbAdministradorCrearAlumnoEstado.ForeColor = Color.Black; tbAdministradorCrearAlumnoEstado.Text = tbAdministradorAgregarNombre.Text + " fue Creado con exito"; tbAdministradorAgregarNombre.Text = ""; tbAdministradoAgregarRut.Text = ""; tbAdministradorAgregarApellido.Text = ""; tbAdministradorAgregarClave.Text = "";
+                if (letra != ' ')
+                {
+                    isZeroN = false;
+                    break;
+                }
             }
-            catch { tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red; ; tbAdministradorCrearAlumnoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
+            foreach (char letra in tbAdministradorAgregarApellido.Text)
+            {
+                if (letra != ' ')
+                {
+                    isZeroA = false;
+                    break;
+                }
+            }
+            if (tbAdministradorAgregarNombre.Text.Length == 0 || isZeroN)
+            {
+                tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red;
+                tbAdministradorCrearAlumnoEstado.Text = "El nombre está vacio";
+                SystemSounds.Hand.Play();
+            }
+            
+            else if (tbAdministradorAgregarApellido.Text.Length == 0 || isZeroA)
+            {
+                tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red;
+                tbAdministradorCrearAlumnoEstado.Text = "El apellido está vacio";
+                SystemSounds.Hand.Play();
+            }
+            else
+            {
+                try
+                {
+                    Alumno alumnoNuevo = new Alumno(int.Parse(tbAdministradoAgregarRut.Text), tbAdministradorAgregarNombre.Text, tbAdministradorAgregarApellido.Text, DateTime.Today, tbAdministradorAgregarClave.Text);
+                    carrera.RetornarCurso("").secciones[0].alumnos.Add(alumnoNuevo);
+                    tbAdministradorCrearAlumnoEstado.ForeColor = Color.Black; tbAdministradorCrearAlumnoEstado.Text = tbAdministradorAgregarNombre.Text + " fue Creado con exito"; tbAdministradorAgregarNombre.Text = ""; tbAdministradoAgregarRut.Text = ""; tbAdministradorAgregarApellido.Text = ""; tbAdministradorAgregarClave.Text = "";
+                }
+                catch { tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red; ; tbAdministradorCrearAlumnoEstado.Text = "Hubo un error al intentar crear al alumno\nporfavor verifique los datos."; SystemSounds.Hand.Play(); }
+            }
         }
 
         private void btnHorarioProfesor_Click(object sender, EventArgs e)
@@ -960,22 +1022,56 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAlumnoEditarAlumnoEditar_Click(object sender, EventArgs e)
         {
-            try
+            bool isZeroN = true;
+            bool isZeroA = true;
+            foreach (char letra in tbAdminEditarNombre.Text)
             {
-                Alumno.nombre = tbAdminEditarNombre.Text;
-                Alumno.apellido = tbAdminEditarApellido.Text;
-                Alumno.clave = tbAdminEditarClave.Text;
-                Alumno.rut = Convert.ToInt32(tbAdminEditarRut.Text);
-                lbAdminEditarAlumnoEstado.ForeColor = Color.Black;
-                lbAdminEditarAlumnoEstado.Text = "Se edito correctamente a " + tbAdminEditarNombre.Text;
-
+                if (letra != ' ')
+                {
+                    isZeroN = false;
+                    break;
+                }
             }
-            catch
+            foreach (char letra in tbAdminEditarApellido.Text)
             {
-
+                if (letra != ' ')
+                {
+                    isZeroA = false;
+                    break;
+                }
+            }
+            if (tbAdminEditarNombre.Text.Length == 0 || isZeroN)
+            {
                 lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
-                lbAdminEditarAlumnoEstado.Text = "No se ha podido editar el alumno";
+                lbAdminEditarAlumnoEstado.Text = "El nombre está vacio";
                 SystemSounds.Hand.Play();
+            }
+            
+            else if (tbAdminEditarApellido.Text.Length == 0 || isZeroA)
+            {
+                lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
+                lbAdminEditarAlumnoEstado.Text = "El apellido está vacio";
+                SystemSounds.Hand.Play();
+            }
+            else
+            {
+                try
+                {
+                    Alumno.nombre = tbAdminEditarNombre.Text;
+                    Alumno.apellido = tbAdminEditarApellido.Text;
+                    Alumno.clave = tbAdminEditarClave.Text;
+                    Alumno.rut = Convert.ToInt32(tbAdminEditarRut.Text);
+                    lbAdminEditarAlumnoEstado.ForeColor = Color.Black;
+                    lbAdminEditarAlumnoEstado.Text = "Se edito correctamente a " + tbAdminEditarNombre.Text;
+
+                }
+                catch
+                {
+
+                    lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
+                    lbAdminEditarAlumnoEstado.Text = "No se ha podido editar el alumno";
+                    SystemSounds.Hand.Play();
+                }
             }
         }
 
@@ -1115,7 +1211,16 @@ namespace WindowsFormsApp1
         private void btnAdminEditarCursoVolver_Click(object sender, EventArgs e)
         {
             todosLosCursos.Clear();
-            foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+            foreach (Curso c in carrera.cursos) {
+                if (c.nombre == "")
+                {
+                    continue;
+                }
+                else
+                {
+                    todosLosCursos.Add(c.nombre);
+                }
+            }
             cbAdministradorEliminarCurso.DataSource = todosLosCursos;
             panelAdminEditarCurso.Hide();
             panelAdministradorEliminarCurso.Show();
@@ -1186,12 +1291,16 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string mensaje = "Tus ramos aprobados son:\n";
-            foreach (Curso curso in loggeado.aprobados)
+            if (loggeado.aprobados.Count != 0)
             {
-                mensaje = mensaje + "\n" + curso.nombre;
+                string mensaje = "Tus ramos aprobados son:\n";
+                foreach (Curso curso in loggeado.aprobados)
+                {
+                    mensaje = mensaje + "\n" + curso.nombre;
+                }
+                MessageBox.Show(mensaje);
             }
-            MessageBox.Show(mensaje);
+            else { MessageBox.Show("No tienes ramos aprobados"); }
         }
     }
 }
