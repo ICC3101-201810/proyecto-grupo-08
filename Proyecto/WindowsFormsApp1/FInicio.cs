@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
     public delegate void CambiarCarreraDelegate(Alumno log, string carrera);
     public partial class FInicio : Form
     {
-
+        int esProfe = 0;
         public Persona loggeado;
         public Universidad Uandes;
         public Carrera carrera;
@@ -33,22 +33,23 @@ namespace WindowsFormsApp1
         BindingList<string> AlumnosString = new BindingList<string>();
         BindingList<string> todosLosCursos = new BindingList<string>();
         BindingList<string> ProfesoresString = new BindingList<string>();
+        BindingList<Horario> horariosSeccion = new BindingList<Horario>();
         public FInicio()
         {
 
             InitializeComponent();
 
             #region Datos
-            //try
-            //{
-            //    BinaryFormatter formateador = new BinaryFormatter();
-            //    Stream miStream = new FileStream("Universidades.bin", FileMode.Open, FileAccess.Read, FileShare.None);
-            //    Uandes = (Universidad)formateador.Deserialize(miStream);
-            //    Uandes.MostrarCarreras();
-            //    miStream.Close();
-            //}
-            //catch
-            //{
+            try
+            {
+                BinaryFormatter formateador = new BinaryFormatter();
+                Stream miStream = new FileStream("Universidades.bin", FileMode.Open, FileAccess.Read, FileShare.None);
+                Uandes = (Universidad)formateador.Deserialize(miStream);
+                Uandes.MostrarCarreras();
+                miStream.Close();
+            }
+            catch
+            {
                 //ESTO SOLO CORRERIA EN EL CASO DE QUE EL ARCHIVO BIN SEA ELIMINADO, PERO AHORA LO ESTA LEYENDO DE LA CARPETA
                 //RESULTADOS QUE HEMOS CREADO Y HECHO DIRECTORIO DE LAS COMPILACIONES
                 Uandes = new Universidad("Universidad de los Andes");
@@ -262,9 +263,9 @@ namespace WindowsFormsApp1
                 Ingenieria.cursos.Add(calculo2);
                 Ingenieria.cursos.Add(calculo1);
                 Ingenieria.cursos.Add(edo);
-            Ingenieria.cursos.Add(lineal);
-            Ingenieria.cursos.Add(algebra);
-            Ingenieria.cursos.Add(programacion);
+                Ingenieria.cursos.Add(lineal);
+                Ingenieria.cursos.Add(algebra);
+                Ingenieria.cursos.Add(programacion);
                 Ingenieria.cursos.Add(quimica);
                 Ingenieria.cursos.Add(biologia);
                 Ingenieria.cursos.Add(peg);
@@ -291,7 +292,7 @@ namespace WindowsFormsApp1
                 Stream miStream = new FileStream("Universidades.bin", FileMode.Create, FileAccess.Write);
                 formateador.Serialize(miStream, Uandes);
                 miStream.Close();
-           // }
+            }
             #endregion
 
             #region Ordenar los paneles y form
@@ -313,6 +314,7 @@ namespace WindowsFormsApp1
             panelAdministradorEditarAlumno.Location = new Point(0, 0);
             panelAdminEditarCurso.Location = new Point(0, 0);
             panelAlumnoVerRamos.Location = new Point(0, 0);
+            panelAgregarHorario.Location = new Point(0, 0);
             panelAlumnoVerRamos.Hide();
             this.Text = Uandes.nombre;
             #endregion
@@ -486,6 +488,7 @@ namespace WindowsFormsApp1
             BindingList<Tabla> lista = new BindingList<Tabla>();
             lista = carrera.devolverStrDelCurso(cursos, loggeado);
             dgvAlumnoVerRamos.DataSource = lista;
+            esProfe = 0;
             panelAlumno.Hide();
             panelAlumnoVerRamos.Show();
         }
@@ -526,7 +529,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if (carrera.RetornarCurso(cbAgregarRamoAlumno.Text).RequisitosAprobados(loggeado) && loggeado.TopeHorario(carrera, carrera.RetornarSeccion(cbSeccionTomarRamoAlumno.Text))==null)
+                if (carrera.RetornarCurso(cbAgregarRamoAlumno.Text).RequisitosAprobados(loggeado) && loggeado.TopeHorario(carrera, carrera.RetornarSeccion(cbSeccionTomarRamoAlumno.Text)) == null)
 
                 {
                     carrera.agregarRamo(cbAgregarRamoAlumno.Text, int.Parse(cbSeccionTomarRamoAlumno.Text), loggeado);
@@ -543,7 +546,7 @@ namespace WindowsFormsApp1
                 {
                     SystemSounds.Hand.Play();
                     lbAvisoTomaRamo.ForeColor = Color.Red;
-                    lbAvisoTomaRamo.Text = "Existe un tope de horario con "+ loggeado.TopeHorario(carrera, carrera.RetornarSeccion(cbSeccionTomarRamoAlumno.Text)).nombre;
+                    lbAvisoTomaRamo.Text = "Existe un tope de horario con " + loggeado.TopeHorario(carrera, carrera.RetornarSeccion(cbSeccionTomarRamoAlumno.Text)).nombre;
                 }
             }
             catch
@@ -639,7 +642,6 @@ namespace WindowsFormsApp1
 
         private void btnHorarioProfesor_Click(object sender, EventArgs e)
         {
-
             cursos = (carrera.VerCursos(loggeado));
             CursosStringProfesor.Clear();//
             foreach (Curso curso in cursos)
@@ -654,7 +656,12 @@ namespace WindowsFormsApp1
         private void btnVerHorarioProfe_Click(object sender, EventArgs e)
         {
             carrera = Uandes.DevolverCarrera(cbCarreras.Text);
-            MessageBox.Show(carrera.RetornarCurso(cbVerHorarioProfe.Text).VerHorarioCurso(loggeado));
+            BindingList<Tabla> lista = new BindingList<Tabla>();
+            lista = carrera.RetornarCurso(cbVerHorarioProfe.Text).VerHorarioCurso(loggeado);
+            dgvAlumnoVerRamos.DataSource = lista;
+            esProfe = 1;
+            panelVerHorarioProfe.Hide();
+            panelAlumnoVerRamos.Show();
         }
 
         private void btnBorrarAlumno_Click(object sender, EventArgs e)
@@ -695,6 +702,7 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarSeccion_Click(object sender, EventArgs e)
         {
+            horariosSeccion.Clear();
             todosLosCursos.Clear();
             ProfesoresString.Clear();
             foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
@@ -750,28 +758,36 @@ namespace WindowsFormsApp1
 
         private void btnAdministradorAgregarSeccionAgregar_Click(object sender, EventArgs e)
         {
-            todosLosCursos.Clear();
-            ProfesoresString.Clear();
-            foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
-            foreach (Profesor p in carrera.RetornarProfesoresCarreras()) { ProfesoresString.Add(p.nombre); }
-            cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
-            cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
-
-            try
-            {
-                DateTime dt = this.dtpAdministradorAgregarSeccionHorario.Value.Date;
-                carrera.RetornarCurso(cbAdministradorAgregarSeccionCurso.Text).CrearSeccion(dt, int.Parse(tbAdministradorAgregarSeccionNrc.Text), int.Parse(tbAdministradorAgregarSeccionVacantes.Text), carrera.RetornarProfesor(cbAdministradorAgregarSeccionProfesor.Text));
-                lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Black;
-                lbAdministradorEstadoAgregarSeccion.Text = "Se agrego correctamente la seccion " + tbAdministradorAgregarSeccionNrc.Text + " \nen el curso " + cbAdministradorAgregarSeccionCurso.Text;
-            }
-
-            catch
+            if (horariosSeccion.Count == 0)
             {
                 lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Red;
-                lbAdministradorEstadoAgregarSeccion.Text = "No se ha podido ingresar la seccion \nverifique datos";
+                lbAdministradorEstadoAgregarSeccion.Text = "Faltan horarios para poder crear la sección";
                 SystemSounds.Hand.Play();
             }
+            else
+            {
+                todosLosCursos.Clear();
+                ProfesoresString.Clear();
+                foreach (Curso c in carrera.cursos) { todosLosCursos.Add(c.nombre); }
+                foreach (Profesor p in carrera.RetornarProfesoresCarreras()) { ProfesoresString.Add(p.nombre); }
+                cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
+                cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
 
+                try
+                {
+                    DateTime dt = this.dtpAgregarHorario.Value.Date;
+                    carrera.RetornarCurso(cbAdministradorAgregarSeccionCurso.Text).CrearSeccion(dt, int.Parse(tbAdministradorAgregarSeccionNrc.Text), int.Parse(tbAdministradorAgregarSeccionVacantes.Text), carrera.RetornarProfesor(cbAdministradorAgregarSeccionProfesor.Text));
+                    lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Black;
+                    lbAdministradorEstadoAgregarSeccion.Text = "Se agrego correctamente la seccion " + tbAdministradorAgregarSeccionNrc.Text + " \nen el curso " + cbAdministradorAgregarSeccionCurso.Text;
+                }
+
+                catch
+                {
+                    lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Red;
+                    lbAdministradorEstadoAgregarSeccion.Text = "No se ha podido ingresar la seccion \nverifique datos";
+                    SystemSounds.Hand.Play();
+                }
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -941,7 +957,44 @@ namespace WindowsFormsApp1
         private void btnAlumnoVerRamosVolver_Click(object sender, EventArgs e)
         {
             panelAlumnoVerRamos.Hide();
-            panelAlumno.Show();
+            if (esProfe == 1)
+            {
+                panelVerHorarioProfe.Show();
+            }
+            else
+            {
+                panelAlumno.Show();
+            }
+        }
+
+        private void btnAgregarHorarioAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //horariosSeccion.Add(new Horario(cbAgregarHorarioTipos.Text,, int.Parse(tbAgregarHorarioDuracion.Text)));
+                lbAgregarHorarioEstado.ForeColor = Color.Black;
+                lbAgregarHorarioEstado.Text = "El horario se agrego correctamente";
+            }
+            catch
+            {
+                lbAgregarHorarioEstado.ForeColor = Color.Red;
+                lbAgregarHorarioEstado.Text = "No se ha podido editar el curso";
+                SystemSounds.Hand.Play();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panelAdministradorAgregarSeccion.Hide();
+            panelAgregarHorario.Show();
+        }
+
+        private void btnAgregarHorarioVolver_Click(object sender, EventArgs e)
+        {
+
+            panelAgregarHorario.Hide();
+            panelAdministradorAgregarSeccion.Show();
+            
         }
     }
 }

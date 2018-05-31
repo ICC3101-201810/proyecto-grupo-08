@@ -139,7 +139,7 @@
             this.panelAdministradorAgregarSeccion = new System.Windows.Forms.Panel();
             this.lbAdministradorEstadoAgregarSeccion = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.dtpAdministradorAgregarSeccionHorario = new System.Windows.Forms.DateTimePicker();
+            this.dtpAgregarHorario = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.cbAdministradorAgregarSeccionProfesor = new System.Windows.Forms.ComboBox();
@@ -174,9 +174,23 @@
             this.btnAdminEditarCursoVolver = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.panelAlumnoVerRamos = new System.Windows.Forms.Panel();
+            this.dgvAlumnoVerRamos = new System.Windows.Forms.DataGridView();
             this.btnAlumnoVerRamosVolver = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
-            this.dgvAlumnoVerRamos = new System.Windows.Forms.DataGridView();
+            this.panelAgregarHorario = new System.Windows.Forms.Panel();
+            this.lbAgregarHorarioEstado = new System.Windows.Forms.Label();
+            this.tbAgregarHorarioHoras = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.btnAgregarHorarioAgregar = new System.Windows.Forms.Button();
+            this.btnAgregarHorarioVolver = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.tbAgregarHorarioMin = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.cbAgregarHorarioTipos = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbAgregarHorarioDuracion = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
             this.PanelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelAlumno.SuspendLayout();
@@ -208,6 +222,7 @@
             this.panelAdminEditarCurso.SuspendLayout();
             this.panelAlumnoVerRamos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoVerRamos)).BeginInit();
+            this.panelAgregarHorario.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbCarreras
@@ -1339,9 +1354,8 @@
             // 
             // panelAdministradorAgregarSeccion
             // 
+            this.panelAdministradorAgregarSeccion.Controls.Add(this.button3);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.lbAdministradorEstadoAgregarSeccion);
-            this.panelAdministradorAgregarSeccion.Controls.Add(this.label29);
-            this.panelAdministradorAgregarSeccion.Controls.Add(this.dtpAdministradorAgregarSeccionHorario);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.label28);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.label27);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.cbAdministradorAgregarSeccionProfesor);
@@ -1371,18 +1385,19 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(175, 251);
+            this.label29.Location = new System.Drawing.Point(32, 109);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(59, 17);
+            this.label29.Size = new System.Drawing.Size(51, 17);
             this.label29.TabIndex = 36;
-            this.label29.Text = "Horario:";
+            this.label29.Text = "Fecha:";
             // 
-            // dtpAdministradorAgregarSeccionHorario
+            // dtpAgregarHorario
             // 
-            this.dtpAdministradorAgregarSeccionHorario.Location = new System.Drawing.Point(61, 269);
-            this.dtpAdministradorAgregarSeccionHorario.Name = "dtpAdministradorAgregarSeccionHorario";
-            this.dtpAdministradorAgregarSeccionHorario.Size = new System.Drawing.Size(271, 22);
-            this.dtpAdministradorAgregarSeccionHorario.TabIndex = 35;
+            this.dtpAgregarHorario.Location = new System.Drawing.Point(103, 109);
+            this.dtpAgregarHorario.Name = "dtpAgregarHorario";
+            this.dtpAgregarHorario.Size = new System.Drawing.Size(228, 22);
+            this.dtpAgregarHorario.TabIndex = 35;
+            this.dtpAgregarHorario.Value = new System.DateTime(2018, 5, 30, 0, 0, 0, 0);
             // 
             // label28
             // 
@@ -1707,11 +1722,22 @@
             this.panelAlumnoVerRamos.Controls.Add(this.dgvAlumnoVerRamos);
             this.panelAlumnoVerRamos.Controls.Add(this.btnAlumnoVerRamosVolver);
             this.panelAlumnoVerRamos.Controls.Add(this.label39);
-            this.panelAlumnoVerRamos.Location = new System.Drawing.Point(923, 1160);
+            this.panelAlumnoVerRamos.Location = new System.Drawing.Point(1401, 1119);
             this.panelAlumnoVerRamos.Name = "panelAlumnoVerRamos";
             this.panelAlumnoVerRamos.Size = new System.Drawing.Size(514, 243);
             this.panelAlumnoVerRamos.TabIndex = 29;
             this.panelAlumnoVerRamos.Visible = false;
+            // 
+            // dgvAlumnoVerRamos
+            // 
+            this.dgvAlumnoVerRamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAlumnoVerRamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnoVerRamos.Location = new System.Drawing.Point(19, 36);
+            this.dgvAlumnoVerRamos.Name = "dgvAlumnoVerRamos";
+            this.dgvAlumnoVerRamos.ReadOnly = true;
+            this.dgvAlumnoVerRamos.RowTemplate.Height = 24;
+            this.dgvAlumnoVerRamos.Size = new System.Drawing.Size(477, 150);
+            this.dgvAlumnoVerRamos.TabIndex = 22;
             // 
             // btnAlumnoVerRamosVolver
             // 
@@ -1730,21 +1756,149 @@
             this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label39.Location = new System.Drawing.Point(159, 4);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(94, 29);
+            this.label39.Size = new System.Drawing.Size(100, 29);
             this.label39.TabIndex = 18;
-            this.label39.Text = "Ramos";
+            this.label39.Text = "Horario";
             this.label39.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dgvAlumnoVerRamos
+            // panelAgregarHorario
             // 
-            this.dgvAlumnoVerRamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAlumnoVerRamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlumnoVerRamos.Location = new System.Drawing.Point(19, 36);
-            this.dgvAlumnoVerRamos.Name = "dgvAlumnoVerRamos";
-            this.dgvAlumnoVerRamos.ReadOnly = true;
-            this.dgvAlumnoVerRamos.RowTemplate.Height = 24;
-            this.dgvAlumnoVerRamos.Size = new System.Drawing.Size(477, 150);
-            this.dgvAlumnoVerRamos.TabIndex = 22;
+            this.panelAgregarHorario.Controls.Add(this.tbAgregarHorarioDuracion);
+            this.panelAgregarHorario.Controls.Add(this.label41);
+            this.panelAgregarHorario.Controls.Add(this.label8);
+            this.panelAgregarHorario.Controls.Add(this.cbAgregarHorarioTipos);
+            this.panelAgregarHorario.Controls.Add(this.tbAgregarHorarioMin);
+            this.panelAgregarHorario.Controls.Add(this.label29);
+            this.panelAgregarHorario.Controls.Add(this.dtpAgregarHorario);
+            this.panelAgregarHorario.Controls.Add(this.lbAgregarHorarioEstado);
+            this.panelAgregarHorario.Controls.Add(this.tbAgregarHorarioHoras);
+            this.panelAgregarHorario.Controls.Add(this.label37);
+            this.panelAgregarHorario.Controls.Add(this.label38);
+            this.panelAgregarHorario.Controls.Add(this.btnAgregarHorarioAgregar);
+            this.panelAgregarHorario.Controls.Add(this.btnAgregarHorarioVolver);
+            this.panelAgregarHorario.Controls.Add(this.label40);
+            this.panelAgregarHorario.Location = new System.Drawing.Point(8, 769);
+            this.panelAgregarHorario.Name = "panelAgregarHorario";
+            this.panelAgregarHorario.Size = new System.Drawing.Size(374, 283);
+            this.panelAgregarHorario.TabIndex = 29;
+            this.panelAgregarHorario.Visible = false;
+            // 
+            // lbAgregarHorarioEstado
+            // 
+            this.lbAgregarHorarioEstado.AutoSize = true;
+            this.lbAgregarHorarioEstado.Location = new System.Drawing.Point(14, 181);
+            this.lbAgregarHorarioEstado.Name = "lbAgregarHorarioEstado";
+            this.lbAgregarHorarioEstado.Size = new System.Drawing.Size(66, 17);
+            this.lbAgregarHorarioEstado.TabIndex = 27;
+            this.lbAgregarHorarioEstado.Text = "Facultad:";
+            // 
+            // tbAgregarHorarioHoras
+            // 
+            this.tbAgregarHorarioHoras.Location = new System.Drawing.Point(71, 152);
+            this.tbAgregarHorarioHoras.Name = "tbAgregarHorarioHoras";
+            this.tbAgregarHorarioHoras.Size = new System.Drawing.Size(39, 22);
+            this.tbAgregarHorarioHoras.TabIndex = 25;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(20, 154);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(50, 17);
+            this.label37.TabIndex = 24;
+            this.label37.Text = "Horas:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(123, 155);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(61, 17);
+            this.label38.TabIndex = 23;
+            this.label38.Text = "Minutos:";
+            // 
+            // btnAgregarHorarioAgregar
+            // 
+            this.btnAgregarHorarioAgregar.Location = new System.Drawing.Point(17, 225);
+            this.btnAgregarHorarioAgregar.Name = "btnAgregarHorarioAgregar";
+            this.btnAgregarHorarioAgregar.Size = new System.Drawing.Size(171, 28);
+            this.btnAgregarHorarioAgregar.TabIndex = 22;
+            this.btnAgregarHorarioAgregar.Text = "Agregar";
+            this.btnAgregarHorarioAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregarHorarioAgregar.Click += new System.EventHandler(this.btnAgregarHorarioAgregar_Click);
+            // 
+            // btnAgregarHorarioVolver
+            // 
+            this.btnAgregarHorarioVolver.Location = new System.Drawing.Point(263, 225);
+            this.btnAgregarHorarioVolver.Name = "btnAgregarHorarioVolver";
+            this.btnAgregarHorarioVolver.Size = new System.Drawing.Size(95, 28);
+            this.btnAgregarHorarioVolver.TabIndex = 21;
+            this.btnAgregarHorarioVolver.Text = "Volver";
+            this.btnAgregarHorarioVolver.UseVisualStyleBackColor = true;
+            this.btnAgregarHorarioVolver.Click += new System.EventHandler(this.btnAgregarHorarioVolver_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label40.Location = new System.Drawing.Point(115, 13);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(200, 29);
+            this.label40.TabIndex = 18;
+            this.label40.Text = "Agregar Horario";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // tbAgregarHorarioMin
+            // 
+            this.tbAgregarHorarioMin.Location = new System.Drawing.Point(182, 152);
+            this.tbAgregarHorarioMin.Name = "tbAgregarHorarioMin";
+            this.tbAgregarHorarioMin.Size = new System.Drawing.Size(39, 22);
+            this.tbAgregarHorarioMin.TabIndex = 28;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(95, 241);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(221, 45);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Agregar Horarios";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cbAgregarHorarioTipos
+            // 
+            this.cbAgregarHorarioTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAgregarHorarioTipos.FormattingEnabled = true;
+            this.cbAgregarHorarioTipos.Location = new System.Drawing.Point(103, 63);
+            this.cbAgregarHorarioTipos.Name = "cbAgregarHorarioTipos";
+            this.cbAgregarHorarioTipos.Size = new System.Drawing.Size(228, 24);
+            this.cbAgregarHorarioTipos.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(32, 68);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 17);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Tipo:";
+            // 
+            // tbAgregarHorarioDuracion
+            // 
+            this.tbAgregarHorarioDuracion.Location = new System.Drawing.Point(309, 151);
+            this.tbAgregarHorarioDuracion.Name = "tbAgregarHorarioDuracion";
+            this.tbAgregarHorarioDuracion.Size = new System.Drawing.Size(39, 22);
+            this.tbAgregarHorarioDuracion.TabIndex = 39;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(237, 154);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(69, 17);
+            this.label41.TabIndex = 38;
+            this.label41.Text = "Duracion:";
             // 
             // FInicio
             // 
@@ -1753,6 +1907,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(2317, 1255);
+            this.Controls.Add(this.panelAgregarHorario);
             this.Controls.Add(this.panelAlumnoVerRamos);
             this.Controls.Add(this.panelAdminEditarCurso);
             this.Controls.Add(this.panelAdministradorEditarAlumno);
@@ -1824,6 +1979,8 @@
             this.panelAlumnoVerRamos.ResumeLayout(false);
             this.panelAlumnoVerRamos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoVerRamos)).EndInit();
+            this.panelAgregarHorario.ResumeLayout(false);
+            this.panelAgregarHorario.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1932,7 +2089,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox cbAdministradorAgregarSeccionProfesor;
         private System.Windows.Forms.ComboBox cbAdministradorAgregarSeccionCurso;
-        private System.Windows.Forms.DateTimePicker dtpAdministradorAgregarSeccionHorario;
+        private System.Windows.Forms.DateTimePicker dtpAgregarHorario;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label lbAdministradorEstadoAgregarSeccion;
         private System.Windows.Forms.Label label30;
@@ -1978,6 +2135,20 @@
         private System.Windows.Forms.DataGridView dgvAlumnoVerRamos;
         private System.Windows.Forms.Button btnAlumnoVerRamosVolver;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Panel panelAgregarHorario;
+        private System.Windows.Forms.Label lbAgregarHorarioEstado;
+        private System.Windows.Forms.TextBox tbAgregarHorarioHoras;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Button btnAgregarHorarioAgregar;
+        private System.Windows.Forms.Button btnAgregarHorarioVolver;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox tbAgregarHorarioMin;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbAgregarHorarioTipos;
+        private System.Windows.Forms.TextBox tbAgregarHorarioDuracion;
+        private System.Windows.Forms.Label label41;
     }
 }
 

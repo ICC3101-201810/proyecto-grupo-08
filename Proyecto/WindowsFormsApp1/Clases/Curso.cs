@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Media;
 
 namespace WindowsFormsApp1
 {
@@ -75,21 +81,21 @@ namespace WindowsFormsApp1
             return str;
         }
 
-        public string VerHorarioCurso(Persona profe)
+        public BindingList<Tabla> VerHorarioCurso(Persona profe)
         {
-            string str = "El horario de " + nombre + " es\n";
+            BindingList<Tabla> lista = new BindingList<Tabla>();
             foreach (Seccion seccion in secciones)
             {
                 if (seccion.profesor == profe)
                 {
                     foreach (Horario horario in seccion.horario)
                     {
-                        str = str + horario.inicio.DayOfWeek.ToString()+"\t "+horario.inicio.TimeOfDay.ToString()+ "\n";
+                        lista.Add(new Tabla(nombre, horario.tipo, horario.inicio.DayOfWeek.ToString() + "  " + horario.inicio.TimeOfDay.ToString(), seccion.nrc.ToString(),horario.duracion));
                     }
 
                 }
             }
-            return str;
+            return lista;
 
         }
 
