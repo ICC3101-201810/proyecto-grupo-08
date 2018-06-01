@@ -781,6 +781,12 @@ namespace WindowsFormsApp1
                 tbAdministradorCrearAlumnoEstado.Text = "El apellido está vacio";
                 SystemSounds.Hand.Play();
             }
+            else if (Uandes.VerPersona(carrera,tbAdministradoAgregarRut.Text)!=null)
+            {
+                tbAdministradorCrearAlumnoEstado.ForeColor = Color.Red;
+                tbAdministradorCrearAlumnoEstado.Text = "Ya existe una persona con este rut";
+                SystemSounds.Hand.Play();
+            }
             else
             {
                 try
@@ -956,6 +962,14 @@ namespace WindowsFormsApp1
                 lbAdministradorEstadoAgregarSeccion.Text = "Faltan horarios para poder crear la sección";
                 SystemSounds.Hand.Play();
             }
+            else if (carrera.ExisteNrc(tbAdministradorAgregarSeccionNrc.Text))
+            {
+                lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Red;
+                lbAdministradorEstadoAgregarSeccion.Text = "Ya existe una sección con el mismo NRC";
+                SystemSounds.Hand.Play();
+
+            }
+
             else
             {
 
@@ -965,6 +979,7 @@ namespace WindowsFormsApp1
 
                     carrera.RetornarCurso(cbAdministradorAgregarSeccionCurso.Text).CrearSeccion(horariosSeccion, int.Parse(tbAdministradorAgregarSeccionNrc.Text), int.Parse(tbAdministradorAgregarSeccionVacantes.Text), carrera.RetornarProfesor(cbAdministradorAgregarSeccionProfesor.Text));
                     lbAdministradorEstadoAgregarSeccion.ForeColor = Color.Black;
+                    lbAdministradorEstadoAgregarSeccion.Text = "Se agrego correctamente la seccion " + tbAdministradorAgregarSeccionNrc.Text + " \nen el curso " + cbAdministradorAgregarSeccionCurso.Text;
                     todosLosCursos.Clear();
                     ProfesoresString.Clear();
                     foreach (Curso c in carrera.cursos)
@@ -989,9 +1004,10 @@ namespace WindowsFormsApp1
                             ProfesoresString.Add(p.nombre);
                         }
                     }
+                    
                     cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
                     cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
-                    lbAdministradorEstadoAgregarSeccion.Text = "Se agrego correctamente la seccion " + tbAdministradorAgregarSeccionNrc.Text + " \nen el curso " + cbAdministradorAgregarSeccionCurso.Text;
+                    
                 }
 
                 catch
@@ -1024,14 +1040,14 @@ namespace WindowsFormsApp1
             try
             {
                 lbAdminEditarAlumnoEstado.Text = "";
-                panelBorrarAlumno.Hide();
-                panelAdministradorEditarAlumno.Show();
                 string[] asd = lbEliminarAlumnos.Text.Split('-');
                 Alumno = Uandes.VerPersona(carrera, asd[1]);
                 tbAdminEditarNombre.Text = Alumno.nombre;
                 tbAdminEditarRut.Text = Alumno.rut.ToString();
                 tbAdminEditarClave.Text = Alumno.clave;
                 tbAdminEditarApellido.Text = Alumno.apellido;
+                panelBorrarAlumno.Hide();
+                panelAdministradorEditarAlumno.Show();
             }
 
             catch
@@ -1072,6 +1088,12 @@ namespace WindowsFormsApp1
             {
                 lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
                 lbAdminEditarAlumnoEstado.Text = "El apellido está vacio";
+                SystemSounds.Hand.Play();
+            }
+            else if (Uandes.VerPersona(carrera, tbAdminEditarRut.Text) != null && Alumno.rut!=Convert.ToInt32(tbAdminEditarRut.Text))
+            {
+                lbAdminEditarAlumnoEstado.ForeColor = Color.Red;
+                lbAdminEditarAlumnoEstado.Text = "Ya existe una persona con este rut";
                 SystemSounds.Hand.Play();
             }
             else
@@ -1275,7 +1297,7 @@ namespace WindowsFormsApp1
 
             try
             {
-                if (int.Parse(tbAgregarHorarioHoras.Text) > 24 || int.Parse(tbAgregarHorarioMin.Text) > 60)
+                if (int.Parse(tbAgregarHorarioHoras.Text) > 24 || int.Parse(tbAgregarHorarioMin.Text) > 59)
                 {
                     lbAgregarHorarioEstado.ForeColor = Color.Red;
                     lbAgregarHorarioEstado.Text = "Porfavor ingrese una hora valida";
@@ -1284,12 +1306,11 @@ namespace WindowsFormsApp1
                 else
                 {
                     DateTime dt = this.dtpAgregarHorario.Value.Date;
-                    dt.AddHours(int.Parse(tbAgregarHorarioHoras.Text));
-                    dt.AddMinutes(int.Parse(tbAgregarHorarioMin.Text));
-                    horariosSeccion.Add(new Horario(cbAgregarHorarioTipos.Text, dt, int.Parse(tbAgregarHorarioDuracion.Text)));
+                    DateTime horario = new DateTime(dt.Year, dt.Month, dt.Day, Convert.ToInt32(tbAgregarHorarioHoras.Text), Convert.ToInt32(tbAgregarHorarioMin.Text), 0);
+                    horariosSeccion.Add(new Horario(cbAgregarHorarioTipos.Text, horario, int.Parse(tbAgregarHorarioDuracion.Text)));
                     lbAgregarHorarioEstado.ForeColor = Color.Black;
                     lbAgregarHorarioEstado.Text = "El horario se agrego correctamente el dia";
-                    lbAgregarHorarioHorario.Text = dtpAgregarHorario.Value.DayOfWeek + "a las" + tbAgregarHorarioHoras.Text + ":" + tbAgregarHorarioMin.Text;
+                    lbAgregarHorarioHorario.Text = horario.DayOfWeek + " a las " + horario.Hour + ":" + horario.Minute;
                 }
             }
             catch

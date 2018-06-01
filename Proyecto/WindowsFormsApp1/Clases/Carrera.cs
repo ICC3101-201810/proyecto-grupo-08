@@ -147,6 +147,18 @@ namespace WindowsFormsApp1
             return nrcs;
 
         }
+        public bool ExisteNrc(string nrcString)
+        {
+            foreach (Curso curso in cursos)
+            {
+                 foreach (Seccion seccion in curso.secciones)
+                 {
+                    if (seccion.nrc == Convert.ToInt32(nrcString)) {return true;}
+                 }          
+            }
+            return false;
+
+        }
         public void agregarRamo(string nombreCurso, int nrc, Persona personaAgregar)
         {
             foreach (Curso c in cursos)
