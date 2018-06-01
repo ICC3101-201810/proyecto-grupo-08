@@ -559,7 +559,12 @@ namespace WindowsFormsApp1
             carrera = Uandes.DevolverCarrera(cbCarreras.Text);
             cursos = (carrera.VerCursos(loggeado));
             BindingList<Tabla> lista = new BindingList<Tabla>();
+            //foreach (Curso cur in cursos)
+            //{
+            //    lista.Add(cur.VerHorarioCurso(loggeado);
+            //}
             lista = carrera.devolverStrDelCurso(cursos, loggeado);
+            
             dgvAlumnoVerRamos.DataSource = lista;
             esProfe = 0;
             panelAlumno.Hide();
@@ -1310,7 +1315,7 @@ namespace WindowsFormsApp1
                     horariosSeccion.Add(new Horario(cbAgregarHorarioTipos.Text, horario, int.Parse(tbAgregarHorarioDuracion.Text)));
                     lbAgregarHorarioEstado.ForeColor = Color.Black;
                     lbAgregarHorarioEstado.Text = "El horario se agrego correctamente el dia";
-                    lbAgregarHorarioHorario.Text = horario.DayOfWeek + " a las " + horario.Hour + ":" + horario.Minute;
+                    lbAgregarHorarioHorario.Text = horario.DayOfWeek + " a las " + horario.TimeOfDay.ToString();
                 }
             }
             catch

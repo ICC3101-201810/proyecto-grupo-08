@@ -117,14 +117,22 @@ namespace WindowsFormsApp1
             BindingList<Tabla> lista = new BindingList<Tabla>();
             foreach (Curso c in listaDeCursos)
             {
-                foreach (Horario horario in c.secciones[0].horario)
+                if (c.nombre == "") { continue; }
+                else
                 {
-                    if (c.nombre == "") { continue; }
-                    else
+                    foreach (Seccion s in c.secciones)
                     {
-                        Tabla elementoTabla = new Tabla(c.nombre, horario.tipo, horario.inicio.DayOfWeek.ToString() + "  " + horario.inicio.TimeOfDay.ToString(), c.mostrarNrc(p).ToString(), horario.duracion);
-                        lista.Add(elementoTabla);
+                        if (s.alumnos.Contains(p))
+                        {
+                            foreach (Horario horario in s.horario)
+                            {
+                                lista.Add(new Tabla(c.nombre, horario.tipo, horario.inicio.DayOfWeek.ToString() + "  " + horario.inicio.TimeOfDay.ToString(), s.nrc.ToString(), horario.duracion));
+                            }
+
+                        }
+                        
                     }
+
                 }
 
             }
