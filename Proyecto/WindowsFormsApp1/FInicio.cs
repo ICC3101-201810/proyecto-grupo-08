@@ -987,6 +987,7 @@ namespace WindowsFormsApp1
                     lbAdministradorEstadoAgregarSeccion.Text = "Se agrego correctamente la seccion " + tbAdministradorAgregarSeccionNrc.Text + " \nen el curso " + cbAdministradorAgregarSeccionCurso.Text;
                     todosLosCursos.Clear();
                     ProfesoresString.Clear();
+                    
                     foreach (Curso c in carrera.cursos)
                     {
                         if (c.nombre == "")
@@ -1009,10 +1010,10 @@ namespace WindowsFormsApp1
                             ProfesoresString.Add(p.nombre);
                         }
                     }
-                    
+
                     cbAdministradorAgregarSeccionCurso.DataSource = todosLosCursos;
                     cbAdministradorAgregarSeccionProfesor.DataSource = ProfesoresString;
-                    
+
                 }
 
                 catch

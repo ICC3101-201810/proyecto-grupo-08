@@ -231,7 +231,7 @@
             this.cbCarreras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCarreras.FormattingEnabled = true;
             this.cbCarreras.Location = new System.Drawing.Point(48, 254);
-            this.cbCarreras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCarreras.Margin = new System.Windows.Forms.Padding(4);
             this.cbCarreras.Name = "cbCarreras";
             this.cbCarreras.Size = new System.Drawing.Size(382, 32);
             this.cbCarreras.TabIndex = 0;
@@ -239,7 +239,7 @@
             // botonCarrera
             // 
             this.botonCarrera.Location = new System.Drawing.Point(254, 518);
-            this.botonCarrera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonCarrera.Margin = new System.Windows.Forms.Padding(4);
             this.botonCarrera.Name = "botonCarrera";
             this.botonCarrera.Size = new System.Drawing.Size(175, 64);
             this.botonCarrera.TabIndex = 1;
@@ -270,7 +270,7 @@
             // tbRut
             // 
             this.tbRut.Location = new System.Drawing.Point(48, 362);
-            this.tbRut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRut.Margin = new System.Windows.Forms.Padding(4);
             this.tbRut.Name = "tbRut";
             this.tbRut.Size = new System.Drawing.Size(382, 29);
             this.tbRut.TabIndex = 4;
@@ -279,7 +279,7 @@
             // tbClave
             // 
             this.tbClave.Location = new System.Drawing.Point(48, 462);
-            this.tbClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbClave.Margin = new System.Windows.Forms.Padding(4);
             this.tbClave.Name = "tbClave";
             this.tbClave.Size = new System.Drawing.Size(382, 29);
             this.tbClave.TabIndex = 5;
@@ -307,7 +307,7 @@
             this.PanelInicio.Controls.Add(this.label1);
             this.PanelInicio.Controls.Add(this.label2);
             this.PanelInicio.Location = new System.Drawing.Point(0, 2);
-            this.PanelInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelInicio.Margin = new System.Windows.Forms.Padding(4);
             this.PanelInicio.Name = "PanelInicio";
             this.PanelInicio.Size = new System.Drawing.Size(466, 602);
             this.PanelInicio.TabIndex = 7;
@@ -316,7 +316,7 @@
             // 
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
             this.pictureBox4.Location = new System.Drawing.Point(56, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(356, 190);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -326,7 +326,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(48, 518);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(175, 64);
             this.btnSalir.TabIndex = 7;
@@ -344,7 +344,7 @@
             this.panelAlumno.Controls.Add(this.botonAgeregarRamoAlumno);
             this.panelAlumno.Controls.Add(this.lbBienvenidoAlumno);
             this.panelAlumno.Location = new System.Drawing.Point(472, 2);
-            this.panelAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.panelAlumno.Name = "panelAlumno";
             this.panelAlumno.Size = new System.Drawing.Size(715, 466);
             this.panelAlumno.TabIndex = 8;
@@ -353,7 +353,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(239, 204);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(198, 116);
             this.button1.TabIndex = 7;
@@ -364,7 +364,7 @@
             // botonCerrarSeccionAlumno
             // 
             this.botonCerrarSeccionAlumno.Location = new System.Drawing.Point(461, 204);
-            this.botonCerrarSeccionAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonCerrarSeccionAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.botonCerrarSeccionAlumno.Name = "botonCerrarSeccionAlumno";
             this.botonCerrarSeccionAlumno.Size = new System.Drawing.Size(235, 238);
             this.botonCerrarSeccionAlumno.TabIndex = 3;
@@ -375,7 +375,7 @@
             // botonBotarRamoAlumno
             // 
             this.botonBotarRamoAlumno.Location = new System.Drawing.Point(239, 328);
-            this.botonBotarRamoAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonBotarRamoAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.botonBotarRamoAlumno.Name = "botonBotarRamoAlumno";
             this.botonBotarRamoAlumno.Size = new System.Drawing.Size(198, 114);
             this.botonBotarRamoAlumno.TabIndex = 1;
@@ -387,7 +387,7 @@
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
             this.pictureBox1.Location = new System.Drawing.Point(34, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(260, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -397,7 +397,7 @@
             // botonVerRamosAlumno
             // 
             this.botonVerRamosAlumno.Location = new System.Drawing.Point(23, 204);
-            this.botonVerRamosAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonVerRamosAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.botonVerRamosAlumno.Name = "botonVerRamosAlumno";
             this.botonVerRamosAlumno.Size = new System.Drawing.Size(195, 116);
             this.botonVerRamosAlumno.TabIndex = 2;
@@ -408,7 +408,7 @@
             // botonAgeregarRamoAlumno
             // 
             this.botonAgeregarRamoAlumno.Location = new System.Drawing.Point(23, 328);
-            this.botonAgeregarRamoAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonAgeregarRamoAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.botonAgeregarRamoAlumno.Name = "botonAgeregarRamoAlumno";
             this.botonAgeregarRamoAlumno.Size = new System.Drawing.Size(195, 114);
             this.botonAgeregarRamoAlumno.TabIndex = 0;
@@ -438,7 +438,7 @@
             this.panelTomaRamoAlumno.Controls.Add(this.label4);
             this.panelTomaRamoAlumno.Controls.Add(this.cbAgregarRamoAlumno);
             this.panelTomaRamoAlumno.Location = new System.Drawing.Point(546, 474);
-            this.panelTomaRamoAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTomaRamoAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.panelTomaRamoAlumno.Name = "panelTomaRamoAlumno";
             this.panelTomaRamoAlumno.Size = new System.Drawing.Size(507, 520);
             this.panelTomaRamoAlumno.TabIndex = 9;
@@ -482,7 +482,7 @@
             this.cbSeccionTomarRamoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSeccionTomarRamoAlumno.FormattingEnabled = true;
             this.cbSeccionTomarRamoAlumno.Location = new System.Drawing.Point(54, 278);
-            this.cbSeccionTomarRamoAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSeccionTomarRamoAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.cbSeccionTomarRamoAlumno.Name = "cbSeccionTomarRamoAlumno";
             this.cbSeccionTomarRamoAlumno.Size = new System.Drawing.Size(385, 32);
             this.cbSeccionTomarRamoAlumno.TabIndex = 4;
@@ -490,7 +490,7 @@
             // btnAceptarTomarRamoAlumno
             // 
             this.btnAceptarTomarRamoAlumno.Location = new System.Drawing.Point(54, 430);
-            this.btnAceptarTomarRamoAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptarTomarRamoAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptarTomarRamoAlumno.Name = "btnAceptarTomarRamoAlumno";
             this.btnAceptarTomarRamoAlumno.Size = new System.Drawing.Size(177, 64);
             this.btnAceptarTomarRamoAlumno.TabIndex = 3;
@@ -501,7 +501,7 @@
             // btnTomarRamosAlumnoSalir
             // 
             this.btnTomarRamosAlumnoSalir.Location = new System.Drawing.Point(263, 430);
-            this.btnTomarRamosAlumnoSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTomarRamosAlumnoSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnTomarRamosAlumnoSalir.Name = "btnTomarRamosAlumnoSalir";
             this.btnTomarRamosAlumnoSalir.Size = new System.Drawing.Size(177, 64);
             this.btnTomarRamosAlumnoSalir.TabIndex = 2;
@@ -524,7 +524,7 @@
             this.cbAgregarRamoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAgregarRamoAlumno.FormattingEnabled = true;
             this.cbAgregarRamoAlumno.Location = new System.Drawing.Point(54, 166);
-            this.cbAgregarRamoAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAgregarRamoAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.cbAgregarRamoAlumno.Name = "cbAgregarRamoAlumno";
             this.cbAgregarRamoAlumno.Size = new System.Drawing.Size(385, 32);
             this.cbAgregarRamoAlumno.TabIndex = 0;
@@ -539,7 +539,7 @@
             this.panelBotarRamo.Controls.Add(this.btnBotarRamo);
             this.panelBotarRamo.Controls.Add(this.label5);
             this.panelBotarRamo.Location = new System.Drawing.Point(534, 1000);
-            this.panelBotarRamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBotarRamo.Margin = new System.Windows.Forms.Padding(4);
             this.panelBotarRamo.Name = "panelBotarRamo";
             this.panelBotarRamo.Size = new System.Drawing.Size(544, 520);
             this.panelBotarRamo.TabIndex = 7;
@@ -563,7 +563,7 @@
             this.cbBotarRamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBotarRamo.FormattingEnabled = true;
             this.cbBotarRamo.Location = new System.Drawing.Point(18, 201);
-            this.cbBotarRamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbBotarRamo.Margin = new System.Windows.Forms.Padding(4);
             this.cbBotarRamo.Name = "cbBotarRamo";
             this.cbBotarRamo.Size = new System.Drawing.Size(500, 32);
             this.cbBotarRamo.TabIndex = 4;
@@ -581,7 +581,7 @@
             // btnSalirBotarRamo
             // 
             this.btnSalirBotarRamo.Location = new System.Drawing.Point(342, 412);
-            this.btnSalirBotarRamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalirBotarRamo.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalirBotarRamo.Name = "btnSalirBotarRamo";
             this.btnSalirBotarRamo.Size = new System.Drawing.Size(177, 64);
             this.btnSalirBotarRamo.TabIndex = 2;
@@ -592,7 +592,7 @@
             // btnBotarRamo
             // 
             this.btnBotarRamo.Location = new System.Drawing.Point(18, 412);
-            this.btnBotarRamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBotarRamo.Margin = new System.Windows.Forms.Padding(4);
             this.btnBotarRamo.Name = "btnBotarRamo";
             this.btnBotarRamo.Size = new System.Drawing.Size(177, 66);
             this.btnBotarRamo.TabIndex = 1;
@@ -618,7 +618,7 @@
             this.panelProfesor.Controls.Add(this.btnHorarioProfesor);
             this.panelProfesor.Controls.Add(this.btnSalirProfesor);
             this.panelProfesor.Location = new System.Drawing.Point(1194, 2);
-            this.panelProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.panelProfesor.Name = "panelProfesor";
             this.panelProfesor.Size = new System.Drawing.Size(710, 369);
             this.panelProfesor.TabIndex = 10;
@@ -628,7 +628,7 @@
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
             this.pictureBox2.Location = new System.Drawing.Point(28, 18);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(260, 148);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -638,7 +638,7 @@
             // btnCursosProfesor
             // 
             this.btnCursosProfesor.Location = new System.Drawing.Point(48, 242);
-            this.btnCursosProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCursosProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.btnCursosProfesor.Name = "btnCursosProfesor";
             this.btnCursosProfesor.Size = new System.Drawing.Size(191, 94);
             this.btnCursosProfesor.TabIndex = 4;
@@ -660,7 +660,7 @@
             // btnHorarioProfesor
             // 
             this.btnHorarioProfesor.Location = new System.Drawing.Point(264, 238);
-            this.btnHorarioProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHorarioProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.btnHorarioProfesor.Name = "btnHorarioProfesor";
             this.btnHorarioProfesor.Size = new System.Drawing.Size(191, 94);
             this.btnHorarioProfesor.TabIndex = 1;
@@ -671,7 +671,7 @@
             // btnSalirProfesor
             // 
             this.btnSalirProfesor.Location = new System.Drawing.Point(485, 238);
-            this.btnSalirProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalirProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalirProfesor.Name = "btnSalirProfesor";
             this.btnSalirProfesor.Size = new System.Drawing.Size(191, 100);
             this.btnSalirProfesor.TabIndex = 0;
@@ -687,7 +687,7 @@
             this.panelCursosProfesor.Controls.Add(this.btnVolverCursosProfesor);
             this.panelCursosProfesor.Controls.Add(this.cbCursosProfesor);
             this.panelCursosProfesor.Location = new System.Drawing.Point(1194, 676);
-            this.panelCursosProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCursosProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.panelCursosProfesor.Name = "panelCursosProfesor";
             this.panelCursosProfesor.Size = new System.Drawing.Size(582, 376);
             this.panelCursosProfesor.TabIndex = 5;
@@ -719,7 +719,7 @@
             // btnVerAlumnos
             // 
             this.btnVerAlumnos.Location = new System.Drawing.Point(37, 225);
-            this.btnVerAlumnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerAlumnos.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerAlumnos.Name = "btnVerAlumnos";
             this.btnVerAlumnos.Size = new System.Drawing.Size(210, 96);
             this.btnVerAlumnos.TabIndex = 2;
@@ -730,7 +730,7 @@
             // btnVolverCursosProfesor
             // 
             this.btnVolverCursosProfesor.Location = new System.Drawing.Point(326, 225);
-            this.btnVolverCursosProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolverCursosProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolverCursosProfesor.Name = "btnVolverCursosProfesor";
             this.btnVolverCursosProfesor.Size = new System.Drawing.Size(226, 96);
             this.btnVolverCursosProfesor.TabIndex = 1;
@@ -743,7 +743,7 @@
             this.cbCursosProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCursosProfesor.FormattingEnabled = true;
             this.cbCursosProfesor.Location = new System.Drawing.Point(37, 126);
-            this.cbCursosProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCursosProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.cbCursosProfesor.Name = "cbCursosProfesor";
             this.cbCursosProfesor.Size = new System.Drawing.Size(516, 32);
             this.cbCursosProfesor.TabIndex = 0;
@@ -760,7 +760,7 @@
             this.panelAdministrador.Controls.Add(this.btnBorrarAlumno);
             this.panelAdministrador.Controls.Add(this.lbBienvenidoAdministrador);
             this.panelAdministrador.Location = new System.Drawing.Point(1926, 2);
-            this.panelAdministrador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdministrador.Margin = new System.Windows.Forms.Padding(4);
             this.panelAdministrador.Name = "panelAdministrador";
             this.panelAdministrador.Size = new System.Drawing.Size(703, 513);
             this.panelAdministrador.TabIndex = 11;
@@ -769,7 +769,7 @@
             // btnAdministradorEliminarSeccion
             // 
             this.btnAdministradorEliminarSeccion.Location = new System.Drawing.Point(492, 334);
-            this.btnAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorEliminarSeccion.Name = "btnAdministradorEliminarSeccion";
             this.btnAdministradorEliminarSeccion.Size = new System.Drawing.Size(166, 51);
             this.btnAdministradorEliminarSeccion.TabIndex = 6;
@@ -780,7 +780,7 @@
             // btnAdministradorEliminarCurso
             // 
             this.btnAdministradorEliminarCurso.Location = new System.Drawing.Point(274, 334);
-            this.btnAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorEliminarCurso.Name = "btnAdministradorEliminarCurso";
             this.btnAdministradorEliminarCurso.Size = new System.Drawing.Size(168, 51);
             this.btnAdministradorEliminarCurso.TabIndex = 5;
@@ -823,7 +823,7 @@
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.uandes_logo;
             this.pictureBox3.Location = new System.Drawing.Point(18, 20);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(260, 148);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -833,7 +833,7 @@
             // btnAdministradorCerrar
             // 
             this.btnAdministradorCerrar.Location = new System.Drawing.Point(202, 402);
-            this.btnAdministradorCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorCerrar.Name = "btnAdministradorCerrar";
             this.btnAdministradorCerrar.Size = new System.Drawing.Size(308, 87);
             this.btnAdministradorCerrar.TabIndex = 6;
@@ -844,7 +844,7 @@
             // btnBorrarAlumno
             // 
             this.btnBorrarAlumno.Location = new System.Drawing.Point(54, 334);
-            this.btnBorrarAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrarAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrarAlumno.Name = "btnBorrarAlumno";
             this.btnBorrarAlumno.Size = new System.Drawing.Size(166, 51);
             this.btnBorrarAlumno.TabIndex = 1;
@@ -866,7 +866,7 @@
             // btnAdministradorAgregarAlumno
             // 
             this.btnAdministradorAgregarAlumno.Location = new System.Drawing.Point(45, 378);
-            this.btnAdministradorAgregarAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarAlumno.Name = "btnAdministradorAgregarAlumno";
             this.btnAdministradorAgregarAlumno.Size = new System.Drawing.Size(414, 84);
             this.btnAdministradorAgregarAlumno.TabIndex = 3;
@@ -889,7 +889,7 @@
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradoAgregarRut);
             this.panelAdministradorCrearAlumno.Controls.Add(this.tbAdministradorAgregarNombre);
             this.panelAdministradorCrearAlumno.Location = new System.Drawing.Point(1926, 526);
-            this.panelAdministradorCrearAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdministradorCrearAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.panelAdministradorCrearAlumno.Name = "panelAdministradorCrearAlumno";
             this.panelAdministradorCrearAlumno.Size = new System.Drawing.Size(703, 526);
             this.panelAdministradorCrearAlumno.TabIndex = 8;
@@ -911,7 +911,7 @@
             // btnAdministradorCrearAlumnoVolver
             // 
             this.btnAdministradorCrearAlumnoVolver.Location = new System.Drawing.Point(544, 424);
-            this.btnAdministradorCrearAlumnoVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorCrearAlumnoVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorCrearAlumnoVolver.Name = "btnAdministradorCrearAlumnoVolver";
             this.btnAdministradorCrearAlumnoVolver.Size = new System.Drawing.Size(114, 48);
             this.btnAdministradorCrearAlumnoVolver.TabIndex = 15;
@@ -972,7 +972,7 @@
             // btnAdministradorAgregarAlumnoNuevo
             // 
             this.btnAdministradorAgregarAlumnoNuevo.Location = new System.Drawing.Point(40, 340);
-            this.btnAdministradorAgregarAlumnoNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarAlumnoNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarAlumnoNuevo.Name = "btnAdministradorAgregarAlumnoNuevo";
             this.btnAdministradorAgregarAlumnoNuevo.Size = new System.Drawing.Size(628, 52);
             this.btnAdministradorAgregarAlumnoNuevo.TabIndex = 7;
@@ -983,7 +983,7 @@
             // tbAdministradorAgregarApellido
             // 
             this.tbAdministradorAgregarApellido.Location = new System.Drawing.Point(406, 160);
-            this.tbAdministradorAgregarApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradorAgregarApellido.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradorAgregarApellido.Name = "tbAdministradorAgregarApellido";
             this.tbAdministradorAgregarApellido.Size = new System.Drawing.Size(262, 29);
             this.tbAdministradorAgregarApellido.TabIndex = 5;
@@ -991,7 +991,7 @@
             // tbAdministradorAgregarClave
             // 
             this.tbAdministradorAgregarClave.Location = new System.Drawing.Point(406, 264);
-            this.tbAdministradorAgregarClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradorAgregarClave.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradorAgregarClave.Name = "tbAdministradorAgregarClave";
             this.tbAdministradorAgregarClave.Size = new System.Drawing.Size(262, 29);
             this.tbAdministradorAgregarClave.TabIndex = 4;
@@ -999,7 +999,7 @@
             // tbAdministradoAgregarRut
             // 
             this.tbAdministradoAgregarRut.Location = new System.Drawing.Point(40, 264);
-            this.tbAdministradoAgregarRut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradoAgregarRut.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradoAgregarRut.Name = "tbAdministradoAgregarRut";
             this.tbAdministradoAgregarRut.Size = new System.Drawing.Size(262, 29);
             this.tbAdministradoAgregarRut.TabIndex = 2;
@@ -1007,7 +1007,7 @@
             // tbAdministradorAgregarNombre
             // 
             this.tbAdministradorAgregarNombre.Location = new System.Drawing.Point(40, 160);
-            this.tbAdministradorAgregarNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradorAgregarNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradorAgregarNombre.Name = "tbAdministradorAgregarNombre";
             this.tbAdministradorAgregarNombre.Size = new System.Drawing.Size(262, 29);
             this.tbAdministradorAgregarNombre.TabIndex = 1;
@@ -1020,7 +1020,7 @@
             this.panelVerHorarioProfe.Controls.Add(this.btnVolverVerHorario);
             this.panelVerHorarioProfe.Controls.Add(this.cbVerHorarioProfe);
             this.panelVerHorarioProfe.Location = new System.Drawing.Point(1194, 375);
-            this.panelVerHorarioProfe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelVerHorarioProfe.Margin = new System.Windows.Forms.Padding(4);
             this.panelVerHorarioProfe.Name = "panelVerHorarioProfe";
             this.panelVerHorarioProfe.Size = new System.Drawing.Size(534, 294);
             this.panelVerHorarioProfe.TabIndex = 12;
@@ -1052,7 +1052,7 @@
             // btnVerHorarioProfe
             // 
             this.btnVerHorarioProfe.Location = new System.Drawing.Point(28, 194);
-            this.btnVerHorarioProfe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerHorarioProfe.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerHorarioProfe.Name = "btnVerHorarioProfe";
             this.btnVerHorarioProfe.Size = new System.Drawing.Size(165, 76);
             this.btnVerHorarioProfe.TabIndex = 2;
@@ -1063,7 +1063,7 @@
             // btnVolverVerHorario
             // 
             this.btnVolverVerHorario.Location = new System.Drawing.Point(337, 194);
-            this.btnVolverVerHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolverVerHorario.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolverVerHorario.Name = "btnVolverVerHorario";
             this.btnVolverVerHorario.Size = new System.Drawing.Size(165, 76);
             this.btnVolverVerHorario.TabIndex = 1;
@@ -1076,7 +1076,7 @@
             this.cbVerHorarioProfe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVerHorarioProfe.FormattingEnabled = true;
             this.cbVerHorarioProfe.Location = new System.Drawing.Point(28, 126);
-            this.cbVerHorarioProfe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbVerHorarioProfe.Margin = new System.Windows.Forms.Padding(4);
             this.cbVerHorarioProfe.Name = "cbVerHorarioProfe";
             this.cbVerHorarioProfe.Size = new System.Drawing.Size(476, 32);
             this.cbVerHorarioProfe.TabIndex = 0;
@@ -1090,7 +1090,7 @@
             this.panelBorrarAlumno.Controls.Add(this.label17);
             this.panelBorrarAlumno.Controls.Add(this.btnVolverBorrarAlumno);
             this.panelBorrarAlumno.Location = new System.Drawing.Point(1926, 1071);
-            this.panelBorrarAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBorrarAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.panelBorrarAlumno.Name = "panelBorrarAlumno";
             this.panelBorrarAlumno.Size = new System.Drawing.Size(700, 486);
             this.panelBorrarAlumno.TabIndex = 13;
@@ -1145,7 +1145,7 @@
             // btnVolverBorrarAlumno
             // 
             this.btnVolverBorrarAlumno.Location = new System.Drawing.Point(495, 376);
-            this.btnVolverBorrarAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolverBorrarAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolverBorrarAlumno.Name = "btnVolverBorrarAlumno";
             this.btnVolverBorrarAlumno.Size = new System.Drawing.Size(183, 88);
             this.btnVolverBorrarAlumno.TabIndex = 1;
@@ -1162,7 +1162,7 @@
             this.panelAdministradorEliminarCurso.Controls.Add(this.btnAdministradorEliminarCursoVolver);
             this.panelAdministradorEliminarCurso.Controls.Add(this.label7);
             this.panelAdministradorEliminarCurso.Location = new System.Drawing.Point(2634, 2);
-            this.panelAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdministradorEliminarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.panelAdministradorEliminarCurso.Name = "panelAdministradorEliminarCurso";
             this.panelAdministradorEliminarCurso.Size = new System.Drawing.Size(557, 442);
             this.panelAdministradorEliminarCurso.TabIndex = 15;
@@ -1195,7 +1195,7 @@
             // btnAdministradorAgregarCurso
             // 
             this.btnAdministradorAgregarCurso.Location = new System.Drawing.Point(21, 384);
-            this.btnAdministradorAgregarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarCurso.Name = "btnAdministradorAgregarCurso";
             this.btnAdministradorAgregarCurso.Size = new System.Drawing.Size(378, 40);
             this.btnAdministradorAgregarCurso.TabIndex = 2;
@@ -1215,7 +1215,7 @@
             // btnAdministradorEliminarCursoVolver
             // 
             this.btnAdministradorEliminarCursoVolver.Location = new System.Drawing.Point(412, 384);
-            this.btnAdministradorEliminarCursoVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorEliminarCursoVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorEliminarCursoVolver.Name = "btnAdministradorEliminarCursoVolver";
             this.btnAdministradorEliminarCursoVolver.Size = new System.Drawing.Size(128, 40);
             this.btnAdministradorEliminarCursoVolver.TabIndex = 17;
@@ -1245,7 +1245,7 @@
             this.panelAdministradorEliminarSeccion.Controls.Add(this.btnAdministradorAgregarSeccion);
             this.panelAdministradorEliminarSeccion.Controls.Add(this.panel2);
             this.panelAdministradorEliminarSeccion.Location = new System.Drawing.Point(2637, 453);
-            this.panelAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdministradorEliminarSeccion.Margin = new System.Windows.Forms.Padding(4);
             this.panelAdministradorEliminarSeccion.Name = "panelAdministradorEliminarSeccion";
             this.panelAdministradorEliminarSeccion.Size = new System.Drawing.Size(557, 390);
             this.panelAdministradorEliminarSeccion.TabIndex = 16;
@@ -1266,7 +1266,7 @@
             // btnAdministradorEliminarSeccionVolver
             // 
             this.btnAdministradorEliminarSeccionVolver.Location = new System.Drawing.Point(412, 330);
-            this.btnAdministradorEliminarSeccionVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorEliminarSeccionVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorEliminarSeccionVolver.Name = "btnAdministradorEliminarSeccionVolver";
             this.btnAdministradorEliminarSeccionVolver.Size = new System.Drawing.Size(128, 40);
             this.btnAdministradorEliminarSeccionVolver.TabIndex = 19;
@@ -1299,7 +1299,7 @@
             // btnAdministradorAgregarSeccion
             // 
             this.btnAdministradorAgregarSeccion.Location = new System.Drawing.Point(21, 330);
-            this.btnAdministradorAgregarSeccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarSeccion.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarSeccion.Name = "btnAdministradorAgregarSeccion";
             this.btnAdministradorAgregarSeccion.Size = new System.Drawing.Size(373, 40);
             this.btnAdministradorAgregarSeccion.TabIndex = 4;
@@ -1310,7 +1310,7 @@
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(0, 382);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(557, 484);
             this.panel2.TabIndex = 17;
@@ -1326,7 +1326,7 @@
             this.panelAdministradorAgregarCurso.Controls.Add(this.btnAdministradorAgregarCursoVolver);
             this.panelAdministradorAgregarCurso.Controls.Add(this.label22);
             this.panelAdministradorAgregarCurso.Location = new System.Drawing.Point(2634, 867);
-            this.panelAdministradorAgregarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdministradorAgregarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.panelAdministradorAgregarCurso.Name = "panelAdministradorAgregarCurso";
             this.panelAdministradorAgregarCurso.Size = new System.Drawing.Size(557, 398);
             this.panelAdministradorAgregarCurso.TabIndex = 18;
@@ -1345,7 +1345,7 @@
             // tbAdministradorFacultadCursoNuevo
             // 
             this.tbAdministradorFacultadCursoNuevo.Location = new System.Drawing.Point(176, 220);
-            this.tbAdministradorFacultadCursoNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradorFacultadCursoNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradorFacultadCursoNuevo.Name = "tbAdministradorFacultadCursoNuevo";
             this.tbAdministradorFacultadCursoNuevo.Size = new System.Drawing.Size(312, 29);
             this.tbAdministradorFacultadCursoNuevo.TabIndex = 26;
@@ -1353,7 +1353,7 @@
             // tbAdministradorNombreCursoNuevo
             // 
             this.tbAdministradorNombreCursoNuevo.Location = new System.Drawing.Point(176, 120);
-            this.tbAdministradorNombreCursoNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradorNombreCursoNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradorNombreCursoNuevo.Name = "tbAdministradorNombreCursoNuevo";
             this.tbAdministradorNombreCursoNuevo.Size = new System.Drawing.Size(312, 29);
             this.tbAdministradorNombreCursoNuevo.TabIndex = 25;
@@ -1381,7 +1381,7 @@
             // btnAdministradorAgregarCursoAgregar
             // 
             this.btnAdministradorAgregarCursoAgregar.Location = new System.Drawing.Point(18, 338);
-            this.btnAdministradorAgregarCursoAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarCursoAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarCursoAgregar.Name = "btnAdministradorAgregarCursoAgregar";
             this.btnAdministradorAgregarCursoAgregar.Size = new System.Drawing.Size(370, 40);
             this.btnAdministradorAgregarCursoAgregar.TabIndex = 22;
@@ -1392,7 +1392,7 @@
             // btnAdministradorAgregarCursoVolver
             // 
             this.btnAdministradorAgregarCursoVolver.Location = new System.Drawing.Point(411, 338);
-            this.btnAdministradorAgregarCursoVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarCursoVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarCursoVolver.Name = "btnAdministradorAgregarCursoVolver";
             this.btnAdministradorAgregarCursoVolver.Size = new System.Drawing.Size(128, 40);
             this.btnAdministradorAgregarCursoVolver.TabIndex = 21;
@@ -1429,8 +1429,8 @@
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionAgregar);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.btnAdministradorAgregarSeccionVolver);
             this.panelAdministradorAgregarSeccion.Controls.Add(this.label23);
-            this.panelAdministradorAgregarSeccion.Location = new System.Drawing.Point(2709, 1283);
-            this.panelAdministradorAgregarSeccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdministradorAgregarSeccion.Location = new System.Drawing.Point(2630, 1189);
+            this.panelAdministradorAgregarSeccion.Margin = new System.Windows.Forms.Padding(4);
             this.panelAdministradorAgregarSeccion.Name = "panelAdministradorAgregarSeccion";
             this.panelAdministradorAgregarSeccion.Size = new System.Drawing.Size(557, 596);
             this.panelAdministradorAgregarSeccion.TabIndex = 19;
@@ -1449,7 +1449,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(213, 370);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(201, 68);
             this.button3.TabIndex = 38;
@@ -1492,7 +1492,7 @@
             this.cbAdministradorAgregarSeccionProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorAgregarSeccionProfesor.FormattingEnabled = true;
             this.cbAdministradorAgregarSeccionProfesor.Location = new System.Drawing.Point(312, 196);
-            this.cbAdministradorAgregarSeccionProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAdministradorAgregarSeccionProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.cbAdministradorAgregarSeccionProfesor.Name = "cbAdministradorAgregarSeccionProfesor";
             this.cbAdministradorAgregarSeccionProfesor.Size = new System.Drawing.Size(192, 32);
             this.cbAdministradorAgregarSeccionProfesor.TabIndex = 32;
@@ -1502,7 +1502,7 @@
             this.cbAdministradorAgregarSeccionCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministradorAgregarSeccionCurso.FormattingEnabled = true;
             this.cbAdministradorAgregarSeccionCurso.Location = new System.Drawing.Point(45, 196);
-            this.cbAdministradorAgregarSeccionCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAdministradorAgregarSeccionCurso.Margin = new System.Windows.Forms.Padding(4);
             this.cbAdministradorAgregarSeccionCurso.Name = "cbAdministradorAgregarSeccionCurso";
             this.cbAdministradorAgregarSeccionCurso.Size = new System.Drawing.Size(192, 32);
             this.cbAdministradorAgregarSeccionCurso.TabIndex = 31;
@@ -1530,7 +1530,7 @@
             // tbAdministradorAgregarSeccionVacantes
             // 
             this.tbAdministradorAgregarSeccionVacantes.Location = new System.Drawing.Point(45, 308);
-            this.tbAdministradorAgregarSeccionVacantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradorAgregarSeccionVacantes.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradorAgregarSeccionVacantes.Name = "tbAdministradorAgregarSeccionVacantes";
             this.tbAdministradorAgregarSeccionVacantes.Size = new System.Drawing.Size(192, 29);
             this.tbAdministradorAgregarSeccionVacantes.TabIndex = 26;
@@ -1538,7 +1538,7 @@
             // tbAdministradorAgregarSeccionNrc
             // 
             this.tbAdministradorAgregarSeccionNrc.Location = new System.Drawing.Point(312, 308);
-            this.tbAdministradorAgregarSeccionNrc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdministradorAgregarSeccionNrc.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdministradorAgregarSeccionNrc.Name = "tbAdministradorAgregarSeccionNrc";
             this.tbAdministradorAgregarSeccionNrc.Size = new System.Drawing.Size(192, 29);
             this.tbAdministradorAgregarSeccionNrc.TabIndex = 26;
@@ -1546,7 +1546,7 @@
             // btnAdministradorAgregarSeccionAgregar
             // 
             this.btnAdministradorAgregarSeccionAgregar.Location = new System.Drawing.Point(18, 534);
-            this.btnAdministradorAgregarSeccionAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarSeccionAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarSeccionAgregar.Name = "btnAdministradorAgregarSeccionAgregar";
             this.btnAdministradorAgregarSeccionAgregar.Size = new System.Drawing.Size(370, 40);
             this.btnAdministradorAgregarSeccionAgregar.TabIndex = 24;
@@ -1557,7 +1557,7 @@
             // btnAdministradorAgregarSeccionVolver
             // 
             this.btnAdministradorAgregarSeccionVolver.Location = new System.Drawing.Point(411, 534);
-            this.btnAdministradorAgregarSeccionVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdministradorAgregarSeccionVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministradorAgregarSeccionVolver.Name = "btnAdministradorAgregarSeccionVolver";
             this.btnAdministradorAgregarSeccionVolver.Size = new System.Drawing.Size(128, 40);
             this.btnAdministradorAgregarSeccionVolver.TabIndex = 23;
@@ -1591,7 +1591,7 @@
             // dtpAgregarHorario
             // 
             this.dtpAgregarHorario.Location = new System.Drawing.Point(142, 164);
-            this.dtpAgregarHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpAgregarHorario.Margin = new System.Windows.Forms.Padding(4);
             this.dtpAgregarHorario.Name = "dtpAgregarHorario";
             this.dtpAgregarHorario.Size = new System.Drawing.Size(312, 29);
             this.dtpAgregarHorario.TabIndex = 35;
@@ -1694,7 +1694,7 @@
             // tbAdminEditarNombre
             // 
             this.tbAdminEditarNombre.Location = new System.Drawing.Point(66, 182);
-            this.tbAdminEditarNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdminEditarNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdminEditarNombre.Name = "tbAdminEditarNombre";
             this.tbAdminEditarNombre.Size = new System.Drawing.Size(190, 29);
             this.tbAdminEditarNombre.TabIndex = 16;
@@ -1712,7 +1712,7 @@
             // tbAdminEditarRut
             // 
             this.tbAdminEditarRut.Location = new System.Drawing.Point(66, 284);
-            this.tbAdminEditarRut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdminEditarRut.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdminEditarRut.Name = "tbAdminEditarRut";
             this.tbAdminEditarRut.Size = new System.Drawing.Size(190, 29);
             this.tbAdminEditarRut.TabIndex = 17;
@@ -1720,7 +1720,7 @@
             // tbAdminEditarClave
             // 
             this.tbAdminEditarClave.Location = new System.Drawing.Point(323, 280);
-            this.tbAdminEditarClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdminEditarClave.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdminEditarClave.Name = "tbAdminEditarClave";
             this.tbAdminEditarClave.Size = new System.Drawing.Size(190, 29);
             this.tbAdminEditarClave.TabIndex = 18;
@@ -1728,7 +1728,7 @@
             // tbAdminEditarApellido
             // 
             this.tbAdminEditarApellido.Location = new System.Drawing.Point(323, 178);
-            this.tbAdminEditarApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdminEditarApellido.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdminEditarApellido.Name = "tbAdminEditarApellido";
             this.tbAdminEditarApellido.Size = new System.Drawing.Size(190, 29);
             this.tbAdminEditarApellido.TabIndex = 19;
@@ -1744,7 +1744,7 @@
             this.panelAdminEditarCurso.Controls.Add(this.btnAdminEditarCursoVolver);
             this.panelAdminEditarCurso.Controls.Add(this.label36);
             this.panelAdminEditarCurso.Location = new System.Drawing.Point(534, 1524);
-            this.panelAdminEditarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdminEditarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.panelAdminEditarCurso.Name = "panelAdminEditarCurso";
             this.panelAdminEditarCurso.Size = new System.Drawing.Size(514, 346);
             this.panelAdminEditarCurso.TabIndex = 28;
@@ -1763,7 +1763,7 @@
             // tbAdminEditarCursoCreditos
             // 
             this.tbAdminEditarCursoCreditos.Location = new System.Drawing.Point(176, 171);
-            this.tbAdminEditarCursoCreditos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdminEditarCursoCreditos.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdminEditarCursoCreditos.Name = "tbAdminEditarCursoCreditos";
             this.tbAdminEditarCursoCreditos.Size = new System.Drawing.Size(315, 29);
             this.tbAdminEditarCursoCreditos.TabIndex = 26;
@@ -1771,7 +1771,7 @@
             // tbAdminEditarCursoNombre
             // 
             this.tbAdminEditarCursoNombre.Location = new System.Drawing.Point(176, 96);
-            this.tbAdminEditarCursoNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAdminEditarCursoNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbAdminEditarCursoNombre.Name = "tbAdminEditarCursoNombre";
             this.tbAdminEditarCursoNombre.Size = new System.Drawing.Size(315, 29);
             this.tbAdminEditarCursoNombre.TabIndex = 25;
@@ -1799,7 +1799,7 @@
             // btnAdminEditarCursoEditar
             // 
             this.btnAdminEditarCursoEditar.Location = new System.Drawing.Point(22, 274);
-            this.btnAdminEditarCursoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdminEditarCursoEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdminEditarCursoEditar.Name = "btnAdminEditarCursoEditar";
             this.btnAdminEditarCursoEditar.Size = new System.Drawing.Size(235, 42);
             this.btnAdminEditarCursoEditar.TabIndex = 22;
@@ -1810,7 +1810,7 @@
             // btnAdminEditarCursoVolver
             // 
             this.btnAdminEditarCursoVolver.Location = new System.Drawing.Point(360, 274);
-            this.btnAdminEditarCursoVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdminEditarCursoVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdminEditarCursoVolver.Name = "btnAdminEditarCursoVolver";
             this.btnAdminEditarCursoVolver.Size = new System.Drawing.Size(131, 42);
             this.btnAdminEditarCursoVolver.TabIndex = 21;
@@ -1837,7 +1837,7 @@
             this.panelAlumnoVerRamos.Controls.Add(this.btnAlumnoVerRamosVolver);
             this.panelAlumnoVerRamos.Controls.Add(this.label39);
             this.panelAlumnoVerRamos.Location = new System.Drawing.Point(1728, 1583);
-            this.panelAlumnoVerRamos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAlumnoVerRamos.Margin = new System.Windows.Forms.Padding(4);
             this.panelAlumnoVerRamos.Name = "panelAlumnoVerRamos";
             this.panelAlumnoVerRamos.Size = new System.Drawing.Size(964, 921);
             this.panelAlumnoVerRamos.TabIndex = 29;
@@ -1848,7 +1848,7 @@
             this.dgvAlumnoVerRamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAlumnoVerRamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlumnoVerRamos.Location = new System.Drawing.Point(30, 54);
-            this.dgvAlumnoVerRamos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAlumnoVerRamos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAlumnoVerRamos.Name = "dgvAlumnoVerRamos";
             this.dgvAlumnoVerRamos.ReadOnly = true;
             this.dgvAlumnoVerRamos.RowTemplate.Height = 24;
@@ -1858,7 +1858,7 @@
             // btnAlumnoVerRamosVolver
             // 
             this.btnAlumnoVerRamosVolver.Location = new System.Drawing.Point(26, 858);
-            this.btnAlumnoVerRamosVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlumnoVerRamosVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlumnoVerRamosVolver.Name = "btnAlumnoVerRamosVolver";
             this.btnAlumnoVerRamosVolver.Size = new System.Drawing.Size(909, 42);
             this.btnAlumnoVerRamosVolver.TabIndex = 21;
@@ -1898,7 +1898,7 @@
             this.panelAgregarHorario.Controls.Add(this.btnAgregarHorarioVolver);
             this.panelAgregarHorario.Controls.Add(this.label40);
             this.panelAgregarHorario.Location = new System.Drawing.Point(11, 1154);
-            this.panelAgregarHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAgregarHorario.Margin = new System.Windows.Forms.Padding(4);
             this.panelAgregarHorario.Name = "panelAgregarHorario";
             this.panelAgregarHorario.Size = new System.Drawing.Size(514, 424);
             this.panelAgregarHorario.TabIndex = 29;
@@ -1927,7 +1927,7 @@
             // tbAgregarHorarioDuracion
             // 
             this.tbAgregarHorarioDuracion.Location = new System.Drawing.Point(425, 226);
-            this.tbAgregarHorarioDuracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAgregarHorarioDuracion.Margin = new System.Windows.Forms.Padding(4);
             this.tbAgregarHorarioDuracion.Name = "tbAgregarHorarioDuracion";
             this.tbAgregarHorarioDuracion.Size = new System.Drawing.Size(52, 29);
             this.tbAgregarHorarioDuracion.TabIndex = 39;
@@ -1957,7 +1957,7 @@
             this.cbAgregarHorarioTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAgregarHorarioTipos.FormattingEnabled = true;
             this.cbAgregarHorarioTipos.Location = new System.Drawing.Point(142, 94);
-            this.cbAgregarHorarioTipos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAgregarHorarioTipos.Margin = new System.Windows.Forms.Padding(4);
             this.cbAgregarHorarioTipos.Name = "cbAgregarHorarioTipos";
             this.cbAgregarHorarioTipos.Size = new System.Drawing.Size(312, 32);
             this.cbAgregarHorarioTipos.TabIndex = 5;
@@ -1965,7 +1965,7 @@
             // tbAgregarHorarioMin
             // 
             this.tbAgregarHorarioMin.Location = new System.Drawing.Point(250, 228);
-            this.tbAgregarHorarioMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAgregarHorarioMin.Margin = new System.Windows.Forms.Padding(4);
             this.tbAgregarHorarioMin.Name = "tbAgregarHorarioMin";
             this.tbAgregarHorarioMin.Size = new System.Drawing.Size(52, 29);
             this.tbAgregarHorarioMin.TabIndex = 28;
@@ -1983,7 +1983,7 @@
             // tbAgregarHorarioHoras
             // 
             this.tbAgregarHorarioHoras.Location = new System.Drawing.Point(98, 228);
-            this.tbAgregarHorarioHoras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAgregarHorarioHoras.Margin = new System.Windows.Forms.Padding(4);
             this.tbAgregarHorarioHoras.Name = "tbAgregarHorarioHoras";
             this.tbAgregarHorarioHoras.Size = new System.Drawing.Size(52, 29);
             this.tbAgregarHorarioHoras.TabIndex = 25;
@@ -2011,7 +2011,7 @@
             // btnAgregarHorarioAgregar
             // 
             this.btnAgregarHorarioAgregar.Location = new System.Drawing.Point(28, 362);
-            this.btnAgregarHorarioAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarHorarioAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarHorarioAgregar.Name = "btnAgregarHorarioAgregar";
             this.btnAgregarHorarioAgregar.Size = new System.Drawing.Size(235, 42);
             this.btnAgregarHorarioAgregar.TabIndex = 22;
@@ -2022,7 +2022,7 @@
             // btnAgregarHorarioVolver
             // 
             this.btnAgregarHorarioVolver.Location = new System.Drawing.Point(366, 362);
-            this.btnAgregarHorarioVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarHorarioVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarHorarioVolver.Name = "btnAgregarHorarioVolver";
             this.btnAgregarHorarioVolver.Size = new System.Drawing.Size(131, 42);
             this.btnAgregarHorarioVolver.TabIndex = 21;
@@ -2069,7 +2069,7 @@
             this.Controls.Add(this.PanelInicio);
             this.Controls.Add(this.panelBotarRamo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
